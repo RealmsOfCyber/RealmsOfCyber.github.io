@@ -14414,7 +14414,18 @@ a.theme-link:hover {
 }
 
 .modal-speaker .profile-image {
-    width: 120px
+    width: 120px;
+    max-width: 120px;
+}
+
+.profile-image {
+    width: 120px;
+    max-width: 120px;
+}
+
+.social-icon {
+    height: 24px;
+    width: 24px;
 }
 
 .modal-speaker h2.name,

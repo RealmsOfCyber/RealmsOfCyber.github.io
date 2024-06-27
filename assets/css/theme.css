@@ -14211,6 +14211,12 @@ a.theme-link:hover {
     width: auto
 }
 
+@media (min-width: 768px) {
+    .header .logo-icon {
+        height: 17px;
+    }
+}
+
 .header-shrink {
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
     background: #141c25
@@ -14291,7 +14297,8 @@ a.theme-link:hover {
 }
 
 .hero-carousel .carousel-item-1 {
-    background: url("../images/hero-1.jpg") no-repeat center center
+    background: url("../images/hero-1.jpg") no-repeat center center;
+    background-size: cover;
 }
 
 .hero-carousel .carousel-item-2 {

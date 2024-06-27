@@ -23,6 +23,9 @@
     />
     <meta name="twitter:title" content="ROCCON 2024 - Home" />
 
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" />
+
     <!-- Google Font -->
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800|Roboto:300,400,700&display=swap"
@@ -30,7 +33,10 @@
     />
 
     <!-- FontAwesome JS-->
-	<script src="https://kit.fontawesome.com/fd2ce283b6.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/fd2ce283b6.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
@@ -42,12 +48,19 @@
         <div class="container-fluid">
           <nav class="main-nav navbar navbar-expand-lg">
             <div class="site-logo">
-              <a class="scrollto" href="#hero-block"
-                ><img
-                  class="logo-icon w-50"
-                  src="assets/images/roclogotxt.png"
-                  alt="logo"
-              /></a>
+              <a class="scrollto" href="#hero-block">
+                <picture>
+                  <source
+                    srcset="assets/images/roclogotxt.png"
+                    media="(min-width: 768px)"
+                  />
+                  <img
+                    class="logo-icon"
+                    src="assets/images/roclogotxt2.png"
+                    alt="logo"
+                  />
+                </picture>
+              </a>
             </div>
 
             <div class="navbar-btn order-lg-2">
@@ -136,7 +149,7 @@
             <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
           </div>
           <div class="hero-intro mb-4">
-            Brisbane's pure Cyberphysical Conference
+            Brisbane's Pure Cyber-Physical Conference
           </div>
           <div class="hero-cta">
             <a
@@ -156,7 +169,7 @@
     <div class="stats-block theme-bg-primary text-white py-4 text-center">
       <div class="container">
         <div class="row">
-          <div class="col-8 col-md-4">
+          <div class="col">
             <div class="item">
               <div class="number">300+</div>
               <div class="unit">Attendees</div>
@@ -164,7 +177,7 @@
             <!--//item-->
           </div>
           <!--//col-->
-          <div class="col-8 col-md-4">
+          <div class="col">
             <div class="item">
               <div class="number">1</div>
               <div class="unit">Jam Packed Day</div>
@@ -172,10 +185,10 @@
             <!--//item-->
           </div>
           <!--//col-->
-          <div class="col-8 col-md-4">
+          <div class="col">
             <div class="item">
-              <div class="number">All</div>
-              <div class="unit">Cyberphysical talks</div>
+              <div class="number">16</div>
+              <div class="unit">Cyber-Physical Talks</div>
             </div>
             <!--//item-->
           </div>
@@ -190,19 +203,21 @@
       <div class="container">
         <h3 class="section-heading text-center mb-3">About ROCCON</h3>
         <div class="section-intro single-col-max mx-auto mb-4">
-          ROCCON (Realms of Cyber conference) is an expansion on our previous,
+          ROCCON (Realms of Cyber Conference) is an expansion on our previous,
           wildly successful, Autohackers conference. We are a think-tank,
-          conference, and hacker meet with a focus on the physical domains. We
-          see a future where land, air, sea, space, cognitive, and
+          conference, and hacker meet with a focus on the physical domains.
+          <br class="mb-3" />
+          We see a future where land, air, sea, space, cognitive, and
           biotechnological industries are well supported to make the Australian
           digital world safer.
+          <br class="mb-3" />
           <strong>
             Our vision is simple: to help everyone grow and protect against
             online threats. We're here to make sure that cyber professionals and
             those who need their support can easily connect, creating a strong
             and united community that keeps our digital spaces secure and
-            thriving.</strong
-          >
+            thriving.
+          </strong>
         </div>
         <div class="event-countdown text-center mb-3">
           <h4 class="countdown-intro mb-2 text-center mb-3">
@@ -224,32 +239,32 @@
 
       <div class="media-block theme-bg-primary py-5">
         <div class="container">
-          <h4 class="text-white text-center mb-4">Explore the realms</h4>
+          <h4 class="text-white text-center pb-3">The Realms</h4>
           <div class="row text-white text-center">
-            <div class="col-sm">
+            <div class="col mb-4 mx-3">
               <div class="realm pb-3"><b>Land</b></div>
               <i style="color: #fff" class="fa-solid fa-truck fa-4x"></i>
             </div>
-            <div class="col-sm">
+            <div class="col mb-4 mx-3">
               <div class="realm pb-3"><b>Sea</b></div>
               <i style="color: #fff" class="fa-solid fa-ship fa-4x"></i>
             </div>
-            <div class="col-sm">
+            <div class="col mb-4 mx-3">
               <div class="realm pb-3"><b>Air</b></div>
               <i
                 style="color: #fff"
                 class="fa-solid fa-plane-departure fa-4x"
               ></i>
             </div>
-            <div class="col-sm">
+            <div class="col mb-4 mx-3">
               <div class="realm pb-3"><b>Space</b></div>
               <i style="color: #fff" class="fa-solid fa-satellite fa-4x"></i>
             </div>
-            <div class="col-sm">
+            <div class="col mb-4 mx-3">
               <div class="realm pb-3"><b>Biological</b></div>
               <i style="color: #fff" class="fa-solid fa-dna fa-4x"></i>
             </div>
-            <div class="col-sm">
+            <div class="col mb-4 mx-3">
               <div class="realm pb-3"><b>Cognitive</b></div>
               <i style="color: #fff" class="fa-solid fa-brain fa-4x"></i>
             </div>
@@ -419,8 +434,9 @@
               <div class="card-body">
                 <h5 class="card-title mb-2">Nicholas Lindsay</h5>
                 <div class="card-text mb-3">
-                  <div class="meta">Director & Pilot</div>
-                  <div class="meta">MATES Ventures</div>
+                  <div class="meta">
+                    Former SpaceX Director of Spacecraft Production
+                  </div>
                 </div>
                 <!--//card-text-->
                 <a
@@ -445,6 +461,171 @@
             <!--//card-->
           </div>
           <!--//col-->
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-5"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-5"
+                ><img
+                  src="assets/images/speakers/sanja_marais.jpg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Sanja Marais</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">Chief Technology and Security Officer</div>
+                  <div class="meta">Aspen Medical</div>
+                </div>
+                <!--//card-text-->
+                <a
+                  href="#modal-speaker-5"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-5"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <!--//card-->
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/sanja-marais-2981487b/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+                <!--//social-list-->
+              </div>
+            </div>
+            <!--//card-->
+          </div>
+          <!--//col-->
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-6"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-6"
+                ><img
+                  src="assets/images/speakers/kylie_mcdevitt.jpg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Kylie McDevitt</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">Chief Executive Officer</div>
+                  <div class="meta">InfoSect</div>
+                </div>
+                <!--//card-text-->
+                <a
+                  href="#modal-speaker-6"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-6"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <!--//card-->
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a
+                      href="https://www.linkedin.com/in/kylie-mcdevitt-162b9a34/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+                <!--//social-list-->
+              </div>
+            </div>
+            <!--//card-->
+          </div>
+          <!--//col-->
+          <!--//col-->
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-7"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-7"
+                ><img
+                  src="assets/images/speakers/steve_baxter.jpg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Steve Baxter</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">Beaten Zone Venture Partners</div>
+                  <div class="meta">Executive Chairman TEN13</div>
+                  <div class="meta">Shark @ Shark Tank Australia</div>
+                </div>
+                <!--//card-text-->
+                <a
+                  href="#modal-speaker-7"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-7"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <!--//card-->
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/steve-baxter-021448/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+                <!--//social-list-->
+              </div>
+            </div>
+            <!--//card-->
+            <!--//col-->
+          </div>
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-8"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-8"
+                ><img
+                  src="assets/images/speakers/bradley_butler.jpg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Bradley Butler</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">Principal Consultant</div>
+                  <div class="meta">Mantel Group</div>
+                </div>
+                <!--//card-text-->
+                <a
+                  href="#modal-speaker-8"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-8"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <!--//card-->
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a
+                      href="https://www.linkedin.com/in/bradley-butler-msc-9445a154/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+                <!--//social-list-->
+              </div>
+            </div>
+            <!--//card-->
+            <!--//col-->
+          </div>
+          <!--//row-->
         </div>
         <!--//row-->
         <div class="speakers-cta text-center py-3">
@@ -1435,356 +1616,116 @@
           We work closely with our sponsors to make ROCCON 2024 a reality. If
           you want to be a sponsor get in touch below!
         </div>
+        <h3 class="fw-bolder text-primary mb-4">Gold</h3>
         <div class="row logos justify-content-center">
-          <!-- Silver -->
-          <h3 class="fw-bolder text-primary">Silver</h3>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-2"></div>
-              <!-- Tayko -->
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <div
-                    class="bg-secondary d-flex align-items-center"
-                    style="height: 150px"
-                  >
-                    <img
-                      class="mx-auto"
-                      alt="Tayko App Security"
-                      src="assets\images\sponsors\tayko.png"
-                      data-holder-rendered="true"
-                      style="height: 80px; width: 75%; display: block"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <a
-                        class="btn btn-sm btn-light mx-auto"
-                        target="_blank"
-                        href="https://tayko.io"
-                        >Tayko Cybersecurity</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Sekuro -->
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <div
-                    class="bg-secondary d-flex align-items-center"
-                    style="height: 150px"
-                  >
-                    <img
-                      class="mx-auto"
-                      alt="Sekuro"
-                      src="assets\images\sponsors\sekuro.png"
-                      data-holder-rendered="true"
-                      style="height: 80px; width: 75%; display: block"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <a
-                        type="button"
-                        class="btn btn-sm btn-light mx-auto"
-                        target="_blank"
-                        href="https://sekuro.io"
-                        >Sekuro</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://tayko.io" target="_blank"
+              ><img
+                src="assets/images/sponsors/tayko.png"
+                style="max-height: 100px"
+                alt="Tayko Group"
+            /></a>
           </div>
-          <!-- Bronze-->
-          <h3 class="fw-bolder text-primary">Bronze</h3>
-          <div class="container">
-            <!-- Row 1 -->
-            <div class="row">
-              <!-- Decipher -->
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <div
-                    class="bg-secondary d-flex align-items-center"
-                    style="height: 150px"
-                  >
-                    <img
-                      class="mx-auto"
-                      alt="Decipher Bureau"
-                      src="assets\images\sponsors\decipher-bureau.svg"
-                      data-holder-rendered="true"
-                      style="height: 100px; width: 75%; display: block"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <div class="d-flex align-items-center">
-                      <a
-                        type="button"
-                        class="btn btn-sm btn-light mx-auto"
-                        target="_blank"
-                        href="https://decipherbureau.com"
-                        >Decipher Bureau</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- AusCERT-->
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <div
-                    class="bg-secondary d-flex align-items-center"
-                    style="height: 150px"
-                  >
-                    <img
-                      class="mx-auto"
-                      alt="AusCERT"
-                      src="assets\images\sponsors\auscert.png"
-                      data-holder-rendered="true"
-                      style="height: 100px; width: 75%; display: block"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <a
-                        type="button"
-                        class="btn btn-sm btn-light mx-auto"
-                        target="_blank"
-                        href="https://auscert.org.au"
-                        >AusCERT</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Redwood -->
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <div
-                    class="bg-secondary d-flex align-items-center"
-                    style="height: 150px"
-                  >
-                    <img
-                      class="mx-auto"
-                      alt="Redwood Security"
-                      src="assets\images\sponsors\redwood.png"
-                      data-holder-rendered="true"
-                      style="height: 80px; width: 75%; display: block"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <a
-                        type="button"
-                        class="btn btn-sm btn-light mx-auto"
-                        target="_blank"
-                        href="https://www.redwoodsecurity.com.au"
-                        >Redwood Security</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Row 2 -->
-            <div class="row">
-              <!-- Payatu -->
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <div
-                    class="bg-secondary d-flex align-items-center"
-                    style="height: 150px"
-                  >
-                    <img
-                      class="mx-auto"
-                      alt="Payatu"
-                      src="assets\images\sponsors\payatu.png"
-                      data-holder-rendered="true"
-                      style="height: 80px; width: 75%; display: block"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <a
-                        type="button"
-                        class="btn btn-sm btn-light mx-auto"
-                        target="_blank"
-                        href="https://payatu.com/"
-                        >Payatu</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Jepsec -->
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <div
-                    class="bg-secondary d-flex align-items-center"
-                    style="height: 150px"
-                  >
-                    <img
-                      class="mx-auto"
-                      alt="Jepsec"
-                      src="assets\images\sponsors\jepsec.png"
-                      data-holder-rendered="true"
-                      style="height: 80px; width: 75%; display: block"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <a
-                        type="button"
-                        class="btn btn-sm btn-light mx-auto"
-                        target="_blank"
-                        href="https://jepsec.com.au/"
-                        >Jepsec</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Baidam -->
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <div
-                    class="bg-secondary d-flex align-items-center"
-                    style="height: 150px"
-                  >
-                    <img
-                      class="mx-auto"
-                      alt="Baidam"
-                      src="assets\images\sponsors\baidam.svg"
-                      data-holder-rendered="true"
-                      style="height: 80px; width: 75%; display: block"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <a
-                        type="button"
-                        class="btn btn-sm btn-light mx-auto"
-                        target="_blank"
-                        href="https://www.baidam.com.au/"
-                        >Baidam</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Row 3 -->
-            <div class="row">
-              <!-- CyberSec People -->
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <div
-                    class="bg-secondary d-flex align-items-center"
-                    style="height: 150px"
-                  >
-                    <img
-                      class="mx-auto"
-                      alt="CyberSec People"
-                      src="assets\images\sponsors\cybersec_people.svg"
-                      data-holder-rendered="true"
-                      style="height: 80px; width: 75%; display: block"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <a
-                        type="button"
-                        class="btn btn-sm btn-light mx-auto"
-                        target="_blank"
-                        href="https://www.cybersecpeople.com/"
-                        >CyberSec People</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- EAGLEGATE Lawyers -->
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <div
-                    class="bg-secondary d-flex align-items-center"
-                    style="height: 150px"
-                  >
-                    <img
-                      class="mx-auto"
-                      alt="EAGLEGATE Lawyers"
-                      src="assets\images\sponsors\eaglegate.png"
-                      data-holder-rendered="true"
-                      style="height: 80px; width: 75%; display: block"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <a
-                        type="button"
-                        class="btn btn-sm btn-light mx-auto"
-                        target="_blank"
-                        href="https://www.eaglegate.com.au/"
-                        >EAGLEGATE Lawyers</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- elttam -->
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <div
-                    class="bg-secondary d-flex align-items-center"
-                    style="height: 150px"
-                  >
-                    <img
-                      class="mx-auto"
-                      alt="elttam"
-                      src="assets\images\sponsors\elttam.png"
-                      data-holder-rendered="true"
-                      style="height: 80px; width: 75%; display: block"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <a
-                        type="button"
-                        class="btn btn-sm btn-light mx-auto"
-                        target="_blank"
-                        href="https://www.elttam.com/"
-                        >elttam</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--//row-->
+        </div>
+        <h3 class="fw-bolder text-primary mb-4">Silver</h3>
+        <div class="row logos justify-content-center">
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://sekuro.io" target="_blank"
+              ><img
+                src="assets/images/sponsors/sekuro.png"
+                style="max-height: 100px"
+                alt="Sekuro"
+            /></a>
           </div>
-          <!--//bronze-->
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.eaglegate.com.au/" target="_blank"
+              ><img
+                src="assets/images/sponsors/eaglegate.jpeg"
+                alt="EAGLEGATE Lawyers"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.redwoodsecurity.com.au/" target="_blank"
+              ><img
+                src="assets/images/sponsors/redwood.png"
+                alt="Redwood Consulting"
+            /></a>
+          </div>
+        </div>
+        <h3 class="fw-bolder text-primary mb-4">Bronze</h3>
+        <div class="row logos justify-content-center">
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.decipherbureau.com/" target="_blank"
+              ><img
+                src="assets/images/sponsors/decipher.png"
+                alt="Decipher Bureau"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://auscert.org.au/" target="_blank"
+              ><img src="assets/images/sponsors/auscert.svg" alt="AusCERT"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://payatu.com/" target="_blank"
+              ><img src="assets/images/sponsors/payatu.png" alt="Payatu"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://jepsec.com.au/" target="_blank"
+              ><img src="assets/images/sponsors/jepsec.webp" alt="Jepsec"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.baidam.com.au/" target="_blank"
+              ><img
+                src="assets/images/sponsors/baidam.svg"
+                alt="Baidam Solutions"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.cybersecpeople.com/" target="_blank"
+              ><img
+                src="assets/images/sponsors/cybersec_people.svg"
+                salt="CyberSec People"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.elttam.com/" target="_blank"
+              ><img src="assets/images/sponsors/elttam.png" alt="elttam"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://radiant.security" target="_blank"
+              ><img
+                src="assets/images/sponsors/radiant.png"
+                alt="Radiant Security"
+            /></a>
+          </div>
         </div>
         <!--//sponsors-->
         <div class="sponsors-cta text-center pt-5">
@@ -1809,10 +1750,8 @@
           </li>
           <li class="list-inline-item me-3">
             <a href="https://bsky.app/profile/realmsofcyber.bsky.social"
-              ><img
-                src="assets\images\social\Bluesky_Logo.svg"
-                class="social-icon"
-            /></a>
+              ><i class="fab fa-bluesky social-icon"></i
+            ></a>
           </li>
           <li class="list-inline-item me-3">
             <a href="https://infosec.exchange/@realmsofcyber@infosec.exchange"
@@ -1855,6 +1794,12 @@
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title p-2">Code of Conduct</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            ></button>
           </div>
           <div class="modal-body p-0">
             <div class="theme-bg-light p-5">
@@ -2382,8 +2327,9 @@
 
                 <div class="col text-center text-md-start mx-auto">
                   <h2 class="name mb-2">Nicholas Lindsay</h2>
-                  <div class="meta">Director & Pilot</div>
-                  <div class="meta">MATES Ventures</div>
+                  <div class="meta">
+                    Former SpaceX Director of Spacecraft Production
+                  </div>
                   <ul class="social-list list-inline mb-0">
                     <li class="list-inline-item">
                       <a href="https://www.linkedin.com/in/nblindsay/"
@@ -2410,6 +2356,358 @@
                 transform operational efficiencies and innovation across the
                 aerospace industry.
               </p>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker smarais -->
+    <div
+      class="modal modal-speaker modal-speaker-5"
+      id="modal-speaker-5"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-5-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-5-ModalLabel" class="modal-title sr-only">
+              Sanja Marais
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/sanja_marais.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Sanja Marais</h2>
+                  <div class="meta">Chief Technology and Security Officer</div>
+                  <div class="meta">Aspen Medical</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a
+                        href="https://www.linkedin.com/in/sanja-marais-2981487b/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                An experienced and accomplished technology and innovation
+                leader, program and change manager with over 14 years’
+                experience in the Australian health sector. I offer a unique
+                blend of executive acumen, global stakeholder management and
+                integrated solutions development expertise. As CTSO at Aspen
+                Medical, I have built a responsive IT environment that
+                consistently delivers results by aligning technology and
+                innovation with business goals. This has brought substantial
+                improvement in operational and clinical service delivery,
+                standardisation and business/systems performance.
+              </div>
+              <br />
+              <div class="meta">
+                In addition, I have effectively raised IT’s visibility within
+                the organisation by bringing technology decisions and a robust
+                cyber security framework to the forefront of crucial Executive
+                Committee discussions. I recently lead the company through an
+                IRAP assessment and succesful ISO 27001 certification. My career
+                includes multiple leadership roles including Board Memberships.
+                I currently lead a highly skilled IT team in implementing
+                complex systems and application development projects for
+                prominent private and public sector clients.
+              </div>
+              <p></p>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker kmcdevitt-->
+    <div
+      class="modal modal-speaker modal-speaker-6"
+      id="modal-speaker-6"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-6-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-6-ModalLabel" class="modal-title sr-only">
+              Kylie McDevitt
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/kylie_mcdevitt.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Kylie McDevitt</h2>
+                  <div class="meta">Chief Executive Officer</div>
+                  <div class="meta">InfoSect</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a
+                        href="https://www.linkedin.com/in/kylie-mcdevitt-162b9a34/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                Kylie McDevitt is a security researcher at her own company,
+                InfoSect, specialising in Linux and embedded devices. Before
+                starting at InfoSect, she was a Technical Director at the
+                Australian Signals Directorate (ASD). Kylie graduated from ANU
+                with a Bachelor of Engineering and worked for Australia's
+                largest telco as a radio engineer in MobileNet before moving
+                into computer security, where she has been for the last 15
+                years. She has a Masters in Computer Networking, as well as
+                multiple industry certifications. Kylie has taught as a casual
+                lecturer at UNSW Canberra and spends her free time organising
+                community events such as BSides Canberra and the CSides monthly
+                security meetup.
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker sbaxter -->
+    <div
+      class="modal modal-speaker modal-speaker-7"
+      id="modal-speaker-7"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-7-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-7-ModalLabel" class="modal-title sr-only">
+              Steve Baxter
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/steve_baxter.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Steve Baxter</h2>
+                  <div class="meta">Beaten Zone Venture Partners</div>
+                  <div class="meta">Executive Chairman TEN13</div>
+                  <div class="meta">Shark @ Shark Tank Australia</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/steve-baxter-021448/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                Tech start-up investor Steve Baxter is a proud Queenslander,
+                born in the remote town of Cloncurry and raised in Emerald in
+                the State's central highlands. In 1994, at the age of 23, Steve
+                put his life savings of $11,000 on the line to launch his first
+                start-up, the pioneering internet service provider SE Net, from
+                the spare room of his Adelaide home. Servicing more than 35,000
+                customers, SE Net was eventually acquired by Ozemail/UUNet under
+                the stewardship of its founding Director and Former Prime
+                Minister, Malcolm Turnbull.
+              </div>
+              <br />
+              <div class="meta">
+                In 2001, Steve teamed with a schoolmate to launch his second
+                start-up, PIPE Networks, a provider of wholesale telecoms
+                infrastructure that was listed on the ASX in 2005. Eight years
+                later they sold it to the TPG Group for $373 million. Steve
+                spent a year working with Google in California in 2008, leading
+                a project to deliver high-speed telecommunications systems
+                across North America. Steve is now the Co-founder and Executive
+                Chairman of TEN13, Australia's leading tech startup investment
+                platform with over 650 investors and crossing $100M in funds
+                under management, and Founder and Lead Investor with Beaten Zone
+                Venture Partners which is dedicated to early stage investments
+                in Australian sovereign lethal defence technology.
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker bbutler -->
+    <div
+      class="modal modal-speaker modal-speaker-8"
+      id="modal-speaker-8"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-8-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-8-ModalLabel" class="modal-title sr-only">
+              Bradley Butler
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/bradley_butler.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Bradley Butler</h2>
+                  <div class="meta">Principal Consultant</div>
+                  <div class="meta">Mantel Group</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a
+                        href="https://www.linkedin.com/in/bradley-butler-msc-9445a154/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                An experienced principal security consultant competent in
+                information governance, risk management, audit and compliance
+                with recent experience consulting to the Australian government,
+                commercial organisations, financial services, transport,
+                manufacturing, and critical national infrastructure (CNI)
+                industries. I have an MSc in Security and Risk Management and my
+                military background in the Royal Marines provides a further
+                level of management and security experience. I am knowledgeable
+                and certified to a number of internationally recognised security
+                standards and frameworks, including: ISO/IEC 27001:2013 and
+                22301, Australian Signals Directorate (ASD) Essential Eight, CIS
+                Controls, ISA 62443, NIST CSF, and Special Publication 800 - 53.
+              </div>
+              <br />
+              <div class="meta">
+                Led multiple threat modelling and cyber security engagements
+                against NIST CSF, ISO/IEC 27001:2013, ASD Essential Eight, APRA
+                CPS 234, and other recognised standards; developed multiple
+                strategic cyber security improvement roadmaps; presented
+                strategic initiatives for cyber security improvement to C-suite
+                stakeholders; delivered and led large scale supplier assurance
+                programs for financial organisations; delivered cyber security
+                assessments in industrial control systems (ICS) and operational
+                technology (OT) domains; as a virtual information security
+                manager, delivered security risk and audit services to multiple
+                organisations; developed cyber security incident management
+                plans and playbooks for multiple clients in the government
+                sector; and delivered onsite security incident table-top
+                exercises using tailored scenarios.
+              </div>
             </div>
           </div>
           <!--//modal-body-->

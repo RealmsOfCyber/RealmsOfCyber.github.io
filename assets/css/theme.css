@@ -14207,8 +14207,14 @@ a.theme-link:hover {
 }
 
 .header .logo-icon {
-    height: 17px;
+    height: 34px;
     width: auto
+}
+
+@media (min-width: 768px) {
+    .header .logo-icon {
+        height: 17px;
+    }
 }
 
 .header-shrink {

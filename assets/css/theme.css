@@ -14207,7 +14207,7 @@ a.theme-link:hover {
 }
 
 .header .logo-icon {
-    height: 34px;
+    height: 17px;
     width: auto
 }
 
@@ -14291,7 +14291,8 @@ a.theme-link:hover {
 }
 
 .hero-carousel .carousel-item-1 {
-    background: url("../images/hero-1.jpg") no-repeat center center
+    background: url("../images/hero-1.jpg") no-repeat center center;
+    background-size: cover;
 }
 
 .hero-carousel .carousel-item-2 {

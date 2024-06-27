@@ -14526,8 +14526,8 @@ a.theme-link:hover {
     margin-bottom: 2rem
 }
 
-.schedule-tab-content .item .item-talk {
-    min-height: 165px
+.schedule-tab-content .item.item-talk {
+    min-height: 140px
 }
 
 .schedule-tab-content .item:after {
@@ -14844,4 +14844,17 @@ a.theme-link:hover {
         -webkit-transform: scale(1);
         transform: scale(1)
     }
+}
+
+.redacted {
+    color: #000;
+    background-color: #000;
+}
+
+.redacted::selection {
+    background: #000;
+}
+
+.redacted::-moz-selection {
+    background: #000;
 }

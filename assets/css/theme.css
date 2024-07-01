@@ -5152,7 +5152,8 @@ fieldset:disabled .btn {
 .card-img,
 .card-img-top,
 .card-img-bottom {
-    width: 100%
+    width: 100%;
+    max-height: 306px;
 }
 
 .card-img,

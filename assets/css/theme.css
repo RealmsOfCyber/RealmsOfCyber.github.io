@@ -14677,7 +14677,8 @@ a.theme-link:hover {
 }
 
 .logo-item img {
-    max-width: 100%
+    max-width: 100%;
+    min-width: 100%
 }
 
 .footer {

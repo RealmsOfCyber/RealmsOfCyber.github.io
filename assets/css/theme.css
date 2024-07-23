@@ -5152,7 +5152,7 @@ fieldset:disabled .btn {
 .card-img,
 .card-img-top,
 .card-img-bottom {
-    width: 100%
+    width: 100%;
 }
 
 .card-img,
@@ -14673,11 +14673,15 @@ a.theme-link:hover {
 }
 
 .logo-item {
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    max-height: 65px;
+    justify-content: center
 }
 
 .logo-item img {
-    max-width: 100%
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 65px
 }
 
 .footer {

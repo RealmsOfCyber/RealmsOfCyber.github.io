@@ -38,6 +38,21 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16636793403"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-16636793403");
+    </script>
+
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
   </head>
@@ -166,50 +181,14 @@
     </div>
     <!--//hero-block-->
 
-    <div class="stats-block theme-bg-primary text-white py-4 text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <div class="item">
-              <div class="number">300+</div>
-              <div class="unit">Attendees</div>
-            </div>
-            <!--//item-->
-          </div>
-          <!--//col-->
-          <div class="col">
-            <div class="item">
-              <div class="number">1</div>
-              <div class="unit">Jam Packed Day</div>
-            </div>
-            <!--//item-->
-          </div>
-          <!--//col-->
-          <div class="col">
-            <div class="item">
-              <div class="number">16</div>
-              <div class="unit">Cyber-Physical Talks</div>
-            </div>
-            <!--//item-->
-          </div>
-          <!--//col-->
-        </div>
-      </div>
-      <!--//container-->
-    </div>
-    <!--//stats-block-->
-
     <section id="about-section" class="about-section section theme-bg-light">
       <div class="container">
         <h3 class="section-heading text-center mb-3">About ROCCON</h3>
         <div class="section-intro single-col-max mx-auto mb-4">
           ROCCON (Realms of Cyber Conference) is an expansion on our previous,
-          wildly successful, Autohackers conference. We are a think-tank,
-          conference, and hacker meet with a focus on the physical domains.
-          <br class="mb-3" />
-          We see a future where land, air, sea, space, cognitive, and
-          biotechnological industries are well supported to make the Australian
-          digital world safer.
+          wildly successful, Autohackers conference. We see a future where land,
+          air, sea, space, cognitive, and biotechnological industries are well
+          supported to make the Australian digital world safer.
           <br class="mb-3" />
           <strong>
             Our vision is simple: to help everyone grow and protect against
@@ -303,17 +282,16 @@
                 data-bs-toggle="modal"
                 data-bs-target="#modal-speaker-1"
                 ><img
-                  src="assets/images/speakers/charles_oconnell.jpg"
+                  src="assets/images/speakers/kylie_mcdevitt.jpg"
                   class="card-img-top rounded-0"
                   alt=""
               /></a>
               <div class="card-body">
-                <h5 class="card-title mb-2">Charles O'Connell</h5>
+                <h5 class="card-title mb-2">Kylie McDevitt</h5>
                 <div class="card-text mb-3">
-                  <div class="meta">Founder, Advisor & Investor</div>
-                  <div class="meta">Stealth Startup</div>
+                  <div class="meta">Chief Executive Officer</div>
+                  <div class="meta">InfoSect</div>
                 </div>
-                <!--//card-text-->
                 <a
                   href="#modal-speaker-1"
                   data-bs-toggle="modal"
@@ -321,27 +299,60 @@
                   >Read more &rarr;</a
                 >
               </div>
-              <!--//card-->
               <div class="card-footer text-muted">
                 <ul class="social-list list-inline mb-0">
                   <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/charles-o-2bb46223/"
+                    <a
+                      href="https://www.linkedin.com/in/kylie-mcdevitt-162b9a34/"
                       ><i class="fab fa-linkedin-in fa-fw"></i
                     ></a>
                   </li>
                 </ul>
-                <!--//social-list-->
               </div>
             </div>
-            <!--//card-->
           </div>
-          <!--//col-->
           <div class="col-6 col-lg-3 mb-4">
             <div class="card rounded-0">
               <a
                 href="#modal-speaker-2"
                 data-bs-toggle="modal"
                 data-bs-target="#modal-speaker-2"
+                ><img
+                  src="assets/images/speakers/steve_baxter.jpg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Steve Baxter</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">Beaten Zone Venture Partners</div>
+                  <div class="meta">Executive Chairman TEN13</div>
+                  <div class="meta">Shark @ Shark Tank Australia</div>
+                </div>
+                <a
+                  href="#modal-speaker-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-2"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/steve-baxter-021448/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-3"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-3"
                 ><img
                   src="assets/images/speakers/michael_creagh.jpg"
                   class="card-img-top rounded-0"
@@ -353,15 +364,13 @@
                   <div class="meta">Chief Executive Officer</div>
                   <div class="meta">Skyborne Technologies</div>
                 </div>
-                <!--//card-text-->
                 <a
-                  href="#modal-speaker-2"
+                  href="#modal-speaker-3"
                   data-bs-toggle="modal"
-                  data-bs-target="#modal-speaker-2"
+                  data-bs-target="#modal-speaker-3"
                   >Read more &rarr;</a
                 >
               </div>
-              <!--//card-->
               <div class="card-footer text-muted">
                 <ul class="social-list list-inline mb-0">
                   <li class="list-inline-item">
@@ -371,18 +380,15 @@
                     ></a>
                   </li>
                 </ul>
-                <!--//social-list-->
               </div>
             </div>
-            <!--//card-->
           </div>
-          <!--//col-->
           <div class="col-6 col-lg-3 mb-4">
             <div class="card rounded-0">
               <a
-                href="#modal-speaker-3"
+                href="#modal-speaker-4"
                 data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-3"
+                data-bs-target="#modal-speaker-4"
                 ><img
                   src="assets/images/speakers/anthony_caulfield.jpg"
                   class="card-img-top rounded-0"
@@ -396,15 +402,13 @@
                   </div>
                   <div class="meta">NCC</div>
                 </div>
-                <!--//card-text-->
                 <a
-                  href="#modal-speaker-3"
+                  href="#modal-speaker-4"
                   data-bs-toggle="modal"
-                  data-bs-target="#modal-speaker-3"
+                  data-bs-target="#modal-speaker-4"
                   >Read more &rarr;</a
                 >
               </div>
-              <!--//card-->
               <div class="card-footer text-muted">
                 <ul class="social-list list-inline mb-0">
                   <li class="list-inline-item">
@@ -414,18 +418,15 @@
                     ></a>
                   </li>
                 </ul>
-                <!--//social-list-->
               </div>
             </div>
-            <!--//card-->
           </div>
-          <!--//col-->
           <div class="col-6 col-lg-3 mb-4">
             <div class="card rounded-0">
               <a
-                href="#modal-speaker-4"
+                href="#modal-speaker-5"
                 data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-4"
+                data-bs-target="#modal-speaker-5"
                 ><img
                   src="assets/images/speakers/nicholas_lindsay.jpg"
                   class="card-img-top rounded-0"
@@ -438,15 +439,13 @@
                     Former SpaceX Director of Spacecraft Production
                   </div>
                 </div>
-                <!--//card-text-->
                 <a
-                  href="#modal-speaker-4"
+                  href="#modal-speaker-5"
                   data-bs-toggle="modal"
-                  data-bs-target="#modal-speaker-4"
+                  data-bs-target="#modal-speaker-5"
                   >Read more &rarr;</a
                 >
               </div>
-              <!--//card-->
               <div class="card-footer text-muted">
                 <ul class="social-list list-inline mb-0">
                   <li class="list-inline-item">
@@ -455,18 +454,15 @@
                     ></a>
                   </li>
                 </ul>
-                <!--//social-list-->
               </div>
             </div>
-            <!--//card-->
           </div>
-          <!--//col-->
           <div class="col-6 col-lg-3 mb-4">
             <div class="card rounded-0">
               <a
-                href="#modal-speaker-5"
+                href="#modal-speaker-6"
                 data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-5"
+                data-bs-target="#modal-speaker-6"
                 ><img
                   src="assets/images/speakers/sanja_marais.jpg"
                   class="card-img-top rounded-0"
@@ -478,15 +474,13 @@
                   <div class="meta">Chief Technology and Security Officer</div>
                   <div class="meta">Aspen Medical</div>
                 </div>
-                <!--//card-text-->
                 <a
-                  href="#modal-speaker-5"
+                  href="#modal-speaker-6"
                   data-bs-toggle="modal"
-                  data-bs-target="#modal-speaker-5"
+                  data-bs-target="#modal-speaker-6"
                   >Read more &rarr;</a
                 >
               </div>
-              <!--//card-->
               <div class="card-footer text-muted">
                 <ul class="social-list list-inline mb-0">
                   <li class="list-inline-item">
@@ -495,101 +489,15 @@
                     ></a>
                   </li>
                 </ul>
-                <!--//social-list-->
               </div>
             </div>
-            <!--//card-->
           </div>
-          <!--//col-->
-          <div class="col-6 col-lg-3 mb-4">
-            <div class="card rounded-0">
-              <a
-                href="#modal-speaker-6"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-6"
-                ><img
-                  src="assets/images/speakers/kylie_mcdevitt.jpg"
-                  class="card-img-top rounded-0"
-                  alt=""
-              /></a>
-              <div class="card-body">
-                <h5 class="card-title mb-2">Kylie McDevitt</h5>
-                <div class="card-text mb-3">
-                  <div class="meta">Chief Executive Officer</div>
-                  <div class="meta">InfoSect</div>
-                </div>
-                <!--//card-text-->
-                <a
-                  href="#modal-speaker-6"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modal-speaker-6"
-                  >Read more &rarr;</a
-                >
-              </div>
-              <!--//card-->
-              <div class="card-footer text-muted">
-                <ul class="social-list list-inline mb-0">
-                  <li class="list-inline-item">
-                    <a
-                      href="https://www.linkedin.com/in/kylie-mcdevitt-162b9a34/"
-                      ><i class="fab fa-linkedin-in fa-fw"></i
-                    ></a>
-                  </li>
-                </ul>
-                <!--//social-list-->
-              </div>
-            </div>
-            <!--//card-->
-          </div>
-          <!--//col-->
-          <!--//col-->
           <div class="col-6 col-lg-3 mb-4">
             <div class="card rounded-0">
               <a
                 href="#modal-speaker-7"
                 data-bs-toggle="modal"
                 data-bs-target="#modal-speaker-7"
-                ><img
-                  src="assets/images/speakers/steve_baxter.jpg"
-                  class="card-img-top rounded-0"
-                  alt=""
-              /></a>
-              <div class="card-body">
-                <h5 class="card-title mb-2">Steve Baxter</h5>
-                <div class="card-text mb-3">
-                  <div class="meta">Beaten Zone Venture Partners</div>
-                  <div class="meta">Executive Chairman TEN13</div>
-                  <div class="meta">Shark @ Shark Tank Australia</div>
-                </div>
-                <!--//card-text-->
-                <a
-                  href="#modal-speaker-7"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modal-speaker-7"
-                  >Read more &rarr;</a
-                >
-              </div>
-              <!--//card-->
-              <div class="card-footer text-muted">
-                <ul class="social-list list-inline mb-0">
-                  <li class="list-inline-item">
-                    <a href="https://www.linkedin.com/in/steve-baxter-021448/"
-                      ><i class="fab fa-linkedin-in fa-fw"></i
-                    ></a>
-                  </li>
-                </ul>
-                <!--//social-list-->
-              </div>
-            </div>
-            <!--//card-->
-            <!--//col-->
-          </div>
-          <div class="col-6 col-lg-3 mb-4">
-            <div class="card rounded-0">
-              <a
-                href="#modal-speaker-8"
-                data-bs-toggle="modal"
-                data-bs-target="#modal-speaker-8"
                 ><img
                   src="assets/images/speakers/bradley_butler.jpg"
                   class="card-img-top rounded-0"
@@ -598,18 +506,16 @@
               <div class="card-body">
                 <h5 class="card-title mb-2">Bradley Butler</h5>
                 <div class="card-text mb-3">
-                  <div class="meta">Principal Consultant</div>
+                  <div class="meta">Maritime Cybersecurity Expert</div>
                   <div class="meta">Mantel Group</div>
                 </div>
-                <!--//card-text-->
                 <a
-                  href="#modal-speaker-8"
+                  href="#modal-speaker-7"
                   data-bs-toggle="modal"
-                  data-bs-target="#modal-speaker-8"
+                  data-bs-target="#modal-speaker-7"
                   >Read more &rarr;</a
                 >
               </div>
-              <!--//card-->
               <div class="card-footer text-muted">
                 <ul class="social-list list-inline mb-0">
                   <li class="list-inline-item">
@@ -619,15 +525,331 @@
                     ></a>
                   </li>
                 </ul>
-                <!--//social-list-->
               </div>
             </div>
-            <!--//card-->
-            <!--//col-->
           </div>
-          <!--//row-->
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-8"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-8"
+                ><img
+                  src="assets/images/speakers/chris_hockings.jpeg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Chris Hockings</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">Chief Technology Officer</div>
+                  <div class="meta">IBM Security Asia Pacific</div>
+                </div>
+                <a
+                  href="#modal-speaker-8"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-8"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/chrishockings/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-9"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-9"
+                ><img
+                  src="assets/images/speakers/chathura_abeydeera.jpg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Chathura Abeydeera</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">Cyber and Space Intelligence Expert</div>
+                  <div class="meta">KPMG Australia</div>
+                </div>
+                <a
+                  href="#modal-speaker-9"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-9"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/abeydeera/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-10"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-10"
+                ><img
+                  src="assets/images/speakers/sam_kelly.png"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Samuel Kelly</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">Offensive Security Consultant</div>
+                  <div class="meta">Sekuro</div>
+                </div>
+                <a
+                  href="#modal-speaker-10"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-10"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/dj-spacies/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-11"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-11"
+                ><img
+                  src="assets/images/speakers/daniel_castillo.jpg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Daniel Castillo</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">OT Cybersecurity Specialist</div>
+                </div>
+                <a
+                  href="#modal-speaker-11"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-11"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a
+                      href="https://www.linkedin.com/in/daniel-castillo-2259236b/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-12"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-12"
+                ><img
+                  src="assets/images/speakers/sadeed_tirmizey.jpg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Sadeed Tirmizey</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">Chief Information Security Officer</div>
+                  <div class="meta">Seqwater</div>
+                </div>
+                <a
+                  href="#modal-speaker-12"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-12"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/tirmizey/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-13"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-13"
+                ><img
+                  src="assets/images/speakers/travis_quinn.jpg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Travis Quinn</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">Principal Security Architect</div>
+                  <div class="meta">Tesserent</div>
+                </div>
+                <a
+                  href="#modal-speaker-13"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-13"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/travis-quinn1/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-14"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-14"
+                ><img
+                  src="assets/images/speakers/edward_farrell.jpeg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Edward Farrell</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">CEO & Principal Consultant</div>
+                  <div class="meta">Mercury Information Security Services</div>
+                </div>
+                <a
+                  href="#modal-speaker-14"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-14"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/31337au/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-speaker-15"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-speaker-15"
+                ><img
+                  src="assets/images/speakers/alex_tilley.jpg"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Alex Tilley</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">APAC Intelligence and Research Head</div>
+                  <div class="meta">Secureworks</div>
+                </div>
+                <a
+                  href="#modal-speaker-15"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-speaker-15"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/alex-tilley-440b992/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <!--//row-->
+        <h3 class="section-heading text-center mb-3">MC</h3>
+        <div class="section-intro text-center single-col-max mx-auto mb-4">
+          ROCCON 2024 will be hosted by the wonderful Adam Green:
+        </div>
+        <div class="row">
+          <div class="mx-auto col-6 col-lg-3 mb-4">
+            <div class="card rounded-0">
+              <a
+                href="#modal-mc"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-mc"
+                ><img
+                  src="assets/images/speakers/adam_green.png"
+                  class="card-img-top rounded-0"
+                  alt=""
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title mb-2">Adam Green</h5>
+                <div class="card-text mb-3">
+                  <div class="meta">Chief Information Security Officer</div>
+                  <div class="meta">Cryptoloc Data Security</div>
+                </div>
+                <a
+                  href="#modal-mc"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal-mc"
+                  >Read more &rarr;</a
+                >
+              </div>
+              <div class="card-footer text-muted">
+                <ul class="social-list list-inline mb-0">
+                  <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/adam-green-7a348519/"
+                      ><i class="fab fa-linkedin-in fa-fw"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="speakers-cta text-center py-3">
           <a
             class="btn btn-primary btn-lg"
@@ -1422,11 +1644,7 @@
               </div>
               <!--//card-body-->
               <div class="card-footer text-center">
-                <a
-                  href="https://events.humanitix.com/realms-of-cyber-conference-2024?discountcode=ROCCON-2024-D10"
-                  class="btn btn-primary"
-                  >Buy Now</a
-                >
+                <a href="#" class="btn btn-primary disabled">SOLD OUT</a>
               </div>
             </div>
             <!--//card-->
@@ -1479,11 +1697,7 @@
               </div>
               <!--//card-body-->
               <div class="card-footer text-center">
-                <a
-                  href="https://events.humanitix.com/realms-of-cyber-conference-2024?discountcode=ROCCON-2024-D10"
-                  class="btn btn-primary"
-                  >Buy Now</a
-                >
+                <a href="#" class="btn btn-primary disabled">SOLD OUT</a>
               </div>
             </div>
             <!--//card-->
@@ -1509,7 +1723,7 @@
               <p>
                 Brisbane Powerhouse is an iconic venue only 20 minutes from the
                 Airport and 400 metres from Public Transport! It is a
-                magnificent power station of the 1920s reborn as Queensland’s
+                magnificent power station of the 1920s reborn as Queensland's
                 home of contemporary art and culture located along the Brisbane
                 River (Maiwar) on Yagara Country. We think it's a perfect
                 location to be hosting Brisbane's pure cyberphysical conference.
@@ -1570,8 +1784,24 @@
           Sponsors &amp; Partners
         </h3>
         <div class="section-intro text-center single-col-max mx-auto mb-5">
-          We work closely with our sponsors to make ROCCON 2024 a reality. If
-          you want to be a sponsor get in touch below!
+          Realms of Cyber is proudly supported by the Queensland Government.
+          <br />
+          <br />
+          We also work closely with all of our other generous sponsors to make
+          ROCCON 2024 a reality. If you're interested in becoming a sponsor, get
+          in touch below!
+        </div>
+        <h3 class="fw-bolder text-primary mb-4">Platinum</h3>
+        <div class="row logos justify-content-center">
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.qld.gov.au/" target="_blank"
+              ><img
+                src="assets/images/sponsors/qldgov.png"
+                alt="Queensland Government"
+            /></a>
+          </div>
         </div>
         <h3 class="fw-bolder text-primary mb-4">Gold</h3>
         <div class="row logos justify-content-center">
@@ -1579,23 +1809,7 @@
             class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
           >
             <a href="https://tayko.io" target="_blank"
-              ><img
-                src="assets/images/sponsors/tayko.png"
-                style="max-height: 100px"
-                alt="Tayko Group"
-            /></a>
-          </div>
-        </div>
-        <h3 class="fw-bolder text-primary mb-4">Silver</h3>
-        <div class="row logos justify-content-center">
-          <div
-            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
-          >
-            <a href="https://sekuro.io" target="_blank"
-              ><img
-                src="assets/images/sponsors/sekuro.png"
-                style="max-height: 100px"
-                alt="Sekuro"
+              ><img src="assets/images/sponsors/tayko.png" alt="Tayko Group"
             /></a>
           </div>
           <div
@@ -1607,6 +1821,16 @@
                 alt="EAGLEGATE Lawyers"
             /></a>
           </div>
+        </div>
+        <h3 class="fw-bolder text-primary mb-4">Silver</h3>
+        <div class="row logos justify-content-center">
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://sekuro.io" target="_blank"
+              ><img src="assets/images/sponsors/sekuro.png" alt="Sekuro"
+            /></a>
+          </div>
           <div
             class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
           >
@@ -1616,9 +1840,13 @@
                 alt="Redwood Consulting"
             /></a>
           </div>
-        </div>
-        <h3 class="fw-bolder text-primary mb-4">Bronze</h3>
-        <div class="row logos justify-content-center">
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://tarian.com.au/" target="_blank"
+              ><img src="assets/images/sponsors/tarian.png" alt="Tarian Cyber"
+            /></a>
+          </div>
           <div
             class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
           >
@@ -1628,6 +1856,16 @@
                 alt="Decipher Bureau"
             /></a>
           </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.adrenalan.com/" target="_blank"
+              ><img src="assets/images/sponsors/adrenalan.png" alt="Adrenalan"
+            /></a>
+          </div>
+        </div>
+        <h3 class="fw-bolder text-primary mb-4">Bronze</h3>
+        <div class="row logos justify-content-center">
           <div
             class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
           >
@@ -1681,6 +1919,87 @@
               ><img
                 src="assets/images/sponsors/radiant.png"
                 alt="Radiant Security"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://zevint.au/" target="_blank"
+              ><img src="assets/images/sponsors/zev.png" alt="ZEV Integrations"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.griffith.edu.au/" target="_blank"
+              ><img
+                src="assets/images/sponsors/griffith_university.png"
+                alt="Griffith University"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.galahcyber.com.au/" target="_blank"
+              ><img src="assets/images/sponsors/galah.png" alt="Galah Cyber"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.netskope.com/" target="_blank"
+              ><img src="assets/images/sponsors/netskope.png" alt="Netskope"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://tomshaw.com/" target="_blank"
+              ><img src="assets/images/sponsors/tomshaw.png" alt="Tom Shaw"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://jypragroup.com.au/" target="_blank"
+              ><img
+                src="assets/images/sponsors/jypra_group.png"
+                alt="Jypra Group"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.volkis.com.au/" target="_blank"
+              ><img src="assets/images/sponsors/volkis.png" alt="Volkis"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://secalerts.co/" target="_blank"
+              ><img src="assets/images/sponsors/secalerts.png" alt="SecAlerts"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://cyberon.com.au" target="_blank"
+              ><img src="assets/images/sponsors/cyberon.png" alt="CYBERON"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://au.hudson.com/" target="_blank"
+              ><img src="assets/images/sponsors/hudson.png" alt="Hudson"
+            /></a>
+          </div>
+          <div
+            class="logo-item m-4 col-6 col-md-4 col-lg-2 d-flex align-items-center"
+          >
+            <a href="https://www.ibm.com/au-en" target="_blank"
+              ><img src="assets/images/sponsors/ibm.png" alt="IBM"
             /></a>
           </div>
         </div>
@@ -1995,8 +2314,100 @@
       <!--//modal-dialog-->
     </div>
 
+    <!-- Modal MC-->
+    <div
+      class="modal modal-speaker modal-mc"
+      id="modal-mc"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="mc-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="mc-ModalLabel" class="modal-title sr-only">Adam Green</h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/adam_green.png"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Adam Green</h2>
+                  <div class="meta">Chief Information Security Officier</div>
+                  <div class="meta">Cryptoloc Data Security</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/adam-green-7a348519/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                With over two decades at the forefront of cybersecurity
+                thought-leadership with some of the industry's biggest
+                disruptors such as IBM, Palo Alto, Verizon, the Israeli
+                Government, and NTT, Adam has been the advisor in the War Room
+                for over 20 active cybersecurity incidents and Ransomware
+                attacks, and hundreds of simulated scenarios.
+              </div>
+              <br />
+              <div class="meta">
+                Having worked with some of the world's best forensic
+                investigators and ethical hackers, Adam's disruptive view of
+                cybersecurity allows him to advise the industry's most
+                progressive CIO's and CISO's with a unique perspective of the
+                cyber threat landscape and adversary behaviour.
+              </div>
+              <br />
+              <div class="meta">
+                As the CISO of Cryptoloc, and Founder of Cybersecurity advisory,
+                Green Cyber Consulting, Adam uses his experience and exposure to
+                some of the leading Higher Education, Critical Infrastructure,
+                Airports, Airlines and Medical Service Providers across the
+                Globe, to collaborating with our most vulnerable sectors to
+                address complex cybersecurity challenges.
+              </div>
+              <br />
+              <div class="meta">
+                Adam is based out of Brisbane, Australia and holds a
+                qualification in Cyber Warfare and Terrorism, Cyber/Electronic
+                Operations and Warfare from Charles Sturt University.
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
     <!-- Modal Speakers -->
-    <!-- Modal Speaker coconnell -->
+    <!-- Modal Speaker kmcdevitt-->
     <div
       class="modal modal-speaker modal-speaker-1"
       id="modal-speaker-1"
@@ -2017,402 +2428,6 @@
               &times;
             </button>
             <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
-              Speaker Name
-            </h4>
-          </div>
-          <div class="modal-body p-0">
-            <div class="theme-bg-light p-5">
-              <div class="row">
-                <div class="col-12 col-md-auto text-center">
-                  <img
-                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
-                    src="assets/images/speakers/charles_oconnell.jpg"
-                    alt=""
-                  />
-                </div>
-
-                <div class="col text-center text-md-start mx-auto">
-                  <h2 class="name mb-2">Charles O'Connell</h2>
-                  <div class="meta">CEO, Advisor & Investor</div>
-                  <ul class="social-list list-inline mb-0">
-                    <li class="list-inline-item">
-                      <a href="https://www.linkedin.com/in/charles-o-2bb46223/"
-                        ><i class="fab fa-linkedin-in fa-fw"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <!--//social-list-->
-                </div>
-                <!--//col-->
-              </div>
-              <!--//row-->
-            </div>
-            <div class="desc p-4 p-lg-5">
-              <p>
-                Charles O'Connell started his career as a diplomat with the UK's
-                Foreign and Commonwealth Office. With over two decades of
-                leadership in the tech and cybersecurity sectors, he has a
-                proven track record of driving growth and fostering innovation.
-                Currently, he is an Advisor at Balmoral Industries and a
-                Co-Founder and Investor at a stealth startup. His past roles
-                include Chief Growth Officer at CyberCX, where he spearheaded
-                major expansion initiatives, and Managing Director at Accenture,
-                focusing on cybersecurity solutions. Charles holds a BA (Hons.)
-                in Politics from The University of Sheffield and a Postgraduate
-                Diploma in Law from BPP Law School.
-              </p>
-            </div>
-          </div>
-          <!--//modal-body-->
-        </div>
-        <!--//modal-content-->
-      </div>
-      <!--//modal-dialog-->
-    </div>
-    <!--//modal-->
-
-    <!-- Modal Speaker mcreagh -->
-    <div
-      class="modal modal-speaker modal-speaker-2"
-      id="modal-speaker-2"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="speaker-2-ModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-hidden="true"
-            >
-              &times;
-            </button>
-            <h4 id="speaker-2-ModalLabel" class="modal-title sr-only">
-              Michael Creagh, PHD
-            </h4>
-          </div>
-          <div class="modal-body p-0">
-            <div class="theme-bg-light p-5">
-              <div class="row">
-                <div class="col-12 col-md-auto text-center">
-                  <img
-                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
-                    src="assets/images/speakers/michael_creagh.jpg"
-                    alt=""
-                  />
-                </div>
-
-                <div class="col text-center text-md-start mx-auto">
-                  <h2 class="name mb-2">Michael Creagh, PHD</h2>
-                  <div class="meta">CEO</div>
-                  <div class="meta">Skyborne Technologies</div>
-                  <ul class="social-list list-inline mb-0">
-                    <li class="list-inline-item">
-                      <a
-                        href="https://www.linkedin.com/in/michael-creagh-1469a210/"
-                        ><i class="fab fa-linkedin-in fa-fw"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <!--//social-list-->
-                </div>
-                <!--//col-->
-              </div>
-              <!--//row-->
-            </div>
-            <div class="desc p-4 p-lg-5">
-			<p>
-                Skyborne Technologies is an Australian Defence company
-                developing smart aerial robotics and weapon systems for Defence
-                and Security customers.
-              </p>
-              <p>
-                Dr. Michael Creagh is the CEO at Skyborne Technologies. He has
-                been working in the Guidance, Navigation and Control (GNC) field
-                since 2007, graduating with a PhD in missile guidance in 2011.
-                He has produced two novel guidance laws for space craft and
-                spinning rockets, an adaptive control law for a hypersonic
-                glider and a plethora of intelligent navigation algorithms.
-				</p>
-				<p>
-                Michael has published on a variety of topics and was highlighted
-                by Popular Science Magazine, ABC Television's Catalyst and
-                Aviation week for GNC work on the SCRAMSPACE 1 hypersonic flight
-                experiment
-              </p>
-            </div>
-          </div>
-          <!--//modal-body-->
-        </div>
-        <!--//modal-content-->
-      </div>
-      <!--//modal-dialog-->
-    </div>
-    <!--//modal-->
-
-    <!-- Modal Speaker acaulfield -->
-    <div
-      class="modal modal-speaker modal-speaker-3"
-      id="modal-speaker-3"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="speaker-3-ModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-hidden="true"
-            >
-              &times;
-            </button>
-            <h4 id="speaker-3-ModalLabel" class="modal-title sr-only">
-              Anthony Caulfield
-            </h4>
-          </div>
-          <div class="modal-body p-0">
-            <div class="theme-bg-light p-5">
-              <div class="row">
-                <div class="col-12 col-md-auto text-center">
-                  <img
-                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
-                    src="assets/images/speakers/anthony_caulfield.jpg"
-                    alt=""
-                  />
-                </div>
-
-                <div class="col text-center text-md-start mx-auto">
-                  <h2 class="name mb-2">Anthony Caulfield</h2>
-                  <div class="meta">
-                    Associate Director and APAC Transport Security Lead
-                  </div>
-                  <div class="meta">NCC</div>
-                  <ul class="social-list list-inline mb-0">
-                    <li class="list-inline-item">
-                      <a
-                        href="https://www.linkedin.com/in/anthony-caulfield-944680/"
-                        ><i class="fab fa-linkedin-in fa-fw"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <!--//social-list-->
-                </div>
-                <!--//col-->
-              </div>
-              <!--//row-->
-            </div>
-            <div class="desc p-4 p-lg-5">
-              <p>
-                Wireless networks used in the railway environment can make use
-                of common standards and commodity hardware, others are
-                customised and can seem invisible to our usual attack
-                techniques. This presentation will discuss one such
-                customisation, the challenges with using our standard pentest
-                tooling, and how to better uncover and pentest these networks.
-              </p>
-            </div>
-          </div>
-          <!--//modal-body-->
-        </div>
-        <!--//modal-content-->
-      </div>
-      <!--//modal-dialog-->
-    </div>
-    <!--//modal-->
-
-    <!-- Modal Speaker nlindsay -->
-    <div
-      class="modal modal-speaker modal-speaker-4"
-      id="modal-speaker-4"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="speaker-4-ModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-hidden="true"
-            >
-              &times;
-            </button>
-            <h4 id="speaker-4-ModalLabel" class="modal-title sr-only">
-              Nicholas Lindsay
-            </h4>
-          </div>
-          <div class="modal-body p-0">
-            <div class="theme-bg-light p-5">
-              <div class="row">
-                <div class="col-12 col-md-auto text-center">
-                  <img
-                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
-                    src="assets/images/speakers/nicholas_lindsay.jpg"
-                    alt=""
-                  />
-                </div>
-
-                <div class="col text-center text-md-start mx-auto">
-                  <h2 class="name mb-2">Nicholas Lindsay</h2>
-                  <div class="meta">
-                    Former SpaceX Director of Spacecraft Production
-                  </div>
-                  <ul class="social-list list-inline mb-0">
-                    <li class="list-inline-item">
-                      <a href="https://www.linkedin.com/in/nblindsay/"
-                        ><i class="fab fa-linkedin-in fa-fw"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <!--//social-list-->
-                </div>
-                <!--//col-->
-              </div>
-              <!--//row-->
-            </div>
-            <div class="desc p-4 p-lg-5">
-              <p>
-                Director & Pilot at MATES Ventures, Nicholas draws from his
-                insights into SpaceX's operational strategies to present "The
-                SpaceX Mentality." With an MBA from the Texas McCombs School of
-                Business and a B.S. in Aerospace Engineering from the United
-                States Naval Academy, Nicholas has extensive experience in
-                aerospace leadership and operations management. His presentation
-                will discuss how the innovative practices at SpaceX can
-                transform operational efficiencies and innovation across the
-                aerospace industry.
-              </p>
-            </div>
-          </div>
-          <!--//modal-body-->
-        </div>
-        <!--//modal-content-->
-      </div>
-      <!--//modal-dialog-->
-    </div>
-    <!--//modal-->
-
-    <!-- Modal Speaker smarais -->
-    <div
-      class="modal modal-speaker modal-speaker-5"
-      id="modal-speaker-5"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="speaker-5-ModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-hidden="true"
-            >
-              &times;
-            </button>
-            <h4 id="speaker-5-ModalLabel" class="modal-title sr-only">
-              Sanja Marais
-            </h4>
-          </div>
-          <div class="modal-body p-0">
-            <div class="theme-bg-light p-5">
-              <div class="row">
-                <div class="col-12 col-md-auto text-center">
-                  <img
-                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
-                    src="assets/images/speakers/sanja_marais.jpg"
-                    alt=""
-                  />
-                </div>
-
-                <div class="col text-center text-md-start mx-auto">
-                  <h2 class="name mb-2">Sanja Marais</h2>
-                  <div class="meta">Chief Technology and Security Officer</div>
-                  <div class="meta">Aspen Medical</div>
-                  <ul class="social-list list-inline mb-0">
-                    <li class="list-inline-item">
-                      <a
-                        href="https://www.linkedin.com/in/sanja-marais-2981487b/"
-                        ><i class="fab fa-linkedin-in fa-fw"></i
-                      ></a>
-                    </li>
-                  </ul>
-                  <!--//social-list-->
-                </div>
-                <!--//col-->
-              </div>
-              <!--//row-->
-            </div>
-            <div class="desc p-4 p-lg-5">
-              <div class="meta">
-                An experienced and accomplished technology and innovation
-                leader, program and change manager with over 14 years’
-                experience in the Australian health sector. I offer a unique
-                blend of executive acumen, global stakeholder management and
-                integrated solutions development expertise. As CTSO at Aspen
-                Medical, I have built a responsive IT environment that
-                consistently delivers results by aligning technology and
-                innovation with business goals. This has brought substantial
-                improvement in operational and clinical service delivery,
-                standardisation and business/systems performance.
-              </div>
-              <br />
-              <div class="meta">
-                In addition, I have effectively raised IT’s visibility within
-                the organisation by bringing technology decisions and a robust
-                cyber security framework to the forefront of crucial Executive
-                Committee discussions. I recently lead the company through an
-                IRAP assessment and succesful ISO 27001 certification. My career
-                includes multiple leadership roles including Board Memberships.
-                I currently lead a highly skilled IT team in implementing
-                complex systems and application development projects for
-                prominent private and public sector clients.
-              </div>
-              <p></p>
-            </div>
-          </div>
-          <!--//modal-body-->
-        </div>
-        <!--//modal-content-->
-      </div>
-      <!--//modal-dialog-->
-    </div>
-    <!--//modal-->
-
-    <!-- Modal Speaker kmcdevitt-->
-    <div
-      class="modal modal-speaker modal-speaker-6"
-      id="modal-speaker-6"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="speaker-6-ModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-hidden="true"
-            >
-              &times;
-            </button>
-            <h4 id="speaker-6-ModalLabel" class="modal-title sr-only">
               Kylie McDevitt
             </h4>
           </div>
@@ -2472,11 +2487,11 @@
 
     <!-- Modal Speaker sbaxter -->
     <div
-      class="modal modal-speaker modal-speaker-7"
-      id="modal-speaker-7"
+      class="modal modal-speaker modal-speaker-2"
+      id="modal-speaker-2"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="speaker-7-ModalLabel"
+      aria-labelledby="speaker-2-ModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
@@ -2490,7 +2505,7 @@
             >
               &times;
             </button>
-            <h4 id="speaker-7-ModalLabel" class="modal-title sr-only">
+            <h4 id="speaker-2-ModalLabel" class="modal-title sr-only">
               Steve Baxter
             </h4>
           </div>
@@ -2560,13 +2575,13 @@
     </div>
     <!--//modal-->
 
-    <!-- Modal Speaker bbutler -->
+    <!-- Modal Speaker mcreagh -->
     <div
-      class="modal modal-speaker modal-speaker-8"
-      id="modal-speaker-8"
+      class="modal modal-speaker modal-speaker-3"
+      id="modal-speaker-3"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="speaker-8-ModalLabel"
+      aria-labelledby="speaker-3-ModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog">
@@ -2580,7 +2595,321 @@
             >
               &times;
             </button>
-            <h4 id="speaker-8-ModalLabel" class="modal-title sr-only">
+            <h4 id="speaker-3-ModalLabel" class="modal-title sr-only">
+              Michael Creagh, PHD
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/michael_creagh.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Michael Creagh, PHD</h2>
+                  <div class="meta">CEO</div>
+                  <div class="meta">Skyborne Technologies</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a
+                        href="https://www.linkedin.com/in/michael-creagh-1469a210/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                Dr. Michael Creagh is the CEO at Skyborne Technologies. He has
+                been working in the Guidance, Navigation and Control (GNC) field
+                since 2007, graduating with a PhD in missile guidance in 2011.
+                He has produced two novel guidance laws for space craft and
+                spinning rockets, an adaptive control law for a hypersonic
+                glider and a plethora of intelligent navigation algorithms.
+				</p>
+				<p>
+                Michael has published on a variety of topics and was highlighted
+                by Popular Science Magazine, ABC Television's Catalyst and
+                Aviation week for GNC work on the SCRAMSPACE 1 hypersonic flight
+                experiment
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker acaulfield -->
+    <div
+      class="modal modal-speaker modal-speaker-4"
+      id="modal-speaker-4"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-4-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-4-ModalLabel" class="modal-title sr-only">
+              Anthony Caulfield
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/anthony_caulfield.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Anthony Caulfield</h2>
+                  <div class="meta">
+                    Associate Director and APAC Transport Security Lead
+                  </div>
+                  <div class="meta">NCC</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a
+                        href="https://www.linkedin.com/in/anthony-caulfield-944680/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                Anthony is the regional lead for NCC Group's Transport Security
+                Practice. He has 25 years' experience in the cybersecurity
+                industry and particularly enjoys hacking trains, OT systems and
+                critical infrastructure.
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker nlindsay -->
+    <div
+      class="modal modal-speaker modal-speaker-5"
+      id="modal-speaker-5"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-5-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-5-ModalLabel" class="modal-title sr-only">
+              Nicholas Lindsay
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/nicholas_lindsay.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Nicholas Lindsay</h2>
+                  <div class="meta">
+                    Former SpaceX Director of Spacecraft Production
+                  </div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/nblindsay/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <p>
+                Director & Pilot at MATES Ventures, Nicholas draws from his
+                insights into SpaceX's operational strategies to present "The
+                SpaceX Mentality." With an MBA from the Texas McCombs School of
+                Business and a B.S. in Aerospace Engineering from the United
+                States Naval Academy, Nicholas has extensive experience in
+                aerospace leadership and operations management. His presentation
+                will discuss how the innovative practices at SpaceX can
+                transform operational efficiencies and innovation across the
+                aerospace industry.
+              </p>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker smarais -->
+    <div
+      class="modal modal-speaker modal-speaker-6"
+      id="modal-speaker-6"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-6-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-6-ModalLabel" class="modal-title sr-only">
+              Sanja Marais
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/sanja_marais.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Sanja Marais</h2>
+                  <div class="meta">Chief Technology and Security Officer</div>
+                  <div class="meta">Aspen Medical</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a
+                        href="https://www.linkedin.com/in/sanja-marais-2981487b/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                An experienced and accomplished technology and innovation
+                leader, program and change manager with over 14 years’
+                experience in the Australian health sector. I offer a unique
+                blend of executive acumen, global stakeholder management and
+                integrated solutions development expertise. As CTSO at Aspen
+                Medical, I have built a responsive IT environment that
+                consistently delivers results by aligning technology and
+                innovation with business goals. This has brought substantial
+                improvement in operational and clinical service delivery,
+                standardisation and business/systems performance.
+              </div>
+              <br />
+              <div class="meta">
+                In addition, I have effectively raised IT’s visibility within
+                the organisation by bringing technology decisions and a robust
+                cyber security framework to the forefront of crucial Executive
+                Committee discussions. I recently lead the company through an
+                IRAP assessment and succesful ISO 27001 certification. My career
+                includes multiple leadership roles including Board Memberships.
+                I currently lead a highly skilled IT team in implementing
+                complex systems and application development projects for
+                prominent private and public sector clients.
+              </div>
+              <p></p>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker bbutler -->
+    <div
+      class="modal modal-speaker modal-speaker-7"
+      id="modal-speaker-7"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-7-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-7-ModalLabel" class="modal-title sr-only">
               Bradley Butler
             </h4>
           </div>
@@ -2597,7 +2926,7 @@
 
                 <div class="col text-center text-md-start mx-auto">
                   <h2 class="name mb-2">Bradley Butler</h2>
-                  <div class="meta">Principal Consultant</div>
+                  <div class="meta">Maritime Cybersecurity Expert</div>
                   <div class="meta">Mantel Group</div>
                   <ul class="social-list list-inline mb-0">
                     <li class="list-inline-item">
@@ -2644,6 +2973,679 @@
                 plans and playbooks for multiple clients in the government
                 sector; and delivered onsite security incident table-top
                 exercises using tailored scenarios.
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker chockings -->
+    <div
+      class="modal modal-speaker modal-speaker-8"
+      id="modal-speaker-8"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-8-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-8-ModalLabel" class="modal-title sr-only">
+              Chris Hockings
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/chris_hockings.jpeg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Chris Hockings</h2>
+                  <div class="meta">Chief Technology Officer</div>
+                  <div class="meta">IBM Security Asia Pacific</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/chrishockings/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                Chris Hockings is the CTO for IBM Security Asia Pacific. He
+                represents the IBM global security strategy and vision to the
+                geography, and in doing so engages with leaders across
+                government, industry and the ecosystem. Chris has been a leader
+                across all facets of software, including global research and
+                development, support, service and market engagement. He is a
+                recognised IBM Master Inventor, a title that reflects a
+                sustained contribution to IBM Security's patent portfolio. Chris
+                is also a certified information systems security professional
+                (CISSP).
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker cabeydeera -->
+    <div
+      class="modal modal-speaker modal-speaker-9"
+      id="modal-speaker-9"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-9-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-9-ModalLabel" class="modal-title sr-only">
+              Chathura Abeydeera
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/chathura_abeydeera.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Chathura Abeydeera</h2>
+                  <div class="meta">Cyber and Space Intelligence Expert</div>
+                  <div class="meta">KPMG Australia</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/abeydeera/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                Chathura is a Director in the consulting practice of KPMG
+                Australia and leads the Cyber Attack and Response services. He
+                possesses over 20 years of experience in offensive
+                cybersecurity, establishing himself as a highly technical
+                cybersecurity practitioner. He holds certifications as a CREST
+                Certified Simulated Attack Manager, a CREST Certified Tester,
+                and serves as an examination assessor for CREST International.
+                He additionally holds a position as an advisory board member for
+                CREST Australasia. He has delivered complex technical
+                cybersecurity assessment programs and incident response
+                engagements for numerous high-profile Australian and global
+                organisations.
+              </div>
+              <br />
+              <div>
+                He is a Fellow of AISA (Australian Information Security
+                Association). He also received the title of Fellow from CREST,
+                becoming the first cybersecurity practitioner recognized outside
+                the United Kingdom. He is presently engaged in the pursuit of a
+                doctoral degree in Cybersecurity and Space Intelligence.
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker skelly -->
+    <div
+      class="modal modal-speaker modal-speaker-10"
+      id="modal-speaker-10"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-10-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-10-ModalLabel" class="modal-title sr-only">
+              Samuel Kelly
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/sam_kelly.png"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Samuel Kelly</h2>
+                  <div class="meta">Offensive Security Consultant</div>
+                  <div class="meta">Sekuro</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/dj-spacies/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                Sam Kelly is a cybersecurity specialist with a unique blend of
+                skills honed over three years in offensive security. Coming from
+                an industrial electrical engineering background, Sam leverages
+                his prior real-world experience with industrial control systems
+                to his role as a Security Consultant at Sekuro.
+              </div>
+              <br />
+              <div class="meta">
+                A "Jack of all trades, Master of many," Sam is actively engaged
+                in the InfoSec community, regularly attending and presenting at
+                local meetups and prominent security conferences. Outside of
+                work, he indulges his passion for hacking car electronics and
+                touge drifting, adding a dynamic flair to his diverse skill set.
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker dcastillo -->
+    <div
+      class="modal modal-speaker modal-speaker-11"
+      id="modal-speaker-11"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-11-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-11-ModalLabel" class="modal-title sr-only">
+              Daniel Castillo
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/daniel_castillo.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Daniel Castillo</h2>
+                  <div class="meta">OT Cybersecurity Specialist</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a
+                        href="https://www.linkedin.com/in/daniel-castillo-2259236b/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                Daniel Castillo is an Industrial Control Systems (ICS)
+                cybersecurity specialist with 6.5 years of hands-on experience
+                across a highly diverse range of Operational Technology (OT) and
+                Critical Infrastructure (CI) sectors including Power Generation,
+                Power Distribution, Water and Wastewater, Building Automation
+                Systems (BAS), Data Center, Corrections, Healthcare, Premium
+                Commercial buildings, and Transportation. Daniel started his
+                post graduate career as a Systems Engineer at Honeywell
+                responsible for the design, implementation, and servicing of
+                enterprise integrator deployments and their underlying ICT
+                infrastructure. Daniel quickly developed a passion for OT
+                cybersecurity and forged ahead on an accelerated track to
+                specialise in the field.
+              </div>
+              <br />
+              <div class="meta">
+                Preceding his debut to industry, Daniel graduated as a
+                Mechatronics Engineer with Honors from the University of New
+                South Wales (UNSW) and was involved in several high-profile
+                projects and communities, teaching students about robotics,
+                digital fabrication, embedded electronics, and IoT. Today,
+                Daniel maintains a heavy focus on improving the cybersecurity
+                posture of Australia's CI providers, and endeavours to
+                contribute whenever possible to the increased awareness and
+                development of capability across the global OT ICS cybersecurity
+                practice.
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker stirmizey-->
+    <div
+      class="modal modal-speaker modal-speaker-12"
+      id="modal-speaker-12"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-12-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-12-ModalLabel" class="modal-title sr-only">
+              Sadeed Tirmizey
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/sadeed_tirmizey.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Sadeed Tirmizey</h2>
+                  <div class="meta">Chief Information Security Officer</div>
+                  <div class="meta">Seqwater</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/tirmizey/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                As a seasoned cyber security leader with over 20 years of
+                industry experience, Sadeed possesses an in-depth understanding
+                of the evolving cyber security landscape and its intricate
+                relationship with emerging technologies. He excels in crafting
+                high-performance security cultures and programs that not only
+                protect organizational performance and integrity but also drive
+                business growth through pragmatic and risk-based security
+                strategies. Sadeed combines a robust technical foundation with
+                strategic leadership and risk management skills, adopting a
+                proactive stance towards cyber security.
+              </div>
+              <br />
+              <div class="meta">
+                Sadeed has served as Deputy CISO at Airservices Australia, where
+                he safeguarded a complex environment that oversees 11% of the
+                global airspace. At Queensland Health, he held the roles of
+                Director of Cyber Security and CISO, successfully delivering a
+                four-year Cyber Maturity Roadmap and establishing their first
+                Security Operations Centre (SOC), significantly enhancing their
+                cyber security posture.
+              </div>
+              <br />
+              <div class="meta">
+                Sadeed recently joined Seqwater's Senior Leadership team as
+                their CISO, leading the Cyber Security capability and is
+                spearheading the development and implementation of their
+                enterprise cyber security strategy. He takes a holistic approach
+                to cyber security, positioning it as a business-enabling
+                capability. Sadeed aligns security measures with the
+                organization's risk profile, drives continuous improvement in
+                the organization's security posture, and fosters a culture of
+                proactive risk management.
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker tquinn -->
+    <div
+      class="modal modal-speaker modal-speaker-13"
+      id="modal-speaker-13"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-13-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-13-ModalLabel" class="modal-title sr-only">
+              Travis Quinn
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/travis_quinn.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Travis Quinn</h2>
+                  <div class="meta">Principal Security Architect</div>
+                  <div class="meta">Tesserent</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/travis-quinn1/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                Travis is a Principal Security Architect with Tesserent and a
+                Lecturer and researcher in cyber security with UNSW. Previously,
+                he held senior cyber roles in industry with KPMG Australia and
+                Trustwave and a technical intelligence role in the Australian
+                Army. In his role with Tesserent, he specialises in security
+                architecture and engineering for Australian Government and
+                industry clients, with a focus on cloud security. At UNSW, he
+                teaches technical cyber security subjects for postgraduate
+                students while he completes his own doctorate focusing on the
+                security applications of programmable networks. Travis enjoys
+                exploring the security of emerging technologies and sharing his
+                passion for cyber security with his students and peers.
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker efarrell -->
+    <div
+      class="modal modal-speaker modal-speaker-14"
+      id="modal-speaker-14"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-14-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-14-ModalLabel" class="modal-title sr-only">
+              Edward Farrell
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/edward_farrell.jpeg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Edward Farrell</h2>
+                  <div class="meta">CEO & Principal Consultant</div>
+                  <div class="meta">Mercury Information Security Services</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/31337au/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                Edward Farrell is a cyber security consultant with over fourteen
+                years' experience in cyber security and eighteen years'
+                experience in the IT industry. As the director of Mercury, he
+                has conducted and overseen the delivery of over 900 independent
+                cyber security audit activities and incident responses in the
+                past eight years.
+              </div>
+              <br />
+              <div class="meta">
+                Edward's professional highlights include his accreditation as an
+                IRAP assessor, and board appointments to industry-leading bodies
+                such as ISC2 and the CREST advisory board. This has seen Edward
+                develop a strong mix of technical, operational, and strategic
+                skills that have honed his ability in the consulting space.
+                Edward's experience as a technical researcher, presenter, and
+                communicator.
+              </div>
+              <br />
+              <div class="meta">
+                Edward has presented at over 50 events in Australia and abroad
+                and developed training materials for the Australian Defence
+                Force Academy and Australian Army. This has seen Edward develop
+                a strong grounding in cyber security and ability to communicate
+                to a variety of audiences. Edward's service as a member of the
+                Australian Army Reserve has included operational deployments and
+                multinational exercises.
+              </div>
+            </div>
+          </div>
+          <!--//modal-body-->
+        </div>
+        <!--//modal-content-->
+      </div>
+      <!--//modal-dialog-->
+    </div>
+    <!--//modal-->
+
+    <!-- Modal Speaker atilley -->
+    <div
+      class="modal modal-speaker modal-speaker-15"
+      id="modal-speaker-15"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="speaker-15-ModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-hidden="true"
+            >
+              &times;
+            </button>
+            <h4 id="speaker-15-ModalLabel" class="modal-title sr-only">
+              Alex Tilley
+            </h4>
+          </div>
+          <div class="modal-body p-0">
+            <div class="theme-bg-light p-5">
+              <div class="row">
+                <div class="col-12 col-md-auto text-center">
+                  <img
+                    class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+                    src="assets/images/speakers/alex_tilley.jpg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="col text-center text-md-start mx-auto">
+                  <h2 class="name mb-2">Alex Tilley</h2>
+                  <div class="meta">APAC Intelligence and Research Head</div>
+                  <div class="meta">Secureworks</div>
+                  <ul class="social-list list-inline mb-0">
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/alex-tilley-440b992/"
+                        ><i class="fab fa-linkedin-in fa-fw"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--//social-list-->
+                </div>
+                <!--//col-->
+              </div>
+              <!--//row-->
+            </div>
+            <div class="desc p-4 p-lg-5">
+              <div class="meta">
+                With well over 20 years of experience in computer security and
+                cyber-crime, Alex Tilley is a highly awarded cyber-crime
+                researcher. Alex was on the forefront of research and
+                countermeasures when phishing and malware first began to attack
+                banking platforms and their customers.
+              </div>
+              <br />
+              <div class="meta">
+                With that background, Alex became the Australian Federal
+                Police's senior cyber-crime technical analyst where he combined
+                his technical background with an analytical approach to the
+                “who” and “why” of the cyber-crime fight. This work resulted is
+                many successful investigations in the cyber-crime and child
+                protection space.
               </div>
             </div>
           </div>

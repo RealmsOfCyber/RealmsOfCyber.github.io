@@ -14618,16 +14618,13 @@ a.theme-link:hover {
 }
 
 .hero-carousel .carousel-item-1 {
-  background: url("../images/hero-1.jpg") no-repeat center center;
+  background: url("../images/air-land-sea-cyber.png") no-repeat center center;
   background-size: cover;
-}
-
-.hero-carousel .carousel-item-2 {
-  background: url("../images/hero-2.jpg") no-repeat center center;
-}
-
-.hero-carousel .carousel-item-3 {
-  background: url("../images/hero-3.jpg") no-repeat center center;
+  background-attachment: fixed;
+  height: 100vh;  /* Ensure it takes up the full viewport height */
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text-block {

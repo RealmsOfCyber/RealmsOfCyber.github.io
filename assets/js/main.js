@@ -128,3 +128,19 @@ setInterval(function () {
     secs_span.innerHTML = '<span class="number">' + seconds + '</span>' + '<span class="unit">Secs</span>'; 
  
 }, 1000);
+
+function expandImage(imageDiv) {
+    const img = imageDiv.querySelector("img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+  
+    // Set the lightbox image source to the clicked image
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+  }
+  
+  function closeLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "none";
+  }
+  

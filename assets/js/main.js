@@ -84,7 +84,7 @@ var spy = new Gumshoe('#navigation a', {
 
 /* ======= Countdown ========= */
 // set the date we're counting down to
-var target_date = new Date("Aug 20, 2024 09:00:00").getTime();
+var target_date = new Date("Aug 1, 2025 09:00:00").getTime();
  
 // variables for time units
 var days, hours, minutes, seconds;
@@ -128,3 +128,19 @@ setInterval(function () {
     secs_span.innerHTML = '<span class="number">' + seconds + '</span>' + '<span class="unit">Secs</span>'; 
  
 }, 1000);
+
+function expandImage(imageDiv) {
+    const img = imageDiv.querySelector("img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+  
+    // Set the lightbox image source to the clicked image
+    lightboxImg.src = img.src;
+    lightbox.style.display = "flex";
+  }
+  
+  function closeLightbox() {
+    const lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "none";
+  }
+  

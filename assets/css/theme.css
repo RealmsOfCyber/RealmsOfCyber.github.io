@@ -14618,16 +14618,13 @@ a.theme-link:hover {
 }
 
 .hero-carousel .carousel-item-1 {
-  background: url("../images/hero-1.jpg") no-repeat center center;
+  background: url("../images/air-land-sea-cyber.png") no-repeat center center;
   background-size: cover;
-}
-
-.hero-carousel .carousel-item-2 {
-  background: url("../images/hero-2.jpg") no-repeat center center;
-}
-
-.hero-carousel .carousel-item-3 {
-  background: url("../images/hero-3.jpg") no-repeat center center;
+  background-attachment: fixed;
+  height: 100vh;  /* Ensure it takes up the full viewport height */
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-text-block {
@@ -14645,7 +14642,7 @@ a.theme-link:hover {
 }
 
 .hero-text-block .hero-intro {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
 .hero-text-block .hero-meta {
@@ -14821,6 +14818,52 @@ a.theme-link:hover {
   color: #fff;
 }
 
+/* ================================
+   Gallery Styles for ROCCON 2024
+================================ */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust column size */
+  gap: 20px; /* Space between pictures */
+  margin: 20px; /* Space around the gallery */
+  max-width: 100%; /* Restrict gallery to viewport width */
+  box-sizing: border-box;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border: 10px solid white; /* Thick white frame */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+/* Lightbox Styles */
+.lightbox {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 8px; /* Matches the gallery styling */
+}
+
+.lightbox:active {
+  display: flex; /* Clicking outside the image closes it */
+}
+
 .schedule-nav .nav-item span {
   display: block;
 }
@@ -14902,7 +14945,7 @@ a.theme-link:hover {
 }
 
 .schedule-tab-content .item .meta .time {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: #098dcf;
 }
 
@@ -15101,10 +15144,6 @@ a.theme-link:hover {
   }
 
   .hero-text-block .hero-meta {
-    font-size: 1.25rem;
-  }
-
-  .hero-text-block .hero-intro {
     font-size: 1.25rem;
   }
 

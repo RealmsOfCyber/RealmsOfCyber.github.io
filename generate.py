@@ -1,5 +1,7 @@
 from jinja2 import Environment, FileSystemLoader
 from variables import *
+from sponsors import sponsors
+from speakers import speakers
 
 # load templates folder to environment (security measure)
 env = Environment(loader=FileSystemLoader('templates'))
@@ -9,7 +11,8 @@ index_template = env.get_template('index.jinja')
 output_from_parsed_template = index_template.render(
   year=year,
   become_a_sponsor_url=become_a_sponsor_url,
-  sponsors=sponsors
+  sponsors=sponsors,
+  speakers=speakers
 )
 
 # write the parsed template

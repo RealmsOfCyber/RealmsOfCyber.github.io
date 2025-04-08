@@ -1,6 +1,7 @@
 year = 2025
 date = "28 Aug"
-tickets_on_sale = True
+tickets_on_sale = False
+last_year_highlights=False
 ticket_url = "https://events.humanitix.com/realms-of-cyber-2025/tickets"
 ticket_price = 125
 become_a_sponsor_url = "https://forms.office.com/r/K5Tqfz2bq7"

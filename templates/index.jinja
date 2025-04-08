@@ -255,10 +255,12 @@
   </section>
   <!--//speakers-section-->
 
+
+
+  {% if last_year_highlights %}
   <div class="container">
     <hr />
   </div>
-
   <section id="schedule-section" class="schedule-section section">
     <div class="container">
       <h3 class="section-heading text-center mb-5">{{ year - 1 }} Highlights</h3>
@@ -390,6 +392,7 @@
     </div>
   </section>
   <!--//schedule-section-->
+  {% endif %}
 
   {% if tickets_on_sale %}
   <section id="tickets-section" class="tickets-section section theme-bg-light">

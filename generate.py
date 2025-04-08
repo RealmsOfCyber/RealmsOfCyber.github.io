@@ -12,7 +12,8 @@ output_from_parsed_template = index_template.render(
   year=year,
   become_a_sponsor_url=become_a_sponsor_url,
   sponsors=sponsors,
-  speakers=speakers
+  speakers=speakers,
+  sponsor_blurb=sponsor_blurb
 )
 
 # write the parsed template

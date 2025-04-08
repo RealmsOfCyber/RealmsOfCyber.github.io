@@ -13,7 +13,10 @@ output_from_parsed_template = index_template.render(
   become_a_sponsor_url=become_a_sponsor_url,
   sponsors=sponsors,
   speakers=speakers,
-  sponsor_blurb=sponsor_blurb
+  sponsor_blurb=sponsor_blurb,
+  tickets_on_sale=tickets_on_sale,
+  ticket_url=ticket_url,
+  ticket_price=ticket_price
 )
 
 # write the parsed template

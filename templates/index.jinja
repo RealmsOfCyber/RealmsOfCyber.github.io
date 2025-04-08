@@ -55,6 +55,14 @@
             </a>
           </div>
 
+        {% if tickets_on_sale %}
+          <div class="navbar-btn order-lg-2">
+            <a class="btn btn-secondary" href="{{ ticket_url }}"
+              target="_blank">Tickets</a>
+          </div>
+        {% endif %}
+
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
             aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -144,6 +152,11 @@
         <div id="countdown-box" class="countdown-box"></div>
       </div> -->
       <!--//event-countdown-->
+    {% if tickets_on_sale %}
+      <div class="about-cta text-center mb-5">
+        <a class="btn btn-secondary btn-lg mb-5" href="{{ ticket_url }}" target="_blank">Get Your Ticket Today</a>
+      </div>
+    {% endif %}
     </div>
     <!--//container-->
 
@@ -195,7 +208,7 @@
     <div class="container">
       <h3 class="section-heading text-center mb-3">Speakers</h3>
       <div class="section-intro text-center single-col-max mx-auto mb-5">
-        We have an exciting list of speakers rolling out for our {{ year }} show,
+        We have an exciting list of speakers rolling out for our {{ year }} conference,
         check them out:
       </div>
     {% set ns = namespace(speaker_count=0) %}
@@ -234,6 +247,11 @@
       {% endif %}
     </div>
     <!--//container-->
+  {% if tickets_on_sale %}
+  <div class="speakers-cta text-center py-3">
+        <a class="btn btn-primary btn-lg" href="{{ ticket_url }}" target="_blank">Get Tickets</a>
+  </div>
+  {% endif %}
   </section>
   <!--//speakers-section-->
 
@@ -372,6 +390,67 @@
     </div>
   </section>
   <!--//schedule-section-->
+
+  {% if tickets_on_sale %}
+  <section id="tickets-section" class="tickets-section section theme-bg-light">
+    <div class="container">
+      <h3 class="section-heading text-center mb-3">Tickets</h3>
+
+      <div class="row pricing mb-2 justify-content-center">
+
+        <!--//col-->
+        <div class="col-12 col-md-4 p-2 p-lg-4">
+          <div class="card card-special rounded-0 border-0">
+            <div class="card-body p-0">
+              <div class="heading text-center p-3">
+                <h4 class="text-white mb-0">Early Bird</h4>
+              </div>
+              <div class="info p-3">
+                <div class="price-figure text-center">
+                  <span class="currency"></span><span class="number">10% Discount</span>
+                </div>
+                <div class="desc px-3">
+                  Purchase before 1st July. Limited tickets available.
+                </div>
+              </div>
+              <!--//info-->
+            </div>
+            <!--//card-body-->
+            <div class="card-footer text-center">
+              <a href="{{ ticket_url }}" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+          <!--//card-->
+        </div>
+        <!--//col-->
+      </div>
+      <div class="row pricing mb-5 justify-content-center">
+        <div class="col-12 col-md-4 p-2 p-lg-4">
+          <div class="card rounded-0 border-0">
+            <div class="card-body p-0">
+              <div class="heading text-center p-3">
+                <h4 class="text-white mb-0">Regular</h4>
+              </div>
+              <div class="info p-3">
+                <div class="price-figure text-center mb-3">
+                  <span class="currency">$</span><span class="number">{{ ticket_price }}</span>
+                </div>
+                <div class="desc px-3">
+                  Our standard ticket with entrance to the show.
+                </div>
+              </div>
+              <!--//info-->
+            </div>
+            <!--//card-body-->
+            <div class="card-footer text-center">
+              <a href="{{ ticket_url }}" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
 
   <section id="venue-section" class="venue-section section theme-bg-primary text-white">
     <div class="container">

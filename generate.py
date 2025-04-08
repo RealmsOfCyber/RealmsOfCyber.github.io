@@ -10,6 +10,7 @@ env = Environment(loader=FileSystemLoader('templates'))
 index_template = env.get_template('index.jinja')
 output_from_parsed_template = index_template.render(
   year=year,
+  date=date,
   become_a_sponsor_url=become_a_sponsor_url,
   sponsors=sponsors,
   speakers=speakers,

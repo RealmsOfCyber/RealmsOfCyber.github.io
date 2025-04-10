@@ -52,7 +52,7 @@
     </script>
 </head>
 
-<body>
+<script>
   <header id="header" class="header fixed-top">
     <div class="branding">
       <div class="container-fluid">
@@ -952,12 +952,14 @@
   <script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
   <script src="assets/js/main.js"></script>
 
+  <script>
    document.querySelector('.btn').addEventListener('click', function() {
        mixpanel.track('Purchase Ticket', {
            'Button Name': this.textContent,
            'Page URL': window.location.href
        });
    });
+  </script>
 </body>
 
 </html>

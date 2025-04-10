@@ -14618,7 +14618,7 @@ a.theme-link:hover {
 }
 
 .hero-carousel .carousel-item-1 {
-  background: url("../images/air-land-sea-cyber.png") no-repeat center center;
+  background: url("../images/hero-1.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   height: 100vh;  /* Ensure it takes up the full viewport height */

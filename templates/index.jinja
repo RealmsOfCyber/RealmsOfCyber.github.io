@@ -953,12 +953,12 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-   document.querySelector('.btn').addEventListener('click', function() {
+      {#document.querySelector('.btn').addEventListener('click', function() {
        mixpanel.track('Purchase Ticket', {
            'Button Name': this.textContent,
            'Page URL': window.location.href
        });
-   });
+   }); #}
   </script>
 </body>
 

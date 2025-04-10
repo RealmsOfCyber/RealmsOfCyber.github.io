@@ -16,7 +16,7 @@ output_from_parsed_template = index_template.render(
   speakers=speakers,
   sponsor_blurb=sponsor_blurb,
 #  tickets_on_sale=tickets_on_sale,
-#  ticket_url=ticket_url,
+  ticket_url=ticket_url,
 #  ticket_price=ticket_price,
   last_year_highlights=last_year_highlights
 )

@@ -25,36 +25,34 @@
   <!-- FontAwesome JS-->
   <script src="https://kit.fontawesome.com/fd2ce283b6.js" crossorigin="anonymous"></script>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16636793403"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "AW-16636793403");
-  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TQP8R7C6');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- Theme CSS -->
   <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
 
-    <!-- Mixpanel -->
-    <script type="text/javascript">
-    (function (f, b) { if (!b.__SV) { var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) { function g(a, d) { var b = d.split("."); 2 == b.length && ((a = a[b[0]]), (d = b[1])); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))); }; } var a = b; "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel"); a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d; }; a.people.toString = function () { return a.toString(1) + ".people (stub)"; }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split( " "); for (h = 0; h < i.length; h++) g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]); }; } for ( var d = {}, e = ["get_group"].concat( Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]); return d; }; b._i.push([e, f, c]); }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g); } })(document, window.mixpanel || []);
-    </script>
-    <script>
+  <!-- Mixpanel -->
+  <script type="text/javascript">
+    (function (f, b) { if (!b.__SV) { var e, g, i, h; window.mixpanel = b; b._i = []; b.init = function (e, f, c) { function g(a, d) { var b = d.split("."); 2 == b.length && ((a = a[b[0]]), (d = b[1])); a[d] = function () { a.push([d].concat(Array.prototype.slice.call(arguments, 0))); }; } var a = b; "undefined" !== typeof c ? (a = b[c] = []) : (c = "mixpanel"); a.people = a.people || []; a.toString = function (a) { var d = "mixpanel"; "mixpanel" !== c && (d += "." + c); a || (d += " (stub)"); return d; }; a.people.toString = function () { return a.toString(1) + ".people (stub)"; }; i = "disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" "); for (h = 0; h < i.length; h++) g(a, i[h]); var j = "set set_once union unset remove delete".split(" "); a.get_group = function () { function b(c) { d[c] = function () { call2_args = arguments; call2 = [c].concat(Array.prototype.slice.call(call2_args, 0)); a.push([e, call2]); }; } for (var d = {}, e = ["get_group"].concat(Array.prototype.slice.call(arguments, 0)), c = 0; c < j.length; c++) b(j[c]); return d; }; b._i.push([e, f, c]); }; b.__SV = 1.2; e = f.createElement("script"); e.type = "text/javascript"; e.async = !0; e.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === f.location.protocol && "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ? "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"; g = f.getElementsByTagName("script")[0]; g.parentNode.insertBefore(e, g); } })(document, window.mixpanel || []);
+  </script>
+  <script>
     mixpanel.init("484117777403c50c97537aeb54057099", {
       debug: false,
       track_pageview: true,
       persistence: "localStorage",
     });
-    mixpanel.track("PageView");
-    </script>
+  </script>
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQP8R7C6" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <header id="header" class="header fixed-top">
     <div class="branding">
       <div class="container-fluid">
@@ -68,12 +66,11 @@
             </a>
           </div>
 
-        {% if tickets_on_sale %}
+          {% if tickets_on_sale %}
           <div class="navbar-btn order-lg-2">
-            <a class="btn btn-secondary" href="{{ ticket_url }}"
-              target="_blank">Tickets</a>
+            <a class="btn btn-secondary" href="{{ ticket_url }}" target="_blank">Tickets</a>
           </div>
-        {% endif %}
+          {% endif %}
 
 
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
@@ -88,9 +85,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#speakers-section">Speakers</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link scrollto" href="#schedule-section">Highlights</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#venue-section">Venue</a>
@@ -126,7 +120,7 @@
             <div class="hero-meta mb-3">
               <i class="far fa-calendar-alt me-2"></i>{{ date }}
               <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
-            </div>     
+            </div>
             <div class="hero-intro mb-4">
               Inspiring and informative talks from some of the world's
               brightest minds in physical cybersecurity
@@ -165,11 +159,11 @@
         <div id="countdown-box" class="countdown-box"></div>
       </div> -->
       <!--//event-countdown-->
-    {% if tickets_on_sale %}
+      {% if tickets_on_sale %}
       <div class="about-cta text-center mb-5">
         <a class="btn btn-secondary btn-lg mb-5" href="{{ ticket_url }}" target="_blank">Get Your Ticket Today</a>
       </div>
-    {% endif %}
+      {% endif %}
     </div>
     <!--//container-->
 
@@ -207,7 +201,12 @@
       <div class="container">
         <h4 class="text-white text-center mb-3 mt-5">Previously</h4>
         <div class="section-intro text-center single-col-max mx-auto text-white mb-5">
-          ROCCON {{ year - 1 }} brought together some of the brightest minds in physical cybersecurity for a day of inspiring and informative discussions. Held at the iconic Brisbane Powerhouse, the conference explored the future of security across various domains, including land, sea, air, space, biological, and cognitive industries. This year’s theme focused on the convergence of operational technology and cybersecurity, addressing the growing challenges and opportunities in protecting our digital world. The event was a resounding success, with attendees gaining valuable insights and networking with industry leaders.
+          ROCCON {{ year - 1 }} brought together some of the brightest minds in physical cybersecurity for a day of
+          inspiring and informative discussions. Held at the iconic Brisbane Powerhouse, the conference explored the
+          future of security across various domains, including land, sea, air, space, biological, and cognitive
+          industries. This year’s theme focused on the convergence of operational technology and cybersecurity,
+          addressing the growing challenges and opportunities in protecting our digital world. The event was a
+          resounding success, with attendees gaining valuable insights and networking with industry leaders.
         </div>
       </div>
       <!--//container-->
@@ -224,22 +223,24 @@
         We have an exciting list of speakers rolling out for our {{ year }} conference,
         check them out:
       </div>
-    {% set ns = namespace(speaker_count=0) %}
-    {% for speaker in speakers -%}
+      {% set ns = namespace(speaker_count=0) %}
+      {% for speaker in speakers -%}
       {% if ns.speaker_count % 4 == 0 %}
       <div class="row" name="{{ ns.speaker_count }}">
-      {% endif %}
-      {% set ns.speaker_count = ns.speaker_count + 1 %}
+        {% endif %}
+        {% set ns.speaker_count = ns.speaker_count + 1 %}
         <div class="col-6 col-lg-3 mb-4">
           <div class="card rounded-0">
-            <a href="#{{ speaker['image'] }}" data-bs-toggle="modal" data-bs-target="#{{ speaker['image'] }}"><img src="assets/images/speakers/{{ speaker['image'] }}" class="card-img-top rounded-0" alt=""></a>
+            <a href="#{{ speaker['image'] }}" data-bs-toggle="modal" data-bs-target="#{{ speaker['image'] }}"><img
+                src="assets/images/speakers/{{ speaker['image'] }}" class="card-img-top rounded-0" alt=""></a>
             <div class="card-body">
               <h5 class="card-title mb-2">{{ speaker['name'] }}</h5>
               <div class="card-text mb-3">
                 <div class="meta">{{ speaker['jobtitle'] }}</div>
                 <div class="meta">{{ speaker['company'] }}</div>
               </div>
-              <a href="#{{ speaker['image'] }}" data-bs-toggle="modal" data-bs-target="#{{ speaker['image'] }}">Read more →</a>
+              <a href="#{{ speaker['image'] }}" data-bs-toggle="modal" data-bs-target="#{{ speaker['image'] }}">Read
+                more →</a>
             </div>
             <div class="card-footer text-muted">
               <ul class="social-list list-inline mb-0">
@@ -250,21 +251,21 @@
             </div>
           </div>
         </div>
-      {% if ns.speaker_count % 4 == 0 %}
-        </div>
+        {% if ns.speaker_count % 4 == 0 %}
+      </div>
       {% endif %}
       {% endfor %}
 
       {% if ns.speaker_count % 4 != 0 %}
-        </div>
-      {% endif %}
+    </div>
+    {% endif %}
     </div>
     <!--//container-->
-  {% if tickets_on_sale %}
-  <div class="speakers-cta text-center py-3">
-        <a class="btn btn-primary btn-lg" href="{{ ticket_url }}" target="_blank">Get Tickets</a>
-  </div>
-  {% endif %}
+    {% if tickets_on_sale %}
+    <div class="speakers-cta text-center py-3">
+      <a class="btn btn-primary btn-lg" href="{{ ticket_url }}" target="_blank">Get Tickets</a>
+    </div>
+    {% endif %}
   </section>
   <!--//speakers-section-->
 
@@ -278,7 +279,8 @@
     <div class="container">
       <h3 class="section-heading text-center mb-5">{{ year - 1 }} Highlights</h3>
       <div class="desc text-center">
-        ROCCON {{ year - 1 }} featured a diverse range of sessions that enthralled the audience. Key highlights included:
+        ROCCON {{ year - 1 }} featured a diverse range of sessions that enthralled the audience. Key highlights
+        included:
       </div>
       <div class="schedule-tab-content tab-content">
         <div class="tab-pane active show" id="tab-1-content" role="tabpanel" aria-labelledby="tab-1">
@@ -326,7 +328,8 @@
                 <b>Multi Realm</b>
               </div>
               <div class="desc">
-                Shared innovative approaches to securing IoT devices, which have become increasingly pervasive in our daily lives.
+                Shared innovative approaches to securing IoT devices, which have become increasingly pervasive in our
+                daily lives.
               </div>
             </div>
           </div>
@@ -351,12 +354,13 @@
                 <b>Sea Realm</b>
               </div>
               <div class="desc">
-                Took attendees on a journey through the evolution of maritime security and the strategies used to combat modern threats.
+                Took attendees on a journey through the evolution of maritime security and the strategies used to combat
+                modern threats.
               </div>
             </div>
           </div>
 
- 
+
 
 
           <!-- PRESENTATION 13 -->
@@ -393,14 +397,16 @@
                 Networking Session
               </h3>
               <div class="desc">
-                Provided a relaxed environment for attendees to connect and discuss the day’s events. Where better than by the beautiful Brisbane River?
+                Provided a relaxed environment for attendees to connect and discuss the day’s events. Where better than
+                by the beautiful Brisbane River?
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="desc text-center">
-        These sessions, along with many others, provided actionable takeaways that attendees can apply within their organisations.
+        These sessions, along with many others, provided actionable takeaways that attendees can apply within their
+        organisations.
       </div>
     </div>
   </section>
@@ -423,8 +429,8 @@
               </div>
               <div class="info p-3">
                 <div class="price-figure text-center">
-                    <h4 class="text-black p-3 mb-0" style="font-size: 1.125rem;">50% Discount<br><del>$1100</del></h4>
-                    <span class="number">$550</span>
+                  <h4 class="text-black p-3 mb-0" style="font-size: 1.125rem;">50% Discount<br><del>$1100</del></h4>
+                  <span class="number">$550</span>
                 </div>
                 <div class="desc px-3">
                   Purchase your regular ticket before they run out.
@@ -498,17 +504,17 @@
         {{ sponsor_blurb }}
       </div>
 
-    {% for sponsor_level in sponsors -%}
+      {% for sponsor_level in sponsors -%}
       <!-- <h3 class="fw-bolder text-primary mb-4">{{ sponsor_level }}</h3> -->
-        {% for sponsor_detail in sponsors[sponsor_level] -%}
-          <div class="row logos justify-content-center">
-            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
-              <a href="{{ sponsor_detail['url'] }}" target="_blank"><img src="assets/images/sponsors/{{ sponsor_detail['logo'] }}"
-                  alt="{{ sponsor_detail['name'] }}" /></a>
-            </div>
-          </div>
-        {% endfor %}
-    {% endfor %}
+      {% for sponsor_detail in sponsors[sponsor_level] -%}
+      <div class="row logos justify-content-center">
+        <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+          <a href="{{ sponsor_detail['url'] }}" target="_blank"><img
+              src="assets/images/sponsors/{{ sponsor_detail['logo'] }}" alt="{{ sponsor_detail['name'] }}" /></a>
+        </div>
+      </div>
+      {% endfor %}
+      {% endfor %}
       <!--//sponsors-->
       <div class="sponsors-cta text-center pt-5">
         <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Become A Sponsor</a>
@@ -899,8 +905,7 @@
                 <div class="meta">{{ speaker['company'] }}</div>
                 <ul class="social-list list-inline mb-0">
                   <li class="list-inline-item">
-                    <a href="{{ speaker['linkedin'] }}"><i
-                        class="fab fa-linkedin-in fa-fw"></i></a>
+                    <a href="{{ speaker['linkedin'] }}"><i class="fab fa-linkedin-in fa-fw"></i></a>
                   </li>
                 </ul>
                 <!--//social-list-->
@@ -932,12 +937,12 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-  document.querySelector('.btn').addEventListener('click', function() {
-       mixpanel.track('Purchase Ticket', {
-           'Button Name': this.textContent,
-           'Page URL': window.location.href
-       });
-   });
+    document.querySelector('.btn').addEventListener('click', function () {
+      mixpanel.track('Purchase Ticket', {
+        'Button Name': this.textContent,
+        'Page URL': window.location.href
+      });
+    });
   </script>
 </body>
 

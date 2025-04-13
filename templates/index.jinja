@@ -943,6 +943,19 @@
         'Page URL': window.location.href
       });
     });
+  
+   // Mixpanel event for when a speaker modal is opened
+   document.querySelectorAll('.modal-speaker').forEach(function(modal) {
+      modal.addEventListener('show.bs.modal', function () {
+        const speakerId = this.id;
+        const speakerName = this.querySelector('.modal-title').textContent.trim();
+        mixpanel.track('Speaker Modal Opened', {
+          'Speaker Name': speakerName,
+          'Page URL': window.location.href
+        });
+      });
+    });
+  
   </script>
 </body>
 

@@ -46,6 +46,12 @@
       persistence: "localStorage",
     });
   </script>
+
+ <!-- Set Mixpanel ID -->
+  <script>
+      localStorage.setItem('mp_user_id', mixpanel.get_distinct_id()); 
+    </script>
+
 </head>
 
 <body>
@@ -433,7 +439,7 @@
                   <h4 class="text-black p-3 mb-0" style="font-size: 1.125rem;">Current Discounted Price</h4>
                   <span class="number">$192.50</span>
                 </div>
-                <div class="desc px-3">
+                <div class="desc px-3 text-center">
                   Critical Infrastructure ticket eligibility: Must work directly for a critical infrastructure organisation, and register with organisation email to purchase this ticket.
                 </div>
               </div>
@@ -448,6 +454,37 @@
         </div>
         <!--//col-->
 
+        {#
+         <!--//col-->
+         <div class="col-12 col-md-4 p-2 p-lg-4">
+          <div class="card card-special rounded-0 border-0">
+            <div class="card-body p-0">
+              <div class="heading text-center p-3">
+                <h4 class="text-white mb-0">Standard Ticket</h4>
+              </div>
+              <div class="info p-3">
+                <div class="price-figure text-center">
+                  <h4 class="text-black p-3 mb-0" style="font-size: 1.125rem;">Early bird prices are available until sold out</h4>
+                  <h4 class="text-black p-3 mb-0" style="font-size: 1.125rem;">Current Discounted Price</h4>
+                  <span class="number">$550</span>
+                </div>
+                <div class="desc px-3 text-center">
+                  -
+                </div>
+              </div>
+              <!--//info-->
+            </div>
+            <!--//card-body-->
+            <div class="card-footer text-center">
+              <a href="{{ ticket_url }}#group0" class="btn btn-primary">Secure Now</a>
+            </div>
+          </div>
+          <!--//card-->
+        </div>
+        <!--//col-->
+        #}
+  
+
         <!--//col-->
         <div class="col-12 col-md-4 p-2 p-lg-4">
           <div class="card card-special rounded-0 border-0">
@@ -461,7 +498,7 @@
                   <h4 class="text-black p-3 mb-0" style="font-size: 1.125rem;">Current Discounted Price</h4>
                   <span class="number">$82.50</span>
                 </div>
-                <div class="desc px-3">
+                <div class="desc px-3 text-center">
                   Student ticket eligibility: Must be currently studying full time, and register with your student email to purchase this ticket.
                 </div>
               </div>
@@ -475,6 +512,36 @@
           <!--//card-->
         </div>
         <!--//col-->
+
+        {#
+        <!--//col-->
+        <div class="col-12 col-md-4 p-2 p-lg-4">
+          <div class="card card-special rounded-0 border-0">
+            <div class="card-body p-0">
+              <div class="heading text-center p-3">
+                <h4 class="text-white mb-0">VIP Ticket</h4>
+              </div>
+              <div class="info p-3">
+                <div class="price-figure text-center">
+                  <h4 class="text-black p-3 mb-0" style="font-size: 1.125rem;">Early bird prices are available until sold out</h4>
+                  <h4 class="text-black p-3 mb-0" style="font-size: 1.125rem;">Current Discounted Price</h4>
+                  <span class="number">$1,375</span>
+                </div>
+                <div class="desc px-3 text-center">
+                  -
+                </div>
+              </div>
+              <!--//info-->
+            </div>
+            <!--//card-body-->
+            <div class="card-footer text-center">
+              <a href="{{ ticket_url }}#group0" class="btn btn-primary">Secure Now</a>
+            </div>
+          </div>
+          <!--//card-->
+        </div>
+        <!--//col-->
+        #}
 
         <!-- hide normal ticket
         <div class="col-12 col-md-4 p-2 p-lg-4">

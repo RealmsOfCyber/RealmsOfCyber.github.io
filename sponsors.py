@@ -6,7 +6,12 @@ sponsors = {
             "logo": "qldgov.png"
         }
     ],
-    # "Gold": [
+    "Gold": [
+        {
+            "name": "Cultural Cyber Security",
+            "url": "https://www.culturalcybersecurity.com",
+            "logo": "ccs.jpg"
+        }
     #     {
     #         "name": "Tayko Group",
     #         "url": "https://tayko.io",
@@ -17,7 +22,7 @@ sponsors = {
     #         "url": "https://www.eaglegate.com.au/",
     #         "logo": "eaglegate.jpeg"
     #     }
-    # ],
+    ],
     # "Silver": [
     #     {
     #         "name": "Sekuro",

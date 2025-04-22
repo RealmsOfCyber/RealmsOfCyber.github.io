@@ -13,7 +13,7 @@ speakers = [
         "company": "DroneSec",
         "linkedin": "https://www.linkedin.com/in/mike-monnik-23026a75/",
         "image": "mike_monnik.jpeg",
-        "description": ""
+        "description": "Mike is the Founder and CEO of DroneSec, a UAS adversary intelligence company. DroneSec was founded in 2016 as an intelligence-led approach to C-UAS and serves FVEY military, government and law enforcement. Mike provides awareness of emerging UAS tactics, techniques and procedures in the rapidly scaling small UAS threat environment. Mike has been invited to present on drone threat proliferation at the United Nations, NATO and to the US National Security Council at The White House."
     },
     {
         "name": "Bradley Butler",
@@ -30,5 +30,13 @@ speakers = [
         "linkedin": "https://www.linkedin.com/in/michael-creagh-1469a210/",
         "image": "michael_creagh.jpg",
         "description": "Dr. Michael Creagh is the CEO at Skyborne Technologies. He has been working in the Guidance, Navigation and Control (GNC) field since 2007, graduating with a PhD in missile guidance in 2011. He has produced two novel guidance laws for space craft and spinning rockets, an adaptive control law for a hypersonic glider and a plethora of intelligent navigation algorithms.<br><br>Michael has published on a variety of topics and was highlighted by Popular Science Magazine, ABC Television's Catalyst and Aviation week for GNC work on the SCRAMSPACE 1 hypersonic flight experiment."
+    },
+    {
+        "name": "David Robinson",
+        "jobtitle": "Senior Security Consultant",
+        "company": "Bastion Security Group",
+        "linkedin": "https://www.linkedin.com/in/davidrobinsonnz/",
+        "image": "david_robinson.jpg",
+        "description": "Dave/Karit has worked in various parts of the IT industry and has developed a skillset that encompasses various disciplines in the information security domain. Dave currently does Security Consulting in Wellington and runs Kākācon.<br><br>Dave has presented at a range of conferences such as DefCon, Kiwicon, Aerospace Village @ DefCon, BSidesCBR, CHCon, Unrestcon and at numerous local meetups; along with running training at Kiwicon, Syscan, CrikeyCon, CHCon and TuskCon. He also has a keen interest in aerospace, lock-picking and all things wireless."
     },
 ]

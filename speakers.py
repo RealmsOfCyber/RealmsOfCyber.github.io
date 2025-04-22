@@ -31,12 +31,12 @@ speakers = [
         "image": "michael_creagh.jpg",
         "description": "Dr. Michael Creagh is the CEO at Skyborne Technologies. He has been working in the Guidance, Navigation and Control (GNC) field since 2007, graduating with a PhD in missile guidance in 2011. He has produced two novel guidance laws for space craft and spinning rockets, an adaptive control law for a hypersonic glider and a plethora of intelligent navigation algorithms.<br><br>Michael has published on a variety of topics and was highlighted by Popular Science Magazine, ABC Television's Catalyst and Aviation week for GNC work on the SCRAMSPACE 1 hypersonic flight experiment."
     },
-    {
-        "name": "David Robinson",
-        "jobtitle": "Senior Security Consultant",
-        "company": "Bastion Security Group",
-        "linkedin": "https://www.linkedin.com/in/davidrobinsonnz/",
-        "image": "david_robinson.jpg",
-        "description": "Dave/Karit has worked in various parts of the IT industry and has developed a skillset that encompasses various disciplines in the information security domain. Dave currently does Security Consulting in Wellington and runs Kākācon.<br><br>Dave has presented at a range of conferences such as DefCon, Kiwicon, Aerospace Village @ DefCon, BSidesCBR, CHCon, Unrestcon and at numerous local meetups; along with running training at Kiwicon, Syscan, CrikeyCon, CHCon and TuskCon. He also has a keen interest in aerospace, lock-picking and all things wireless."
-    },
+    # {
+    #     "name": "David Robinson",
+    #     "jobtitle": "Senior Security Consultant",
+    #     "company": "Bastion Security Group",
+    #     "linkedin": "https://www.linkedin.com/in/davidrobinsonnz/",
+    #     "image": "david_robinson.jpg",
+    #     "description": "Dave/Karit has worked in various parts of the IT industry and has developed a skillset that encompasses various disciplines in the information security domain. Dave currently does Security Consulting in Wellington and runs Kākācon.<br><br>Dave has presented at a range of conferences such as DefCon, Kiwicon, Aerospace Village @ DefCon, BSidesCBR, CHCon, Unrestcon and at numerous local meetups; along with running training at Kiwicon, Syscan, CrikeyCon, CHCon and TuskCon. He also has a keen interest in aerospace, lock-picking and all things wireless."
+    # },
 ]

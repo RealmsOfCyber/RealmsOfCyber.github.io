@@ -5,7 +5,7 @@ speakers = [
         "company": "InfoSect",
         "linkedin": "https://www.linkedin.com/in/kylie-mcdevitt-162b9a34/",
         "image": "kylie_mcdevitt.jpg",
-        "description": "Kylie McDevitt is a security researcher at her own company, InfoSect, specialising in Linux and embedded devices. Before starting at InfoSect, she was a Technical Director at the Australian Signals Directorate (ASD). Kylie graduated from ANU with a Bachelor of Engineering and worked for Australia's largest telco as a radio engineer in MobileNet before moving into computer security, where she has been for the last 15 years. She has a Masters in Computer Networking, as well as multiple industry certifications. Kylie has taught as a casual lecturer at UNSW Canberra and spends her free time organising community events such as BSides Canberra and the CSides monthly security meetup."
+        "description": "Kylie McDevitt is a security researcher at her own company, InfoSect, specialising in Linux and embedded devices. Before starting at InfoSect, she was a Technical Director at the Australian Signals Directorate (ASD). Kylie graduated from ANU with a Bachelor of Engineering and worked for Australia's largest telco as a radio engineer in MobileNet before moving into computer security, where she has been for the last 16 years. She has a Masters in Computer Networking, as well as multiple industry certifications. Kylie has taught as a casual lecturer at UNSW Canberra and spends her free time organising community events such as BSides Canberra and the CSides monthly security meetup."
     },
     {
         "name": "Mike Monnik",
@@ -29,14 +29,14 @@ speakers = [
         "company": "Skyborne Technologies",
         "linkedin": "https://www.linkedin.com/in/michael-creagh-1469a210/",
         "image": "michael_creagh.jpg",
-        "description": "Dr. Michael Creagh is the CEO at Skyborne Technologies. He has been working in the Guidance, Navigation and Control (GNC) field since 2007, graduating with a PhD in missile guidance in 2011. He has produced two novel guidance laws for space craft and spinning rockets, an adaptive control law for a hypersonic glider and a plethora of intelligent navigation algorithms.<br><br>Michael has published on a variety of topics and was highlighted by Popular Science Magazine, ABC Television's Catalyst and Aviation week for GNC work on the SCRAMSPACE 1 hypersonic flight experiment."
+        "description": "Dr. Michael Creagh is CEO and co-founder of Skyborne Technologies, which provides armed robotic solutions for Defence and law enforcement customers.<br><br>Michael has been working in the Guidance, Navigation and Control (GNC) field since 2007 with highlights including live aerial firing demonstrations from armed drones in front of top brass and hitting targets with optical terminal guidance techniques. Michael has produced two novel guidance laws for space craft and spinning rockets, an adaptive control law for a hypersonic glider and a plethora of intelligent navigation algorithms.<br><br>A Co-Founder and Former Director of Athena AI, Dr. Creagh has successfully exited this company in a trade sale."
     },
-    # {
-    #     "name": "David Robinson",
-    #     "jobtitle": "Senior Security Consultant",
-    #     "company": "Bastion Security Group",
-    #     "linkedin": "https://www.linkedin.com/in/davidrobinsonnz/",
-    #     "image": "david_robinson.jpg",
-    #     "description": "Dave/Karit has worked in various parts of the IT industry and has developed a skillset that encompasses various disciplines in the information security domain. Dave currently does Security Consulting in Wellington and runs Kākācon.<br><br>Dave has presented at a range of conferences such as DefCon, Kiwicon, Aerospace Village @ DefCon, BSidesCBR, CHCon, Unrestcon and at numerous local meetups; along with running training at Kiwicon, Syscan, CrikeyCon, CHCon and TuskCon. He also has a keen interest in aerospace, lock-picking and all things wireless."
-    # },
+    {
+        "name": "David Robinson",
+        "jobtitle": "",
+        "company": "",
+        "linkedin": "https://www.linkedin.com/in/davidrobinsonnz/",
+        "image": "david_robinson.jpg",
+        "description": "Dave/Karit has worked in various parts of the IT industry and has developed a skillset that encompasses various disciplines in the information security domain. Dave currently does Security Consulting in Wellington and runs Kākācon.<br><br>Dave has presented at a range of conferences such as DefCon, Kiwicon, Aerospace Village @ DefCon, BSidesCBR, CHCon, Unrestcon and at numerous local meetups; along with running training at Kiwicon, Syscan, CrikeyCon, CHCon and TuskCon. He also has a keen interest in aerospace, lock-picking and all things wireless."
+    },
 ]

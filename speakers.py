@@ -36,7 +36,7 @@ speakers = [
         "jobtitle": "",
         "company": "",
         "linkedin": "https://www.linkedin.com/in/davidrobinsonnz/",
-        "image": "david_robinson.jpg",
+        "image": "david_robinson.png",
         "description": "Dave/Karit has worked in various parts of the IT industry and has developed a skillset that encompasses various disciplines in the information security domain. Dave currently does Security Consulting in Wellington and runs Kākācon.<br><br>Dave has presented at a range of conferences such as DefCon, Kiwicon, Aerospace Village @ DefCon, BSidesCBR, CHCon, Unrestcon and at numerous local meetups; along with running training at Kiwicon, Syscan, CrikeyCon, CHCon and TuskCon. He also has a keen interest in aerospace, lock-picking and all things wireless."
     },
 ]

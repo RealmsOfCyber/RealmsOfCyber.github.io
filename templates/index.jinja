@@ -247,6 +247,7 @@
         <div class="col-6 col-lg-3 mb-4">
           <div class="card rounded-0">
             <a href="#{{ speaker['image'] }}" data-bs-toggle="modal" data-bs-target="#{{ speaker['image'] }}"><img
+                    width="300px" height="300px"
                 src="assets/images/speakers/{{ speaker['image'] }}" class="card-img-top rounded-0" alt=""></a>
             <div class="card-body">
               <h5 class="card-title mb-2">{{ speaker['name'] }}</h5>
@@ -274,6 +275,35 @@
       {% if ns.speaker_count % 4 != 0 %}
     </div>
     {% endif %}
+
+
+    <h3 class="section-heading text-center mb-3">MC</h3>
+  <div class="section-intro text-center single-col-max mx-auto mb-4">
+          ROCCON 2024 will be hosted by Adam Green:
+  </div>
+  <div class="row">
+    <div class="mx-auto col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#modal-mc" data-bs-toggle="modal" data-bs-target="#modal-mc"><img width="300px" height="300px" src="assets/images/speakers/adam_green.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Adam Green</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Founder and CISO</div>
+            <div class="meta">Green Cyber Consulting</div>
+          </div>
+          <a href="#modal-mc" data-bs-toggle="modal" data-bs-target="#modal-mc">Read more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/adam-green-7a348519/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
     </div>
     <!--//container-->
     {% if tickets_on_sale %}
@@ -283,7 +313,6 @@
     {% endif %}
   </section>
   <!--//speakers-section-->
-
 
 
   {% if last_year_highlights %}

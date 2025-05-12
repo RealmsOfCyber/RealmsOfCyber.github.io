@@ -40,11 +40,6 @@ sponsors = {
     #         "logo": "tarian.png"
     #     },
     #     {
-    #         "name": "Decipher Bureau",
-    #         "url": "https://www.decipherbureau.com/",
-    #         "logo": "decipher.png"
-    #     },
-    #     {
     #         "name": "Adrenalan",
     #         "url": "https://www.adrenalan.com/",
     #         "logo": "adrenalan.png"
@@ -55,7 +50,12 @@ sponsors = {
     #         "logo": "infotrust.png"
     #     }
     # ],
-    # "Bronze": [
+    "Bronze": [
+        {
+            "name": "Decipher Bureau",
+            "url": "https://www.decipherbureau.com/",
+            "logo": "decipher.png"
+        },
     #     {
     #         "name": "AusCERT",
     #         "url": "https://auscert.org.au/",
@@ -156,5 +156,5 @@ sponsors = {
     #         "url": "https://www.orcacyber.com.au/",
     #         "logo": "orca.png"
     #     }
-    # ]
+    ]
 }

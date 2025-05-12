@@ -39,4 +39,12 @@ speakers = [
         "image": "david_robinson.png",
         "description": "Dave/Karit has worked in various parts of the IT industry and has developed a skillset that encompasses various disciplines in the information security domain. Dave currently does Security Consulting in Wellington and runs Kākācon.<br><br>Dave has presented at a range of conferences such as DefCon, Kiwicon, Aerospace Village @ DefCon, BSidesCBR, CHCon, Unrestcon and at numerous local meetups; along with running training at Kiwicon, Syscan, CrikeyCon, CHCon and TuskCon. He also has a keen interest in aerospace, lock-picking and all things wireless."
     },
+    # {
+    #     "name": "Ruarri Fairweather",
+    #     "jobtitle": "",
+    #     "company": "",
+    #     "linkedin": "https://www.linkedin.com/in/rfairweather/",
+    #     "image": ".png",
+    #     "description": "Ruarri is a strategic legal and commercial advisor with deep roots in IT, AI, cyber, and emerging tech. With decades operating at the edge of innovation, he has helped start-ups, scale-ups, boards, and Fortune 500s navigate risk, close complex deals, and scale with confidence - often in regulated, high-stakes environments.<br><br>But he's not your typical lawyer. He brings a founder’s mindset, a consultant’s edge, and a bias for action. He simplifies complexity, translate risk into commercial advantage, and get things done without fluff, footnotes, or lengthy reports you’ll never read.<br><br>You’ll find him where law, business, and technology collide - where the stakes are high, timelines short, and outcomes matter."
+    # },
 ]

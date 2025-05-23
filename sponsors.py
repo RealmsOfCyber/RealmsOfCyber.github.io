@@ -23,7 +23,7 @@ sponsors = {
     #         "logo": "eaglegate.jpeg"
     #     }
     ],
-    # "Silver": [
+    "Silver": [
     #     {
     #         "name": "Sekuro",
     #         "url": "https://sekuro.io",
@@ -34,11 +34,11 @@ sponsors = {
     #         "url": "https://www.redwoodsecurity.com.au/",
     #         "logo": "redwood.png"
     #     },
-    #     {
-    #         "name": "Tarian Cyber",
-    #         "url": "https://tarian.com.au/",
-    #         "logo": "tarian.png"
-    #     },
+        {
+            "name": "Tarian Cyber",
+            "url": "https://tarian.com.au/",
+            "logo": "tarian.png"
+        },
     #     {
     #         "name": "Adrenalan",
     #         "url": "https://www.adrenalan.com/",
@@ -49,7 +49,7 @@ sponsors = {
     #         "url": "https://www.infotrust.com.au/",
     #         "logo": "infotrust.png"
     #     }
-    # ],
+    ],
     "Bronze": [
         {
             "name": "Decipher Bureau",

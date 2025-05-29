@@ -11,7 +11,12 @@ sponsors = {
             "name": "Cultural Cyber Security",
             "url": "https://www.culturalcybersecurity.com",
             "logo": "ccs.jpg"
-        }
+        },
+        {
+            "name": "Silent Grid",
+            "url": "https://www.silentgrid.com/",
+            "logo": "silentgrid.png"
+        },
     #     {
     #         "name": "Tayko Group",
     #         "url": "https://tayko.io",
@@ -24,6 +29,16 @@ sponsors = {
     #     }
     ],
     "Silver": [
+        {
+            "name": "Tarian Cyber",
+            "url": "https://tarian.com.au/",
+            "logo": "tarian.png"
+        },
+        {
+            "name": "Siege Cyber",
+            "url": "https://www.siegecyber.com.au",
+            "logo": "siegecyber.png"
+        },
     #     {
     #         "name": "Sekuro",
     #         "url": "https://sekuro.io",
@@ -34,11 +49,6 @@ sponsors = {
     #         "url": "https://www.redwoodsecurity.com.au/",
     #         "logo": "redwood.png"
     #     },
-        {
-            "name": "Tarian Cyber",
-            "url": "https://tarian.com.au/",
-            "logo": "tarian.png"
-        },
     #     {
     #         "name": "Adrenalan",
     #         "url": "https://www.adrenalan.com/",

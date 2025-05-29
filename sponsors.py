@@ -12,11 +12,6 @@ sponsors = {
             "url": "https://www.culturalcybersecurity.com",
             "logo": "ccs.jpg"
         },
-        {
-            "name": "Silent Grid",
-            "url": "https://www.silentgrid.com/",
-            "logo": "silentgrid.png"
-        },
     #     {
     #         "name": "Tayko Group",
     #         "url": "https://tayko.io",
@@ -38,6 +33,11 @@ sponsors = {
             "name": "Siege Cyber",
             "url": "https://www.siegecyber.com.au",
             "logo": "siegecyber.png"
+        },
+        {
+            "name": "Silent Grid",
+            "url": "https://www.silentgrid.com/",
+            "logo": "silentgrid.png"
         },
     #     {
     #         "name": "Sekuro",

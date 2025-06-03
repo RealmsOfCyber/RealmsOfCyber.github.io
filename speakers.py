@@ -8,6 +8,14 @@ speakers = [
         "description": "Kylie McDevitt is a security researcher at her own company, InfoSect, specialising in Linux and embedded devices. Before starting at InfoSect, she was a Technical Director at the Australian Signals Directorate (ASD). Kylie graduated from ANU with a Bachelor of Engineering and worked for Australia's largest telco as a radio engineer in MobileNet before moving into computer security, where she has been for the last 16 years. She has a Masters in Computer Networking, as well as multiple industry certifications. Kylie has taught as a casual lecturer at UNSW Canberra and spends her free time organising community events such as BSides Canberra and the CSides monthly security meetup."
     },
     {
+        "name": "Sasha Biskup",
+        "jobtitle": "CISO",
+        "company": "DroneShield",
+        "linkedin": "https://www.linkedin.com/in/sashabiskup/",
+        "image": "sasha_biskup.png",
+        "description": "Sasha has been at the forefront of cybersecurity and engineering for over 25 years, working in Big Tech, the Internet of Things (IoT), Telecommunications, and Financial Services.<br><br>Prior to joining DroneShield, he held numerous leadership and engineering roles in England and the U.S. He has been pivotal in maturing cybersecurity at product startups and large-scale Internet companies throughout his career. His prolific work with global-scale IoT initiatives has given him the invaluable hands-on practical experience he needs to scale systems and processes effectively.<br><br>Sasha contributes significantly to DroneShield’s innovation and required engineering velocity. He is constantly raising the security bar to protect assets, products, and customers."
+    },
+    {
         "name": "Mike Monnik",
         "jobtitle": "CEO",
         "company": "DroneSec",
@@ -46,13 +54,5 @@ speakers = [
         "linkedin": "https://www.linkedin.com/in/rfairweather/",
         "image": "ruarri_fairweather.jpeg",
         "description": "Ruarri is a strategic legal and commercial advisor with deep roots in IT, AI, cyber, and emerging tech. With decades operating at the edge of innovation, he has helped start-ups, scale-ups, boards, and Fortune 500s navigate risk, close complex deals, and scale with confidence - often in regulated, high-stakes environments.<br><br>But he's not your typical lawyer. He brings a founder’s mindset, a consultant’s edge, and a bias for action. He simplifies complexity, translate risk into commercial advantage, and get things done without fluff, footnotes, or lengthy reports you’ll never read.<br><br>You’ll find him where law, business, and technology collide - where the stakes are high, timelines short, and outcomes matter."
-    },
-    {
-        "name": "Sasha Biskup",
-        "jobtitle": "CISO",
-        "company": "DroneShield",
-        "linkedin": "https://www.linkedin.com/in/sashabiskup/",
-        "image": "sasha_biskup.png",
-        "description": "Sasha has been at the forefront of cybersecurity and engineering for over 25 years, working in Big Tech, the Internet of Things (IoT), Telecommunications, and Financial Services.<br><br>Prior to joining DroneShield, he held numerous leadership and engineering roles in England and the U.S. He has been pivotal in maturing cybersecurity at product startups and large-scale Internet companies throughout his career. His prolific work with global-scale IoT initiatives has given him the invaluable hands-on practical experience he needs to scale systems and processes effectively.<br><br>Sasha contributes significantly to DroneShield’s innovation and required engineering velocity. He is constantly raising the security bar to protect assets, products, and customers."
     },
 ]

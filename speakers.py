@@ -55,4 +55,20 @@ speakers = [
         "image": "ruarri_fairweather.jpeg",
         "description": "Ruarri is a strategic legal and commercial advisor with deep roots in IT, AI, cyber, and emerging tech. With decades operating at the edge of innovation, he has helped start-ups, scale-ups, boards, and Fortune 500s navigate risk, close complex deals, and scale with confidence - often in regulated, high-stakes environments.<br><br>But he's not your typical lawyer. He brings a founder’s mindset, a consultant’s edge, and a bias for action. He simplifies complexity, translate risk into commercial advantage, and get things done without fluff, footnotes, or lengthy reports you’ll never read.<br><br>You’ll find him where law, business, and technology collide - where the stakes are high, timelines short, and outcomes matter."
     },
+    {
+        "name": "Jocelinn Kang",
+        "jobtitle": "",
+        "company": "Australian Strategic Policy Institute",
+        "linkedin": "https://www.linkedin.com/in/jocelinn-k/",
+        "image": "jocelinn_kang.png",
+        "description": "Jocelinn Kang is a Technical Fellow at the Australian Strategic Policy Institute with over 20 years experience in cyber security and national security. Originally trained in computer network security, she moved from hands-on technical work to strategic policy, driven by a belief that technology should serve people, and that good decisions depend on understanding how systems work. Jocelinn now leads her own consulting business, Nodalys, alongside her policy work. She is known for making complex technical issues accessible and actionable, and for bridging technical, executive, and policy domains. Her commentary has appeared in the Sydney Morning Herald, ABC, and other outlets."
+    },
+    {
+        "name": "Dr Jessie Jacob",
+        "jobtitle": "",
+        "company": "Australian Strategic Policy Institute",
+        "linkedin": "https://www.linkedin.com/in/jessie-jacob-1a0baa346/",
+        "image": "jessie_jacob.jpg",
+        "description": "Dr Jacob is an expert in navigating complex issues at the intersection of intelligence and cyber legislation, with a particular focus on oversight and compliance, and how these areas interact with Australian Government policy.<br><br>She has worked across multiple agencies within the National Intelligence Community (NIC), including the Australian Geospatial-Intelligence Organisation, the Office of National Intelligence, and the Australian Signals Directorate, giving her a broad understanding of Defence intelligence and the NIC landscape. Dr Jacob has also contributed to policy research on cyber and critical infrastructure as a researcher at the Australian Strategic Policy Institute."
+    },
 ]

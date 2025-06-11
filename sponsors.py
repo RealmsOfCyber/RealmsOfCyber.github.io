@@ -66,6 +66,11 @@ sponsors = {
             "url": "https://www.decipherbureau.com/",
             "logo": "decipher.png"
         },
+        {
+            "name": "Flame Tree Cyber",
+            "url": "https://www.flametreecyber.com.au/",
+            "logo": "flame_tree_cyber.png"
+        },
     #     {
     #         "name": "AusCERT",
     #         "url": "https://auscert.org.au/",

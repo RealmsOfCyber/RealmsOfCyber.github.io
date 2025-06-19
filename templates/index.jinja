@@ -131,7 +131,7 @@
       <div class="row">
         <div class="col-lg-6 col-12">
           <div class="hero-text-block">
-            <h1 class="hero-heading mb-2">ROCCON {{ year }}</h1>
+            <h1 class="hero-heading mb-2">Realms of Cyber Conference {{ year }}</h1>
             <div class="hero-meta mb-3">
               <i class="far fa-calendar-alt me-2"></i>{{ date }}
               <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
@@ -151,21 +151,19 @@
 
   <section id="about-section" class="about-section section theme-bg-light">
     <div class="container">
-      <h3 class="section-heading text-center mb-3">About ROCCON</h3>
+      <h3 class="section-heading text-center mb-3">About Realms of Cyber Conference</h3>
       <div class="section-intro text-center single-col-max mx-auto mb-4">
-        We see a future where land,
-        air, sea, space, cognitive, and biotechnological industries are well
-        supported to make the Australian digital world safer.
+          ROCC is a high-impact, one-day conference bringing together cutting-edge presentations,
+          live technology demonstrations, and meaningful networking opportunities
+          - all set in the inspiring surrounds of the iconic Brisbane Powerhouse.
       </div>
-      <br />
       <div class="section-intro text-center single-col-max mx-auto mb-4">
-        <strong>
-          Our vision is simple: to help everyone grow and protect against
-          online threats. We're here to make sure that cyber professionals and
-          those who need their support can easily connect, creating a strong
-          and united community that keeps our digital spaces secure and
-          thriving.
-        </strong>
+            Focused on operational security across physical domains - Land, Sea, Air, Space, Biological,
+            and Cognitive - ROCC is dedicated to advancing Australia’s OT and cyber-physical resilience.
+      </div>
+      <div class="section-intro text-center single-col-max mx-auto mb-4">
+            Attendees can explore multiple streams of expert talks, get hands-on with interactive tech
+            displays, and connect in curated social spaces designed to spark real conversations and collaboration.
       </div>
       <!-- <div class="event-countdown text-center mb-3">
         <h4 class="countdown-intro mb-2 text-center mb-3">
@@ -228,8 +226,8 @@
       {% set ns = namespace(speaker_count=0) %}
       {% for speaker in speakers -%}
       {% if ns.speaker_count % 4 == 0 %}
-      <div class="row" name="{{ ns.speaker_count }}">
-        {% endif %}
+        <div class="row" name="{{ ns.speaker_count }}">
+      {% endif %}
         {% set ns.speaker_count = ns.speaker_count + 1 %}
         <div class="col-6 col-lg-3 mb-4">
           <div class="card rounded-0">
@@ -271,7 +269,7 @@
 
     <h3 class="section-heading text-center mb-3">MC</h3>
   <div class="section-intro text-center single-col-max mx-auto mb-4">
-          ROCCON 2025 will be hosted by Adam Green:
+          ROCC {{ year }} will be hosted by Adam Green:
   </div>
   <div class="row">
     <div class="mx-auto col-6 col-lg-3 mb-4">
@@ -652,15 +650,36 @@
       </div>
 
       {% for sponsor_level in sponsors -%}
-      <h4 class="fw-bolder text-primary mb-4 text-center">{{ sponsor_level }}</h4>
-      {% for sponsor_detail in sponsors[sponsor_level] -%}
-      <div class="row logos justify-content-center">
-        <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
-          <a href="{{ sponsor_detail['url'] }}" target="_blank"><img style="float: left; width:  300px; height: 150px; object-fit:scale-down;"
-              src="assets/images/sponsors/{{ sponsor_detail['logo'] }}" alt="{{ sponsor_detail['name'] }}" /></a>
-        </div>
-      </div>
-      {% endfor %}
+          <h2 class="fw-bolder text-primary mb-4 text-center">{{ sponsor_level }}</h2>
+          {% if sponsor_level == "Silver" or sponsor_level == "Bronze" %}
+            {% set ns = namespace(sponsor_count=0) %}
+          {% endif %}
+          {% for sponsor_detail in sponsors[sponsor_level] -%}
+              {% if sponsor_level == "Silver" or sponsor_level == "Bronze" %}
+                {% if ns.sponsor_count % 2 == 0 %}
+                  <div class="row logos justify-content-center">
+                {% endif %}
+                <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+                  <a href="{{ sponsor_detail['url'] }}" target="_blank"><img style="float: left; width: {{ sponsor_detail['width'] }}px; height: {{ sponsor_detail['height'] }}px; object-fit:scale-down; max-height: {{ sponsor_detail['height'] }}px"
+                      src="assets/images/sponsors/{{ sponsor_detail['logo'] }}" alt="{{ sponsor_detail['name'] }}" /></a>
+                </div>
+                {% if ns.sponsor_count % 2 == 1 %}
+                  </div>
+                {% endif %}
+                {% set ns.sponsor_count = ns.sponsor_count + 1 %}
+              {% else %}
+                  <div class="row logos justify-content-center">
+                    <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+                      <a href="{{ sponsor_detail['url'] }}" target="_blank"><img style="float: left; width: {{ sponsor_detail['width'] }}px; height: {{ sponsor_detail['height'] }}px; object-fit:scale-down; max-height: {{ sponsor_detail['height'] }}px"
+                          src="assets/images/sponsors/{{ sponsor_detail['logo'] }}" alt="{{ sponsor_detail['name'] }}" /></a>
+                    </div>
+                  </div>
+              {% endif %}
+          {% endfor %}
+          {% if (sponsor_level == "Silver" or sponsor_level == "Bronze") and ns.sponsor_count % 2 == 0 %}
+            </div>
+          {% endif %}
+          <br>
       {% endfor %}
       <!--//sponsors-->
       <div class="sponsors-cta text-center pt-5">

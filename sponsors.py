@@ -173,3 +173,27 @@ sponsors = {
     #     }
     ]
 }
+for level in sponsors.keys():
+    sponsors_level = sponsors[level]
+    sponsors_build = []
+    for sponsor in sponsors_level:
+        if not sponsor.get("height"):
+            if level == "Platinum":
+                sponsor['height'] = 110
+            elif level == "Gold":
+                sponsor['height'] = 90
+            elif level == "Silver":
+                sponsor['height'] = 70
+            else:
+                sponsor['height'] = 60
+        if not sponsor.get("width"):
+            if level == "Platinum":
+                sponsor['width'] = 320
+            elif level == "Gold":
+                sponsor['width'] = 260
+            elif level == "Silver":
+                sponsor['width'] = 220
+            else:
+                sponsor['width'] = 180
+        sponsors_build += [sponsor]
+    sponsors[level] = sponsors_build

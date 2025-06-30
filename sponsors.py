@@ -71,6 +71,11 @@ sponsors = {
             "url": "https://www.flametreecyber.com.au/",
             "logo": "flame_tree_cyber.png"
         },
+        {
+            "name": "Acumenis",
+            "url": "https://www.acumenis.com.au/",
+            "logo": "acumenis.png"
+        },        
     #     {
     #         "name": "AusCERT",
     #         "url": "https://auscert.org.au/",
@@ -160,11 +165,6 @@ sponsors = {
     #         "name": "IBM",
     #         "url": "https://www.ibm.com/services/security",
     #         "logo": "ibm.png"
-    #     },
-    #     {
-    #         "name": "Acumenis",
-    #         "url": "https://www.acumenis.com.au/",
-    #         "logo": "acumenis.png"
     #     },
     #     {
     #         "name": "Orca Cyber Solutions",

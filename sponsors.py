@@ -45,10 +45,6 @@ sponsors = {
     #         "logo": "sekuro.png"
     #     },
     #     {
-    #         "name": "Redwood Consulting",
-    #         "url": "https://www.redwoodsecurity.com.au/",
-    #         "logo": "redwood.png"
-    #     },
     #     {
     #         "name": "Adrenalan",
     #         "url": "https://www.adrenalan.com/",
@@ -75,7 +71,12 @@ sponsors = {
             "name": "Acumenis",
             "url": "https://www.acumenis.com.au/",
             "logo": "acumenis.png"
-        },        
+        },
+        {
+            "name": "Redwood Consulting",
+            "url": "https://www.redwoodsecurity.com.au/",
+            "logo": "redwood.png"
+        },
     #     {
     #         "name": "AusCERT",
     #         "url": "https://auscert.org.au/",

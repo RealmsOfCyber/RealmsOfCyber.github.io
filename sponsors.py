@@ -77,6 +77,11 @@ sponsors = {
             "url": "https://www.redwoodsecurity.com.au/",
             "logo": "redwood.png"
         },
+        {
+            "name": "DroneShield",
+            "url": "https://www.droneshield.com/",
+            "logo": "droneshield.png"
+        },
     #     {
     #         "name": "AusCERT",
     #         "url": "https://auscert.org.au/",

@@ -1,0 +1,116 @@
+<section id="speakers-section" class="speakers-section section active">
+<div class="container">
+  <h3 class="section-heading text-center mb-3">Speakers</h3>
+  <div class="section-intro text-center single-col-max mx-auto mb-5">
+    We have an exciting list of speakers rolling out for our {{ year }} conference,
+    check them out:
+  </div>
+  {% set ns = namespace(speaker_count=0) %}
+  {% for speaker in speakers -%}
+  {% if ns.speaker_count % 4 == 0 %}
+    <div class="row" name="{{ ns.speaker_count }}">
+  {% endif %}
+    {% set ns.speaker_count = ns.speaker_count + 1 %}
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#{{ speaker['image'] }}" data-bs-toggle="modal" data-bs-target="#{{ speaker['image'] }}"><img
+
+            src="assets/images/speakers/{{ speaker['image'] }}" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">{{ speaker['name'] }}</h5>
+          <div class="card-text mb-3">
+            <div class="meta">{{ speaker['jobtitle'] }}</div>
+            <div class="meta">{{ speaker['company'] }}</div>
+          </div>
+          <a href="#{{ speaker['image'] }}" data-bs-toggle="modal" data-bs-target="#{{ speaker['image'] }}">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="{{ speaker['linkedin'] }}"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    {% if ns.speaker_count % 4 == 0 %}
+  </div>
+  {% endif %}
+  {% endfor %}
+
+  {% if ns.speaker_count % 4 != 0 %}
+</div>
+{% endif %}
+
+<br><div class="container">
+  <div class="speakers-cta text-center py-3">
+      <a class="btn btn-primary btn-lg" href="https://forms.office.com/r/VkSvkBzaf3" target="_blank">Call for Presenters</a>
+  </div>
+</div><br>
+
+
+{% include 'mc.jinja' %}
+
+</div>
+<!--//container-->
+{% if tickets_on_sale %}
+<div class="speakers-cta text-center py-3">
+  <a class="btn btn-primary btn-lg" href="{{ ticket_url }}" target="_blank">Get Tickets</a>
+</div>
+{% endif %}
+</section>
+<!--//speakers-section-->
+
+<!-- Modal Speakers -->
+{% for speaker in speakers -%}
+<!-- Modal Speaker {{ speaker['image'] }}-->
+<div class="modal modal-speaker modal-speaker-1" id="{{ speaker['image'] }}" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        {{ speaker['name'] }}
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/speakers/{{ speaker['image'] }}" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">{{ speaker['name'] }}</h2>
+            <div class="meta">{{ speaker['jobtitle'] }}</div>
+            <div class="meta">{{ speaker['company'] }}</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="{{ speaker['linkedin'] }}"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          {{ speaker['description'] }}
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+{% endfor %}

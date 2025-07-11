@@ -3,3 +3,4 @@ __pycache__
 .DS_Store
 site/index.html
 site/indexold.html
+site/staging.html

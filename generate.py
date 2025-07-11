@@ -10,6 +10,7 @@ env = Environment(loader=FileSystemLoader('templates'))
 # load the `index.jinja` template
 index_template = env.get_template('index.jinja')
 output_from_parsed_template = index_template.render(
+  staging=False,
   year=year,
   date=date,
   become_a_sponsor_url=become_a_sponsor_url,
@@ -23,6 +24,25 @@ output_from_parsed_template = index_template.render(
   schedule2=schedule2
 )
 
+staging = index_template.render(
+  staging=True,
+  year=year,
+  date=date,
+  become_a_sponsor_url=become_a_sponsor_url,
+  sponsors=sponsors,
+  speakers=speakers,
+  sponsor_blurb=sponsor_blurb,
+  tickets_on_sale=tickets_on_sale,
+  ticket_url=ticket_url,
+  ticket_price=ticket_price,
+  schedule=schedule,
+  schedule2=schedule2
+)
+
+
 # write the parsed template
 with open("site/index.html", "w") as chap_page:
   chap_page.write(output_from_parsed_template)
+
+with open("site/staging.html", "w") as chap_page:
+  chap_page.write(staging)

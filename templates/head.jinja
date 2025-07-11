@@ -3,6 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <title>Realms of Cyber</title>
+{% if not staging %}
   <meta name="description"
     content="Realms of Cyber {{ year }} | Brisbane's biggest cyber and information security meets physical systems conference in Brisbane. Learn more." />
   <meta property="og:description"
@@ -15,6 +16,9 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="1024">
+{% else %}
+  <meta name="robots" content="noindex">
+{% endif %}
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />

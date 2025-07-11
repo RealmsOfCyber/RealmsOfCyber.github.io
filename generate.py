@@ -2,7 +2,7 @@ from jinja2 import Environment, FileSystemLoader
 from variables import *
 from sponsors import sponsors
 from speakers import speakers
-from schedule import schedule
+from schedule import schedule, schedule2
 
 # load templates folder to environment (security measure)
 env = Environment(loader=FileSystemLoader('templates'))
@@ -19,7 +19,8 @@ output_from_parsed_template = index_template.render(
   tickets_on_sale=tickets_on_sale,
   ticket_url=ticket_url,
   ticket_price=ticket_price,
-  schedule=schedule
+  schedule=schedule,
+  schedule2=schedule2
 )
 
 # write the parsed template

@@ -227,7 +227,7 @@ schedule2_build = [
         "title": "Stay Tuned",
         "realm": "Multi",
         "speaker": {
-            "name": "Kenneth (Ken) Radke",
+            "name": "Ken Radke",
             "image": "default.png"
         },
         "desc": ""

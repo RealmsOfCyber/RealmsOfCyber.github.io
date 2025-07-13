@@ -29,7 +29,7 @@ schedule_build = [
             "name": "Kylie McDevitt",
             "image": "kylie_mcdevitt.jpg"
         },
-        "desc": ""
+        "desc": "At Pwn2Own Ireland 2024, Kylie's team became the first fully Australian company to compete at any Pwn2Own event. They entered the Embedded Systems category with exploits for three targets and successfully demonstrated two. One of those was the Sonos Era 300 smart speaker, which earned them USD 30,000 and 3 Master of Pwn points after being the second team to exploit it. This talk covers their experience preparing for the competition—from dealing with last-minute firmware changes to the unlucky demo draw that shaped their outcome. I’ll also introduce the exploit developed for the Sonos Era 300 and share insights into breaking a modern smart speaker. If you’re curious about embedded exploitation or what it’s like behind the scenes at Pwn2Own, this talk is for you."
     },
     {
         "time": "9:50 - 10:05",
@@ -49,7 +49,7 @@ schedule_build = [
             "name": "Bradley Butler",
             "image": "bradley_butler.jpg"
         },
-        "desc": ""
+        "desc": "Bradley's session dives into the critical realm of cyber incident response in the maritime domain. Drawing powerful parallels from a first-hand military crisis – a rocket attack in Afghanistan – we'll highlight the vital need for robust drills when a vessel faces a cyber threat. We'll then explore a theoretical ship cyber-attack scenario, drawing insights from our experience conducting tabletop exercises for various Operational Technology industries. We'll examine how to effectively assess, contain, communicate, and recover systems when hundreds of miles from shore. Finally, we'll cast an eye to the horizon, discussing the emerging response challenges of Maritime Autonomous Surface Ships (MASS) and their degrees of autonomy. Equip yourself to navigate the unseen digital storms of the sea."
     },
     {
         "time": "10:20 – 10:35",
@@ -77,7 +77,7 @@ schedule_build = [
             "name": "Sasha Biskup",
             "image": "sasha_biskup.png"
         },
-        "desc": ""
+        "desc": "Sasha's presentation explores the critical need for a full stack security strategy in the context of Counter-Unmanned Aircraft Systems (CUAS) companies and manufacturers. We will examine the unique cyber and physical risks posed by autonomous and AI-driven platforms, the importance of mature security capabilities early in a company’s lifecycle, and the necessity of integrating security disciplines across hardware, software, and operational processes. Attendees will gain insights into threat modelling for product security, the interplay between hardware and software engineering, and the imperative of secure-by-design principles."
     },
     {
         "time": "11:45 – 12:00",
@@ -87,7 +87,7 @@ schedule_build = [
             "name": "David Robinson",
             "image": "david_robinson.png"
         },
-        "desc": ""
+        "desc": "Global Navigation Satellite Systems (GNSS) are integral to maritime navigation—guiding everything from cargo ships and cruise liners to fishing vessels and autonomous maritime systems. But what happens when GNSS is compromised? Attacks like jamming and spoofing are no longer theoretical—they’re happening in the wild, impacting maritime operations with growing frequency and sophistication. In this talk, we’ll explore how GNSS works, what global systems are in play, and how attackers manipulate positioning and timing signals. We’ll look at why ships aren’t always where they think they are—and how this disconnect can lead to near misses, accidental groundings, or even maritime incursions. We’ll break down real-world cases, including coastal jamming near North Korea and spoofing events in the Eastern Mediterranean."
     },
     {
         "time": "12:00 – 12:15",
@@ -97,7 +97,7 @@ schedule_build = [
             "name": "Jocelinn Kang & Dr Jessie Jacob (ASPI)",
             "image": "default.png"
         },
-        "desc": ""
+        "desc": "A conversation between two subcable enthusiasts unpacks why undersea cables are seen as strategic assets in a shifting geopolitical landscape. It will explore why Australia is emerging as a digital hub, and what risks submarine cables, which carry 99% of all international internet traffic, face from sabotage, to cyber intrusions, to single points of failure. We’ll leave you with practical considerations to inform your risk management when selecting or securing digital services, emphasising the critical role of sovereign digital resilience for business continuity."
     },
     {
         "time": "12:15 – 12:25",
@@ -167,7 +167,7 @@ schedule_build = [
             "name": "Ruarri Fairweather",
             "image": "ruarri_fairweather.jpeg"
         },
-        "desc": ""
+        "desc": "Space is now a critical domain for cybersecurity. Satellites are essential to communications, navigation, and defense—and they're increasingly targeted. Australia regulates this through its Criminal Code, Radiocommunications, and Space Acts, while globally, the Outer Space Treaty and Liability Convention apply. However, there's no specific cyber treaty for space, creating legal gaps. Hacking a satellite may trigger international law, war-like consequences, or commercial liability. State actors, private companies, and individuals all face exposure. As the race to the Moon and commercial space accelerates, cybersecurity must be built into missions, not bolted on. Australia has an opportunity to lead, but policy must keep pace with orbital reality."
     },
     {
         "time": "16:00 – 16:15",
@@ -177,7 +177,7 @@ schedule_build = [
             "name": "Clint Arizmendi",
             "image": "clint_arizmendi.png"
         },
-        "desc": ""
+        "desc": "Clint's talk will dive deep into how nation states are increasingly deploying sophisticated AI-generated deepfake videos to fabricate events, manipulate public perception, and influence narratives during global incidents. Once considered novel curiosities, deepfakes are now critical tools for real-time strategic deception, enabled by rapid advances in accessible technology. In recent global conflicts, such as the Russia-Ukraine war and China-Taiwan tensions, deepfakes have been used to undermine trust, fabricate war crimes, and distort democratic processes. Notably, a March 2022 deepfake of Ukrainian President Zelensky calling for surrender was disseminated through compromised media channels. Similarly, during Taiwan's 2024 election, fabricated corruption and explicit videos targeting political figures were spread to influence voters - particularly youth via platforms like TikTok."
     },
     {
         "time": "16:15 – 16:30",
@@ -187,7 +187,7 @@ schedule_build = [
             "name": "Michael Creagh",
             "image": "michael_creagh.jpg"
         },
-        "desc": ""
+        "desc": "Arming robots has been a prominent topic since the invasion of Ukraine by Russia where First-Person View drones have dominated the battlefield. Skyborne Technologies has been arming robots for six years and has learnt many lessons along the way on topics of reliability, accuracy, autonomy and cyber security of such platforms. Michael Creagh discusses lessons learnt, current state of the art and the future of arming robots and keeping them in friendly hands. Michael will present on several different air and ground platforms, weapon systems (12 Ga, 40mm Grenade and warhead), and also discuss the economics of future attrition warfare."
     },
     {
         "time": "16:30 – 16:45",

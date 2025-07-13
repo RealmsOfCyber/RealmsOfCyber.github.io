@@ -13,13 +13,13 @@ schedule_build = [
     },
     {
         "time": "9:15 - 9:35",
-        "title": "Keynote",
-        "realm": "Multi",
+        "title": "Stay Tuned",
+        "realm": "",
         "speaker": {
-            "name": "TBD",
+            "name": "",
             "image": "default.png"
         },
-        "desc": "To be announced..."
+        "desc": ""
     },
     {
         "time": "9:35 - 9:50",
@@ -29,7 +29,7 @@ schedule_build = [
             "name": "Kylie McDevitt",
             "image": "kylie_mcdevitt.jpg"
         },
-        "desc": "To be announced..."
+        "desc": ""
     },
     {
         "time": "9:50 - 10:05",
@@ -39,7 +39,7 @@ schedule_build = [
             "name": "Mike Monik",
             "image": "mike_monnik.jpeg"
         },
-        "desc": "To be announced..."
+        "desc": ""
     },
     {
         "time": "10:05 - 10:20",
@@ -49,17 +49,17 @@ schedule_build = [
             "name": "Bradley Butler",
             "image": "bradley_butler.jpg"
         },
-        "desc": "To be announced..."
+        "desc": ""
     },
     {
         "time": "10:20 – 10:35",
-        "title": "TBD",
-        "realm": "Multi",
+        "title": "Stay Tuned",
+        "realm": "",
         "speaker": {
-            "name": "TBD",
+            "name": "",
             "image": "default.png"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "10:35 – 10:45",
@@ -77,7 +77,7 @@ schedule_build = [
             "name": "Sasha Biskup",
             "image": "sasha_biskup.png"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "11:45 – 12:00",
@@ -87,7 +87,7 @@ schedule_build = [
             "name": "David Robinson",
             "image": "david_robinson.png"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "12:00 – 12:15",
@@ -97,7 +97,7 @@ schedule_build = [
             "name": "Jocelinn Kang & Dr Jessie Jacob (ASPI)",
             "image": "default.png"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "12:15 – 12:25",
@@ -113,43 +113,43 @@ schedule_build = [
     },
     {
         "time": "13:40 – 13:55",
-        "title": "TBD",
-        "realm": "Multi",
+        "title": "Stay Tuned",
+        "realm": "",
         "speaker": {
-            "name": "TBD",
+            "name": "",
             "image": "default.png"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "13:55 – 14:10",
-        "title": "TBD",
-        "realm": "Multi",
+        "title": "Stay Tuned",
+        "realm": "",
         "speaker": {
-            "name": "TBD",
+            "name": "",
             "image": "default.png"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "14:10 – 14:25",
-        "title": "TBD",
-        "realm": "Multi",
+        "title": "Stay Tuned",
+        "realm": "",
         "speaker": {
-            "name": "TBD",
+            "name": "",
             "image": "default.png"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "14:25 – 14:40",
-        "title": "TBD",
-        "realm": "Multi",
+        "title": "Stay Tuned",
+        "realm": "",
         "speaker": {
-            "name": "TBD",
+            "name": "",
             "image": "default.png"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "14:40 – 14:50",
@@ -167,7 +167,7 @@ schedule_build = [
             "name": "Ruarri Fairweather",
             "image": "ruarri_fairweather.jpeg"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "16:00 – 16:15",
@@ -177,7 +177,7 @@ schedule_build = [
             "name": "Clint Arizmendi",
             "image": "clint_arizmendi.png"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "16:15 – 16:30",
@@ -187,17 +187,17 @@ schedule_build = [
             "name": "Michael Creagh",
             "image": "michael_creagh.jpg"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "16:30 – 16:45",
-        "title": "TBD",
-        "realm": "Multi",
+        "title": "Stay Tuned",
+        "realm": "",
         "speaker": {
-            "name": "TBD",
+            "name": "",
             "image": "default.png"
         },
-        "desc": "TBD"
+        "desc": ""
     },
     {
         "time": "16:45 – 16:55",
@@ -224,23 +224,23 @@ schedule2_build = [
     },
     {
         "time": "11:35 – 12:05",
-        "title": "TBD",
+        "title": "Stay Tuned",
         "realm": "Multi",
         "speaker": {
             "name": "Kenneth (Ken) Radke",
             "image": "default.png"
         },
-        "desc": "To be announced..."
+        "desc": ""
     },
     {
         "time": "12:05 – 12:35",
-        "title": "TBD",
+        "title": "Stay Tuned",
         "realm": "Multi",
         "speaker": {
-            "name": "TBD",
+            "name": "",
             "image": "default.png"
         },
-        "desc": "To be announced..."
+        "desc": ""
     },
     {
         "time": "12:30 – 13:40",
@@ -248,23 +248,23 @@ schedule2_build = [
     },
     {
         "time": "13:40 – 14:10",
-        "title": "TBD",
+        "title": "Stay Tuned",
         "realm": "Multi",
         "speaker": {
             "name": "Daniel Castillo",
             "image": "default.png"
         },
-        "desc": "To be announced..."
+        "desc": ""
     },
     {
         "time": "14:10 – 14:40",
-        "title": "TBD",
-        "realm": "Multi",
+        "title": "Stay Tuned",
+        "realm": "",
         "speaker": {
-            "name": "TBD",
+            "name": "",
             "image": "default.png"
         },
-        "desc": "To be announced..."
+        "desc": ""
     },
     {
         "time": "14:40 – 14:45",
@@ -293,6 +293,8 @@ def add_schedule_logos(schedule_list):
                 schedule_item["logo"] = "fa-brain"
             case "Land":
                 schedule_item["logo"] = "fa-truck"
+            case "Land/Air":
+                schedule_item["logo"] = "fa-truck"
             case "Sea":
                 schedule_item["logo"] = "fa-ship"
             case "Air":
@@ -302,7 +304,7 @@ def add_schedule_logos(schedule_list):
             case "Multi":
                 schedule_item["logo"] = "fa-earth-americas"
             case _:
-                schedule_item["logo"] = "fa-earth-americas"
+                schedule_item["logo"] = "NONE"
         schedule_ret += [schedule_item]
     return schedule_ret
 

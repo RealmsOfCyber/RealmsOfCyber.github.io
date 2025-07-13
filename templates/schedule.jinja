@@ -25,6 +25,7 @@
               <h3 class="title mb-3">
                 {{ schedule_item["title"] }}
               </h3>
+            {% if schedule_item["logo"] != "NONE" %}
               <div class="location mb-3">
                 <i class="fa-solid {{ schedule_item["logo"] }} me-2" aria-hidden="true"></i>
                 <b>{{ schedule_item["realm"] }} Realm</b>
@@ -32,6 +33,7 @@
               <div class="desc">
                   {{ schedule_item["desc"] }}
               </div>
+            {% endif %}
             </div>
           </div>
           {% else %}
@@ -77,6 +79,7 @@
               <h3 class="title mb-3">
                 {{ schedule_item["title"] }}
               </h3>
+              {% if schedule_item["logo"] != "NONE" %}
               <div class="location mb-3">
                 <i class="fa-solid {{ schedule_item["logo"] }} me-2" aria-hidden="true"></i>
                 <b>{{ schedule_item["realm"] }} Realm</b>
@@ -84,6 +87,7 @@
               <div class="desc">
                   {{ schedule_item["desc"] }}
               </div>
+              {% endif %}
             </div>
           </div>
           {% else %}

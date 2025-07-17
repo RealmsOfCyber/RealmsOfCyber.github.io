@@ -12,6 +12,11 @@ sponsors = {
             "url": "https://www.culturalcybersecurity.com",
             "logo": "ccs.jpg"
         },
+        {
+            "name": "Pentester Labs",
+            "url": "https://pentesterlab.com/",
+            "logo": "pentesterlab.png"
+        },
     #     {
     #         "name": "Tayko Group",
     #         "url": "https://tayko.io",
@@ -38,6 +43,11 @@ sponsors = {
             "name": "Silent Grid",
             "url": "https://www.silentgrid.com/",
             "logo": "silentgrid.png"
+        },
+        {
+            "name": "Redwood Consulting",
+            "url": "https://www.redwoodsecurity.com.au/",
+            "logo": "redwood.png"
         },
     #     {
     #         "name": "Sekuro",
@@ -71,11 +81,6 @@ sponsors = {
             "name": "Acumenis",
             "url": "https://www.acumenis.com.au/",
             "logo": "acumenis.png"
-        },
-        {
-            "name": "Redwood Consulting",
-            "url": "https://www.redwoodsecurity.com.au/",
-            "logo": "redwood.png"
         },
         {
             "name": "DroneShield",

@@ -29,7 +29,7 @@ schedule_build = [
             "name": "Kylie McDevitt",
             "image": "kylie_mcdevitt.jpg"
         },
-        "desc": "At Pwn2Own Ireland 2024, Kylie's team became the first fully Australian company to compete at any Pwn2Own event. They entered the Embedded Systems category with exploits for three targets and successfully demonstrated two. One of those was the Sonos Era 300 smart speaker, which earned them USD 30,000 and 3 Master of Pwn points after being the second team to exploit it. This talk covers their experience preparing for the competition—from dealing with last-minute firmware changes to the unlucky demo draw that shaped their outcome. I’ll also introduce the exploit developed for the Sonos Era 300 and share insights into breaking a modern smart speaker. If you’re curious about embedded exploitation or what it’s like behind the scenes at Pwn2Own, this talk is for you."
+        "desc": "At Pwn2Own Ireland 2024, Kylie's team became the first fully Australian company to compete at any Pwn2Own event. They entered the Embedded Systems category with exploits for three targets and successfully demonstrated two. One of those was the Sonos Era 300 smart speaker, which earned them USD 30,000 and 3 Master of Pwn points after being the second team to exploit it. This talk covers their experience preparing for the competition—from dealing with last-minute firmware changes to the unlucky demo draw that shaped their outcome. Kylie will also introduce the exploit developed for the Sonos Era 300 and share insights into breaking a modern smart speaker. If you’re curious about embedded exploitation or what it’s like behind the scenes at Pwn2Own, this talk is for you."
     },
     {
         "time": "9:50 - 10:05",

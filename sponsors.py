@@ -17,6 +17,11 @@ sponsors = {
             "url": "https://pentesterlab.com/",
             "logo": "pentesterlab.png"
         },
+        {
+            "name": "Thynne & Macartney",
+            "url": "https://www.thymac.com.au/",
+            "logo": "thynne_macartney.png"
+        }
     #     {
     #         "name": "Tayko Group",
     #         "url": "https://tayko.io",
@@ -48,6 +53,11 @@ sponsors = {
             "name": "Redwood Consulting",
             "url": "https://www.redwoodsecurity.com.au/",
             "logo": "redwood.png"
+        },
+        {
+            "name": "Hacker Content",
+            "url": "https://hackercontent.com/",
+            "logo": "hacker_content.png"
         },
     #     {
     #         "name": "Sekuro",

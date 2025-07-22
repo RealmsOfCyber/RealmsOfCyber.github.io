@@ -53,13 +53,13 @@ schedule_build = [
     },
     {
         "time": "10:20 – 10:35",
-        "title": "Stay Tuned",
-        "realm": "",
+        "title": "The Roo-ver Mission: Securing Space Innovation",
+        "realm": "Space",
         "speaker": {
-            "name": "",
-            "image": "default.png"
+            "name": "Ben Sorensen",
+            "image": "ben_sorensen.jpg"
         },
-        "desc": ""
+        "desc": "The Roo-ver Mission, led by ELO2 in partnership with the Australian Space Agency, will see Australia’s lunar rover traverse the Moon’s surface around the end of the decade. This briefing highlights cyber-critical aspects of rover design, including secure sensor technology, autonomous navigation, and communications integrity in extreme conditions. It explores threat mitigation strategies in high-risk environments and outlines protection mechanisms for command systems and mission data. Ben will offer insights into how this industry-research collaboration will develop and protect emerging space technologies. Mission challenges and constraints, including communications delays, weight restrictions, and the harsh lunar environment will also be addressed."
     },
     {
         "time": "10:35 – 10:45",
@@ -171,13 +171,13 @@ schedule_build = [
     },
     {
         "time": "16:00 – 16:15",
-        "title": "Deepfakes as Strategic Weapons",
+        "title": "Cognitive Warfare in the Age of Deepfakes",
         "realm": "Cognitive",
         "speaker": {
-            "name": "Clint Arizmendi",
-            "image": "clint_arizmendi.png"
+            "name": "James Carlopio",
+            "image": "james_carlopio.jpg"
         },
-        "desc": "Clint's talk will dive deep into how nation states are increasingly deploying sophisticated AI-generated deepfake videos to fabricate events, manipulate public perception, and influence narratives during global incidents. Once considered novel curiosities, deepfakes are now critical tools for real-time strategic deception, enabled by rapid advances in accessible technology. In recent global conflicts, such as the Russia-Ukraine war and China-Taiwan tensions, deepfakes have been used to undermine trust, fabricate war crimes, and distort democratic processes. Notably, a March 2022 deepfake of Ukrainian President Zelensky calling for surrender was disseminated through compromised media channels. Similarly, during Taiwan's 2024 election, fabricated corruption and explicit videos targeting political figures were spread to influence voters - particularly youth via platforms like TikTok."
+        "desc": "Dr James Carlopio will explore how nation-states now deploy AI‑generated deepfake videos as strategic tools of real‑time deception, manipulating perception and narrative through cultural and psychological levers. Drawing on examples from the Russia‑Ukraine conflict, and China–Taiwan tensions (including the March 2022 Zelensky deepfake and fake Taiwan election footage on TikTok) he’ll illustrate how deepfakes exploit cognitive biases, emotional triggers, trust dynamics and digital habits."
     },
     {
         "time": "16:15 – 16:30",
@@ -237,8 +237,8 @@ schedule2_build = [
         "title": "Stay Tuned",
         "realm": "Multi",
         "speaker": {
-            "name": "",
-            "image": "default.png"
+            "name": "Gareth Smith",
+            "image": "gareth_smith.jpg"
         },
         "desc": ""
     },
@@ -261,8 +261,8 @@ schedule2_build = [
         "title": "Stay Tuned",
         "realm": "",
         "speaker": {
-            "name": "",
-            "image": "default.png"
+            "name": "Gareth Smith",
+            "image": "gareth_smith.jpg"
         },
         "desc": ""
     },

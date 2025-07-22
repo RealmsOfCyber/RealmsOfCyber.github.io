@@ -72,11 +72,19 @@ speakers = [
         "description": "Dr Jacob is an expert in navigating complex issues at the intersection of intelligence and cyber legislation, with a particular focus on oversight and compliance, and how these areas interact with Australian Government policy.<br><br>She has worked across multiple agencies within the National Intelligence Community (NIC), including the Australian Geospatial-Intelligence Organisation, the Office of National Intelligence, and the Australian Signals Directorate, giving her a broad understanding of Defence intelligence and the NIC landscape. Dr Jacob has also contributed to policy research on cyber and critical infrastructure as a researcher at the Australian Strategic Policy Institute."
     },
     {
-        "name": "Clint Arizmendi",
-        "jobtitle": "",
-        "company": "",
-        "linkedin": "https://www.linkedin.com/in/clint-a-a667492a9/",
-        "image": "clint_arizmendi.png",
-        "description": "Dr Clint Arizmendi is a seasoned intelligence and technology strategist with over 20 years of experience across defence, government, law enforcement, and the tech sector. He previously led the Google Search Intelligence team and the Trust & Safety Intelligence – Emerging Trends section, overseeing global responses to threats like disinformation, election interference, violent extremism, and geopolitical conflict. Clint played a key role in protecting billions of users during pivotal global events and was at the forefront of integrating Google’s Bard and Gemini AI systems into intelligence workflows.<br><br>Clint now works with Island Bell Advisers to help organisations navigate the intersection of AI, cyber, and information integrity. He brings deep insight into future threat forecasting, scalable intelligence operations, and ethical risk mitigation. At Realms of Cyber 2025, Clint will share his unique perspective on how technology can be harnessed to combat ""badness at scale"" while protecting the digital fabric of society."
+        "name": "James Carlopio",
+        "jobtitle": "Co-founder and Director",
+        "company": "Cultural Cyber Security",
+        "linkedin": "https://www.linkedin.com/in/jamescarlopio/",
+        "image": "james_carlopio.jpg",
+        "description": "Dr. James Carlopio is an organisational psychologist and co-founder of Cultural Cyber Security, focusing on the human and cultural aspects of cyber risk. He has consulted for leading organisations across Australia, Europe, and the U.S., including the UN, IBM, Rio Tinto, and General Motors.<br><br>James has published five books and over 36 articles on socio-technical issues and was a regular contributor to AFR BOSS magazine. He has held senior academic roles and is a frequent speaker on cyber security, organisational change, and human-technology integration."
+    },    
+    {
+        "name": "Ben Sorensen",
+        "jobtitle": "Roo-ver Mission & ELO2 Consortium Director",
+        "company": "EPE",
+        "linkedin": "https://www.linkedin.com/in/bsorensen/",
+        "image": "ben_sorensen.jpg",
+        "description": "Ben Sorensen is an award-winning innovation leader driving Australia’s Roo-ver Mission - Australia’s first lunar rover. With a track record across space, defence, cybersecurity and national security, Ben leads large-scale teams and game-changing technology initiatives. Previously Commercial Director at CSIRO’s Data61 and Board Director at the Cyber Security CRC, he has shaped national R&D strategy, secured over $90M in funding, and built enduring industry-research partnerships. A published author and advisor to boards and startups, Ben’s mission is clear: help people lead, succeed and grow."
     },
 ]

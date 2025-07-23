@@ -87,4 +87,12 @@ speakers = [
         "image": "ben_sorensen.jpg",
         "description": "Ben Sorensen is an award-winning innovation leader driving Australia’s Roo-ver Mission - Australia’s first lunar rover. With a track record across space, defence, cybersecurity and national security, Ben leads large-scale teams and game-changing technology initiatives. Previously Commercial Director at CSIRO’s Data61 and Board Director at the Cyber Security CRC, he has shaped national R&D strategy, secured over $90M in funding, and built enduring industry-research partnerships. A published author and advisor to boards and startups, Ben’s mission is clear: help people lead, succeed and grow."
     },
+    {
+        "name": "Daniel Castillo",
+        "jobtitle": "OT Cybersecurity Consultant",
+        "company": "Enterprise IT & IACS Cybersecurity",
+        "linkedin": "https://www.linkedin.com/in/daniel-castillo-2259236b/",
+        "image": "dan_castillo.png",
+        "description": "Daniel has a background in Mechatronics engineering and spent a good portion of his early career in the systems engineering space across industries including defence, water, energy, corrections, healthcare, and premium commercial buildings. Proceeding his formal transition into the cyber security world, Daniel served as the OT cyber security specialist for the Australian Signals Directorate (ASD) as part of their Critical Infrastructure uplift capability. Daniel Castillo is now the CEO & Founder of Skadi Solutions, an Australian based cybersecurity firm driving an enterprise approach to IT / OT resiliency uplift in the Critical Infrastructure and building automations industry."
+    },
 ]

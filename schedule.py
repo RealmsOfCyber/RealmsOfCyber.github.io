@@ -95,7 +95,7 @@ schedule_build = [
         "realm": "Sea",
         "speaker": {
             "name": "Jocelinn Kang & Dr Jessie Jacob (ASPI)",
-            "image": "default.png"
+            "image": "jocelinnandjessie.png"
         },
         "desc": "A conversation between two subcable enthusiasts unpacks why undersea cables are seen as strategic assets in a shifting geopolitical landscape. It will explore why Australia is emerging as a digital hub, and what risks submarine cables, which carry 99% of all international internet traffic, face from sabotage, to cyber intrusions, to single points of failure. We’ll leave you with practical considerations to inform your risk management when selecting or securing digital services, emphasising the critical role of sovereign digital resilience for business continuity."
     },
@@ -248,13 +248,13 @@ schedule2_build = [
     },
     {
         "time": "13:40 – 14:10",
-        "title": "Stay Tuned",
+        "title": "Fighting the FUD: Pragmatic considerations for effective OT Vulnerability Management in Critical Infrastructure",
         "realm": "Multi",
         "speaker": {
             "name": "Daniel Castillo",
-            "image": "default.png"
+            "image": "dan_castillo.png"
         },
-        "desc": ""
+        "desc": "Fear, Uncertainty, and Doubt – otherwise known as FUD – has long hindered meaningful progress in Critical Infrastructure (CI) cyber resiliency programs. Release of the first annual report deadline for the Security of Critical Infrastructure (SOCI) Act prompted a nationwide rush by asset owners to implement a cyber risk management program based on several endorsed frameworks. In doing so, many quickly uncovered that OT vulnerability management was a critical gap in their capability.<br>This talk covers a pragmatic approach to the planning and execution of an effective OT vulnerability management program within CI environments. Attendees will walk away with actionable insights on what OT vulnerability management really entails, why it matters for both compliance and resilience, and how to measure its success within complex operational environments.<br>With guidance grounded in real-world experience, this session equips security leaders, engineers, and risk managers to reduce the OT attack surface, align with regulatory expectations, and move beyond the FUD that so often stands in the way of progress."
     },
     {
         "time": "14:10 – 14:40",

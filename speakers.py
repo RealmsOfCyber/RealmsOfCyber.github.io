@@ -95,4 +95,12 @@ speakers = [
         "image": "dan_castillo.png",
         "description": "Daniel has a background in Mechatronics engineering and spent a good portion of his early career in the systems engineering space across industries including defence, water, energy, corrections, healthcare, and premium commercial buildings. Proceeding his formal transition into the cyber security world, Daniel served as the OT cyber security specialist for the Australian Signals Directorate (ASD) as part of their Critical Infrastructure uplift capability. Daniel Castillo is now the CEO & Founder of Skadi Solutions, an Australian based cybersecurity firm driving an enterprise approach to IT / OT resiliency uplift in the Critical Infrastructure and building automations industry."
     },
+    {
+        "name": "Gaurav Vikash",
+        "jobtitle": "Head of Security and Risk (APAC)",
+        "company": "Axon",
+        "linkedin": "https://www.linkedin.com/in/gauravvikash/",
+        "image": "gaurav_vikash.png",
+        "description": "Gaurav is a cybersecurity leader who helps complex organisations move fast without compromising trust. With 16+ years across financial services, government, critical infrastructure, and tech, he’s built and led security programs that protect growth, recover from crisis, and hold under pressure - across Australia, the UK, and Asia.<br><br>He currently leads security for Axon’s Asia-Pacific region, working across public safety technologies and mission-critical platforms. He also advises selected organisations on scaling security capability, aligning with global compliance frameworks, and using security maturity as a lever to unlock new business and market expansion."
+    },
 ]

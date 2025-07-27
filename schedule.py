@@ -33,13 +33,13 @@ schedule_build = [
     },
     {
         "time": "9:50 - 10:05",
-        "title": "Presentation",
+        "title": "From Cartels to Combat Zones: Mapping the Global Drone Threat",
         "realm": "Air",
         "speaker": {
             "name": "Mike Monik",
             "image": "mike_monnik.jpeg"
         },
-        "desc": ""
+        "desc": "Mike Monnik, CEO of DroneSec, presents a sharp overview of emerging drone threats, from prison smuggling to battlefield swarm attacks, using real-time open-source data. He outlines how criminals use drones with spoofed GPS and disguised payloads to deliver contraband, while militants deploy heavy-lift drones to target infrastructure with bomblets. Threat actors now easily bypass geofences and alter drone IDs using widely available tools. Mike stresses the need for intelligence sharing, standardised reporting, layered counter-UAS systems, and legal frameworks to combat these evolving threats across corrections, infrastructure, and defence."
     },
     {
         "time": "10:05 - 10:20",
@@ -53,7 +53,7 @@ schedule_build = [
     },
     {
         "time": "10:20 – 10:35",
-        "title": "The Roo-ver Mission: Securing Space Innovation",
+        "title": "The Roo-ver Mission: Cybersecurity and Space Capabilities",
         "realm": "Space",
         "speaker": {
             "name": "Ben Sorensen",
@@ -113,13 +113,13 @@ schedule_build = [
     },
     {
         "time": "13:40 – 13:55",
-        "title": "Stay Tuned",
-        "realm": "",
+        "title": "Compromised by Design – The Hidden Risks of Wearable Technology",
+        "realm": "Multi",
         "speaker": {
-            "name": "",
-            "image": "default.png"
+            "name": "Gaurav Vikash",
+            "image": "gaurav_vikash.png"
         },
-        "desc": ""
+        "desc": "Wearable devices promise convenience and health insights - but often at the cost of privacy, security, and user control. This talk explores how wearables collect sensitive biometric and behavioural data, the hidden risks of their connectivity and design flaws, and what organisations and individuals can do to mitigate exposure across health, defence, and workplace settings."
     },
     {
         "time": "13:55 – 14:10",
@@ -254,7 +254,7 @@ schedule2_build = [
             "name": "Daniel Castillo",
             "image": "dan_castillo.png"
         },
-        "desc": "Fear, Uncertainty, and Doubt – otherwise known as FUD – has long hindered meaningful progress in Critical Infrastructure (CI) cyber resiliency programs. Release of the first annual report deadline for the Security of Critical Infrastructure (SOCI) Act prompted a nationwide rush by asset owners to implement a cyber risk management program based on several endorsed frameworks. In doing so, many quickly uncovered that OT vulnerability management was a critical gap in their capability.<br>This talk covers a pragmatic approach to the planning and execution of an effective OT vulnerability management program within CI environments. Attendees will walk away with actionable insights on what OT vulnerability management really entails, why it matters for both compliance and resilience, and how to measure its success within complex operational environments.<br>With guidance grounded in real-world experience, this session equips security leaders, engineers, and risk managers to reduce the OT attack surface, align with regulatory expectations, and move beyond the FUD that so often stands in the way of progress."
+        "desc": "Fear, Uncertainty, and Doubt – otherwise known as FUD – has long hindered meaningful progress in Critical Infrastructure (CI) cyber resiliency programs. Release of the first annual report deadline for the Security of Critical Infrastructure (SOCI) Act prompted a nationwide rush by asset owners to implement a cyber risk management program based on several endorsed frameworks. In doing so, many quickly uncovered that OT vulnerability management was a critical gap in their capability.<br>Daniel's talk covers a pragmatic approach to the planning and execution of an effective OT vulnerability management program within CI environments. Attendees will walk away with actionable insights on what OT vulnerability management really entails, why it matters for both compliance and resilience, and how to measure its success within complex operational environments.<br>With guidance grounded in real-world experience, this session equips security leaders, engineers, and risk managers to reduce the OT attack surface, align with regulatory expectations, and move beyond the FUD that so often stands in the way of progress."
     },
     {
         "time": "14:10 – 14:40",

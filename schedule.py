@@ -234,13 +234,13 @@ schedule2_build = [
     },
     {
         "time": "12:05 – 12:35",
-        "title": "Stay Tuned",
+        "title": "OT 101: Foundations of Operational Technology Security",
         "realm": "Multi",
         "speaker": {
             "name": "Gareth Smith",
             "image": "gareth_smith.jpg"
         },
-        "desc": ""
+        "desc": "What exactly is Operational Technology, and why does it matter more now than ever? In this foundational talk, Gareth Smith breaks down the essential concepts behind OT environments — from SCADA systems to PLCs — and highlights the unique risks they face in today’s threat landscape. Tailored for those new to the field or bridging from IT, this session offers a clear, jargon-free introduction to how physical systems are monitored, controlled, and protected. Whether you're a cyber professional crossing into industrial realms or an asset owner getting your head around digital threats, OT 101 is your briefing room."
     },
     {
         "time": "12:30 – 13:40",

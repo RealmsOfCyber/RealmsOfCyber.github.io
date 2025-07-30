@@ -59,6 +59,11 @@ sponsors = {
             "url": "https://hackercontent.com/",
             "logo": "hacker_content.png"
         },
+        {
+            "name": "Cube Cyber",
+            "url": "https://cubecyber.com/",
+            "logo": "cubecyber.png"
+        },
     #     {
     #         "name": "Sekuro",
     #         "url": "https://sekuro.io",

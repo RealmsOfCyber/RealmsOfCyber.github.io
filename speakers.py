@@ -103,4 +103,12 @@ speakers = [
         "image": "gaurav_vikash.png",
         "description": "Gaurav is a cybersecurity leader who helps complex organisations move fast without compromising trust. With 16+ years across financial services, government, critical infrastructure, and tech, he’s built and led security programs that protect growth, recover from crisis, and hold under pressure - across Australia, the UK, and Asia.<br><br>He currently leads security for Axon’s Asia-Pacific region, working across public safety technologies and mission-critical platforms. He also advises selected organisations on scaling security capability, aligning with global compliance frameworks, and using security maturity as a lever to unlock new business and market expansion."
     },
+    {
+        "name": "Ben Doyle",
+        "jobtitle": "Director - Cyber Security Industry Experience",
+        "company": "Thales",
+        "linkedin": "https://www.linkedin.com/in/bendoylethales/",
+        "image": "ben_doyle.jpg",
+        "description": "Ben Doyle is a seasoned cyber security leader who served as CISO for Thales Australia & New Zealand for over two decades. With more than 25 years in the industry, Ben has been at the helm of information security strategies that span national security obligations, export controls, and the evolving cyber threat landscape.<br><br>Now leading Cyber Security Industry Experience at Thales Cyber and Digital, Ben continues to influence industry thinking by mentoring startups, advising boards, and supporting innovation across Australia’s cyber ecosystem. He is a vocal advocate for values-led leadership and inclusive community culture, and an active contributor to advisory boards such as AISA and AustCyber."
+    }, 
 ]

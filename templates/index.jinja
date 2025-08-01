@@ -11,8 +11,12 @@
 
 {% include 'speakers.jinja' %}
 
-{% if enable_schedule %}
-{% include 'schedule.jinja' %}
+{% if enable_main_schedule %}
+{% include 'schedule-main.jinja' %}
+{% endif %}
+
+{% if enable_ot_schedule %}
+{% include 'schedule-ot.jinja' %}
 {% endif %}
 
 {% include 'tickets.jinja' %}

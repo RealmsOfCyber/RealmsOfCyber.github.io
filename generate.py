@@ -19,7 +19,8 @@ output_from_parsed_template = index_template.render(
   tickets_on_sale=tickets_on_sale,
   ticket_url=ticket_url,
   ticket_price=ticket_price,
-  enable_schedule=False,
+  enable_main_schedule=True,
+  enable_ot_schedule=False,
   schedule=schedule,
   schedule2=schedule2
 )
@@ -34,7 +35,8 @@ staging = index_template.render(
   tickets_on_sale=tickets_on_sale,
   ticket_url=ticket_url,
   ticket_price=ticket_price,
-  enable_schedule=True,
+  enable_main_schedule=True,
+  enable_ot_schedule=True,
   schedule=schedule,
   schedule2=schedule2
 )
@@ -49,7 +51,8 @@ after_event = index_template.render(
   tickets_on_sale=tickets_on_sale,
   ticket_url=ticket_url,
   ticket_price=ticket_price,
-  enable_schedule=True,
+  enable_main_schedule=True,
+  enable_ot_schedule=True,
   schedule=schedule,
   schedule2=schedule2
 )

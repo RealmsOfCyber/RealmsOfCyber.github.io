@@ -81,13 +81,13 @@ schedule_build = [
     },
     {
         "time": "11:45 – 12:00",
-        "title": "You Are Not Where You Think You Are: GNSS/GPS Threats at Sea",
-        "realm": "Sea",
+        "title": "Supply Chains, Secure Comms, and Sovereign Risk",
+        "realm": "Land",
         "speaker": {
-            "name": "David Robinson",
-            "image": "david_robinson.png"
+            "name": "Ben Doyle",
+            "image": "ben_doyle.jpg"
         },
-        "desc": "Global Navigation Satellite Systems (GNSS) are integral to maritime navigation—guiding everything from cargo ships and cruise liners to fishing vessels and autonomous maritime systems. But what happens when GNSS is compromised? Attacks like jamming and spoofing are no longer theoretical—they’re happening in the wild, impacting maritime operations with growing frequency and sophistication. In this talk, we’ll explore how GNSS works, what global systems are in play, and how attackers manipulate positioning and timing signals. We’ll look at why ships aren’t always where they think they are—and how this disconnect can lead to near misses, accidental groundings, or even maritime incursions. We’ll break down real-world cases, including coastal jamming near North Korea and spoofing events in the Eastern Mediterranean."
+        "desc": "From depots to deployables, land-based operations face a unique blend of cyber and physical threats—made more complex by sprawling supply chains, field comms infrastructure, and increasing sovereign requirements. In this session, Ben Doyle draws on over two decades as a CISO overseeing security for defence-grade programs to explore what land operators must prioritise now. He’ll unpack real-world lessons on managing vendor accountability, mitigating risk across integrated systems, and building secure-by-design into procurement before the contract is signed. This is a call to action for leaders responsible for land-based assets to move beyond compliance and adopt resilient, future-facing strategies grounded in operational realities."
     },
     {
         "time": "12:00 – 12:15",
@@ -114,7 +114,7 @@ schedule_build = [
     {
         "time": "13:40 – 13:55",
         "title": "Compromised by Design – The Hidden Risks of Wearable Technology",
-        "realm": "Multi",
+        "realm": "Biological",
         "speaker": {
             "name": "Gaurav Vikash",
             "image": "gaurav_vikash.png"
@@ -123,23 +123,23 @@ schedule_build = [
     },
     {
         "time": "13:55 – 14:10",
-        "title": "Stay Tuned",
-        "realm": "",
+        "title": "You Are Not Where You Think You Are: GNSS/GPS Threats at Sea",
+        "realm": "Sea",
         "speaker": {
-            "name": "",
-            "image": "default.png"
+            "name": "David Robinson",
+            "image": "david_robinson.png"
         },
-        "desc": ""
+        "desc": "Global Navigation Satellite Systems (GNSS) are integral to maritime navigation—guiding everything from cargo ships and cruise liners to fishing vessels and autonomous maritime systems. But what happens when GNSS is compromised? Attacks like jamming and spoofing are no longer theoretical—they’re happening in the wild, impacting maritime operations with growing frequency and sophistication. In this talk, we’ll explore how GNSS works, what global systems are in play, and how attackers manipulate positioning and timing signals. We’ll look at why ships aren’t always where they think they are—and how this disconnect can lead to near misses, accidental groundings, or even maritime incursions. We’ll break down real-world cases, including coastal jamming near North Korea and spoofing events in the Eastern Mediterranean."
     },
     {
         "time": "14:10 – 14:25",
-        "title": "Stay Tuned",
-        "realm": "",
+        "title": "Automating Secure-by-Design with – and for – Artificial Intelligence",
+        "realm": "Multi",
         "speaker": {
-            "name": "",
-            "image": "default.png"
+            "name": "Travis Quinn",
+            "image": "travis_quinn.jpg"
         },
-        "desc": ""
+        "desc": "Secure-by-design is a software security engineering philosophy that seeks to integrate security from software design through development , deployment and operation. The proliferation of Artificial Intelligence (AI) and Machine Learning (ML) in enterprises adds complexity to secure-by-design as they are predominantly based in software and lend themselves to rapid design, development and deployment cycles, increasing the potential for vulnerabilities, anti-patterns and inefficiencies in performance and cost. However, AI/ML also brings exciting new capabilities to software development that when paired with a robust secure development methodology can accelerate secure-by-design, reduce security risk, and ensure developers are free to focus on high impact tasks. This presentation will address the challenges and opportunities that AI/ML represent for secure-by-design software development."
     },
     {
         "time": "14:25 – 14:40",

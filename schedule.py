@@ -230,7 +230,7 @@ schedule2_build = [
             "name": "Ken Radke",
             "image": "default.png"
         },
-        "desc": ""
+        "desc": "Australia’s critical infrastructure faces mounting cyber threats - yet many asset owners remain under-equipped to manage Operational Technology (OT) risk. In this session, Dr Ken Radke draws from frontline experience at the Australian Cyber Security Centre to unpack the current OT threat landscape, from ICS vulnerabilities to emerging tactics targeting systems of national significance.<br>Ken will outline the practical steps asset owners can take to uplift their cyber resilience - beyond compliance - by focusing on visibility, risk ownership, and fit-for-purpose controls. This is a no-spin look at what’s working, what’s missing, and what must change to secure the backbone of Australia’s physical operations."
     },
     {
         "time": "12:05 – 12:35",
@@ -244,7 +244,7 @@ schedule2_build = [
     },
     {
         "time": "12:30 – 13:40",
-        "title": "Lunch Break"
+        "title": "Lunch Break (Catered)"
     },
     {
         "time": "13:40 – 14:10",
@@ -261,8 +261,8 @@ schedule2_build = [
         "title": "Stay Tuned",
         "realm": "",
         "speaker": {
-            "name": "Gareth Smith",
-            "image": "gareth_smith.jpg"
+            "name": "",
+            "image": "default.png"
         },
         "desc": ""
     },

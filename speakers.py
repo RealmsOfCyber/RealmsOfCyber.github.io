@@ -105,8 +105,8 @@ speakers = [
     },
     {
         "name": "Ben Doyle",
-        "jobtitle": "Director - Cyber Security Industry Experience",
-        "company": "Thales",
+        "jobtitle": "Former Thales CISO",
+        "company": "",
         "linkedin": "https://www.linkedin.com/in/bendoylethales/",
         "image": "ben_doyle.jpg",
         "description": "Ben Doyle is a seasoned cyber security leader who served as CISO for Thales Australia & New Zealand for over two decades. With more than 25 years in the industry, Ben has been at the helm of information security strategies that span national security obligations, export controls, and the evolving cyber threat landscape.<br><br>Now leading Cyber Security Industry Experience at Thales Cyber and Digital, Ben continues to influence industry thinking by mentoring startups, advising boards, and supporting innovation across Australia’s cyber ecosystem. He is a vocal advocate for values-led leadership and inclusive community culture, and an active contributor to advisory boards such as AISA and AustCyber."

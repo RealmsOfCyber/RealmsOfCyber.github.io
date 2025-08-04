@@ -20,7 +20,7 @@ output_from_parsed_template = index_template.render(
   ticket_url=ticket_url,
   ticket_price=ticket_price,
   enable_main_schedule=True,
-  enable_ot_schedule=False,
+  enable_ot_schedule=True,
   schedule=schedule,
   schedule2=schedule2
 )

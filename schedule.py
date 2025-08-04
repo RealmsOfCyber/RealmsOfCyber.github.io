@@ -224,13 +224,13 @@ schedule2_build = [
     },
     {
         "time": "11:35 – 12:05",
-        "title": "Stay Tuned",
+        "title": "Protecting OT systems using engineering and cybersecurity",
         "realm": "Multi",
         "speaker": {
             "name": "Ken Radke",
-            "image": "default.png"
+            "image": "ken.png"
         },
-        "desc": "Australia’s critical infrastructure faces mounting cyber threats - yet many asset owners remain under-equipped to manage Operational Technology (OT) risk. In this session, Dr Ken Radke draws from frontline experience at the Australian Cyber Security Centre to unpack the current OT threat landscape, from ICS vulnerabilities to emerging tactics targeting systems of national significance.<br>Ken will outline the practical steps asset owners can take to uplift their cyber resilience - beyond compliance - by focusing on visibility, risk ownership, and fit-for-purpose controls. This is a no-spin look at what’s working, what’s missing, and what must change to secure the backbone of Australia’s physical operations."
+        "desc": "Operational Technology (OT) systems remain the unseen backbone of modern infrastructure – yet securing them continues to trail behind traditional IT in maturity and resourcing. In this presentation, Dr Ken Radke explores the current state-of-the-art in OT security: what’s working, what’s not, and what’s simply misunderstood.<br>Blending engineering rigour with cyber defence expertise, Ken draws on real-world experience across national infrastructure to examine prevailing practices and their limitations. He challenges the audience to re-evaluate assumptions, proposing a set of theoretical and practical interventions – from protocol-level resilience and anomaly detection to embedding security into the engineering lifecycle itself."
     },
     {
         "time": "12:05 – 12:35",

@@ -102,6 +102,11 @@ sponsors = {
             "url": "https://www.droneshield.com/",
             "logo": "droneshield.png"
         },
+        {
+            "name": "Cydarm Technologies",
+            "url": "https://www.cydarm.com/",
+            "logo": "cydarm.png"
+        },
     #     {
     #         "name": "AusCERT",
     #         "url": "https://auscert.org.au/",

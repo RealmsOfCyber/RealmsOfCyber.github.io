@@ -110,5 +110,14 @@ speakers = [
         "linkedin": "https://www.linkedin.com/in/bendoylethales/",
         "image": "ben_doyle.jpg",
         "description": "Ben Doyle is a seasoned cyber security leader who served as CISO for Thales Australia & New Zealand for over two decades. With more than 25 years in the industry, Ben has been at the helm of information security strategies that span national security obligations, export controls, and the evolving cyber threat landscape.<br><br>Now leading Cyber Security Industry Experience at Thales Cyber and Digital, Ben continues to influence industry thinking by mentoring startups, advising boards, and supporting innovation across Australia’s cyber ecosystem. He is a vocal advocate for values-led leadership and inclusive community culture, and an active contributor to advisory boards such as AISA and AustCyber."
-    }, 
+    },
+    {
+        "name": "Jake Smith",
+        "jobtitle": "OT Infrastructure Engineer | RPEQ | GICSP",
+        "company": "Glencore Australia",
+        "linkedin": "https://www.linkedin.com/in/jakesmithics/",
+        "image": "jake_smith.jpg",
+        "description": "Jake Smith is an experienced Operational Technology (OT) and Industrial Control Systems (ICS) engineer specialising in cybersecurity for critical infrastructure. Currently working with Glencore Australia, he has deep domain expertise across mining, control systems integration, and secure network architecture. Jake holds RPEQ and GICSP credentials and brings a practitioner’s perspective to securing systems never designed with cybersecurity in mind. From air-gapped myths to hardened patching realities, his work is grounded in making OT environments resilient, standards-aligned, and safer by design. At ROCC25, Jake will be tackling the hard truths behind insecure-by-design ICS systems - and why transparency might be their greatest strength."
+
+    },
 ]

@@ -258,13 +258,13 @@ schedule2_build = [
     },
     {
         "time": "14:10 – 14:40",
-        "title": "Stay Tuned",
-        "realm": "",
+        "title": "Insecure by design, the openness of Critical Infrastructure ICS",
+        "realm": "Multi",
         "speaker": {
-            "name": "",
-            "image": "default.png"
+            "name": "Jake Smith",
+            "image": "jake_smith.jpg"
         },
-        "desc": ""
+        "desc": "Despite decades of progress in IT security, Industrial Control Systems (ICS) across critical infrastructure remain inherently vulnerable - not due to oversight, but by design. In this session, OT Infrastructure Engineer Jake Smith exposes the architectural assumptions and legacy protocols that leave ICS environments wide open to modern threats. Drawing on his experience in mining, underground operations, and field engineering, Jake unpacks why many systems were never meant to be secure and what engineers can practically do about it. From air-gapped myths to hardcoded trust, this presentation is a sobering look at the real-world limitations of ICS -and how to defend them anyway."
     },
     {
         "time": "14:40 – 14:45",

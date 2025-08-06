@@ -107,6 +107,11 @@ sponsors = {
             "url": "https://www.cydarm.com/",
             "logo": "cydarm.png"
         },
+        {
+            "name": "SecAlerts",
+            "url": "https://secalerts.co/",
+            "logo": "secalerts.png"
+        },
     #     {
     #         "name": "AusCERT",
     #         "url": "https://auscert.org.au/",

@@ -21,7 +21,12 @@ sponsors = {
             "name": "Thynne & Macartney",
             "url": "https://www.thymac.com.au/",
             "logo": "thynne_macartney.png"
-        }
+        },
+        {
+            "name": "Sitle",
+            "url": "https://sitle.space/",
+            "logo": "sitle.png"
+        },
     #     {
     #         "name": "Tayko Group",
     #         "url": "https://tayko.io",

@@ -118,6 +118,21 @@ speakers = [
         "linkedin": "https://www.linkedin.com/in/jakesmithics/",
         "image": "jake_smith.jpg",
         "description": "Jake Smith is an experienced Operational Technology (OT) and Industrial Control Systems (ICS) engineer specialising in cybersecurity for critical infrastructure. Currently working with Glencore Australia, he has deep domain expertise across mining, control systems integration, and secure network architecture. Jake holds RPEQ and GICSP credentials and brings a practitioner’s perspective to securing systems never designed with cybersecurity in mind. From air-gapped myths to hardened patching realities, his work is grounded in making OT environments resilient, standards-aligned, and safer by design. At ROCC25, Jake will be tackling the hard truths behind insecure-by-design ICS systems - and why transparency might be their greatest strength."
-
+    },
+    {
+        "name": "Kenneth Radke",
+        "jobtitle": "Technical Director, Critical Infrastructure and Operational Technology Environments, Cyber Security Resilience",
+        "company": "Australian Signals Directorate",
+        "linkedin": "",
+        "image": "ken.png",
+        "description": "Dr Ken Radke is a cyber security leader, specialising in the protection of operational technology (OT) and systems of national significance. With a background spanning engineering and applied cryptography, Ken’s work blends hands-on cyber defence with deep research into ICS/SCADA vulnerabilities and protocol resilience. Ken holds a PhD in security engineering from QUT, where his early research helped shape human-centred approaches to cryptographic protocol design. He continues to contribute as an Adjunct Associate Professor, publishing on topics such as anomaly detection in SCADA networks and attack taxonomy in industrial control systems."
+    },
+    {
+        "name": "Alok Patel",
+        "jobtitle": "Founder & CEO, Azcende & Azymmetric | Chairman, National Security Association of Australia",
+        "company": "Azcende & Azymmetric",
+        "linkedin": "https://www.linkedin.com/in/alokdocpatel/",
+        "image": "alok_patel.png",
+        "description": "Alok Patel is a venture capitalist, strategist, and national security advocate with over 20 years of leadership experience spanning the Australian Army & Navy, private equity, management consulting, and real estate. Alok developed the Royal Australian Navy’s AI Benefits framework and as the Founder and CEO of Azcende and Azymmetric, Alok champions the adoption emerging technologies that underpin national security and critical infrastructure. He leads investments into startups positioned to transform urban innovation, defence technology, and cybersecurity. A Harvard Business School alumnus, Alok brings a unique blend of strategic foresight and operational insight, having shaped transactions exceeding AUD$4 billion and advised governments on trusted technology standards. He also serves as Chairman of the National Security Association of Australia and is a Strategic Advisor to the Global Trusted Technology Standard through the Krach Institute for Tech Diplomacy."
     },
 ]

@@ -75,7 +75,7 @@ schedule_build = [
         "realm": "Air",
         "speaker": {
             "name": "Sasha Biskup",
-            "image": "sasha_biskup.png"
+            "image": "sasha_biskup.jpg"
         },
         "desc": "Sasha's presentation explores the critical need for a full stack security strategy in the context of Counter-Unmanned Aircraft Systems (CUAS) companies and manufacturers. We will examine the unique cyber and physical risks posed by autonomous and AI-driven platforms, the importance of mature security capabilities early in a company’s lifecycle, and the necessity of integrating security disciplines across hardware, software, and operational processes. Attendees will gain insights into threat modelling for product security, the interplay between hardware and software engineering, and the imperative of secure-by-design principles."
     },

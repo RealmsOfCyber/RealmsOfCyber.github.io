@@ -12,7 +12,7 @@ speakers = [
         "jobtitle": "CISO",
         "company": "DroneShield",
         "linkedin": "https://www.linkedin.com/in/sashabiskup/",
-        "image": "sasha_biskup.png",
+        "image": "sasha_biskup.jpg",
         "description": "Sasha has been at the forefront of cybersecurity and engineering for over 25 years, working in Big Tech, the Internet of Things (IoT), Telecommunications, and Financial Services.<br><br>Prior to joining DroneShield, he held numerous leadership and engineering roles in England and the U.S. He has been pivotal in maturing cybersecurity at product startups and large-scale Internet companies throughout his career. His prolific work with global-scale IoT initiatives has given him the invaluable hands-on practical experience he needs to scale systems and processes effectively.<br><br>Sasha contributes significantly to DroneShield’s innovation and required engineering velocity. He is constantly raising the security bar to protect assets, products, and customers."
     },
     {

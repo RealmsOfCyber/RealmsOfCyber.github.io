@@ -33,13 +33,13 @@ schedule_build = [
     },
     {
         "time": "9:50 - 10:05",
-        "title": "From Cartels to Combat Zones: Mapping the Global Drone Threat",
+        "title": "Cyber Operations in Drone Warfare - Infiltrating the Stack",
         "realm": "Air",
         "speaker": {
             "name": "Mike Monik",
             "image": "mike_monnik.jpeg"
         },
-        "desc": "Mike Monnik, CEO of DroneSec, presents a sharp overview of emerging drone threats, from prison smuggling to battlefield swarm attacks, using real-time open-source data. He outlines how criminals use drones with spoofed GPS and disguised payloads to deliver contraband, while militants deploy heavy-lift drones to target infrastructure with bomblets. Threat actors now easily bypass geofences and alter drone IDs using widely available tools. Mike stresses the need for intelligence sharing, standardised reporting, layered counter-UAS systems, and legal frameworks to combat these evolving threats across corrections, infrastructure, and defence."
+        "desc": "The face of warfare has changed, with small, cheap, attritable drones being used to target multi-million dollar assets globally. Covert cyber operations are taking place against drone supply chains, watering-hole attacks against firmware and cat-and-mouse innovation to evade countermeasures (C-UAS) in the battlefield. We will consider OPSEC and offensive techniques used by cartels, prison gangs and even military units within Ukraine, with intelligence that has come across our analyst’s desks."
     },
     {
         "time": "10:05 - 10:20",

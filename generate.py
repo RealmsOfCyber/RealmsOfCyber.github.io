@@ -3,6 +3,7 @@ from variables import *
 from sponsors import sponsors
 from speakers import speakers
 from schedule import schedule, schedule2
+from exhibitors import exhibitors
 
 # load templates folder to environment (security measure)
 env = Environment(loader=FileSystemLoader('templates'))
@@ -14,8 +15,10 @@ output_from_parsed_template = index_template.render(
   date=date,
   become_a_sponsor_url=become_a_sponsor_url,
   sponsors=sponsors,
+  exhibitors=exhibitors,
   speakers=speakers,
   sponsor_blurb=sponsor_blurb,
+  exhibitor_blurb=exhibitor_blurb,
   tickets_on_sale=tickets_on_sale,
   ticket_url=ticket_url,
   ticket_price=ticket_price,
@@ -30,8 +33,10 @@ staging = index_template.render(
   date=date,
   become_a_sponsor_url=become_a_sponsor_url,
   sponsors=sponsors,
+  exhibitors=exhibitors,
   speakers=speakers,
   sponsor_blurb=sponsor_blurb,
+  exhibitor_blurb=exhibitor_blurb,
   tickets_on_sale=tickets_on_sale,
   ticket_url=ticket_url,
   ticket_price=ticket_price,
@@ -46,8 +51,10 @@ after_event = index_template.render(
   date=date,
   become_a_sponsor_url=become_a_sponsor_url,
   sponsors=sponsors,
+  exhibitors=exhibitors,
   speakers=speakers,
   sponsor_blurb=sponsor_blurb,
+  exhibitor_blurb=exhibitor_blurb,
   tickets_on_sale=tickets_on_sale,
   ticket_url=ticket_url,
   ticket_price=ticket_price,

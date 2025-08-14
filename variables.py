@@ -6,3 +6,4 @@ ticket_price = 1100
 become_a_sponsor_url = "https://forms.office.com/r/K5Tqfz2bq7"
 #sponsor_blurb = "We extend our deepest gratitude to the sponsors and partners who made ROCCON 2024 possible. Your generous support ensured the success of this year’s event and helped us bring together a community dedicated to advancing cybersecurity. Thank you to our Platinum sponsor, Queensland Government, as well as our Gold, Silver, and Bronze sponsors."
 sponsor_blurb = "ROCC is proudly supported by the following sponsors driving Australia’s cybersecurity future"
+exhibitor_blurb = None

@@ -105,11 +105,11 @@ schedule_build = [
     },
     {
         "time": "12:25 – 12:30",
-        "title": "Demo Announcement"
+        "title": "Demo: Introduction to \"McBathy\" bathymetric survey boat"
     },
     {
         "time": "12:30 – 13:40",
-        "title": "Lunch Break"
+        "title": "Lunch Break: Live demonstration of Ocebile's \"McBathy\" bathymetric survey boat"
     },
     {
         "time": "13:40 – 13:55",

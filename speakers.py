@@ -135,4 +135,12 @@ speakers = [
         "image": "alok_patel.png",
         "description": "Alok Patel is a venture capitalist, strategist, and national security advocate with over 20 years of leadership experience spanning the Australian Army & Navy, private equity, management consulting, and real estate. Alok developed the Royal Australian Navy’s AI Benefits framework and as the Founder and CEO of Azcende and Azymmetric, Alok champions the adoption emerging technologies that underpin national security and critical infrastructure. He leads investments into startups positioned to transform urban innovation, defence technology, and cybersecurity. A Harvard Business School alumnus, Alok brings a unique blend of strategic foresight and operational insight, having shaped transactions exceeding AUD$4 billion and advised governments on trusted technology standards. He also serves as Chairman of the National Security Association of Australia and is a Strategic Advisor to the Global Trusted Technology Standard through the Krach Institute for Tech Diplomacy."
     },
+    {
+        "name": "Nicole Gibson",
+        "jobtitle": "CEO",
+        "company": "inTruth",
+        "linkedin": "https://www.linkedin.com/in/nicjgibson/",
+        "image": "nicole_gibson.jpg",
+        "description": "Nicole Gibson is the founder and CEO of inTruth Technologies, pioneering biometric emotion AI to revolutionise emotional health. A former Federal Mental Health Commissioner, she’s a global thought leader on ethical technology, emotional intelligence, and data sovereignty, inspiring radical change at the intersection of science, humanity, and innovation."
+    },
 ]

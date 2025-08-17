@@ -181,6 +181,16 @@ schedule_build = [
     },
     {
         "time": "16:15 – 16:30",
+        "title": "TBC",
+        "realm": "Biological",
+        "speaker": {
+            "name": "Nicole Gibson",
+            "image": "nicole_gibson.jpg"
+        },
+        "desc": "Emotions drive up to 80% of our decisions, yet remain one of the most under-explored aspects of human behaviour. Nicole Gibson, CEO and founder of inTruth Technologies, reveals how biometric wearables and AI can turn physiological signals into actionable emotional insights. She will share the science of quantifying emotion, the promise of emotional intelligence at scale, and the risks of storing such sensitive data online - if emotions are stored online, they can be targeted, manipulated, or exploited by bad actors, whether for commercial gain, political influence, or psychological harm. Nicole outlines how inTruth is building safeguards around cybersecurity, data sovereignty, and user control to protect the emotional core of human decision-making."
+    },
+    {
+        "time": "16:30 – 16:45",
         "title": "How to Arm Robots for Modern Warfare",
         "realm": "Land/Air",
         "speaker": {
@@ -188,16 +198,6 @@ schedule_build = [
             "image": "michael_creagh.jpg"
         },
         "desc": "Arming robots has been a prominent topic since the invasion of Ukraine by Russia where First-Person View drones have dominated the battlefield. Skyborne Technologies has been arming robots for six years and has learnt many lessons along the way on topics of reliability, accuracy, autonomy and cyber security of such platforms. Michael Creagh discusses lessons learnt, current state of the art and the future of arming robots and keeping them in friendly hands. Michael will present on several different air and ground platforms, weapon systems (12 Ga, 40mm Grenade and warhead), and also discuss the economics of future attrition warfare."
-    },
-    {
-        "time": "16:30 – 16:45",
-        "title": "Stay Tuned",
-        "realm": "",
-        "speaker": {
-            "name": "",
-            "image": "default.png"
-        },
-        "desc": ""
     },
     {
         "time": "16:45 – 16:55",

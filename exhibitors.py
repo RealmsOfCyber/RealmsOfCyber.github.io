@@ -9,6 +9,11 @@ exhibitors = [
         "url": "https://mcbathy.com/",
         "logo": "mcbathy.png"
     }, 
+    {
+        "name": "Roo-ver",
+        "url": "https://www.space.gov.au/meet-roo-ver",
+        "logo": "roo-ver.jpg"
+    }
 ]
 
 for exhibitor in exhibitors:

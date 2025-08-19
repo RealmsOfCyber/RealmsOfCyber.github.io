@@ -224,16 +224,6 @@ schedule2_build = [
     },
     {
         "time": "11:35 – 12:05",
-        "title": "Protecting OT systems using engineering and cybersecurity",
-        "realm": "Multi",
-        "speaker": {
-            "name": "Ken Radke",
-            "image": "ken.png"
-        },
-        "desc": "Operational Technology (OT) systems remain the unseen backbone of modern infrastructure – yet securing them continues to trail behind traditional IT in maturity and resourcing. In this presentation, Dr Ken Radke explores the current state-of-the-art in OT security: what’s working, what’s not, and what’s simply misunderstood.<br>Blending engineering rigour with cyber defence expertise, Ken draws on real-world experience across national infrastructure to examine prevailing practices and their limitations. He challenges the audience to re-evaluate assumptions, proposing a set of theoretical and practical interventions – from protocol-level resilience and anomaly detection to embedding security into the engineering lifecycle itself."
-    },
-    {
-        "time": "12:05 – 12:35",
         "title": "OT 101: Foundations of Operational Technology Security",
         "realm": "Multi",
         "speaker": {
@@ -241,6 +231,16 @@ schedule2_build = [
             "image": "gareth_smith.jpg"
         },
         "desc": "What exactly is Operational Technology, and why does it matter more now than ever? In this foundational talk, Gareth Smith breaks down the essential concepts behind OT environments — from SCADA systems to PLCs — and highlights the unique risks they face in today’s threat landscape. Tailored for those new to the field or bridging from IT, this session offers a clear, jargon-free introduction to how physical systems are monitored, controlled, and protected. Whether you're a cyber professional crossing into industrial realms or an asset owner getting your head around digital threats, OT 101 is your briefing room."
+    },
+    {
+        "time": "12:05 – 12:35",
+        "title": "Protecting OT systems using engineering and cybersecurity",
+        "realm": "Multi",
+        "speaker": {
+            "name": "Ken Radke",
+            "image": "ken.png"
+        },
+        "desc": "Operational Technology (OT) systems remain the unseen backbone of modern infrastructure – yet securing them continues to trail behind traditional IT in maturity and resourcing. In this presentation, Dr Ken Radke explores the current state-of-the-art in OT security: what’s working, what’s not, and what’s simply misunderstood.<br>Blending engineering rigour with cyber defence expertise, Ken draws on real-world experience across national infrastructure to examine prevailing practices and their limitations. He challenges the audience to re-evaluate assumptions, proposing a set of theoretical and practical interventions – from protocol-level resilience and anomaly detection to embedding security into the engineering lifecycle itself."
     },
     {
         "time": "12:30 – 13:40",

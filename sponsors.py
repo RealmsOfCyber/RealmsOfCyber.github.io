@@ -122,6 +122,11 @@ sponsors = {
             "url": "https://secalerts.co/",
             "logo": "secalerts.png"
         },
+        {
+            "name": "Green Cyber Consulting",
+            "url": "https://www.greencyberconsulting.com/",
+            "logo": "green_cyber_consulting.png"
+        },
     #     {
     #         "name": "AusCERT",
     #         "url": "https://auscert.org.au/",

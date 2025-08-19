@@ -27,6 +27,11 @@ sponsors = {
             "url": "https://sitle.space/",
             "logo": "sitle.png"
         },
+        {
+            "name": "Loc Cyber",
+            "url": "https://loccyber.com/",
+            "logo": "loc_cyber.png"
+        },
     #     {
     #         "name": "Tayko Group",
     #         "url": "https://tayko.io",

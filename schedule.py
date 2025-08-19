@@ -105,7 +105,13 @@ schedule_build = [
     },
     {
         "time": "12:25 – 12:30",
-        "title": "Demo: Introduction to \"McBathy\" bathymetric survey boat"
+        "title": "Demo Announcement",
+        "realm": "Sea",
+        "speaker": {
+            "name": "Judd McCann",
+            "image": "judd_mccann.jpg"
+        },
+         "desc": "Introduction to \"McBathy\" bathymetric survey boat"
     },
     {
         "time": "12:30 – 13:40",

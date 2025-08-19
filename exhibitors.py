@@ -13,7 +13,17 @@ exhibitors = [
         "name": "Roo-ver",
         "url": "https://www.space.gov.au/meet-roo-ver",
         "logo": "roo-ver.jpg"
-    }
+    },
+    {
+        "name": "QUT Centre for Future Mobility",
+        "url": "https://research.qut.edu.au/carrsq/centre-for-future-mobility/",
+        "logo": "qut_cffm.png"
+    },
+    {
+        "name": "QUT Industrial Control System",
+        "url": "https://www.qut.edu.au/about/faculty-of-science/school-of-information-systems",
+        "logo": "qut_tuftrw.png"
+    },
 ]
 
 for exhibitor in exhibitors:

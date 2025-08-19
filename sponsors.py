@@ -69,11 +69,11 @@ sponsors = {
             "url": "https://cubecyber.com/",
             "logo": "cubecyber.png"
         },
-    #     {
-    #         "name": "Sekuro",
-    #         "url": "https://sekuro.io",
-    #         "logo": "sekuro.png"
-    #     },
+        {
+            "name": "Sekuro",
+            "url": "https://sekuro.io",
+            "logo": "sekuro.png"
+        },
     #     {
     #     {
     #         "name": "Adrenalan",

@@ -24,6 +24,11 @@ exhibitors = [
         "url": "https://www.qut.edu.au/about/faculty-of-science/school-of-information-systems",
         "logo": "qut_tuftrw.png"
     },
+    {
+        "name": "TLR",
+        "url": "https://tlr.global/",
+        "logo": "tlr.png"
+    },
 ]
 
 for exhibitor in exhibitors:

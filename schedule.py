@@ -181,7 +181,7 @@ schedule_build = [
     },
     {
         "time": "16:15 – 16:30",
-        "title": "TBC",
+        "title": "Decoding Emotion: Harnessing Biometric AI for Ethical Emotional Intelligence at Scale",
         "realm": "Biological",
         "speaker": {
             "name": "Nicole Gibson",

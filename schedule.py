@@ -224,7 +224,7 @@ schedule2_build = [
     },
     {
         "time": "11:35 – 12:05",
-        "title": "OT 101: Foundations of Operational Technology Security",
+        "title": "Getting started in OT security, pitfalls and pathways",
         "realm": "Multi",
         "speaker": {
             "name": "Gareth Smith",

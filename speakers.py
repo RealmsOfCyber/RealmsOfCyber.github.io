@@ -114,7 +114,7 @@ speakers = [
     {
         "name": "Jake Smith",
         "jobtitle": "OT Infrastructure Engineer | RPEQ | GICSP",
-        "company": "Glencore Australia",
+        "company": "EEHA Automation",
         "linkedin": "https://www.linkedin.com/in/jakesmithics/",
         "image": "jake_smith.jpg",
         "description": "Jake Smith is an experienced Operational Technology (OT) and Industrial Control Systems (ICS) engineer specialising in cybersecurity for critical infrastructure. Currently working with Glencore Australia, he has deep domain expertise across mining, control systems integration, and secure network architecture. Jake holds RPEQ and GICSP credentials and brings a practitioner’s perspective to securing systems never designed with cybersecurity in mind. From air-gapped myths to hardened patching realities, his work is grounded in making OT environments resilient, standards-aligned, and safer by design. At ROCC25, Jake will be tackling the hard truths behind insecure-by-design ICS systems - and why transparency might be their greatest strength."

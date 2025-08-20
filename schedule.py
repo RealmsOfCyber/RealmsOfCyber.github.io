@@ -282,7 +282,7 @@ schedule2_build = [
     },
     {
         "time": "14:50 – 15:45",
-        "title": "Afternoon Tea Break"
+        "title": "Afternoon Break"
     }
 ]
 

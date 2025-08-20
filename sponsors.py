@@ -30,7 +30,9 @@ sponsors = {
         {
             "name": "Loc Cyber",
             "url": "https://loccyber.com/",
-            "logo": "loc_cyber.png"
+            "logo": "loc_cyber.png",
+            "height": 160,
+            "width": 320
         },
     #     {
     #         "name": "Tayko Group",
@@ -125,7 +127,9 @@ sponsors = {
         {
             "name": "Green Cyber Consulting",
             "url": "https://www.greencyberconsulting.com/",
-            "logo": "green_cyber_consulting.png"
+            "logo": "green_cyber_consulting.png",
+            "height": 200,
+            "width": 150
         },
     #     {
     #         "name": "AusCERT",

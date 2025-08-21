@@ -143,4 +143,12 @@ speakers = [
         "image": "nicole_gibson.jpg",
         "description": "Nicole Gibson is the founder and CEO of inTruth Technologies, pioneering biometric emotion AI to revolutionise emotional health. A former Federal Mental Health Commissioner, she’s a global thought leader on ethical technology, emotional intelligence, and data sovereignty, inspiring radical change at the intersection of science, humanity, and innovation."
     },
+    {
+        "name": "Travis Quinn",
+        "jobtitle": "Security Consultant at AWS, PhD Candidate and Casual Academic at UNSW",
+        "company": "AWS",
+        "linkedin": "https://www.linkedin.com/in/travis-quinn1/",
+        "image": "travis_quinn.jpg",
+        "description": "Travis is a Security Leader (Senior Delivery Consultant) at Amazon Web Services (AWS), and a PhD candidate and part-time lecturer at the University of New South Wales (UNSW). At AWS, Travis supports Australian Government customers in their cloud security through best practice security architecture and compliance. At UNSW, his research focuses on the security and applications of programmable networks, while his teaching focuses on technical cyber subjects for postgraduate students. Travis is passionate about advancing the state of the art for security through innovation in technology and methods."
+    },
 ]

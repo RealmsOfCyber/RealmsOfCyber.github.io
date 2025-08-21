@@ -68,8 +68,8 @@ after_event = index_template.render(
 with open("site/index.html", "w") as chap_page:
   chap_page.write(output_from_parsed_template)
 
-with open("site/staging.html", "w") as chap_page:
-  chap_page.write(staging)
+#with open("site/staging.html", "w") as chap_page:
+#  chap_page.write(staging)
 
 with open("site/after-event.html", "w") as chap_page:
   chap_page.write(after_event)

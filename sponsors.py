@@ -141,6 +141,13 @@ sponsors = {
             "url": "https://arcticwolf.com/",
             "logo": "arctic_wolf.png"
         },
+        {
+            "name": "ACS",
+            "url": "https://www.acs.org.au/",
+            "logo": "acs.png",
+            "height": 200,
+            "width": 150
+        },
     #     {
     #         "name": "AusCERT",
     #         "url": "https://auscert.org.au/",

@@ -81,6 +81,11 @@ sponsors = {
             "url": "https://sekuro.io",
             "logo": "sekuro.png"
         },
+        {
+            "name": "Netskope",
+            "url": "https://www.netskope.com/",
+            "logo": "netskope.png"
+        },
     #     {
     #     {
     #         "name": "Adrenalan",
@@ -180,11 +185,6 @@ sponsors = {
     #         "name": "Galah Cyber",
     #         "url": "https://www.galahcyber.com.au/",
     #         "logo": "galah.png"
-    #     },
-    #     {
-    #         "name": "Netskope",
-    #         "url": "https://www.netskope.com/",
-    #         "logo": "netskope.png"
     #     },
     #     {
     #         "name": "Tom Shaw",

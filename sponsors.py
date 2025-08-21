@@ -136,6 +136,11 @@ sponsors = {
             "height": 200,
             "width": 150
         },
+        {
+            "name": "Arctic Wolf",
+            "url": "https://arcticwolf.com/",
+            "logo": "arctic_wolf.png"
+        },
     #     {
     #         "name": "AusCERT",
     #         "url": "https://auscert.org.au/",

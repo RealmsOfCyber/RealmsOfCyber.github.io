@@ -226,7 +226,7 @@ schedule2_build = [
             "name": "Gareth Smith",
             "image": "gareth_smith.jpg"
         },
-        "desc": "What exactly is Operational Technology, and why does it matter more now than ever? In this foundational talk, Gareth Smith breaks down the essential concepts behind OT environments — from SCADA systems to PLCs — and highlights the unique risks they face in today’s threat landscape. Tailored for those new to the field or bridging from IT, this session offers a clear, jargon-free introduction to how physical systems are monitored, controlled, and protected. Whether you're a cyber professional crossing into industrial realms or an asset owner getting your head around digital threats, OT 101 is your briefing room."
+        "desc": "What exactly is Operational Technology security, and why does it matter more now than ever? In this foundational talk, Gareth Smith breaks down the essential concepts behind OT environments security and highlights the unique risks these systems they face in today’s threat landscape. Tailored for those new to the field or bridging from IT security and OT engineering, this session offers a clear, jargon-free introduction to how physical systems are monitored, controlled, and protected. Whether you're a cyber professional crossing into industrial realms or an asset owner getting your head around digital this is your briefing room."
     },
     {
         "time": "12:05 – 12:35",

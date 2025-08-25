@@ -153,7 +153,7 @@ schedule_build = [
     },
     {
         "time": "14:50 – 15:45",
-        "title": "Afternoon Tea Break"
+        "title": "Afternoon Break"
     },
     {
         "time": "15:45 – 16:00",
@@ -200,11 +200,11 @@ schedule_build = [
         "title": "Group Q&A Session"
     },
     {
-        "time": "4:55 - 5:00",
+        "time": "16:55 - 17:00",
         "title": "Closing Words"
     },
     {
-        "time": "5:00 - 6:30",
+        "time": "17:00 - 18:30",
         "title": "Networking Session and Closing Reception"
     }
 ]

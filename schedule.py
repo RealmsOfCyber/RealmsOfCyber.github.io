@@ -8,21 +8,11 @@ schedule_build = [
         "title": "Theatre Open"
     },
     {
-        "time": "9:00 - 9:15",
+        "time": "9:00 - 9:20",
         "title": "Acknowledgement of Country and Opening Words"
     },
     {
-        "time": "9:15 - 9:35",
-        "title": "Stay Tuned",
-        "realm": "",
-        "speaker": {
-            "name": "",
-            "image": "default.png"
-        },
-        "desc": ""
-    },
-    {
-        "time": "9:35 - 9:50",
+        "time": "9:20 - 9:35",
         "title": "Cracking the Sonos: An Australian Team’s Journey to Pwn2Own 2024",
         "realm": "Multi",
         "speaker": {
@@ -32,7 +22,7 @@ schedule_build = [
         "desc": "At Pwn2Own Ireland 2024, Kylie's team became the first fully Australian company to compete at any Pwn2Own event. They entered the Embedded Systems category with exploits for three targets and successfully demonstrated two. One of those was the Sonos Era 300 smart speaker, which earned them USD 30,000 and 3 Master of Pwn points after being the second team to exploit it. This talk covers their experience preparing for the competition—from dealing with last-minute firmware changes to the unlucky demo draw that shaped their outcome. Kylie will also introduce the exploit developed for the Sonos Era 300 and share insights into breaking a modern smart speaker. If you’re curious about embedded exploitation or what it’s like behind the scenes at Pwn2Own, this talk is for you."
     },
     {
-        "time": "9:50 - 10:05",
+        "time": "9:35 - 10:50",
         "title": "Cyber Operations in Drone Warfare - Infiltrating the Stack",
         "realm": "Air",
         "speaker": {
@@ -42,7 +32,7 @@ schedule_build = [
         "desc": "The face of warfare has changed, with small, cheap, attritable drones being used to target multi-million dollar assets globally. Covert cyber operations are taking place against drone supply chains, watering-hole attacks against firmware and cat-and-mouse innovation to evade countermeasures (C-UAS) in the battlefield. We will consider OPSEC and offensive techniques used by cartels, prison gangs and even military units within Ukraine, with intelligence that has come across our analyst’s desks."
     },
     {
-        "time": "10:05 - 10:20",
+        "time": "9:50 - 10:05",
         "title": "Navigating the Cyber Storm: Incident Response on the High Seas",
         "realm": "Sea",
         "speaker": {
@@ -52,7 +42,7 @@ schedule_build = [
         "desc": "Bradley's session dives into the critical realm of cyber incident response in the maritime domain. Drawing powerful parallels from a first-hand military crisis – a rocket attack in Afghanistan – we'll highlight the vital need for robust drills when a vessel faces a cyber threat. We'll then explore a theoretical ship cyber-attack scenario, drawing insights from our experience conducting tabletop exercises for various Operational Technology industries. We'll examine how to effectively assess, contain, communicate, and recover systems when hundreds of miles from shore. Finally, we'll cast an eye to the horizon, discussing the emerging response challenges of Maritime Autonomous Surface Ships (MASS) and their degrees of autonomy. Equip yourself to navigate the unseen digital storms of the sea."
     },
     {
-        "time": "10:20 – 10:35",
+        "time": "10:05 – 10:20",
         "title": "The Roo-ver Mission: Cybersecurity and Space Capabilities",
         "realm": "Space",
         "speaker": {
@@ -62,15 +52,15 @@ schedule_build = [
         "desc": "The Roo-ver Mission, led by ELO2 in partnership with the Australian Space Agency, will see Australia’s lunar rover traverse the Moon’s surface around the end of the decade. This briefing highlights cyber-critical aspects of rover design, including secure sensor technology, autonomous navigation, and communications integrity in extreme conditions. It explores threat mitigation strategies in high-risk environments and outlines protection mechanisms for command systems and mission data. Ben will offer insights into how this industry-research collaboration will develop and protect emerging space technologies. Mission challenges and constraints, including communications delays, weight restrictions, and the harsh lunar environment will also be addressed."
     },
     {
-        "time": "10:35 – 10:45",
+        "time": "10:20 – 10:30",
         "title": "Group Q&A Session"
     },
     {
-        "time": "10:45 – 11:30",
+        "time": "10:30 – 11:25",
         "title": "Morning Tea Break"
     },
     {
-        "time": "11:30 – 11:45",
+        "time": "11:25 – 11:40",
         "title": "Full Stack Security for CUAS: Defending Against Modern Unmanned Threats",
         "realm": "Air",
         "speaker": {
@@ -80,7 +70,7 @@ schedule_build = [
         "desc": "Sasha's presentation explores the critical need for a full stack security strategy in the context of Counter-Unmanned Aircraft Systems (CUAS) companies and manufacturers. We will examine the unique cyber and physical risks posed by autonomous and AI-driven platforms, the importance of mature security capabilities early in a company’s lifecycle, and the necessity of integrating security disciplines across hardware, software, and operational processes. Attendees will gain insights into threat modelling for product security, the interplay between hardware and software engineering, and the imperative of secure-by-design principles."
     },
     {
-        "time": "11:45 – 12:00",
+        "time": "11:40 – 11:55",
         "title": "Supply Chains, Secure Comms, and Sovereign Risk",
         "realm": "Land",
         "speaker": {
@@ -90,7 +80,7 @@ schedule_build = [
         "desc": "From depots to deployables, land-based operations face a unique blend of cyber and physical threats—made more complex by sprawling supply chains, field comms infrastructure, and increasing sovereign requirements. In this session, Ben Doyle draws on over two decades as a CISO overseeing security for defence-grade programs to explore what land operators must prioritise now. He’ll unpack real-world lessons on managing vendor accountability, mitigating risk across integrated systems, and building secure-by-design into procurement before the contract is signed. This is a call to action for leaders responsible for land-based assets to move beyond compliance and adopt resilient, future-facing strategies grounded in operational realities."
     },
     {
-        "time": "12:00 – 12:15",
+        "time": "11:55 – 12:10",
         "title": "Submarine cables: Submerged yet exposed",
         "realm": "Sea",
         "speaker": {
@@ -100,11 +90,11 @@ schedule_build = [
         "desc": "A conversation between two subcable enthusiasts unpacks why undersea cables are seen as strategic assets in a shifting geopolitical landscape. It will explore why Australia is emerging as a digital hub, and what risks submarine cables, which carry 99% of all international internet traffic, face from sabotage, to cyber intrusions, to single points of failure. We’ll leave you with practical considerations to inform your risk management when selecting or securing digital services, emphasising the critical role of sovereign digital resilience for business continuity."
     },
     {
-        "time": "12:15 – 12:25",
+        "time": "12:10 – 12:20",
         "title": "Group Q&A Session"
     },
     {
-        "time": "12:25 – 12:30",
+        "time": "12:20 – 12:25",
         "title": "Demo Announcement",
         "realm": "Sea",
         "speaker": {
@@ -114,7 +104,7 @@ schedule_build = [
          "desc": "Introduction to \"McBathy\" bathymetric survey boat"
     },
     {
-        "time": "12:30 – 13:40",
+        "time": "12:25 – 13:40",
         "title": "Lunch Break: Live demonstration of Ocebile's \"McBathy\" bathymetric survey boat"
     },
     {

@@ -139,13 +139,13 @@ schedule_build = [
     },
     {
         "time": "14:25 – 14:40",
-        "title": "Stay Tuned",
-        "realm": "",
+        "title": "Real World Threats to Cognitive Security in Critical Infrastructure – Why We Need More Tools Than Ever Before",
+        "realm": "Cognitive",
         "speaker": {
-            "name": "",
-            "image": "default.png"
+            "name": "Alok Patel",
+            "image": "alok_patel.png"
         },
-        "desc": ""
+        "desc": "As critical infrastructure becomes more interconnected and reliant on cyber-physical systems, a new frontline has emerged in the battle for security - the human mind. Adversaries are increasingly focusing on operators and decision-makers, exploiting trust, urgency, and authority to influence actions at key moments. These tactics, now supercharged by artificial intelligence, enable precision-crafted communications and scenarios that blend seamlessly into operational environments, making them harder to detect and easier to act upon.<br><br>From fabricated incident reports to convincing operational directives, these manipulative campaigns can mislead even experienced personnel, creating knock-on effects that disrupt physical systems as effectively as any technical breach. The convergence of accessible AI tools and evolving tradecraft has created an environment where the gap between offensive creativity and defensive readiness is widening.<br><br>Drawing on current threat intelligence and recent incidents, this session will explore how information operations are increasingly targeting the cognitive domain of critical infrastructure. We will examine why existing security frameworks - focused largely on systems and networks - are insufficient, and why protecting the decision-making process itself is now mission-critical. "
     },
     {
         "time": "14:40 – 14:50",

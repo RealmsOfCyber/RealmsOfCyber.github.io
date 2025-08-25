@@ -34,6 +34,11 @@ exhibitors = [
         "url": "https://www.facebook.com/AUADRT",
         "logo": "adf_drone_racing.png"
     },
+    {
+        "name": "Savic Motorcycles",
+        "url": "https://www.savicmotorcycles.com/",
+        "logo": "savic_motorcycles.png"
+    },
 ]
 
 for exhibitor in exhibitors:

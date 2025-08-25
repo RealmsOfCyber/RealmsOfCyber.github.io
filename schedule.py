@@ -211,15 +211,15 @@ schedule_build = [
 
 schedule2_build = [
     {
-        "time": "10:45 – 11:30",
+        "time": "10:30 – 11:25",
         "title": "Morning Tea Break"
     },
     {
-        "time": "11:30 – 11:35",
+        "time": "11:25 – 11:30",
         "title": "MC Opening"
     },
     {
-        "time": "11:35 – 12:05",
+        "time": "11:30 – 12:00",
         "title": "Getting started in OT security, pitfalls and pathways",
         "realm": "Multi",
         "speaker": {
@@ -229,7 +229,7 @@ schedule2_build = [
         "desc": "What exactly is Operational Technology security, and why does it matter more now than ever? In this foundational talk, Gareth Smith breaks down the essential concepts behind OT environments security and highlights the unique risks these systems they face in today’s threat landscape. Tailored for those new to the field or bridging from IT security and OT engineering, this session offers a clear, jargon-free introduction to how physical systems are monitored, controlled, and protected. Whether you're a cyber professional crossing into industrial realms or an asset owner getting your head around digital this is your briefing room."
     },
     {
-        "time": "12:05 – 12:35",
+        "time": "12:00 – 12:30",
         "title": "Protecting OT systems using engineering and cybersecurity",
         "realm": "Multi",
         "speaker": {

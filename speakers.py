@@ -151,4 +151,12 @@ speakers = [
         "image": "travis_quinn.jpg",
         "description": "Travis is a Security Leader (Senior Delivery Consultant) at Amazon Web Services (AWS), and a PhD candidate and part-time lecturer at the University of New South Wales (UNSW). At AWS, Travis supports Australian Government customers in their cloud security through best practice security architecture and compliance. At UNSW, his research focuses on the security and applications of programmable networks, while his teaching focuses on technical cyber subjects for postgraduate students. Travis is passionate about advancing the state of the art for security through innovation in technology and methods."
     },
+    {
+        "name": "Judd McCann",
+        "jobtitle": "Group Director",
+        "company": "Ocebile",
+        "linkedin": "https://www.linkedin.com/in/judd-mccann-21413925/",
+        "image": "judd_mccann.jpg",
+        "description": "Judd McCann is an accomplished strategic and operational leader with more than 20 years’ experience delivering complex, high-risk programs in defence, mining, and engineering. Having served multiple tours in conflict regions, he has worked across North America, the Middle East, and Australasia, and now focuses on U.S. Federal programs in the Indo-Pacific. As Group Director at Ocebile, Judd oversees initiatives in autonomous systems, defence sustainment, and advanced technology integration—designing and building programs from the ground up. His work leverages Indigenous-led supply chains, global partnerships, and rapid deployment capabilities to strengthen sovereign capability and operational readiness."
+    },
 ]

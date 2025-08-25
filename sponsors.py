@@ -148,6 +148,11 @@ sponsors = {
             "height": 200,
             "width": 150
         },
+        {
+            "name": "EEHA Automation",
+            "url": "https://eehaa.com.au/",
+            "logo": "eeha.png"
+        },
     #     {
     #         "name": "AusCERT",
     #         "url": "https://auscert.org.au/",

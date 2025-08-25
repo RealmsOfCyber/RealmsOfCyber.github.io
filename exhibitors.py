@@ -29,6 +29,11 @@ exhibitors = [
         "url": "https://tlr.global/",
         "logo": "tlr.png"
     },
+    {
+        "name": "ADF Drone Racing Team",
+        "url": "https://www.facebook.com/AUADRT",
+        "logo": "adf_drone_racing.png"
+    },
 ]
 
 for exhibitor in exhibitors:

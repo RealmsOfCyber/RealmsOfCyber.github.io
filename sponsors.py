@@ -34,6 +34,13 @@ sponsors = {
             "height": 160,
             "width": 320
         },
+        {
+            "name": "SupplyDIO",
+            "url": "https://www.supplydio.com",
+            "logo": "supplydio.png",
+            "height": 260,
+            "width": 420
+        },
     #     {
     #         "name": "Tayko Group",
     #         "url": "https://tayko.io",

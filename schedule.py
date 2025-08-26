@@ -71,13 +71,13 @@ schedule_build = [
     },
     {
         "time": "11:40 – 11:55",
-        "title": "Supply Chains, Secure Comms, and Sovereign Risk",
-        "realm": "Land",
+        "title": "Real World Threats to Cognitive Security in Critical Infrastructure – Why We Need More Tools Than Ever Before",
+        "realm": "Cognitive",
         "speaker": {
-            "name": "Ben Doyle",
-            "image": "ben_doyle.jpg"
+            "name": "Alok Patel",
+            "image": "alok_patel.png"
         },
-        "desc": "From depots to deployables, land-based operations face a unique blend of cyber and physical threats—made more complex by sprawling supply chains, field comms infrastructure, and increasing sovereign requirements. In this session, Ben Doyle draws on over two decades as a CISO overseeing security for defence-grade programs to explore what land operators must prioritise now. He’ll unpack real-world lessons on managing vendor accountability, mitigating risk across integrated systems, and building secure-by-design into procurement before the contract is signed. This is a call to action for leaders responsible for land-based assets to move beyond compliance and adopt resilient, future-facing strategies grounded in operational realities."
+        "desc": "As critical infrastructure becomes more interconnected and reliant on cyber-physical systems, a new frontline has emerged in the battle for security - the human mind. Adversaries are increasingly focusing on operators and decision-makers, exploiting trust, urgency, and authority to influence actions at key moments. These tactics, now supercharged by artificial intelligence, enable precision-crafted communications and scenarios that blend seamlessly into operational environments, making them harder to detect and easier to act upon.<br><br>From fabricated incident reports to convincing operational directives, these manipulative campaigns can mislead even experienced personnel, creating knock-on effects that disrupt physical systems as effectively as any technical breach. The convergence of accessible AI tools and evolving tradecraft has created an environment where the gap between offensive creativity and defensive readiness is widening.<br><br>Drawing on current threat intelligence and recent incidents, this session will explore how information operations are increasingly targeting the cognitive domain of critical infrastructure. We will examine why existing security frameworks - focused largely on systems and networks - are insufficient, and why protecting the decision-making process itself is now mission-critical. "
     },
     {
         "time": "11:55 – 12:10",
@@ -139,13 +139,13 @@ schedule_build = [
     },
     {
         "time": "14:25 – 14:40",
-        "title": "Real World Threats to Cognitive Security in Critical Infrastructure – Why We Need More Tools Than Ever Before",
-        "realm": "Cognitive",
+        "title": "Supply Chains, Secure Comms, and Sovereign Risk",
+        "realm": "Land",
         "speaker": {
-            "name": "Alok Patel",
-            "image": "alok_patel.png"
+            "name": "Ben Doyle",
+            "image": "ben_doyle.jpg"
         },
-        "desc": "As critical infrastructure becomes more interconnected and reliant on cyber-physical systems, a new frontline has emerged in the battle for security - the human mind. Adversaries are increasingly focusing on operators and decision-makers, exploiting trust, urgency, and authority to influence actions at key moments. These tactics, now supercharged by artificial intelligence, enable precision-crafted communications and scenarios that blend seamlessly into operational environments, making them harder to detect and easier to act upon.<br><br>From fabricated incident reports to convincing operational directives, these manipulative campaigns can mislead even experienced personnel, creating knock-on effects that disrupt physical systems as effectively as any technical breach. The convergence of accessible AI tools and evolving tradecraft has created an environment where the gap between offensive creativity and defensive readiness is widening.<br><br>Drawing on current threat intelligence and recent incidents, this session will explore how information operations are increasingly targeting the cognitive domain of critical infrastructure. We will examine why existing security frameworks - focused largely on systems and networks - are insufficient, and why protecting the decision-making process itself is now mission-critical. "
+        "desc": "From depots to deployables, land-based operations face a unique blend of cyber and physical threats—made more complex by sprawling supply chains, field comms infrastructure, and increasing sovereign requirements. In this session, Ben Doyle draws on over two decades as a CISO overseeing security for defence-grade programs to explore what land operators must prioritise now. He’ll unpack real-world lessons on managing vendor accountability, mitigating risk across integrated systems, and building secure-by-design into procurement before the contract is signed. This is a call to action for leaders responsible for land-based assets to move beyond compliance and adopt resilient, future-facing strategies grounded in operational realities."
     },
     {
         "time": "14:40 – 14:50",
@@ -263,11 +263,7 @@ schedule2_build = [
         "desc": "Despite decades of progress in IT security, Industrial Control Systems (ICS) across critical infrastructure remain inherently vulnerable - not due to oversight, but by design. In this session, OT Infrastructure Engineer Jake Smith exposes the architectural assumptions and legacy protocols that leave ICS environments wide open to modern threats. Drawing on his experience in mining, underground operations, and field engineering, Jake unpacks why many systems were never meant to be secure and what engineers can practically do about it. From air-gapped myths to hardcoded trust, this presentation is a sobering look at the real-world limitations of ICS -and how to defend them anyway."
     },
     {
-        "time": "14:40 – 14:45",
-        "title": "Group Q&A"
-    },
-    {
-        "time": "14:45 – 14:50",
+        "time": "14:40 – 14:50",
         "title": "MC Closing"
     },
     {

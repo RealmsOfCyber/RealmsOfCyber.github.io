@@ -26,7 +26,7 @@ schedule_build = [
         "title": "Cyber Operations in Drone Warfare - Infiltrating the Stack",
         "realm": "Air",
         "speaker": {
-            "name": "Mike Monik",
+            "name": "Mike Monnik",
             "image": "mike_monnik.jpeg"
         },
         "desc": "The face of warfare has changed, with small, cheap, attritable drones being used to target multi-million dollar assets globally. Covert cyber operations are taking place against drone supply chains, watering-hole attacks against firmware and cat-and-mouse innovation to evade countermeasures (C-UAS) in the battlefield. We will consider OPSEC and offensive techniques used by cartels, prison gangs and even military units within Ukraine, with intelligence that has come across our analyst’s desks."

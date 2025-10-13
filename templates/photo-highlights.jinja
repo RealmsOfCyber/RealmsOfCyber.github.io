@@ -1,0 +1,185 @@
+<section id="faq-section" class="faq section theme-bg-primary text-white">
+<div class="container">
+  <h3 class="section-heading text-center mb-5 text-white">ROCC25 Photo Highlights</h3>
+    <div class="row gx-5 py-lg-5">
+      <h3 class="text-white mb-0">A rolling gallery from an unforgettable day at Brisbane Powerhouse</h3>
+
+    <style>
+        .carousel-container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .carousel-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 15px;
+        }
+
+        .carousel-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn:hover {
+            background: #764ba2;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .indicator.active {
+            background: #667eea;
+        }
+
+        .placeholder-text {
+            font-size: 18px;
+            color: #666;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+
+
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+            {% for i in range(1, 15) %}
+            <div class="carousel-slide active">
+                <img src="assets/images/highlights/highlight{{ i }}.jpg" alt="Photo 1">
+            </div>
+            {% endfor %}
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-btn" id="prevBtn">&#10094;</button>
+            <div class="carousel-indicators" id="indicators"></div>
+            <button class="carousel-btn" id="nextBtn">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicatorsContainer = document.getElementById('indicators');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let currentIndex = 0;
+        let autoPlayInterval;
+
+        // Create indicators
+        slides.forEach((_, index) => {
+            const indicator = document.createElement('div');
+            indicator.classList.add('indicator');
+            if (index === 0) indicator.classList.add('active');
+            indicator.addEventListener('click', () => goToSlide(index));
+            indicatorsContainer.appendChild(indicator);
+        });
+
+        const indicators = document.querySelectorAll('.indicator');
+
+        function updateCarousel() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                indicators[index].classList.remove('active');
+            });
+
+            slides[currentIndex].classList.add('active');
+            indicators[currentIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+            resetAutoPlay();
+        }
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 3000);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            startAutoPlay();
+        }
+
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoPlay();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoPlay();
+        });
+
+        // Start auto-play
+        startAutoPlay();
+    </script>
+    </div>
+  </div>
+</section>

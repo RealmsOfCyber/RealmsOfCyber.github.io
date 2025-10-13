@@ -1,5 +1,17 @@
 <section id="faq-section" class="faq section theme-bg-primary text-white">
 <div class="container">
+{% if after_conf %}
+    <div class="row gx-5 py-lg-5">
+      <h3 class="text-white mb-0">When is ROCC26?</h3>
+      <ul class="faq-list"><br>
+        <a class="text-white" href="https://forms.office.com/Pages/ResponsePage.aspx?id=M_lB6ZN8ZUqF9CN5eeaMlk2zVhzLeglLsBOvYaQmADVUNDVPOFdaNUlFRTBDS01WVVdVM1ZMRTlKQi4u">Join the mailing list to be first to know.</a>
+      </ul>
+      <h3 class="text-white mb-0">How can I speak/sponsor?</h3>
+      <ul class="faq-list"><br>
+        <a class="text-white" href="https://forms.office.com/r/VkSvkBzaf3">Submit your interest via our forms.</a>
+      </ul>
+    </div>
+{% else %}
   <h3 class="section-heading text-center mb-5 text-white">Frequently Asked Questions</h3>
     <div class="row gx-5 py-lg-5">
       <h3 class="text-white mb-0">What is Frontline to ROCC?</h3>
@@ -80,5 +92,6 @@
     <div class="faq-contact">
       <p><strong>Still unsure which ticket to purchase?</strong> <a href="/contact" class="text-white mb-0">Contact us</a> and we will get back to you ASAP.</p>
     </div>
+{% endif %}
   </div>
 </section>

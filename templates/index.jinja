@@ -21,11 +21,17 @@
 
 {% include 'tickets.jinja' %}
 
+{% if not after_conf %}
 {% include 'venue.jinja' %}
+{% endif %}
 
 {% include 'sponsors.jinja' %}
 
 {% include 'exhibitors.jinja' %}
+
+{% include 'photo-highlights.jinja' %}
+
+{% include 'what-attendees-said.jinja' %}
 
 {% include 'faq.jinja' %}
 

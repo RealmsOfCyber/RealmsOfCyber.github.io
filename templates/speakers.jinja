@@ -1,10 +1,17 @@
 <section id="speakers-section" class="speakers-section section active">
 <div class="container">
+{% if after_conf %}
+  <h3 class="section-heading text-center mb-3">ROCC25 Highlights</h3>
+  <div class="section-intro text-center single-col-max mx-auto mb-5">
+    Explore a snapshot of this year's speakers and sessions - then register your interest to speak at ROCC26.
+  </div>
+{% else %}
   <h3 class="section-heading text-center mb-3">Speakers</h3>
   <div class="section-intro text-center single-col-max mx-auto mb-5">
     We have an exciting list of speakers rolling out for our {{ year }} conference,
     check them out:
   </div>
+{% endif %}
   {% set ns = namespace(speaker_count=0) %}
   {% for speaker in speakers -%}
   {% if ns.speaker_count % 4 == 0 %}
@@ -43,11 +50,13 @@
 </div>
 {% endif %}
 
+{% if not after_conf %}
 <br><div class="container">
   <div class="speakers-cta text-center py-3">
       <a class="btn btn-primary btn-lg" href="https://forms.office.com/r/VkSvkBzaf3" target="_blank">Call for Presenters</a>
   </div>
 </div><br>
+{% endif %}
 
 
 {% include 'mc.jinja' %}

@@ -64,17 +64,35 @@
     <div class="hero-block-mask"></div>
     <div class="container">
       <div class="row">
+
         <div class="col-lg-8 col-12">
+
           <div class="hero-text-block">
+      {% if after_conf %}
+      <i class="mb-0">ROCC25 is wrapped! Thank you to everyone who joined us. Stay tuned for ROCC26 - dates to be announced soon. </i>
+          <br><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=M_lB6ZN8ZUqF9CN5eeaMlk2zVhzLeglLsBOvYaQmADVUNDVPOFdaNUlFRTBDS01WVVdVM1ZMRTlKQi4u" class="hero-intro" style="font-weight: bold; color: white">Join the mailing list |</a><a href="egg" class="hero-intro" style="font-weight: bold; color: white"> See 2025 photos</a>
+      {% endif %}
+              {% if after_conf %}
+            <h1 class="hero-heading mb-2">Realms of Cyber Conference - Thank you, ROCC25!</h1>
+              {% else %}
             <h1 class="hero-heading mb-2">Realms of Cyber Conference {{ year }}</h1>
+              {% endif %}
             <div class="hero-meta mb-3">
+              {% if not after_conf %}
               <i class="far fa-calendar-alt me-2"></i>{{ date }}
+              {% endif %}
               <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
             </div>
+            {% if after_conf %}
+            <div class="hero-intro mb-4">
+              A huge thanks to our speakers, sponsors, exhibitors, and attendees for an incredible day at Brisbane Powerhouse. We're already cooking up ROCC26.
+            </div>
+            {% else %}
             <div class="hero-intro mb-4">
               Inspiring and informative talks from some of the world's
               brightest minds in physical cybersecurity
             </div>
+            {% endif %}
           </div>
         </div>
       </div>

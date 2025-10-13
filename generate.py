@@ -25,26 +25,29 @@ output_from_parsed_template = index_template.render(
   enable_main_schedule=True,
   enable_ot_schedule=True,
   schedule=schedule,
-  schedule2=schedule2
+  schedule2=schedule2,
+  after_conf=False
 )
 
-staging = index_template.render(
-  year=year,
-  date=date,
-  become_a_sponsor_url=become_a_sponsor_url,
-  sponsors=sponsors,
-  exhibitors=exhibitors,
-  speakers=speakers,
-  sponsor_blurb=sponsor_blurb,
-  exhibitor_blurb=exhibitor_blurb,
-  tickets_on_sale=tickets_on_sale,
-  ticket_url=ticket_url,
-  ticket_price=ticket_price,
-  enable_main_schedule=True,
-  enable_ot_schedule=True,
-  schedule=schedule,
-  schedule2=schedule2
-)
+# staging = index_template.render(
+#   year=year,
+#   date=date,
+#   become_a_sponsor_url=become_a_sponsor_url,
+#   sponsors=sponsors,
+#   exhibitors=exhibitors,
+#   speakers=speakers,
+#   sponsor_blurb=sponsor_blurb,
+#   exhibitor_blurb=exhibitor_blurb,
+#   tickets_on_sale=tickets_on_sale,
+#   ticket_url=ticket_url,
+#   ticket_price=ticket_price,
+#   enable_main_schedule=True,
+#   enable_ot_schedule=True,
+#   schedule=schedule,
+#   schedule2=schedule2,
+#   staging=True,
+#   after_conf=False
+# )
 
 after_event = index_template.render(
   year=year,
@@ -55,13 +58,15 @@ after_event = index_template.render(
   speakers=speakers,
   sponsor_blurb=sponsor_blurb,
   exhibitor_blurb=exhibitor_blurb,
-  tickets_on_sale=tickets_on_sale,
+  tickets_on_sale=False,
   ticket_url=ticket_url,
   ticket_price=ticket_price,
-  enable_main_schedule=True,
-  enable_ot_schedule=True,
+  enable_main_schedule=False,
+  enable_ot_schedule=False,
   schedule=schedule,
-  schedule2=schedule2
+  schedule2=schedule2,
+  staging=True,
+  after_conf=True
 )
 
 # write the parsed template

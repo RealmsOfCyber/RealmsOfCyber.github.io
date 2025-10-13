@@ -1,11 +1,20 @@
 <section id="sponsors-section" class="sponsors-section section">
 <div class="container">
+{% if after_conf %}
+  <h3 class="section-heading text-center mb-3">
+    Thank you to our ROCC25 sponsors
+  </h3>
+  <div class="section-intro text-center single-col-max mx-auto mb-5">
+    We're proud to partner with the organisations advancing Australia's cyber-physical resilience.
+  </div>
+{% else %}
   <h3 class="section-heading text-center mb-3">
     Sponsors
   </h3>
   <div class="section-intro text-center single-col-max mx-auto mb-5">
     {{ sponsor_blurb }}
   </div>
+{% endif %}
 
   {% for sponsor_level in sponsors -%}
       <h2 class="fw-bolder text-primary mb-4 text-center">{{ sponsor_level }}</h2>
@@ -33,9 +42,15 @@
       <br>
   {% endfor %}
   <!--//sponsors-->
+{% if after_conf %}
+  <div class="sponsors-cta text-center pt-5">
+    <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Interested in sponsoring ROCC26?</a>
+  </div>
+{% else %}
   <div class="sponsors-cta text-center pt-5">
     <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Become A Sponsor</a>
   </div>
+{% endif %}
 </div>
 <!--//container-->
 </section>

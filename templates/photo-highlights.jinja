@@ -5,7 +5,7 @@
       <h3 class="text-white mb-0">A rolling gallery from an unforgettable day at Brisbane Powerhouse</h3>
 
     <style>
-        .carousel-container {
+        .carouselhighlight-container {
             max-width: 800px;
             width: 100%;
             background: white;
@@ -14,14 +14,14 @@
             overflow: hidden;
         }
 
-        .carousel {
+        .carouselhighlight {
             position: relative;
             width: 100%;
             height: 500px;
             overflow: hidden;
         }
 
-        .carousel-slide {
+        .carouselhighlight-slide {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -33,17 +33,17 @@
             background: #f0f0f0;
         }
 
-        .carousel-slide.active {
+        .carouselhighlight-slide.active {
             opacity: 1;
         }
 
-        .carousel-slide img {
+        .carouselhighlight-slide img {
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
         }
 
-        .carousel-controls {
+        .carouselhighlight-controls {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -51,7 +51,7 @@
             gap: 15px;
         }
 
-        .carousel-btn {
+        .carouselhighlight-btn {
             background: #667eea;
             color: white;
             border: none;
@@ -66,11 +66,11 @@
             justify-content: center;
         }
 
-        .carousel-btn:hover {
+        .carouselhighlight-btn:hover {
             background: #764ba2;
         }
 
-        .carousel-indicators {
+        .carouselhighlight-indicators {
             display: flex;
             gap: 10px;
         }
@@ -97,23 +97,23 @@
     </style>
 
 
-    <div class="carousel-container">
-        <div class="carousel" id="carousel">
+    <div class="carouselhighlight-container">
+        <div class="carouselhighlight" id="carouselhighlight">
             {% for i in range(1, 15) %}
-            <div class="carousel-slide active">
+            <div class="carouselhighlight-slide active">
                 <img src="assets/images/highlights/highlight{{ i }}.jpg" alt="Photo 1">
             </div>
             {% endfor %}
         </div>
-        <div class="carousel-controls">
-            <button class="carousel-btn" id="prevBtn">&#10094;</button>
-            <div class="carousel-indicators" id="indicators"></div>
-            <button class="carousel-btn" id="nextBtn">&#10095;</button>
+        <div class="carouselhighlight-controls">
+            <button class="carouselhighlight-btn" id="prevBtn">&#10094;</button>
+            <div class="carouselhighlight-indicators" id="indicators"></div>
+            <button class="carouselhighlight-btn" id="nextBtn">&#10095;</button>
         </div>
     </div>
 
     <script>
-        const slides = document.querySelectorAll('.carousel-slide');
+        const slides = document.querySelectorAll('.carouselhighlight-slide');
         const indicatorsContainer = document.getElementById('indicators');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');

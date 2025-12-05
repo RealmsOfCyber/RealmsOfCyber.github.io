@@ -24,14 +24,17 @@
 
         .carouselhighlight-slide {
             position: absolute;
-            width: 100%;
-            height: 100%;
+            top: 40px;
+            left: 20px;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
             opacity: 0;
             transition: opacity 1s ease-in-out;
             display: flex;
             align-items: center;
             justify-content: center;
             background: #f0f0f0;
+            box-sizing: border-box;
         }
 
         .carouselhighlight-slide.active {

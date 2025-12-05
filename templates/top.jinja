@@ -64,30 +64,25 @@
     <div class="hero-block-mask"></div>
     <div class="container">
       <div class="row">
-
-        <div class="col-lg-8 col-12">
-
-          <div class="hero-text-block">
+        <div class="col-lg-12 col-12">
+          <div class="hero-text-block mx-auto text-center" style="max-width: 900px;">
       {% if after_conf %}
-      <i class="mb-0">ROCC25 is wrapped! Thank you to everyone who joined us. Stay tuned for ROCC26 - dates to be announced soon. </i>
-          <br><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=M_lB6ZN8ZUqF9CN5eeaMlk2zVhzLeglLsBOvYaQmADVUNDVPOFdaNUlFRTBDS01WVVdVM1ZMRTlKQi4u" class="hero-intro" style="font-weight: bold; color: white">Join the mailing list |</a><a href="#highlights-section" class="hero-intro" style="font-weight: bold; color: white"> See 2025 photos</a>
-      {% endif %}
-              {% if after_conf %}
-            <h1 class="hero-heading mb-2">Realms of Cyber Conference - Thank you, ROCC25!</h1>
-              {% else %}
-            <h1 class="hero-heading mb-2">Realms of Cyber Conference {{ year }}</h1>
-              {% endif %}
+      <p class="mb-2" style="font-size: 1.7em; font-weight: 600;">That's a wrap for ROCC25!</p>
+      <p class="mb-3" style="font-size: 1.2em;">A huge thanks to our <a href="#speakers-section" style="color: white; text-decoration: underline;">speakers</a>, <a href="#sponsors-section" style="color: white; text-decoration: underline;">sponsors</a>, <a href="#exhibitors-section" style="color: white; text-decoration: underline;">exhibitors</a>, and attendees for an incredible day at Brisbane Powerhouse.</p>
+            <h1 class="hero-heading mb-2">Stay tuned for ROCC26</h1>
             <div class="hero-meta mb-3">
-              {% if not after_conf %}
-              <i class="far fa-calendar-alt me-2"></i>{{ date }}
-              {% endif %}
               <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
             </div>
-            {% if after_conf %}
-            <div class="hero-intro mb-4">
-              A huge thanks to our speakers, sponsors, exhibitors, and attendees for an incredible day at Brisbane Powerhouse. We're already cooking up ROCC26.
+            <div class="mb-3">
+              <a class="btn-primary btn btn-lg" href="https://forms.office.com/Pages/ResponsePage.aspx?id=M_lB6ZN8ZUqF9CN5eeaMlk2zVhzLeglLsBOvYaQmADVUNDVPOFdaNUlFRTBDS01WVVdVM1ZMRTlKQi4u">Join the ROCC mailing list</a>
             </div>
-            {% else %}
+            <p class="mb-4" style="font-size: 1.1em;">Be notified when registration opens for ROCC26</p>
+      {% else %}
+            <h1 class="hero-heading mb-2">Realms of Cyber Conference {{ year }}</h1>
+            <div class="hero-meta mb-3">
+              <i class="far fa-calendar-alt me-2"></i>{{ date }}
+              <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
+            </div>
             <div class="hero-intro mb-4">
               Inspiring and informative talks from some of the world's
               brightest minds in physical cybersecurity

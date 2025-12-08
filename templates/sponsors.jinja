@@ -1,6 +1,9 @@
 <section id="sponsors-section" class="sponsors-section section">
 <div class="container">
 {% if after_conf %}
+  <div class="sponsors-cta text-center mb-5">
+    <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Interested in sponsoring ROCC26?</a>
+  </div>
   <h3 class="section-heading text-center mb-3">
     Thank you to our ROCC25 sponsors
   </h3>
@@ -42,11 +45,7 @@
       <br>
   {% endfor %}
   <!--//sponsors-->
-{% if after_conf %}
-  <div class="sponsors-cta text-center pt-5">
-    <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Interested in sponsoring ROCC26?</a>
-  </div>
-{% else %}
+{% if not after_conf %}
   <div class="sponsors-cta text-center pt-5">
     <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Become A Sponsor</a>
   </div>

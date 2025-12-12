@@ -1,4 +1,3 @@
-{% if tickets_on_sale %}
 <section id="tickets-section" class="tickets-section section theme-bg-light">
 <div class="container">
   <h3 class="section-heading text-center mb-3">Tickets</h3>
@@ -10,74 +9,77 @@
       <div class="card card-special rounded-0 border-0">
         <div class="card-body p-0">
           <div class="heading text-center p-3">
-            <h4 class="text-white mb-0">Frontline Ticket</h4>
+            <h4 class="text-white mb-0">{{ ticket_1_name }}</h4>
           </div>
           <div class="info p-3">
             <div class="price-figure text-center">
-              <span class="number">$330</span>
+              <span class="number">${{ ticket_1_price }}</span>
             </div>
+            {% if ticket_1_description %}
             <div class="desc px-3 text-center">
-              Frontline ticket eligibility: Must work directly for a Frontline organisation, and register with organisation email to purchase this ticket.
+              {{ ticket_1_description }}
             </div>
+            {% endif %}
           </div>
           <!--//info-->
         </div>
         <!--//card-body-->
         <div class="card-footer text-center">
-          <a href="{{ ticket_url }}#group0" class="btn btn-primary">Secure Now</a>
+          <a href="{{ ticket_url }}#{{ ticket_1_url_fragment }}" class="btn btn-primary">Secure Now</a>
         </div>
       </div>
       <!--//card-->
     </div>
     <!--//col-->
 
-     <!--//col-->
-     <div class="col-12 col-md-4 p-2 p-lg-4">
-      <div class="card card-special rounded-0 border-0">
-        <div class="card-body p-0">
-          <div class="heading text-center p-3">
-            <h4 class="text-white mb-0">General Admission</h4>
-          </div>
-          <div class="info p-3">
-            <div class="price-figure text-center">
-              <span class="number">$990</span>
-            </div>
-            <div class="desc px-3 text-center">
-
-            </div>
-          </div>
-          <!--//info-->
-        </div>
-        <!--//card-body-->
-        <div class="card-footer text-center">
-          <a href="{{ ticket_url }}#group0" class="btn btn-primary">Secure Now</a>
-        </div>
-      </div>
-      <!--//card-->
-    </div>
-    <!--//col-->
-
-
-    <!--//col-->
     <div class="col-12 col-md-4 p-2 p-lg-4">
       <div class="card card-special rounded-0 border-0">
         <div class="card-body p-0">
           <div class="heading text-center p-3">
-            <h4 class="text-white mb-0">Student Ticket</h4>
+            <h4 class="text-white mb-0">{{ ticket_2_name }}</h4>
           </div>
           <div class="info p-3">
             <div class="price-figure text-center">
-              <span class="number">$165</span>
+              <span class="number">${{ ticket_2_price }}</span>
             </div>
+            {% if ticket_2_description %}
             <div class="desc px-3 text-center">
-              Student ticket eligibility: Must be currently studying full time, and register with your student email to purchase this ticket.
+              {{ ticket_2_description }}
             </div>
+            {% endif %}
           </div>
           <!--//info-->
         </div>
         <!--//card-body-->
         <div class="card-footer text-center">
-          <a href="{{ ticket_url }}#group1" class="btn btn-primary">Secure Now</a>
+          <a href="{{ ticket_url }}#{{ ticket_2_url_fragment }}" class="btn btn-primary">Secure Now</a>
+        </div>
+      </div>
+      <!--//card-->
+    </div>
+    <!--//col-->
+
+    <div class="col-12 col-md-4 p-2 p-lg-4">
+      <div class="card card-special rounded-0 border-0">
+        <div class="card-body p-0">
+          <div class="heading text-center p-3">
+            <h4 class="text-white mb-0">{{ ticket_3_name }}</h4>
+          </div>
+          <div class="info p-3">
+            <div class="price-figure text-center">
+              <span class="number">${{ ticket_3_price }}</span>
+            </div>
+            {% if ticket_3_description %}
+            <div class="desc px-3 text-center">
+              {{ ticket_3_description }}
+            </div>
+            {% endif %}
+          </div>
+          <!--//info-->
+        </div>
+        <!--//card-body-->
+        <div class="card-footer text-center">
+          <a href="{{ ticket_url }}#{{ ticket_3_url_fragment }}" class="btn btn-primary">Secure Now</a>
         </div>
       </div>
       <!--//card-->
@@ -138,7 +140,6 @@
     </div>
     -->
   </div>
-    <p class="text-center">If you are experiencing financial hardship that is preventing you from purchasing a ticket, please <a href="https://forms.office.com/r/8GUa9t9yds" ><b>Contact us</b></a>.</p>
+    <p class="text-center">If you are experiencing financial hardship that is preventing you from purchasing a ticket, please <a href="{{ contact_us_url }}" ><b>Contact us</b></a>.</p>
 </div>
 </section>
-{% endif %}

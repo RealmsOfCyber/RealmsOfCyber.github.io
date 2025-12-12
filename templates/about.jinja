@@ -21,7 +21,7 @@
     <div id="countdown-box" class="countdown-box"></div>
   </div> -->
   <!--//event-countdown-->
-  {% if tickets_on_sale %}
+  {% if tickets_on_sale and not is_post_event %}
   <div class="about-cta text-center mb-5">
     <a class="btn btn-secondary btn-lg mb-5" href="{{ ticket_url }}" target="_blank">Get Your Ticket Today</a>
   </div>
@@ -29,9 +29,6 @@
 </div>
 <!--//container-->
 
-{% if after_conf %}
-{% include 'what-attendees-said.jinja' %}
-{% endif %}
 
 <div class="media-block theme-bg-primary py-5">
   <div class="container">

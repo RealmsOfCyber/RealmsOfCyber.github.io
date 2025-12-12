@@ -1,8 +1,13 @@
 <section id="speakers-section" class="speakers-section section active">
 <div class="container">
-{% if after_conf %}
+{% if is_year_page %}
+  <h3 class="section-heading text-center mb-3">ROCC{{ year }} Speakers</h3>
+  <div class="section-intro text-center single-col-max mx-auto mb-5">
+    View the speakers from Realms of Cyber Conference {{ year }}
+  </div>
+{% elif is_post_event %}
   <div class="speakers-cta text-center mb-5">
-    <a class="btn-primary btn btn-lg" href="https://forms.office.com/r/VkSvkBzaf3" target="_blank">Interested in presenting at ROCC26?</a>
+    <a class="btn-primary btn btn-lg" href="{{ call_for_presenters_url }}" target="_blank">Interested in presenting at ROCC{{ next_year }}?</a>
   </div>
   <h3 class="section-heading text-center mb-3">ROCC25 Speakers</h3>
   <div class="section-intro text-center single-col-max mx-auto mb-5">
@@ -25,7 +30,7 @@
       <div class="card rounded-0">
         <a href="#{{ speaker['image'] }}" data-bs-toggle="modal" data-bs-target="#{{ speaker['image'] }}"><img
 
-            src="assets/images/speakers/{{ speaker['image'] }}" class="card-img-top rounded-0" alt=""></a>
+            src="assets/images/{{ year }}/speakers/{{ speaker['image'] }}" class="card-img-top rounded-0" alt=""></a>
         <div class="card-body">
           <h5 class="card-title mb-2">{{ speaker['name'] }}</h5>
           <div class="card-text mb-3">
@@ -53,16 +58,101 @@
 </div>
 {% endif %}
 
-{% if not after_conf %}
+{% if not is_post_event and not is_year_page %}
 <br><div class="container">
   <div class="speakers-cta text-center py-3">
-      <a class="btn btn-primary btn-lg" href="https://forms.office.com/r/VkSvkBzaf3" target="_blank">Call for Presenters</a>
+      <a class="btn btn-primary btn-lg" href="{{ call_for_presenters_url }}" target="_blank">Call for Presenters</a>
   </div>
 </div><br>
 {% endif %}
 
+{% if mc and mc|length > 0 %}
+{% if not is_post_event %}
+<h3 class="section-heading text-center mb-3">MC</h3>
+<div class="section-intro text-center single-col-max mx-auto mb-4">
+  ROCC {{ year }} will be hosted by{% if mc|length > 1 %}:{% endif %}
+</div>
+{% endif %}
 
-{% include 'mc.jinja' %}
+<div class="row justify-content-center">
+  {% for mc_person in mc -%}
+  <div class="col-6 col-lg-3 mb-4" {% if mc|length == 1 %}style="margin: 0 auto;"{% elif loop.first %}style="margin-left: auto !important;"{% elif loop.last %}style="margin-right: auto !important;"{% endif %}>
+    <div class="card rounded-0">
+      <a href="#mc-{{ mc_person['image'] }}" data-bs-toggle="modal" data-bs-target="#mc-{{ mc_person['image'] }}"><img
+          src="assets/images/{{ year }}/speakers/{{ mc_person['image'] }}" class="card-img-top rounded-0" alt=""></a>
+      <div class="card-body">
+        <h5 class="card-title mb-2">{{ mc_person['name'] }}</h5>
+        <div class="card-text mb-3">
+          <div class="meta">{{ mc_person['jobtitle'] }}</div>
+          <div class="meta">{{ mc_person['company'] }}</div>
+        </div>
+        <a href="#mc-{{ mc_person['image'] }}" data-bs-toggle="modal" data-bs-target="#mc-{{ mc_person['image'] }}">Read
+          more →</a>
+      </div>
+      <div class="card-footer text-muted">
+        <ul class="social-list list-inline mb-0">
+          <li class="list-inline-item">
+            <a href="{{ mc_person['linkedin'] }}"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Modal MCs -->
+{% for mc_person in mc -%}
+<div class="modal modal-speaker modal-mc" id="mc-{{ mc_person['image'] }}" tabindex="-1" role="dialog"
+aria-labelledby="mc-{{ mc_person['image'] }}-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="mc-{{ mc_person['image'] }}-ModalLabel" class="modal-title sr-only">
+        {{ mc_person['name'] }}
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/{{ year }}/speakers/{{ mc_person['image'] }}" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">{{ mc_person['name'] }}</h2>
+            <div class="meta">{{ mc_person['jobtitle'] }}</div>
+            <div class="meta">{{ mc_person['company'] }}</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="{{ mc_person['linkedin'] }}"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          {{ mc_person['description'] }}
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+{% endfor %}
+{% endif %}
 
 </div>
 <!--//container-->
@@ -94,7 +184,7 @@ aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
         <div class="row">
           <div class="col-12 col-md-auto text-center">
             <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
-              src="assets/images/speakers/{{ speaker['image'] }}" alt="" />
+              src="assets/images/{{ year }}/speakers/{{ speaker['image'] }}" alt="" />
           </div>
 
           <div class="col text-center text-md-start mx-auto">

@@ -1,6 +1,6 @@
 <section id="highlights-section" class="faq section theme-bg-primary text-white">
 <div class="container">
-  <h3 class="section-heading text-center mb-5 text-white">ROCC25 Photo Highlights</h3>
+  <h3 class="section-heading text-center mb-5 text-white">ROCC{{ year }} Photo Highlights</h3>
     <div class="row gx-5 py-lg-5 justify-content-center">
 
     <style>
@@ -103,11 +103,17 @@
 
     <div class="carouselhighlight-container mx-auto">
         <div class="carouselhighlight" id="carouselhighlight">
-            {% for i in range(1, 15) %}
-            <div class="carouselhighlight-slide active">
-                <img src="assets/images/highlights/highlight{{ i }}.jpg" alt="Photo 1">
+            {% if photo_highlights and photo_highlights|length > 0 %}
+            {% for photo in photo_highlights -%}
+            <div class="carouselhighlight-slide {% if loop.first %}active{% endif %}">
+                <img src="assets/images/{{ year }}/highlights/{{ photo }}" alt="Photo {{ loop.index }}">
             </div>
             {% endfor %}
+            {% else %}
+            <div class="carouselhighlight-slide active">
+                <div class="placeholder-text">No photos available</div>
+            </div>
+            {% endif %}
         </div>
         <div class="carouselhighlight-controls">
             <button class="carouselhighlight-btn" id="prevBtn">&#10094;</button>
@@ -125,64 +131,85 @@
         let currentIndex = 0;
         let autoPlayInterval;
 
-        // Create indicators
-        slides.forEach((_, index) => {
-            const indicator = document.createElement('div');
-            indicator.classList.add('indicator');
-            if (index === 0) indicator.classList.add('active');
-            indicator.addEventListener('click', () => goToSlide(index));
-            indicatorsContainer.appendChild(indicator);
-        });
-
-        const indicators = document.querySelectorAll('.indicator');
-
-        function updateCarousel() {
-            slides.forEach((slide, index) => {
-                slide.classList.remove('active');
-                indicators[index].classList.remove('active');
+        // Only initialize if there are slides
+        if (slides.length > 0) {
+            // Create indicators
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.classList.add('indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(indicator);
             });
 
-            slides[currentIndex].classList.add('active');
-            indicators[currentIndex].classList.add('active');
-        }
+            const indicators = document.querySelectorAll('.indicator');
 
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % slides.length;
-            updateCarousel();
-        }
+            function updateCarousel() {
+                slides.forEach((slide, index) => {
+                    slide.classList.remove('active');
+                    if (indicators[index]) {
+                        indicators[index].classList.remove('active');
+                    }
+                });
 
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateCarousel();
-        }
+                if (slides[currentIndex]) {
+                    slides[currentIndex].classList.add('active');
+                    if (indicators[currentIndex]) {
+                        indicators[currentIndex].classList.add('active');
+                    }
+                }
+            }
 
-        function goToSlide(index) {
-            currentIndex = index;
-            updateCarousel();
-            resetAutoPlay();
-        }
+            function nextSlide() {
+                if (slides.length > 0) {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    updateCarousel();
+                }
+            }
 
-        function startAutoPlay() {
-            autoPlayInterval = setInterval(nextSlide, 3000);
-        }
+            function prevSlide() {
+                if (slides.length > 0) {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    updateCarousel();
+                }
+            }
 
-        function resetAutoPlay() {
-            clearInterval(autoPlayInterval);
+            function goToSlide(index) {
+                if (slides.length > 0 && index >= 0 && index < slides.length) {
+                    currentIndex = index;
+                    updateCarousel();
+                    resetAutoPlay();
+                }
+            }
+
+            function startAutoPlay() {
+                if (slides.length > 0) {
+                    autoPlayInterval = setInterval(nextSlide, 3000);
+                }
+            }
+
+            function resetAutoPlay() {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    resetAutoPlay();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    resetAutoPlay();
+                });
+            }
+
+            // Start auto-play
             startAutoPlay();
         }
-
-        prevBtn.addEventListener('click', () => {
-            prevSlide();
-            resetAutoPlay();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            nextSlide();
-            resetAutoPlay();
-        });
-
-        // Start auto-play
-        startAutoPlay();
     </script>
     </div>
   </div>

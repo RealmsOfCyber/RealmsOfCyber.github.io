@@ -1,7 +1,55 @@
 # RealmsOfCyber.github.io
 This git repo generates the website https://www.realmsofcyber.com/
 
-## Variable Templating
+## Setup
+
+Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Generate the Site
+
+Run the site generation script:
+
+```bash
+python3 generate.py
+```
+
+This will:
+- Automatically detect the current year from your system date
+- Generate `site/index.html` for the current year
+- Generate `site/thanks.html` for the current year
+- Generate archive pages (e.g., `site/2025.html`) for all available years
+
+The generated HTML files will be written to the `site/` directory.
+
+## Run Locally
+
+After generating the site, you can view it locally using Python's built-in HTTP server to serve from the root directory:
+
+```bash
+python3 -m http.server --directory site 8000
+```
+
+Then open your browser to: `http://localhost:8000`
+
+## Pushing to Production
+
+The site is automatically deployed to GitHub Pages when you push changes to the `main` branch.
+
+The GitHub Actions workflow (`.github/workflows/static.yml`) will automatically:
+- Install dependencies
+- Generate the site
+- Deploy to GitHub Pages
+
+The site will be live at https://www.realmsofcyber.com/ within a few minutes after the workflow completes.
+
+You can also manually trigger the deployment from the GitHub Actions tab in the repository.
+
+
+## Project Structure
 
 /
 ├── generate.py              ← Main entry point

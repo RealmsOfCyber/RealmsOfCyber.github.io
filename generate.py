@@ -19,14 +19,14 @@ output_from_parsed_template = index_template.render(
   speakers=speakers,
   sponsor_blurb=sponsor_blurb,
   exhibitor_blurb=exhibitor_blurb,
-  tickets_on_sale=tickets_on_sale,
+  tickets_on_sale=False,
   ticket_url=ticket_url,
   ticket_price=ticket_price,
   enable_main_schedule=True,
   enable_ot_schedule=True,
   schedule=schedule,
   schedule2=schedule2,
-  after_conf=False
+  after_conf=True
 )
 
 # staging = index_template.render(
@@ -76,5 +76,6 @@ with open("site/index.html", "w") as chap_page:
 #with open("site/staging.html", "w") as chap_page:
 #  chap_page.write(staging)
 
-with open("site/after-event.html", "w") as chap_page:
-  chap_page.write(after_event)
+# After-event view is now the default index.html view
+# with open("site/after-event.html", "w") as chap_page:
+#   chap_page.write(after_event)

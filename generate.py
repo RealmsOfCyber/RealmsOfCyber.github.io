@@ -1,81 +1,36 @@
-from jinja2 import Environment, FileSystemLoader
-from variables import *
-from sponsors import sponsors
-from speakers import speakers
-from schedule import schedule, schedule2
-from exhibitors import exhibitors
+"""
+Main site generation script.
+Orchestrates data loading, template rendering, and file writing.
+"""
 
-# load templates folder to environment (security measure)
-env = Environment(loader=FileSystemLoader('templates'))
+from datetime import date
+from generator_helpers import get_current_year_data, discover_available_years, render_page, render_thanks_page
 
-# load the `index.jinja` template
-index_template = env.get_template('index.jinja')
-output_from_parsed_template = index_template.render(
-  year=year,
-  date=date,
-  become_a_sponsor_url=become_a_sponsor_url,
-  sponsors=sponsors,
-  exhibitors=exhibitors,
-  speakers=speakers,
-  sponsor_blurb=sponsor_blurb,
-  exhibitor_blurb=exhibitor_blurb,
-  tickets_on_sale=False,
-  ticket_url=ticket_url,
-  ticket_price=ticket_price,
-  enable_main_schedule=True,
-  enable_ot_schedule=True,
-  schedule=schedule,
-  schedule2=schedule2,
-  after_conf=True
-)
+# Get current year from system date
+current_year = date.today().year
 
-# staging = index_template.render(
-#   year=year,
-#   date=date,
-#   become_a_sponsor_url=become_a_sponsor_url,
-#   sponsors=sponsors,
-#   exhibitors=exhibitors,
-#   speakers=speakers,
-#   sponsor_blurb=sponsor_blurb,
-#   exhibitor_blurb=exhibitor_blurb,
-#   tickets_on_sale=tickets_on_sale,
-#   ticket_url=ticket_url,
-#   ticket_price=ticket_price,
-#   enable_main_schedule=True,
-#   enable_ot_schedule=True,
-#   schedule=schedule,
-#   schedule2=schedule2,
-#   staging=True,
-#   after_conf=False
-# )
+# Load current year data
+current_data = get_current_year_data(current_year)
 
-after_event = index_template.render(
-  year=year,
-  date=date,
-  become_a_sponsor_url=become_a_sponsor_url,
-  sponsors=sponsors,
-  exhibitors=exhibitors,
-  speakers=speakers,
-  sponsor_blurb=sponsor_blurb,
-  exhibitor_blurb=exhibitor_blurb,
-  tickets_on_sale=False,
-  ticket_url=ticket_url,
-  ticket_price=ticket_price,
-  enable_main_schedule=False,
-  enable_ot_schedule=False,
-  schedule=schedule,
-  schedule2=schedule2,
-  staging=True,
-  after_conf=True
-)
+# Generate main index page
+print(f"Generating index page for year {current_year}...")
+index_html = render_page(current_data)
+with open("site/index.html", "w") as f:
+    f.write(index_html)
 
-# write the parsed template
-with open("site/index.html", "w") as chap_page:
-  chap_page.write(output_from_parsed_template)
+# Generate thanks page
+print(f"Generating thanks page for year {current_year}...")
+thanks_html = render_thanks_page(current_data)
+with open("site/thanks.html", "w") as f:
+    f.write(thanks_html)
 
-#with open("site/staging.html", "w") as chap_page:
-#  chap_page.write(staging)
+# Generate archive pages for all available years (including current year for archive view)
+available_years = discover_available_years()
+for archive_year in available_years:
+    print(f"Generating archive page for {archive_year}...")
+    archive_data = get_current_year_data(archive_year)
+    archive_html = render_page(archive_data, is_year_page=True)
+    with open(f"site/{archive_year}.html", "w") as f:
+        f.write(archive_html)
 
-# After-event view is now the default index.html view
-# with open("site/after-event.html", "w") as chap_page:
-#   chap_page.write(after_event)
+print("✓ Site generation complete!")

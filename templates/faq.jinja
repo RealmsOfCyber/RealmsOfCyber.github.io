@@ -1,25 +1,25 @@
 <section id="faq-section" class="faq section theme-bg-light">
 <div class="container">
-{% if after_conf %}
+{% if is_post_event %}
   <h3 class="section-heading text-center mb-5">FAQ</h3>
     <div class="row gx-5 py-lg-5">
       <div class="single-col-max mx-auto">
         <h3 class="mb-3">I'm all in for ROCC26, when is it?</h3>
         <p class="mb-3" style="padding-left: 20px;">ROCC will be back at Brisbane Powerhouse in 2026, join our mailing list to be the first to know.</p>
         <div class="mb-5" style="padding-left: 20px;">
-          <a class="btn-primary btn btn-lg" href="https://forms.office.com/Pages/ResponsePage.aspx?id=M_lB6ZN8ZUqF9CN5eeaMlk2zVhzLeglLsBOvYaQmADVUNDVPOFdaNUlFRTBDS01WVVdVM1ZMRTlKQi4u">Join the mailing list</a>
+          <a class="btn-primary btn btn-lg" href="{{ mailing_list_url }}">Join the mailing list</a>
         </div>
         
         <h3 class="mb-3">I'm interested in becoming a sponsor. How can I get involved?</h3>
         <p class="mb-3" style="padding-left: 20px;">We love working with sponsors to create partnerships that boost visibility and deliver real value and return on investment through a range of tailored sponsorship options.</p>
         <div class="mb-5" style="padding-left: 20px;">
-          <a class="btn-primary btn btn-lg" href="https://forms.office.com/r/K5Tqfz2bq7">Register your interest here</a>
+          <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Register your interest here</a>
         </div>
         
-        <h3 class="mb-3">I'm interested in presenting at ROCC26. How can I connect?</h3>
+        <h3 class="mb-3">I'm interested in presenting at ROCC{{ next_year }}. How can I connect?</h3>
         <p class="mb-3" style="padding-left: 20px;">We'd love to hear from you! If you're interested in presenting, we welcome speakers who bring fresh perspectives, real-world experience, and a passion for advancing physical cyber security.</p>
         <div class="mb-5" style="padding-left: 20px;">
-          <a class="btn-primary btn btn-lg" href="https://forms.office.com/r/VkSvkBzaf3">Register your interest here</a>
+          <a class="btn-primary btn btn-lg" href="{{ call_for_presenters_url }}">Register your interest here</a>
         </div>
       </div>
     </div>

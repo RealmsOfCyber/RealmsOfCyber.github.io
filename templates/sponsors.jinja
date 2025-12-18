@@ -1,6 +1,6 @@
 <section id="sponsors-section" class="sponsors-section section">
 <div class="container">
-{% if after_conf %}
+{% if is_post_event %}
   <div class="sponsors-cta text-center mb-5">
     <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Interested in sponsoring ROCC26?</a>
   </div>
@@ -28,7 +28,7 @@
             {% endif %}
             <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
               <a href="{{ sponsor_detail['url'] }}" target="_blank"><img style="float: left; width: {{ sponsor_detail['width'] }}px; height: {{ sponsor_detail['height'] }}px; object-fit:scale-down; max-height: {{ sponsor_detail['height'] }}px"
-                  src="assets/images/sponsors/{{ sponsor_detail['logo'] }}" alt="{{ sponsor_detail['name'] }}" /></a>
+                  src="assets/images/{{ year }}/sponsors/{{ sponsor_detail['logo'] }}" alt="{{ sponsor_detail['name'] }}" /></a>
             </div>
             {% if loop.index is divisibleby 2 or loop.last %}
               </div>
@@ -37,7 +37,7 @@
               <div class="row logos justify-content-center">
                 <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
                   <a href="{{ sponsor_detail['url'] }}" target="_blank"><img style="float: left; width: {{ sponsor_detail['width'] }}px; height: {{ sponsor_detail['height'] }}px; object-fit:scale-down; max-height: {{ sponsor_detail['height'] }}px"
-                      src="assets/images/sponsors/{{ sponsor_detail['logo'] }}" alt="{{ sponsor_detail['name'] }}" /></a>
+                      src="assets/images/{{ year }}/sponsors/{{ sponsor_detail['logo'] }}" alt="{{ sponsor_detail['name'] }}" /></a>
                 </div>
               </div>
           {% endif %}
@@ -45,7 +45,7 @@
       <br>
   {% endfor %}
   <!--//sponsors-->
-{% if not after_conf %}
+{% if not is_post_event %}
   <div class="sponsors-cta text-center pt-5">
     <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Become A Sponsor</a>
   </div>

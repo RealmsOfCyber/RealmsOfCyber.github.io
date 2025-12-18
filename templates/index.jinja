@@ -9,29 +9,31 @@
 
 {% include 'about.jinja' %}
 
+{% if is_post_event and testimonials and testimonials|length > 0 %}
+{% include 'testimonials.jinja' %}
+{% endif %}
+
+{% if photo_highlights and photo_highlights|length > 0 %}
+{% include 'photo-highlights.jinja' %}
+{% endif %}
+
 {% include 'speakers.jinja' %}
 
-{% if enable_main_schedule %}
-{% include 'schedule-main.jinja' %}
+{% if has_schedules %}
+{% include 'schedule.jinja' %}
 {% endif %}
 
-{% if enable_ot_schedule %}
-{% include 'schedule-ot.jinja' %}
-{% endif %}
-
+{% if tickets_on_sale and not is_post_event %}
 {% include 'tickets.jinja' %}
+{% endif %}
 
-{% if not after_conf %}
+{% if not is_post_event %}
 {% include 'venue.jinja' %}
 {% endif %}
 
 {% include 'sponsors.jinja' %}
 
 {% include 'exhibitors.jinja' %}
-
-{% if after_conf %}
-{% include 'photo-highlights.jinja' %}
-{% endif %}
 
 {% include 'faq.jinja' %}
 

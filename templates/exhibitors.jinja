@@ -13,7 +13,7 @@
         <div class="row logos justify-content-center">
       {% endif %}
       <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
-        <a href="{{ exhibitor_details['url'] }}" target="_blank"><img style="float: left; width: {{ exhibitor_details['width'] }}px; height: {{ exhibitor_details['height'] }}px; object-fit:scale-down; max-height: {{ exhibitor_details['height'] }}px"
+        <a href="{{ exhibitor_details['url'] }}" target="_blank"><img style="float: left; width: {{ exhibitor_details.get('width', 320) }}px; height: {{ exhibitor_details.get('height', 110) }}px; object-fit:scale-down; max-height: {{ exhibitor_details.get('height', 110) }}px"
               src="assets/images/{{ year }}/exhibitors/{{ exhibitor_details['logo'] }}" alt="{{ exhibitor_details['name'] }}" />
         </a>
       </div>

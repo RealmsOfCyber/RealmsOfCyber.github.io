@@ -106,7 +106,7 @@
             {% if photo_highlights and photo_highlights|length > 0 %}
             {% for photo in photo_highlights -%}
             <div class="carouselhighlight-slide {% if loop.first %}active{% endif %}">
-                <img src="assets/images/{{ year }}/highlights/{{ photo }}" alt="Photo {{ loop.index }}">
+                <img src="/assets/images/{{ year }}/highlights/{{ photo }}" alt="Photo {{ loop.index }}">
             </div>
             {% endfor %}
             {% else %}

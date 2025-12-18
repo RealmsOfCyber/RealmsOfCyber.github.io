@@ -26,7 +26,7 @@ schedule = [
     },
     {
         "time": "9:35 - 9:50",
-        "name": "Kylie McDevitt"
+        "name": "Kylie McDevitt",
         "title": "Enhancing Embedded Security Assessments",
         "realm": "Multi Realm",
         "description": "IoT devices have become pervasive in the way we live and interact with the world. In order to provide security assessments on the wide variety of devices on the market, InfoSect has had to expand their capabilities. This talk will walk through InfoSect's improved process for performing security assessment on embedded devices.",
@@ -142,7 +142,7 @@ schedule = [
         "name": 'Chathura Abeydeera',
         "title": 'Cybers Beyond the Earth',
         "realm": 'Space Realm',
-        "description": 'As our reliance on space-based technologies expands, so does the urgency to protect these assets from evolving cyber threats. This will explore key challenges such as securing satellite communication networks, mitigating risks to orbital platforms, and defending against sophisticated cyber attacks targeting space infrastructure. In this climate, innovative approaches and strategies essential for building resilient and secure space systems. Get ready to uncover the complexities and advancements in safeguarding our national interests beyond Earth's atmosphere.',
+        "description": "As our reliance on space-based technologies expands, so does the urgency to protect these assets from evolving cyber threats. This will explore key challenges such as securing satellite communication networks, mitigating risks to orbital platforms, and defending against sophisticated cyber attacks targeting space infrastructure. In this climate, innovative approaches and strategies essential for building resilient and secure space systems. Get ready to uncover the complexities and advancements in safeguarding our national interests beyond Earth's atmosphere.",
         "image": 'chathura_abeydeera.jpg',
         "type": 'talk',
     },
@@ -185,7 +185,7 @@ schedule = [
         "name": 'Sanja Marais',
         "title": 'Guardians of the Health Tech Galaxy: Cybersecurity Edition',
         "realm": 'Biological Realm',
-        "description": 'Join me for a thrilling adventure as we explore “Guardians of the Health Tech Galaxy: Cybersecurity Edition." Diving into what happens when medical devices go rogue, how transcriptions can get lost in translation, why health data is the new oil, and savvy strategies to outsmart cyber villains. Let's gaze into the future with AI, blockchain, and quantum computing, and see how these innovations are shaping the next frontier of cybersecurity in healthcare.',
+        "description": "Join me for a thrilling adventure as we explore \"Guardians of the Health Tech Galaxy: Cybersecurity Edition.\" Diving into what happens when medical devices go rogue, how transcriptions can get lost in translation, why health data is the new oil, and savvy strategies to outsmart cyber villains. Let's gaze into the future with AI, blockchain, and quantum computing, and see how these innovations are shaping the next frontier of cybersecurity in healthcare.",
         "image": 'sanja_marais.jpg',
         "type": 'talk',
     },
@@ -218,4 +218,60 @@ schedule = [
 ]
 
 schedule2 = []
-schedules = []
+
+def convert_2024_schedule_to_template_format(schedule_list):
+    """Convert 2024 schedule format to template-compatible format"""
+    converted = []
+    for item in schedule_list:
+        # Handle items with speakers (talks)
+        if "name" in item and item.get("type") == "talk":
+            # Extract realm name (remove " Realm" suffix if present)
+            realm = item.get("realm", "").replace(" Realm", "").strip()
+            
+            # Map realm to icon
+            realm_icon_map = {
+                "Space": "fa-satellite",
+                "Cognitive": "fa-brain",
+                "Land": "fa-truck",
+                "Land/Air": "fa-truck",
+                "Sea": "fa-ship",
+                "Air": "fa-plane-departure",
+                "Biological": "fa-dna",
+                "Multi": "fa-earth-americas",
+            }
+            logo = realm_icon_map.get(realm, "NONE")
+            
+            converted_item = {
+                "time": item.get("time", ""),
+                "title": item.get("title", ""),
+                "realm": realm,
+                "logo": logo,
+                "desc": item.get("description", ""),
+                "speaker": {
+                    "name": item.get("name", ""),
+                    "image": item.get("image", "")
+                }
+            }
+            converted.append(converted_item)
+        else:
+            # Handle non-talk items (registration, breaks, etc.)
+            converted_item = {
+                "time": item.get("time", ""),
+                "title": item.get("title", "")
+            }
+            converted.append(converted_item)
+    return converted
+
+# Convert schedule to template-compatible format
+converted_schedule = convert_2024_schedule_to_template_format(schedule)
+
+# Convert schedule to schedules structure for template compatibility
+schedules = [
+    {
+        "id": "schedule",
+        "title": "Schedule",
+        "subtitle": None,
+        "date": None,
+        "items": converted_schedule
+    }
+]

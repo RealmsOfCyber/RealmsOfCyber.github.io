@@ -33,9 +33,11 @@
   <div class="archive-links mb-4">
     <p class="text-white mb-2"><b>Past Conferences:</b></p>
     <ul class="list-inline mb-0">
+      {% for past_year in past_years %}
       <li class="list-inline-item me-3">
-        <a href="2025.html" class="text-white"><b>ROCC 2025</b></a>
+        <a href="{{ past_year }}.html" class="text-white"><b>ROCC {{ past_year }}</b></a>
       </li>
+      {% endfor %}
     </ul>
   </div>
   <picture>

@@ -67,12 +67,12 @@
 {% endif %}
 
 {% if mc and mc|length > 0 %}
-{% if not is_post_event %}
-<h3 class="section-heading text-center mb-3">MC</h3>
-<div class="section-intro text-center single-col-max mx-auto mb-4">
-  ROCC {{ year }} will be hosted by{% if mc|length > 1 %}:{% endif %}
+<div class="container">
+  <hr class="my-5">
 </div>
-{% endif %}
+<div class="section-intro text-center single-col-max mx-auto mb-4">
+  ROCC {{ year }} hosted by{% if mc|length > 1 %}:{% endif %}
+</div>
 
 <div class="row justify-content-center">
   {% for mc_person in mc -%}

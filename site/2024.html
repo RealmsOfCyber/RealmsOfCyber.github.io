@@ -134,16 +134,20 @@
         <div class="col-lg-12 col-12">
           <div class="hero-text-block mx-auto text-center" style="max-width: 900px;">
       
-            <h1 class="hero-heading mb-2">Realms of Cyber Conference 2024</h1>
+            <p class="mb-2" style="font-size: 1.7em; font-weight: 600;">That's a wrap for ROCC2024!</p>
+            <p class="mb-3" style="font-size: 1.2em;">A huge thanks to our <a href="#speakers-section" style="color: white; text-decoration: underline;">speakers</a>, <a href="#sponsors-section" style="color: white; text-decoration: underline;">sponsors</a>, <a href="#exhibitors-section" style="color: white; text-decoration: underline;">exhibitors</a>, and attendees for an incredible day at Brisbane Powerhouse.</p>
+            <h1 class="hero-heading mb-2">ROCC2024 Archive</h1>
             <div class="hero-meta mb-3">
-              <i class="far fa-calendar-alt me-2"></i>TBD
+              <i class="far fa-calendar-alt me-2"></i>28 Aug
               <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
             </div>
             <div class="hero-intro mb-4">
-              Inspiring and informative talks from some of the world's
-              brightest minds in physical cybersecurity
+              View the speakers and schedule from Realms of Cyber Conference 2024
             </div>
-            
+            <div class="mb-3">
+              <a class="btn-primary btn btn-lg" href="index.html">Back to Current Conference</a>
+            </div>
+      
           </div>
         </div>
       </div>
@@ -215,27 +219,823 @@
 <!--//media-block-->
 </section>
 
+
+
+
+<section id="highlights-section" class="faq section theme-bg-primary text-white">
+<div class="container">
+  <h3 class="section-heading text-center mb-5 text-white">ROCC2024 Photo Highlights</h3>
+    <div class="row gx-5 py-lg-5 justify-content-center">
+
+    <style>
+        .carouselhighlight-container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .carouselhighlight {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .carouselhighlight-slide {
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0;
+            box-sizing: border-box;
+        }
+
+        .carouselhighlight-slide.active {
+            opacity: 1;
+        }
+
+        .carouselhighlight-slide img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .carouselhighlight-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            gap: 15px;
+        }
+
+        .carouselhighlight-btn {
+            background: white;
+            color: black;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carouselhighlight-btn:hover {
+            background: white;
+        }
+
+        .carouselhighlight-indicators {
+            display: flex;
+            gap: 10px;
+        }
+
+        .indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .indicator.active {
+            background: #667eea;
+        }
+
+        .placeholder-text {
+            font-size: 18px;
+            color: #666;
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+
+
+    <div class="carouselhighlight-container mx-auto">
+        <div class="carouselhighlight" id="carouselhighlight">
+            
+            <div class="carouselhighlight-slide active">
+                <img src="/assets/images/2024/highlights/WebsiteA.jpg" alt="Photo 1">
+            </div>
+            <div class="carouselhighlight-slide ">
+                <img src="/assets/images/2024/highlights/WebsiteB.jpg" alt="Photo 2">
+            </div>
+            <div class="carouselhighlight-slide ">
+                <img src="/assets/images/2024/highlights/WebsiteC.jpg" alt="Photo 3">
+            </div>
+            <div class="carouselhighlight-slide ">
+                <img src="/assets/images/2024/highlights/WebsiteD.jpg" alt="Photo 4">
+            </div>
+            <div class="carouselhighlight-slide ">
+                <img src="/assets/images/2024/highlights/WebsiteE.jpg" alt="Photo 5">
+            </div>
+            <div class="carouselhighlight-slide ">
+                <img src="/assets/images/2024/highlights/WebsiteF.jpg" alt="Photo 6">
+            </div>
+            
+            
+        </div>
+        <div class="carouselhighlight-controls">
+            <button class="carouselhighlight-btn" id="prevBtn">&#10094;</button>
+            <div class="carouselhighlight-indicators" id="indicators"></div>
+            <button class="carouselhighlight-btn" id="nextBtn">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.carouselhighlight-slide');
+        const indicatorsContainer = document.getElementById('indicators');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let currentIndex = 0;
+        let autoPlayInterval;
+
+        // Only initialize if there are slides
+        if (slides.length > 0) {
+            // Create indicators
+            slides.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.classList.add('indicator');
+                if (index === 0) indicator.classList.add('active');
+                indicator.addEventListener('click', () => goToSlide(index));
+                indicatorsContainer.appendChild(indicator);
+            });
+
+            const indicators = document.querySelectorAll('.indicator');
+
+            function updateCarousel() {
+                slides.forEach((slide, index) => {
+                    slide.classList.remove('active');
+                    if (indicators[index]) {
+                        indicators[index].classList.remove('active');
+                    }
+                });
+
+                if (slides[currentIndex]) {
+                    slides[currentIndex].classList.add('active');
+                    if (indicators[currentIndex]) {
+                        indicators[currentIndex].classList.add('active');
+                    }
+                }
+            }
+
+            function nextSlide() {
+                if (slides.length > 0) {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    updateCarousel();
+                }
+            }
+
+            function prevSlide() {
+                if (slides.length > 0) {
+                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    updateCarousel();
+                }
+            }
+
+            function goToSlide(index) {
+                if (slides.length > 0 && index >= 0 && index < slides.length) {
+                    currentIndex = index;
+                    updateCarousel();
+                    resetAutoPlay();
+                }
+            }
+
+            function startAutoPlay() {
+                if (slides.length > 0) {
+                    autoPlayInterval = setInterval(nextSlide, 3000);
+                }
+            }
+
+            function resetAutoPlay() {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            }
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    resetAutoPlay();
+                });
+            }
+
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    resetAutoPlay();
+                });
+            }
+
+            // Start auto-play
+            startAutoPlay();
+        }
+    </script>
+    </div>
+  </div>
+</section>
+
+
 <section id="speakers-section" class="speakers-section section active">
 <div class="container">
 
-  <h3 class="section-heading text-center mb-3">Speakers</h3>
+  <h3 class="section-heading text-center mb-3">ROCC2024 Speakers</h3>
   <div class="section-intro text-center single-col-max mx-auto mb-5">
-    We have an exciting list of speakers rolling out for our 2024 conference,
-    check them out:
+    View the speakers from Realms of Cyber Conference 2024
   </div>
 
   
   
+    <div class="row" name="0">
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#kylie_mcdevitt.jpg" data-bs-toggle="modal" data-bs-target="#kylie_mcdevitt.jpg"><img
 
+            src="assets/images/2024/speakers/kylie_mcdevitt.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Kylie McDevitt</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Chief Executive Officer</div>
+            <div class="meta">InfoSect</div>
+          </div>
+          <a href="#kylie_mcdevitt.jpg" data-bs-toggle="modal" data-bs-target="#kylie_mcdevitt.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/kylie-mcdevitt-162b9a34/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#charles_oconnell.jpg" data-bs-toggle="modal" data-bs-target="#charles_oconnell.jpg"><img
+
+            src="assets/images/2024/speakers/charles_oconnell.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Charles O'Connell</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Founder, Advisor & Investor</div>
+            <div class="meta">Stealth Startup</div>
+          </div>
+          <a href="#charles_oconnell.jpg" data-bs-toggle="modal" data-bs-target="#charles_oconnell.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/charles-o-2bb46223/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#michael_creagh.jpg" data-bs-toggle="modal" data-bs-target="#michael_creagh.jpg"><img
+
+            src="assets/images/2024/speakers/michael_creagh.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Michael Creagh, PHD</h5>
+          <div class="card-text mb-3">
+            <div class="meta">CEO</div>
+            <div class="meta">Skyborne Technologies</div>
+          </div>
+          <a href="#michael_creagh.jpg" data-bs-toggle="modal" data-bs-target="#michael_creagh.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/michael-creagh-1469a210/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#anthony_caulfield.jpg" data-bs-toggle="modal" data-bs-target="#anthony_caulfield.jpg"><img
+
+            src="assets/images/2024/speakers/anthony_caulfield.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Anthony Caulfield</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Associate Director and APAC Transport Security Lead</div>
+            <div class="meta">NCC</div>
+          </div>
+          <a href="#anthony_caulfield.jpg" data-bs-toggle="modal" data-bs-target="#anthony_caulfield.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/anthony-caulfield-944680/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  
+    <div class="row" name="4">
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#nicholas_lindsay.jpg" data-bs-toggle="modal" data-bs-target="#nicholas_lindsay.jpg"><img
+
+            src="assets/images/2024/speakers/nicholas_lindsay.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Nicholas Lindsay</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Former SpaceX Director of Spacecraft Production</div>
+            <div class="meta">MATES Ventures</div>
+          </div>
+          <a href="#nicholas_lindsay.jpg" data-bs-toggle="modal" data-bs-target="#nicholas_lindsay.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/nblindsay/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#sanja_marais.jpg" data-bs-toggle="modal" data-bs-target="#sanja_marais.jpg"><img
+
+            src="assets/images/2024/speakers/sanja_marais.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Sanja Marais</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Chief Technology and Security Officer</div>
+            <div class="meta">Aspen Medical</div>
+          </div>
+          <a href="#sanja_marais.jpg" data-bs-toggle="modal" data-bs-target="#sanja_marais.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/sanja-marais-2981487b/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#bradley_butler.jpg" data-bs-toggle="modal" data-bs-target="#bradley_butler.jpg"><img
+
+            src="assets/images/2024/speakers/bradley_butler.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Bradley Butler</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Maritime Cybersecurity Expert</div>
+            <div class="meta">Mantel Group</div>
+          </div>
+          <a href="#bradley_butler.jpg" data-bs-toggle="modal" data-bs-target="#bradley_butler.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/bradley-butler-msc-9445a154/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#chris_hockings.jpeg" data-bs-toggle="modal" data-bs-target="#chris_hockings.jpeg"><img
+
+            src="assets/images/2024/speakers/chris_hockings.jpeg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Chris Hockings</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Chief Technology Officer</div>
+            <div class="meta">IBM Security Asia Pacific</div>
+          </div>
+          <a href="#chris_hockings.jpeg" data-bs-toggle="modal" data-bs-target="#chris_hockings.jpeg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/chrishockings/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  
+    <div class="row" name="8">
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#chathura_abeydeera.jpg" data-bs-toggle="modal" data-bs-target="#chathura_abeydeera.jpg"><img
+
+            src="assets/images/2024/speakers/chathura_abeydeera.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Chathura Abeydeera</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Cyber and Space Intelligence Expert</div>
+            <div class="meta">KPMG Australia</div>
+          </div>
+          <a href="#chathura_abeydeera.jpg" data-bs-toggle="modal" data-bs-target="#chathura_abeydeera.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/abeydeera/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#sam_kelly.png" data-bs-toggle="modal" data-bs-target="#sam_kelly.png"><img
+
+            src="assets/images/2024/speakers/sam_kelly.png" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Samuel Kelly</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Offensive Security Consultant</div>
+            <div class="meta">Sekuro</div>
+          </div>
+          <a href="#sam_kelly.png" data-bs-toggle="modal" data-bs-target="#sam_kelly.png">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/dj-spacies/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#daniel_castillo.jpg" data-bs-toggle="modal" data-bs-target="#daniel_castillo.jpg"><img
+
+            src="assets/images/2024/speakers/daniel_castillo.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Daniel Castillo</h5>
+          <div class="card-text mb-3">
+            <div class="meta">OT Cybersecurity Specialist</div>
+            <div class="meta"></div>
+          </div>
+          <a href="#daniel_castillo.jpg" data-bs-toggle="modal" data-bs-target="#daniel_castillo.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/daniel-castillo-2259236b/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#sadeed_tirmizey.jpg" data-bs-toggle="modal" data-bs-target="#sadeed_tirmizey.jpg"><img
+
+            src="assets/images/2024/speakers/sadeed_tirmizey.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Sadeed Tirmizey</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Chief Information Security Officer</div>
+            <div class="meta">Seqwater</div>
+          </div>
+          <a href="#sadeed_tirmizey.jpg" data-bs-toggle="modal" data-bs-target="#sadeed_tirmizey.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/tirmizey/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  
+    <div class="row" name="12">
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#travis_quinn.jpg" data-bs-toggle="modal" data-bs-target="#travis_quinn.jpg"><img
+
+            src="assets/images/2024/speakers/travis_quinn.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Travis Quinn</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Principal Security Architect</div>
+            <div class="meta">Tesserent</div>
+          </div>
+          <a href="#travis_quinn.jpg" data-bs-toggle="modal" data-bs-target="#travis_quinn.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/travis-quinn1/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#edward_farrell.jpeg" data-bs-toggle="modal" data-bs-target="#edward_farrell.jpeg"><img
+
+            src="assets/images/2024/speakers/edward_farrell.jpeg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Edward Farrell</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Chief Executive Officer</div>
+            <div class="meta">Mercury Information Security Services</div>
+          </div>
+          <a href="#edward_farrell.jpeg" data-bs-toggle="modal" data-bs-target="#edward_farrell.jpeg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/31337au/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#alex_tilley.jpg" data-bs-toggle="modal" data-bs-target="#alex_tilley.jpg"><img
+
+            src="assets/images/2024/speakers/alex_tilley.jpg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Alex Tilley</h5>
+          <div class="card-text mb-3">
+            <div class="meta">APAC Intelligence and Research Head</div>
+            <div class="meta">Secureworks</div>
+          </div>
+          <a href="#alex_tilley.jpg" data-bs-toggle="modal" data-bs-target="#alex_tilley.jpg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/alex-tilley-440b992/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#david_middleton.jpeg" data-bs-toggle="modal" data-bs-target="#david_middleton.jpeg"><img
+
+            src="assets/images/2024/speakers/david_middleton.jpeg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">David Middleton</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Head of Engineering</div>
+            <div class="meta">Innoflex Technology</div>
+          </div>
+          <a href="#david_middleton.jpeg" data-bs-toggle="modal" data-bs-target="#david_middleton.jpeg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/david-middleton-a065b11/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  
+    <div class="row" name="16">
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#james_carlopio.jpeg" data-bs-toggle="modal" data-bs-target="#james_carlopio.jpeg"><img
+
+            src="assets/images/2024/speakers/james_carlopio.jpeg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">James Carlopio</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Co-founder & Director</div>
+            <div class="meta">Cultural Cyber Security</div>
+          </div>
+          <a href="#james_carlopio.jpeg" data-bs-toggle="modal" data-bs-target="#james_carlopio.jpeg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/jamescarlopio/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  
+    
+    <div class="col-6 col-lg-3 mb-4">
+      <div class="card rounded-0">
+        <a href="#koh_eng.jpeg" data-bs-toggle="modal" data-bs-target="#koh_eng.jpeg"><img
+
+            src="assets/images/2024/speakers/koh_eng.jpeg" class="card-img-top rounded-0" alt=""></a>
+        <div class="card-body">
+          <h5 class="card-title mb-2">Koh Eng Tay</h5>
+          <div class="card-text mb-3">
+            <div class="meta">Principal Advisor (Data Analysis)</div>
+            <div class="meta">Department of Transport and Main Roads</div>
+          </div>
+          <a href="#koh_eng.jpeg" data-bs-toggle="modal" data-bs-target="#koh_eng.jpeg">Read
+            more →</a>
+        </div>
+        <div class="card-footer text-muted">
+          <ul class="social-list list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/koh-eng-tay-904b0654/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
   
 
+  
+</div>
 
-<br><div class="container">
-  <div class="speakers-cta text-center py-3">
-      <a class="btn btn-primary btn-lg" href="https://forms.office.com/r/VkSvkBzaf3" target="_blank">Call for Presenters</a>
+
+
+
+
+<div class="container">
+  <hr class="my-5">
+</div>
+<div class="section-intro text-center single-col-max mx-auto mb-4">
+  ROCC 2024 hosted by
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-6 col-lg-3 mb-4" style="margin: 0 auto;">
+    <div class="card rounded-0">
+      <a href="#mc-adam_green.jpg" data-bs-toggle="modal" data-bs-target="#mc-adam_green.jpg"><img
+          src="assets/images/2024/speakers/adam_green.jpg" class="card-img-top rounded-0" alt=""></a>
+      <div class="card-body">
+        <h5 class="card-title mb-2">Adam Green</h5>
+        <div class="card-text mb-3">
+          <div class="meta">Founder and CISO</div>
+          <div class="meta">Green Cyber Consulting</div>
+        </div>
+        <a href="#mc-adam_green.jpg" data-bs-toggle="modal" data-bs-target="#mc-adam_green.jpg">Read
+          more →</a>
+      </div>
+      <div class="card-footer text-muted">
+        <ul class="social-list list-inline mb-0">
+          <li class="list-inline-item">
+            <a href="https://www.linkedin.com/in/adam-green-7a348519/"><i class="fab fa-linkedin-in fa-fw" aria-hidden="true"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-</div><br>
+  
+</div>
 
+<!-- Modal MCs -->
+<div class="modal modal-speaker modal-mc" id="mc-adam_green.jpg" tabindex="-1" role="dialog"
+aria-labelledby="mc-adam_green.jpg-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="mc-adam_green.jpg-ModalLabel" class="modal-title sr-only">
+        Adam Green
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/adam_green.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Adam Green</h2>
+            <div class="meta">Founder and CISO</div>
+            <div class="meta">Green Cyber Consulting</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/adam-green-7a348519/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          With over two decades at the forefront of cybersecurity thought-leadership with some of the industry's biggest disruptors such as IBM, Palo Alto, Verizon, the Israeli Government, and NTT, Adam has been the advisor in the War Room for over 20 active cybersecurity incidents and Ransomware attacks, and hundreds of simulated scenarios.<br><br>Having worked with some of the world's best forensic investigators and ethical hackers, Adam's disruptive view of cybersecurity allows him to advise the industry's most progressive CIO's and CISO's with a unique perspective of the cyber threat landscape and adversary behaviour.<br><br>As the Founder and CISO of Cybersecurity advisory, Green Cyber Consulting, Adam uses his experience and exposure to some of the leading Higher Education, Critical Infrastructure, Airports, Airlines and Medical Service Providers across the Globe, to collaborating with our most vulnerable sectors to address complex cybersecurity challenges.<br><br>Adam is based out of Brisbane, Australia and holds a qualification in Cyber Warfare and Terrorism, Cyber/Electronic Operations and Warfare from Charles Sturt University.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
 
 
 
@@ -246,76 +1046,1773 @@
 <!--//speakers-section-->
 
 <!-- Modal Speakers -->
-
-
-
-
-
-
-
-
-
-<section id="venue-section" class="venue-section section theme-bg-primary text-white">
-<div class="container">
-  <h3 class="section-heading text-center mb-5 text-white">Venue</h3>
-  <div class="row gx-5 py-lg-5">
-    <div class="col-12 col-lg-7 h-100">
-      <div class="desc">
-        <h4 class="text-white mb-3">How To Get Here</h4>
-        <p>
-          Brisbane Powerhouse is an iconic venue only 20 minutes from the
-          Airport and 400 metres from Public Transport! It is a
-          magnificent power station of the 1920s reborn as Queensland's
-          home of contemporary art and culture located along the Brisbane
-          River (Maiwar) on Yagara Country. We think it's a perfect
-          location to be hosting Brisbane's pure cyberphysical conference.
-        </p>
-        <h4 class="text-white mb-4 mt-3 mt-lg-5">Google Maps</h4>
-        <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-          src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Powerhouse%20Brisbane+(Realms%20of%20Cyber%20Conference%202024)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-      </div>
-      <!--//desc-->
+<!-- Modal Speaker kylie_mcdevitt.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="kylie_mcdevitt.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Kylie McDevitt
+      </h4>
     </div>
-    <!--//col-->
-    <div class="col-12 col-xl-3 col-lg-4 offset-lg-1 position-relative h-100 mt-5 mt-lg-0">
-      <div class="figures-holder">
-        <div class="figure figure-1">
-          <img class="shadow" src="assets/images/2024/venue/venue-1.jpg" alt="" />
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/kylie_mcdevitt.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Kylie McDevitt</h2>
+            <div class="meta">Chief Executive Officer</div>
+            <div class="meta">InfoSect</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/kylie-mcdevitt-162b9a34/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
         </div>
-        <div class="figure figure-2">
-          <img class="shadow" src="assets/images/2024/venue/venue-2.jpg" alt="" />
-        </div>
-        <div class="figure figure-3">
-          <img class="shadow" src="assets/images/2024/venue/venue-3.jpg" alt="" />
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          Kylie McDevitt is a security researcher at her own company, InfoSect, specialising in Linux and embedded devices. Before starting at InfoSect, she was a Technical Director at the Australian Signals Directorate (ASD). Kylie graduated from ANU with a Bachelor of Engineering and worked for Australia's largest telco as a radio engineer in MobileNet before moving into computer security, where she has been for the last 15 years. She has a Masters in Computer Networking, as well as multiple industry certifications. Kylie has taught as a casual lecturer at UNSW Canberra and spends her free time organising community events such as BSides Canberra and the CSides monthly security meetup.
         </div>
       </div>
-      <!--//figures-holder-->
     </div>
-    <!--//col-->
+    <!--//modal-body-->
   </div>
-  <!--//row-->
+  <!--//modal-content-->
 </div>
-<!--//container-->
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker charles_oconnell.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="charles_oconnell.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Charles O'Connell
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/charles_oconnell.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Charles O'Connell</h2>
+            <div class="meta">Founder, Advisor & Investor</div>
+            <div class="meta">Stealth Startup</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/charles-o-2bb46223/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker michael_creagh.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="michael_creagh.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Michael Creagh, PHD
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/michael_creagh.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Michael Creagh, PHD</h2>
+            <div class="meta">CEO</div>
+            <div class="meta">Skyborne Technologies</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/michael-creagh-1469a210/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          Dr. Michael Creagh is the CEO at Skyborne Technologies. He has been working in the Guidance, Navigation and Control (GNC) field since 2007, graduating with a PhD in missile guidance in 2011. He has produced two novel guidance laws for space craft and spinning rockets, an adaptive control law for a hypersonic glider and a plethora of intelligent navigation algorithms.<br><br>Michael has published on a variety of topics and was highlighted by Popular Science Magazine, ABC Television's Catalyst and Aviation week for GNC work on the SCRAMSPACE 1 hypersonic flight experiment
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker anthony_caulfield.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="anthony_caulfield.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Anthony Caulfield
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/anthony_caulfield.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Anthony Caulfield</h2>
+            <div class="meta">Associate Director and APAC Transport Security Lead</div>
+            <div class="meta">NCC</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/anthony-caulfield-944680/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          Anthony is the regional lead for NCC Group's Transport Security Practice. He has 25 years' experience in the cybersecurity industry and particularly enjoys hacking trains, OT systems and critical infrastructure.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker nicholas_lindsay.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="nicholas_lindsay.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Nicholas Lindsay
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/nicholas_lindsay.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Nicholas Lindsay</h2>
+            <div class="meta">Former SpaceX Director of Spacecraft Production</div>
+            <div class="meta">MATES Ventures</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/nblindsay/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          Nicholas draws from his insights into SpaceX's operational strategies to present "The SpaceX Mentality." With an MBA from the Texas McCombs School of Business and a B.S. in Aerospace Engineering from the United States Naval Academy, Nicholas has extensive experience in aerospace leadership and operations management. His presentation will discuss how the innovative practices at SpaceX can transform operational efficiencies and innovation across the aerospace industry.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker sanja_marais.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="sanja_marais.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Sanja Marais
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/sanja_marais.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Sanja Marais</h2>
+            <div class="meta">Chief Technology and Security Officer</div>
+            <div class="meta">Aspen Medical</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/sanja-marais-2981487b/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker bradley_butler.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="bradley_butler.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Bradley Butler
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/bradley_butler.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Bradley Butler</h2>
+            <div class="meta">Maritime Cybersecurity Expert</div>
+            <div class="meta">Mantel Group</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/bradley-butler-msc-9445a154/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          An experienced principal security consultant competent in information governance, risk management, audit and compliance with recent experience consulting to the Australian government, commercial organisations, financial services, transport, manufacturing, and critical national infrastructure (CNI) industries. I have an MSc in Security and Risk Management and my military background in the Royal Marines provides a further level of management and security experience. I am knowledgeable and certified to a number of internationally recognised security standards and frameworks, including: ISO/IEC 27001:2013 and 22301, Australian Signals Directorate (ASD) Essential Eight, CIS Controls, ISA 62443, NIST CSF, and Special Publication 800 - 53. Led multiple threat modelling and cyber security engagements against NIST CSF, ISO/IEC 27001:2013, ASD Essential Eight, APRA CPS 234, and other recognised standards; developed multiple strategic cyber security improvement roadmaps; presented strategic initiatives for cyber security improvement to C-suite stakeholders; delivered and led large scale supplier assurance programs for financial organisations; delivered cyber security assessments in industrial control systems (ICS) and operational technology (OT) domains; as a virtual information security manager, delivered security risk and audit services to multiple organisations; developed cyber security incident management plans and playbooks for multiple clients in the government sector; and delivered onsite security incident table-top exercises using tailored scenarios.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker chris_hockings.jpeg-->
+<div class="modal modal-speaker modal-speaker-1" id="chris_hockings.jpeg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Chris Hockings
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/chris_hockings.jpeg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Chris Hockings</h2>
+            <div class="meta">Chief Technology Officer</div>
+            <div class="meta">IBM Security Asia Pacific</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/chrishockings/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          Chris Hockings is the CTO for IBM Security Asia Pacific. He represents the IBM global security strategy and vision to the geography, and in doing so engages with leaders across government, industry and the ecosystem. Chris has been a leader across all facets of software, including global research and development, support, service and market engagement. He is a recognised IBM Master Inventor, a title that reflects a sustained contribution to IBM Security's patent portfolio. Chris is also a certified information systems security professional (CISSP).
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker chathura_abeydeera.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="chathura_abeydeera.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Chathura Abeydeera
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/chathura_abeydeera.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Chathura Abeydeera</h2>
+            <div class="meta">Cyber and Space Intelligence Expert</div>
+            <div class="meta">KPMG Australia</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/abeydeera/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          Chathura is a Director in the consulting practice of KPMG Australia and leads the Cyber Attack and Response services. He possesses over 20 years of experience in offensive cybersecurity, establishing himself as a highly technical cybersecurity practitioner. He holds certifications as a CREST Certified Simulated Attack Manager, a CREST Certified Tester, and serves as an examination assessor for CREST International. He additionally holds a position as an advisory board member for CREST Australasia. He has delivered complex technical cybersecurity assessment programs and incident response engagements for numerous high-profile Australian and global organisations.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker sam_kelly.png-->
+<div class="modal modal-speaker modal-speaker-1" id="sam_kelly.png" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Samuel Kelly
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/sam_kelly.png" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Samuel Kelly</h2>
+            <div class="meta">Offensive Security Consultant</div>
+            <div class="meta">Sekuro</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/dj-spacies/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          Sam Kelly is a cybersecurity specialist with a unique blend of skills honed over three years in offensive security. Coming from an industrial electrical engineering background, Sam leverages his prior real-world experience with industrial control systems to his role as a Security Consultant at Sekuro.<br><br>A "Jack of all trades, Master of many," Sam is actively engaged in the InfoSec community, regularly attending and presenting at local meetups and prominent security conferences. Outside of work, he indulges his passion for hacking car electronics and touge drifting, adding a dynamic flair to his diverse skill set.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker daniel_castillo.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="daniel_castillo.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Daniel Castillo
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/daniel_castillo.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Daniel Castillo</h2>
+            <div class="meta">OT Cybersecurity Specialist</div>
+            <div class="meta"></div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/daniel-castillo-2259236b/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          Daniel Castillo is an Industrial Control Systems (ICS) cybersecurity specialist with 6.5 years of hands-on experience across a highly diverse range of Operational Technology (OT) and Critical Infrastructure (CI) sectors including Power Generation, Power Distribution, Water and Wastewater, Building Automation Systems (BAS), Data Center, Corrections, Healthcare, Premium Commercial buildings, and Transportation. Daniel started his post graduate career as a Systems Engineer at Honeywell responsible for the design, implementation, and servicing of enterprise integrator deployments and their underlying ICT infrastructure. Daniel quickly developed a passion for OT cybersecurity and forged ahead on an accelerated track to specialise in the field.<br><br>Preceding his debut to industry, Daniel graduated as a Mechatronics Engineer with Honors from the University of New South Wales (UNSW) and was involved in several high-profile projects and communities, teaching students about robotics, digital fabrication, embedded electronics, and IoT. Today, Daniel maintains a heavy focus on improving the cybersecurity posture of Australia's CI providers, and endeavours to contribute whenever possible to the increased awareness and development of capability across the global OT ICS cybersecurity practice.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker sadeed_tirmizey.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="sadeed_tirmizey.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Sadeed Tirmizey
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/sadeed_tirmizey.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Sadeed Tirmizey</h2>
+            <div class="meta">Chief Information Security Officer</div>
+            <div class="meta">Seqwater</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/tirmizey/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          As a seasoned cyber security leader with over 20 years of industry experience, Sadeed possesses an in-depth understanding of the evolving cyber security landscape and its intricate relationship with emerging technologies. He excels in crafting high-performance security cultures and programs that not only protect organizational performance and integrity but also drive business growth through pragmatic and risk-based security strategies. Sadeed combines a robust technical foundation with strategic leadership and risk management skills, adopting a proactive stance towards cyber security.<br><br>Sadeed has served as Deputy CISO at Airservices Australia, where he safeguarded a complex environment that oversees 11% of the global airspace. At Queensland Health, he held the roles of Director of Cyber Security and CISO, successfully delivering a four-year Cyber Maturity Roadmap and establishing their first Security Operations Centre (SOC), significantly enhancing their cyber security posture.<br><br>Sadeed recently joined Seqwater's Senior Leadership team as their CISO, leading the Cyber Security capability and is spearheading the development and implementation of their enterprise cyber security strategy. He takes a holistic approach to cyber security, positioning it as a business-enabling capability. Sadeed aligns security measures with the organization's risk profile, drives continuous improvement in the organization's security posture, and fosters a culture of proactive risk management.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker travis_quinn.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="travis_quinn.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Travis Quinn
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/travis_quinn.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Travis Quinn</h2>
+            <div class="meta">Principal Security Architect</div>
+            <div class="meta">Tesserent</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/travis-quinn1/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          Travis is a Principal Security Architect with Tesserent and a Lecturer and researcher in cyber security with UNSW. Previously, he held senior cyber roles in industry with KPMG Australia and Trustwave and a technical intelligence role in the Australian Army. In his role with Tesserent, he specialises in security architecture and engineering for Australian Government and industry clients, with a focus on cloud security. At UNSW, he teaches technical cyber security subjects for postgraduate students while he completes his own doctorate focusing on the security applications of programmable networks. Travis enjoys exploring the security of emerging technologies and sharing his passion for cyber security with his students and peers.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker edward_farrell.jpeg-->
+<div class="modal modal-speaker modal-speaker-1" id="edward_farrell.jpeg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Edward Farrell
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/edward_farrell.jpeg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Edward Farrell</h2>
+            <div class="meta">Chief Executive Officer</div>
+            <div class="meta">Mercury Information Security Services</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/31337au/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          Edward Farrell is a cyber security consultant with over fourteen years' experience in cyber security and eighteen years' experience in the IT industry. As the director of Mercury, he has conducted and overseen the delivery of over 900 independent cyber security audit activities and incident responses in the past eight years.<br><br>Edward's professional highlights include his accreditation as an IRAP assessor, and board appointments to industry-leading bodies such as ISC2 and the CREST advisory board. This has seen Edward develop a strong mix of technical, operational, and strategic skills that have honed his ability in the consulting space. Edward's experience as a technical researcher, presenter, and communicator.<br><br>Edward has presented at over 50 events in Australia and abroad and developed training materials for the Australian Defence Force Academy and Australian Army. This has seen Edward develop a strong grounding in cyber security and ability to communicate to a variety of audiences. Edward's service as a member of the Australian Army Reserve has included operational deployments and multinational exercises.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker alex_tilley.jpg-->
+<div class="modal modal-speaker modal-speaker-1" id="alex_tilley.jpg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Alex Tilley
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/alex_tilley.jpg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Alex Tilley</h2>
+            <div class="meta">APAC Intelligence and Research Head</div>
+            <div class="meta">Secureworks</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/alex-tilley-440b992/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          With well over 20 years of experience in computer security and cyber-crime, Alex Tilley is a highly awarded cyber-crime researcher. Alex was on the forefront of research and countermeasures when phishing and malware first began to attack banking platforms and their customers.<br><br>With that background, Alex became the Australian Federal Police's senior cyber-crime technical analyst where he combined his technical background with an analytical approach to the “who” and “why” of the cyber-crime fight. This work resulted is many successful investigations in the cyber-crime and child protection space.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker david_middleton.jpeg-->
+<div class="modal modal-speaker modal-speaker-1" id="david_middleton.jpeg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        David Middleton
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/david_middleton.jpeg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">David Middleton</h2>
+            <div class="meta">Head of Engineering</div>
+            <div class="meta">Innoflex Technology</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/david-middleton-a065b11/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          David Middleton is a security evangelist, Innoflex Technology, specialises in Linux and embedded devices. Before founding Innoflex Technology, David has worked at Eracom, Safenet, RSA Security and ABB Renewable Energy over the last 25 years. Within Innoflex Technology he has been involved in developing security policies and researching automotive and internet of things attack surfaces.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker james_carlopio.jpeg-->
+<div class="modal modal-speaker modal-speaker-1" id="james_carlopio.jpeg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        James Carlopio
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/james_carlopio.jpeg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">James Carlopio</h2>
+            <div class="meta">Co-founder & Director</div>
+            <div class="meta">Cultural Cyber Security</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/jamescarlopio/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          James has published over three-dozen articles and five books on various socio-technical issues and has written a regular section for the Australian Financial Review BOSS magazine. He has been a facilitator of short-term meetings and large-scale organisational change, and a speaker at numerous meetings on cyber-security, organisational strategy, cybernetics, human factors/ergonomics, human technology, and organisational behaviour.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+<!-- Modal Speaker koh_eng.jpeg-->
+<div class="modal modal-speaker modal-speaker-1" id="koh_eng.jpeg" tabindex="-1" role="dialog"
+aria-labelledby="speaker-1-ModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+      <h4 id="speaker-1-ModalLabel" class="modal-title sr-only">
+        Koh Eng Tay
+      </h4>
+    </div>
+    <div class="modal-body p-0">
+      <div class="theme-bg-light p-5">
+        <div class="row">
+          <div class="col-12 col-md-auto text-center">
+            <img class="profile-image mb-3 mb-md-0 me-md-4 rounded-circle mx-auto"
+              src="assets/images/2024/speakers/koh_eng.jpeg" alt="" />
+          </div>
+
+          <div class="col text-center text-md-start mx-auto">
+            <h2 class="name mb-2">Koh Eng Tay</h2>
+            <div class="meta">Principal Advisor (Data Analysis)</div>
+            <div class="meta">Department of Transport and Main Roads</div>
+            <ul class="social-list list-inline mb-0">
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/koh-eng-tay-904b0654/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+              </li>
+            </ul>
+            <!--//social-list-->
+          </div>
+          <!--//col-->
+        </div>
+        <!--//row-->
+      </div>
+      <div class="desc p-4 p-lg-5">
+        <div class="meta">
+          Koh Eng is a Principal Advisor (Data Analysis) at the Queensland Department of Transport and Main Roads (TMR), with 18 years of IT experience in various roles. She has extensive experience in data analysis and interpretation and is passionate about data, cloud services, and analytics. Throughout her career, she has focused on data analytics, effectively supporting the management, and reporting of transport system performance.<br><br>Recently, she has broadened her expertise to include Connected Intelligent Transport Systems (C-ITS) technology, staying at the forefront of innovations that enhance transportation efficiency and safety. Koh Eng is committed to using data to inform strategic decisions and improve infrastructure performance, which is the driving force behind her professional journey.
+        </div>
+      </div>
+    </div>
+    <!--//modal-body-->
+  </div>
+  <!--//modal-content-->
+</div>
+<!--//modal-dialog-->
+</div>
+<!--//modal-->
+
+
+
+
+<div class="container">
+    <hr>
+</div>
+
+<section id="schedule" class="schedule-section section active">
+    <div class="container">
+        <h3 class="section-heading text-center mb-5">
+            Schedule - ROCC2024
+        </h3>
+        
+        
+        <div class="schedule-tab-content tab-content">
+            <div class="tab-pane active show" id="tab-1-content" role="tabpanel" aria-labelledby="tab-1">
+
+                
+                <div class="item item-other">
+                    <div class="meta">
+                        <h4 class="time mb-3">8:00 - 9:00</h4>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">Registration</h3>
+                    </div>
+                </div>
+                
+                
+                <div class="item item-other">
+                    <div class="meta">
+                        <h4 class="time mb-3">9:00 - 9:15</h4>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">Opening Words</h3>
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">9:15 - 9:35</h4>
+                        <div class="profile">
+                            <a href="#nicholas_lindsay.jpg" data-bs-toggle="modal" data-bs-target="#nicholas_lindsay.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/nicholas_lindsay.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#nicholas_lindsay.jpg" data-bs-toggle="modal" data-bs-target="#nicholas_lindsay.jpg">Nicholas Lindsay</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Secrets to Success in Dynamic Startups: Insights from SpaceX and Beyond
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-satellite me-2" aria-hidden="true"></i>
+                            <b>Space Realm</b>
+                        </div>
+                        <div class="desc">
+                            Join us for an insightful presentation by an aerospace engineer with experience in the US Navy and leading startup companies including SpaceX, Gilmour Space Technologies, and Hypersonix. Drawing on over a decade of experience in fast-paced start-ups, this talk will uncover the secrets to success in the dynamic startup environment and how these lessons can contribute to a safer and more secure digital world..
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">9:35 - 9:50</h4>
+                        <div class="profile">
+                            <a href="#kylie_mcdevitt.jpg" data-bs-toggle="modal" data-bs-target="#kylie_mcdevitt.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/kylie_mcdevitt.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#kylie_mcdevitt.jpg" data-bs-toggle="modal" data-bs-target="#kylie_mcdevitt.jpg">Kylie McDevitt</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Enhancing Embedded Security Assessments
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-earth-americas me-2" aria-hidden="true"></i>
+                            <b>Multi Realm</b>
+                        </div>
+                        <div class="desc">
+                            IoT devices have become pervasive in the way we live and interact with the world. In order to provide security assessments on the wide variety of devices on the market, InfoSect has had to expand their capabilities. This talk will walk through InfoSect's improved process for performing security assessment on embedded devices.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">9:50 - 10:05</h4>
+                        <div class="profile">
+                            <a href="#david_middleton.jpeg" data-bs-toggle="modal" data-bs-target="#david_middleton.jpeg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/david_middleton.jpeg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#david_middleton.jpeg" data-bs-toggle="modal" data-bs-target="#david_middleton.jpeg">David Middleton</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Unlocking the Future: SDW Swiff Army Tools in Automotive Security
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-truck me-2" aria-hidden="true"></i>
+                            <b>Land Realm</b>
+                        </div>
+                        <div class="desc">
+                            This presentation delves into the change from physical penetration mechanisms to modern Software-Defined Radio (SDR) devices in the context of automotive security. As vehicles increasingly incorporate advanced technologies and connected features, the attack surface has expanded dramatically, exposing non-contact vulnerabilities that were once not realistic. The session will explore how SDR devices can be exploited to intercept keyless entry signals, manipulate vehicle systems, and hijack vehicle control networks
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">10:05 - 10:20</h4>
+                        <div class="profile">
+                            <a href="#bradley_butler.jpg" data-bs-toggle="modal" data-bs-target="#bradley_butler.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/bradley_butler.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#bradley_butler.jpg" data-bs-toggle="modal" data-bs-target="#bradley_butler.jpg">Bradley Butler</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Securing the Seas: From Pirate Threats to Cyber Attacks
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-ship me-2" aria-hidden="true"></i>
+                            <b>Sea Realm</b>
+                        </div>
+                        <div class="desc">
+                            Join Brad for a session on the evolution of maritime security threats, where you will journey from traditional piracy to the emerging challenge of cyber attacks. Discover how the landscape of maritime security has transformed over the years and the innovative strategies being employed to combat these threats. Featuring an in-depth case study on modern-day piracy defense and a detailed look into an onboard cyber assessment for a ship.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">10:20 - 10:35</h4>
+                        <div class="profile">
+                            <a href="#anthony_caulfield.jpg" data-bs-toggle="modal" data-bs-target="#anthony_caulfield.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/anthony_caulfield.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#anthony_caulfield.jpg" data-bs-toggle="modal" data-bs-target="#anthony_caulfield.jpg">Anthony Caulfield</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Minding the Gap Between Pentest Tooling and Railway Systems
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-truck me-2" aria-hidden="true"></i>
+                            <b>Land Realm</b>
+                        </div>
+                        <div class="desc">
+                            Wireless networks used in the railway environment can make use of common standards and commodity hardware, others are customised and can seem invisible to our usual attack techniques. This presentation will discuss one such customisation, the challenges with using our standard pentest tooling, and how to better uncover and pentest these networks.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="item item-other">
+                    <div class="meta">
+                        <h4 class="time mb-3">10:35 - 10:45</h4>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">Group 1 Q&A Session</h3>
+                    </div>
+                </div>
+                
+                
+                <div class="item item-other">
+                    <div class="meta">
+                        <h4 class="time mb-3">10:45 - 11:30</h4>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">Morning Tea Break</h3>
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">11:30 - 11:45</h4>
+                        <div class="profile">
+                            <a href="#chris_hockings.jpeg" data-bs-toggle="modal" data-bs-target="#chris_hockings.jpeg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/chris_hockings.jpeg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#chris_hockings.jpeg" data-bs-toggle="modal" data-bs-target="#chris_hockings.jpeg">Chris Hockings</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Refactoring Security of the Internet to Achieve Quantum Safety
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-earth-americas me-2" aria-hidden="true"></i>
+                            <b>Multi Realm</b>
+                        </div>
+                        <div class="desc">
+                            Quantum computers are expected to revolutionise compute, not replacing contemporary systems, but augmenting for specific industry use cases where big data analytics with heavy factorial computation is required. Quantum computers are known to be capable of breaking traditional encryption, through Shor's algorithm. Moving to a Quantum safe world will require new capability, and a focus on quantum risk focus on data security. In this session, Chris will talk through what this means for the world, and the timeframe that action will be required for every organisation, government and software/hardware suppliers.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">11:45 - 12:00</h4>
+                        <div class="profile">
+                            <a href="#james_carlopio.jpg" data-bs-toggle="modal" data-bs-target="#james_carlopio.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/james_carlopio.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#james_carlopio.jpg" data-bs-toggle="modal" data-bs-target="#james_carlopio.jpg">James Carlopio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Information Warfare
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-brain me-2" aria-hidden="true"></i>
+                            <b>Cognitive Realm</b>
+                        </div>
+                        <div class="desc">
+                            Dr. Carlopio will discuss information warfare, from both the Nation-State sponsored and cybercrime perspectives, looking at recent examples, what we can expect in the not-too-distant future, and what we can do about it.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">12:00 - 12:15</h4>
+                        <div class="profile">
+                            <a href="#alex_tilley.jpg" data-bs-toggle="modal" data-bs-target="#alex_tilley.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/alex_tilley.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#alex_tilley.jpg" data-bs-toggle="modal" data-bs-target="#alex_tilley.jpg">Alex Tilley</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            OT Systems Are Systems Too: Response Considerations to an Attack on an Industrial System
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-earth-americas me-2" aria-hidden="true"></i>
+                            <b>Multi Realm</b>
+                        </div>
+                        <div class="desc">
+                            Preparedness and response considerations to an attack (ransomware or more subtle) on crucial OT/industrial systems. Many considerations are identical to standard IT systems but some unique aspects and stakeholders need to be considered. A session designed to spur internal discussion as organisations plan.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="item item-other">
+                    <div class="meta">
+                        <h4 class="time mb-3">12:25 - 12:30</h4>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">Group 2 Q&A Session</h3>
+                    </div>
+                </div>
+                
+                
+                <div class="item item-other">
+                    <div class="meta">
+                        <h4 class="time mb-3">12:30 - 1:40</h4>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">Lunch Break</h3>
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">1:40 - 1:55</h4>
+                        <div class="profile">
+                            <a href="#edward_farrell.jpeg" data-bs-toggle="modal" data-bs-target="#edward_farrell.jpeg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/edward_farrell.jpeg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#edward_farrell.jpeg" data-bs-toggle="modal" data-bs-target="#edward_farrell.jpeg">Edward Farrell</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Cyberwar
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-earth-americas me-2" aria-hidden="true"></i>
+                            <b>Multi Realm</b>
+                        </div>
+                        <div class="desc">
+                            How does conflict and cyber effects play out into the real world Whilst a lot of theory, speculation and "Cyber is good children are our future" conceptual thinking plays out, there are some realities to appreciate if contention or outright conflict takes place. I wanted to work through recent occurrences in Ukraine, the influence conflict plays as well as technical appreciation for prospective scenarios that may exist in Australia and the Asia Pacific.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">1:55 - 2:10</h4>
+                        <div class="profile">
+                            <a href="#daniel_castillo.jpg" data-bs-toggle="modal" data-bs-target="#daniel_castillo.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/daniel_castillo.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#daniel_castillo.jpg" data-bs-toggle="modal" data-bs-target="#daniel_castillo.jpg">Daniel Castillo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            The Future of Vehicular Autonomy and Its Interplay with Critical Infrastructure Cybersecurity
+                        </h3>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">2:10 - 2:25</h4>
+                        <div class="profile">
+                            <a href="#chathura_abeydeera.jpg" data-bs-toggle="modal" data-bs-target="#chathura_abeydeera.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/chathura_abeydeera.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#chathura_abeydeera.jpg" data-bs-toggle="modal" data-bs-target="#chathura_abeydeera.jpg">Chathura Abeydeera</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Cybers Beyond the Earth
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-satellite me-2" aria-hidden="true"></i>
+                            <b>Space Realm</b>
+                        </div>
+                        <div class="desc">
+                            As our reliance on space-based technologies expands, so does the urgency to protect these assets from evolving cyber threats. This will explore key challenges such as securing satellite communication networks, mitigating risks to orbital platforms, and defending against sophisticated cyber attacks targeting space infrastructure. In this climate, innovative approaches and strategies essential for building resilient and secure space systems. Get ready to uncover the complexities and advancements in safeguarding our national interests beyond Earth's atmosphere.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">2:25 - 2:40</h4>
+                        <div class="profile">
+                            <a href="#travis_quinn.jpg" data-bs-toggle="modal" data-bs-target="#travis_quinn.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/travis_quinn.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#travis_quinn.jpg" data-bs-toggle="modal" data-bs-target="#travis_quinn.jpg">Travis Quinn</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Cross-Domain Security in Converged IT/OT
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-earth-americas me-2" aria-hidden="true"></i>
+                            <b>Multi Realm</b>
+                        </div>
+                        <div class="desc">
+                            The industry is experiencing a shift away from isolated operational technology (OT) systems towards a model where those systems are integrated into the enterprise information technology (IT) environment. While this model has many advantages, bridging IT and OT domains also invites new threats that challenge our existing security methods. Specifically, the convergence of IT and OT challenges how we perform and secure cross-domain communications. Many organisations lack the knowledge, expertise and technical rigour required to do cross-domain security effectively. This presentation explores the problem of cross-domain security in onverged IT/OT by first defining the problem, then describing the requirements and components of a cross-domain solution (CDS) for converged IT/OT, and finally, providing a CDS reference architecture for converged IT/OT based on best practice from industry and government.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="item item-other">
+                    <div class="meta">
+                        <h4 class="time mb-3">2:40 - 2:50</h4>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">Group 3 Q&A Session</h3>
+                    </div>
+                </div>
+                
+                
+                <div class="item item-other">
+                    <div class="meta">
+                        <h4 class="time mb-3">2:50 - 3:45</h4>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">Afternoon Tea Break</h3>
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">3:45 - 4:00</h4>
+                        <div class="profile">
+                            <a href="#sadeed_tirmizey.jpg" data-bs-toggle="modal" data-bs-target="#sadeed_tirmizey.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/sadeed_tirmizey.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#sadeed_tirmizey.jpg" data-bs-toggle="modal" data-bs-target="#sadeed_tirmizey.jpg">Sadeed Tirmizey</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Safeguarding Operational Technology Against Cyber Risks
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-earth-americas me-2" aria-hidden="true"></i>
+                            <b>Multi Realm</b>
+                        </div>
+                        <div class="desc">
+                            More details coming soon...
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">4:00 - 4:15</h4>
+                        <div class="profile">
+                            <a href="#sanja_marais.jpg" data-bs-toggle="modal" data-bs-target="#sanja_marais.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/sanja_marais.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#sanja_marais.jpg" data-bs-toggle="modal" data-bs-target="#sanja_marais.jpg">Sanja Marais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Guardians of the Health Tech Galaxy: Cybersecurity Edition
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-dna me-2" aria-hidden="true"></i>
+                            <b>Biological Realm</b>
+                        </div>
+                        <div class="desc">
+                            Join me for a thrilling adventure as we explore "Guardians of the Health Tech Galaxy: Cybersecurity Edition." Diving into what happens when medical devices go rogue, how transcriptions can get lost in translation, why health data is the new oil, and savvy strategies to outsmart cyber villains. Let's gaze into the future with AI, blockchain, and quantum computing, and see how these innovations are shaping the next frontier of cybersecurity in healthcare.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">4:15 - 4:30</h4>
+                        <div class="profile">
+                            <a href="#sam_kelly.jpg" data-bs-toggle="modal" data-bs-target="#sam_kelly.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/sam_kelly.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#sam_kelly.jpg" data-bs-toggle="modal" data-bs-target="#sam_kelly.jpg">Sam kelly</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            CAN Bus Hacking
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-truck me-2" aria-hidden="true"></i>
+                            <b>Land Realm</b>
+                        </div>
+                        <div class="desc">
+                            Despite the Controller Area Network (CAN) protocol being around since the 1980s, it remains a daunting challenge for backyard mechanics and cybersecurity red teamers alike. In this presentation, Sam will guide you through the process of procuring and reverse engineering unknown data on a vehicle's CAN Bus. Learn how attackers might exploit this information to bypass security controls and how entrepreneurs could develop vehicle-specific products for the market. Plus, for the sheer fun of it, discover how Sam made his car run DOOM.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <h2 class="fw-bolder text-primary mb-4 text-center"></h2>
+                <div class="item item-talk">
+                    <div class="meta">
+                        <h4 class="time mb-3">4:30 - 4:45</h4>
+                        <div class="profile">
+                            <a href="#michael_creagh.jpg" data-bs-toggle="modal" data-bs-target="#michael_creagh.jpg"><img class="profile-image rounded-circle mb-2" src="assets/images/2024/speakers/michael_creagh.jpg" alt=""></a>
+                            <div class="name">
+                                <a class="theme-link" href="#michael_creagh.jpg" data-bs-toggle="modal" data-bs-target="#michael_creagh.jpg">Michael Creagh</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">
+                            Cerberus MI Kinetic Effects with AI Targeting
+                        </h3>
+                        
+                        <div class="location mb-3">
+                            <i class="fa-solid fa-plane-departure me-2" aria-hidden="true"></i>
+                            <b>Air Realm</b>
+                        </div>
+                        <div class="desc">
+                            The Cerberus MI UAS is a man-packable, lethal 22 kg sUAS. Armed with a 40mm Low velocity grenade launcher, 12 Ga  shotgun, 5.7 x 28mm Submachine gun or M72 LAW, it is intended to be used at the Company and platoon level to provide target recognition (by A thena AI) which enables “slew-to-cue” semi-automated  targeting. This has been demonstrated in live fire exercises to the USMC, ADF and US Army. The Cerberus MI is a modular payload to enable integration of a variety of kinetic and address the current state of the  Cerberus and its targeting system (including limitations) and  cyber resilience strategies employed.
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="item item-other">
+                    <div class="meta">
+                        <h4 class="time mb-3">4:45 - 4:55</h4>
+                    </div>
+                    <div class="content">
+                        <h3 class="title mb-3">Group 4 Q&A Session</h3>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
 </section>
+
+
+
+
+
+
 
 
 <section id="sponsors-section" class="sponsors-section section">
 <div class="container">
 
+  <div class="sponsors-cta text-center mb-5">
+    <a class="btn-primary btn btn-lg" href="">Interested in sponsoring ROCC26?</a>
+  </div>
   <h3 class="section-heading text-center mb-3">
-    Sponsors
+    Thank you to our ROCC25 sponsors
   </h3>
   <div class="section-intro text-center single-col-max mx-auto mb-5">
-    
+    We're proud to partner with the organisations advancing Australia's cyber-physical resilience.
   </div>
 
 
+  <h2 class="fw-bolder text-primary mb-4 text-center">Platinum</h2>
+      
+              <div class="row logos justify-content-center">
+                <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+                  <a href="https://www.qld.gov.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                      src="assets/images/2024/sponsors/qldgov.png" alt="Queensland Government" /></a>
+                </div>
+              </div>
+          
+      
+      <br>
+  <h2 class="fw-bolder text-primary mb-4 text-center">Gold</h2>
+      
+              <div class="row logos justify-content-center">
+                <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+                  <a href="https://tayko.io" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                      src="assets/images/2024/sponsors/tayko.png" alt="Tayko Group" /></a>
+                </div>
+              </div>
+          
+      
+              <div class="row logos justify-content-center">
+                <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+                  <a href="https://www.eaglegate.com.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                      src="assets/images/2024/sponsors/eaglegate.jpeg" alt="EAGLEGATE Lawyers" /></a>
+                </div>
+              </div>
+          
+      
+      <br>
+  <h2 class="fw-bolder text-primary mb-4 text-center">Silver</h2>
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://sekuro.io" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/sekuro.png" alt="Sekuro" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.redwoodsecurity.com.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/redwood.png" alt="Redwood Consulting" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://tarian.com.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/tarian.png" alt="Tarian Cyber" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.adrenalan.com/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/adrenalan.png" alt="Adrenalan" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.infotrust.com.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/infotrust.png" alt="Infotrust" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+      <br>
+  <h2 class="fw-bolder text-primary mb-4 text-center">Bronze</h2>
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.redwoodsecurity.com.au" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/redwood.png" alt="Redwood Security" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.decipherbureau.com/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/decipher.png" alt="Decipher Bureau" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://auscert.org.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/auscert.svg" alt="AusCERT" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://payatu.com/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/payatu.png" alt="Payatu" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://jepsec.com.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/jepsec.webp" alt="Jepsec" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.baidam.com.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/baidam.svg" alt="Baidam Solutions" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.cybersecpeople.com/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/cybersec_people.svg" alt="CyberSec People" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.elttam.com/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/elttam.png" alt="elttam" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://radiant.security" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/radiant.png" alt="Radiant Security" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://zevint.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/zev.png" alt="ZEV Integrations" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.griffith.edu.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/griffith_university.png" alt="Griffith University" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.galahcyber.com.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/galah.png" alt="Galah Cyber" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.netskope.com/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/netskope.png" alt="Netskope" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://tomshaw.com/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/tomshaw.png" alt="Tom Shaw" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://jypragroup.com.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/jypra_group.png" alt="Jypra Group" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.volkis.com.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/volkis.png" alt="Volkis" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://secalerts.co/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/secalerts.png" alt="SecAlerts" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://cyberon.com.au" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/cyberon.png" alt="CYBERON" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://au.hudson.com/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/hudson.png" alt="Hudson" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.ibm.com/services/security" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/ibm.png" alt="IBM" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+            
+              <div class="row logos justify-content-center">
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.acumenis.com.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/acumenis.png" alt="Acumenis" /></a>
+            </div>
+            
+          
+      
+            
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="https://www.orcacyber.com.au/" target="_blank"><img style="float: left; width: px; height: px; object-fit:scale-down; max-height: px"
+                  src="assets/images/2024/sponsors/orca.png" alt="Orca Cyber Solutions" /></a>
+            </div>
+            
+              </div>
+            
+          
+      
+      <br>
   
   <!--//sponsors-->
-
-  <div class="sponsors-cta text-center pt-5">
-    <a class="btn-primary btn btn-lg" href="">Become A Sponsor</a>
-  </div>
 
 </div>
 <!--//container-->
@@ -333,92 +2830,30 @@
 <!--//container-->
 </section>
 
-
-
-
-
 <section id="faq-section" class="faq section theme-bg-light">
 <div class="container">
 
-  <h3 class="section-heading text-center mb-5 text-white">Frequently Asked Questions</h3>
+  <h3 class="section-heading text-center mb-5">FAQ</h3>
     <div class="row gx-5 py-lg-5">
-      <h3 class="text-white mb-0">What is Frontline to ROCC?</h3>
-      <ul class="faq-list"><br>
-        <li><strong>Utilities:</strong> Water, Gas, Electricity, Energy</li>
-        <li><strong>Education & Training:</strong> Schools, TAFEs, Universities</li>
-        <li><strong>Infrastructure:</strong> Mining, Construction, Ports, Telecommunications, Space</li>
-        <li><strong>Defence Industry</strong></li>
-        <li><strong>Trade, Retail, and Manufacturing</strong></li>
-        <li><strong>Healthcare & Medical</strong></li>
-        <li><strong>Transport:</strong> Aviation, Maritime, Rail, Road, Logistics</li>
-        <li><strong>Public Administration:</strong> Government departments, LGAs</li>
-        <li><strong>Financial Services:</strong> Banks, Superannuation, Insurance</li>
-        <li><strong>Not-for-Profits & Charities</strong></li>
-      </ul>
-      <p><em>If your work helps things run, move, stay safe, or stay online — you belong at the intersection of cybersecurity, operational technology (OT), and cyber-physical systems (CPS).</em></p>
-    </div>
-
-    <div class="faq-item">
-      <h3 class="text-white mb-0">Ticketing Questions</h3><br>
-
-      <details class="faq-details">
-        <summary class="faq-summary">I’m a developer working in Qld Police. What ticket do I get?</summary>
-        <p class="faq-answer">You’re in public administration and Frontline.</p>
-      </details>
-
-      <details class="faq-details">
-        <summary class="faq-summary">I’m a recruiter. What ticket do I get?</summary>
-        <p class="faq-answer">You're welcome to purchase a general admission ticket.</p>
-      </details>
-
-      <details class="faq-details">
-        <summary class="faq-summary">I’m a student studying business. What ticket do I get?</summary>
-        <p class="faq-answer">You’re the future — grab the student ticket.</p>
-      </details>
-
-      <details class="faq-details">
-        <summary class="faq-summary">I work for a large supermarket chain in their logistics area. What ticket do I get?</summary>
-        <p class="faq-answer">You’re part of the national supply chain — that’s Frontline.</p>
-      </details>
-
-      <details class="faq-details">
-        <summary class="faq-summary">I work for a cybersecurity consultancy. What ticket do I get?</summary>
-        <p class="faq-answer">You’re in the commercial cyber sector — choose the general admission ticket.</p>
-      </details>
-
-      <details class="faq-details">
-        <summary class="faq-summary">I work for Catholic Education. What ticket do I get?</summary>
-        <p class="faq-answer">You’re in education and public service — that’s Frontline.</p>
-      </details>
-
-      <details class="faq-details">
-        <summary class="faq-summary">I deliver cybersecurity training. What ticket do I get?</summary>
-        <p class="faq-answer">If you’re with a public education or training provider (e.g. TAFE, university), grab a critical infrastructure ticket. If you’re private sector, choose general admission.</p>
-      </details>
-
-      <details class="faq-details">
-        <summary class="faq-summary">I work for a telecommunications company. What ticket do I get?</summary>
-        <p class="faq-answer">You’re part of national infrastructure — that’s firmly within critical infrastructure.</p>
-      </details>
-
-      <details class="faq-details">
-        <summary class="faq-summary">I work for a bank in their IT risk team. What ticket do I get?</summary>
-        <p class="faq-answer">Finance is critical infrastructure, especially in cyber.</p>
-      </details>
-
-      <details class="faq-details">
-        <summary class="faq-summary">I work in a local council’s facilities team. What ticket do I get?</summary>
-        <p class="faq-answer">Local government is public administration — you’re covered under critical infrastructure.</p>
-      </details>
-
-      <details class="faq-details">
-        <summary class="faq-summary">I’m a lawyer. What ticket do I get?</summary>
-        <p class="faq-answer">If you’re in-house counsel at a critical infrastructure organisation, you’re eligible for a critical infrastructure ticket. If you’re in private legal practice, please select a general admission ticket.</p>
-      </details>
-    </div>
-
-    <div class="faq-contact">
-      <p><strong>Still unsure which ticket to purchase?</strong> <a href="/contact" class="text-white mb-0">Contact us</a> and we will get back to you ASAP.</p>
+      <div class="single-col-max mx-auto">
+        <h3 class="mb-3">I'm all in for ROCC26, when is it?</h3>
+        <p class="mb-3" style="padding-left: 20px;">ROCC will be back at Brisbane Powerhouse in 2026, join our mailing list to be the first to know.</p>
+        <div class="mb-5" style="padding-left: 20px;">
+          <a class="btn-primary btn btn-lg" href="">Join the mailing list</a>
+        </div>
+        
+        <h3 class="mb-3">I'm interested in becoming a sponsor. How can I get involved?</h3>
+        <p class="mb-3" style="padding-left: 20px;">We love working with sponsors to create partnerships that boost visibility and deliver real value and return on investment through a range of tailored sponsorship options.</p>
+        <div class="mb-5" style="padding-left: 20px;">
+          <a class="btn-primary btn btn-lg" href="">Register your interest here</a>
+        </div>
+        
+        <h3 class="mb-3">I'm interested in presenting at ROCC2025. How can I connect?</h3>
+        <p class="mb-3" style="padding-left: 20px;">We'd love to hear from you! If you're interested in presenting, we welcome speakers who bring fresh perspectives, real-world experience, and a passion for advancing physical cyber security.</p>
+        <div class="mb-5" style="padding-left: 20px;">
+          <a class="btn-primary btn btn-lg" href="">Register your interest here</a>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -450,18 +2885,20 @@
           Conduct</b></a>
     </li><br>
     <li class="list-inline-item">
-      <a href="https://events.humanitix.com/realms-of-cyber-2025/contact" ><b>Contact Us</b></a>
+      <a href="" ><b>Contact Us</b></a>
     </li><br>
     <li class="list-inline-item">
-      <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=M_lB6ZN8ZUqF9CN5eeaMlk2zVhzLeglLsBOvYaQmADVUNDVPOFdaNUlFRTBDS01WVVdVM1ZMRTlKQi4u" ><b>Get ROCC updates first</b></a>
+      <a href="" ><b>Get ROCC updates first</b></a>
     </li>
   </ul>
   <div class="archive-links mb-4">
     <p class="text-white mb-2"><b>Past Conferences:</b></p>
     <ul class="list-inline mb-0">
+      
       <li class="list-inline-item me-3">
         <a href="2025.html" class="text-white"><b>ROCC 2025</b></a>
       </li>
+      
     </ul>
   </div>
   <picture>

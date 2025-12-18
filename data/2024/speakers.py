@@ -8,7 +8,7 @@ speakers = [
         "description": "Kylie McDevitt is a security researcher at her own company, InfoSect, specialising in Linux and embedded devices. Before starting at InfoSect, she was a Technical Director at the Australian Signals Directorate (ASD). Kylie graduated from ANU with a Bachelor of Engineering and worked for Australia's largest telco as a radio engineer in MobileNet before moving into computer security, where she has been for the last 15 years. She has a Masters in Computer Networking, as well as multiple industry certifications. Kylie has taught as a casual lecturer at UNSW Canberra and spends her free time organising community events such as BSides Canberra and the CSides monthly security meetup.",
     },
     {
-        "name": 'Charles O'Connell',
+        "name": "Charles O'Connell",
         "jobtitle": 'Founder, Advisor & Investor',
         "company": 'Stealth Startup',
         "linkedin": 'https://www.linkedin.com/in/charles-o-2bb46223/',
@@ -82,7 +82,7 @@ speakers = [
     {
         "name": 'Daniel Castillo',
         "jobtitle": 'OT Cybersecurity Specialist',
-        "company": 'Daniel Castillo is an Industrial Control Systems (ICS) cybersecurity specialist with 6.5 years of hands-on experience across a highly diverse range of Operational Technology (OT) and Critical Infrastructure (CI) sectors including Power Generation, Power Distribution, Water and Wastewater, Building Automation Systems (BAS), Data Center, Corrections, Healthcare, Premium Commercial buildings, and Transportation. Daniel started his post graduate career as a Systems Engineer at Honeywell responsible for the design, implementation, and servicing of enterprise integrator deployments and their underlying ICT infrastructure. Daniel quickly developed a passion for OT cybersecurity and forged ahead on an accelerated track to specialise in the field.',
+        "company": '',
         "linkedin": 'https://www.linkedin.com/in/daniel-castillo-2259236b/',
         "image": 'daniel_castillo.jpg',
         "description": "Daniel Castillo is an Industrial Control Systems (ICS) cybersecurity specialist with 6.5 years of hands-on experience across a highly diverse range of Operational Technology (OT) and Critical Infrastructure (CI) sectors including Power Generation, Power Distribution, Water and Wastewater, Building Automation Systems (BAS), Data Center, Corrections, Healthcare, Premium Commercial buildings, and Transportation. Daniel started his post graduate career as a Systems Engineer at Honeywell responsible for the design, implementation, and servicing of enterprise integrator deployments and their underlying ICT infrastructure. Daniel quickly developed a passion for OT cybersecurity and forged ahead on an accelerated track to specialise in the field.<br><br>Preceding his debut to industry, Daniel graduated as a Mechatronics Engineer with Honors from the University of New South Wales (UNSW) and was involved in several high-profile projects and communities, teaching students about robotics, digital fabrication, embedded electronics, and IoT. Today, Daniel maintains a heavy focus on improving the cybersecurity posture of Australia's CI providers, and endeavours to contribute whenever possible to the increased awareness and development of capability across the global OT ICS cybersecurity practice.",

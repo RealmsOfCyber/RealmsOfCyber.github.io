@@ -170,14 +170,23 @@ def render_page(year_data, is_year_page=False):
     # Calculate schedule enable flags (only show if schedules have content)
     enable_main = len(year_data.get("schedule", [])) > 0
     enable_ot = len(year_data.get("schedule2", [])) > 0
-    has_schedules = len(year_data.get("schedules", [])) > 0
+    # has_schedules should be True if either schedule, schedule2, or schedules has content
+    has_schedules = (len(year_data.get("schedule", [])) > 0 or 
+                     len(year_data.get("schedule2", [])) > 0 or 
+                     len(year_data.get("schedules", [])) > 0)
     
     # Tickets are on sale if event hasn't passed yet
     tickets_on_sale = not is_post
     
+    # Get available years for footer - show all years except the current page's year
+    available_years = discover_available_years()
+    current_page_year = year_data.get("year")
+    past_years = [y for y in available_years if y != current_page_year]
+    
     context = {
         "year": year_data.get("year"),
         "next_year": year_data.get("year", 0) + 1,
+        "past_years": sorted(past_years, reverse=True),  # Most recent first
         "date": year_data.get("date", "TBD"),
         "become_a_sponsor_url": year_data.get("become_a_sponsor_url", ""),
         "mailing_list_url": year_data.get("mailing_list_url", ""),

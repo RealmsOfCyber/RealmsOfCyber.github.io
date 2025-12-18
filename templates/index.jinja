@@ -23,7 +23,7 @@
 {% include 'schedule.jinja' %}
 {% endif %}
 
-{% if tickets_on_sale %}
+{% if tickets_on_sale and not is_post_event %}
 {% include 'tickets.jinja' %}
 {% endif %}
 

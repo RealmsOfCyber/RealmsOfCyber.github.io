@@ -55,11 +55,25 @@ You can also manually trigger the deployment from the GitHub Actions tab in the 
 ├── generate.py              ← Main entry point
 ├── generator_helpers.py     ← Helper functions
 ├── data/                    ← All year-specific data
-│   └── 2025/                ← Year data directory
-│       ├── speakers.py
-│       ├── schedule.py
-│       ├── variables.py
-│       └── ...
+│   ├── 2024/                ← Year data directory
+│   │   ├── speakers.py
+│   │   ├── schedule.py
+│   │   ├── sponsors.py
+│   │   ├── exhibitors.py
+│   │   ├── variables.py
+│   │   ├── tickets.py
+│   │   ├── testimonials.py
+│   │   └── photo_highlights.py
+│   ├── 2025/                ← Year data directory
+│   │   ├── speakers.py
+│   │   ├── schedule.py
+│   │   ├── sponsors.py
+│   │   ├── exhibitors.py
+│   │   ├── variables.py
+│   │   ├── tickets.py
+│   │   ├── testimonials.py
+│   │   └── photo_highlights.py
+│   └── {year}/               ← Additional years as needed
 ├── templates/               ← Jinja templates
 └── site/                    ← Generated HTML
 
@@ -67,7 +81,15 @@ You can also manually trigger the deployment from the GitHub Actions tab in the 
 The site uses a year-based architecture where `current_year` is automatically detected from the system date in `generate.py`. All data and assets are organized by year in `{year}/` directories (e.g., `2025/`, `2026/`).
 
 Each year directory contains:
-- **Data files**: `speakers.py`, `schedule.py`, `sponsors.py`, `exhibitors.py`, `variables.py`, `testimonials.py` (optional, used for `post_event`), `photo_highlights.py` (optional, used for `post_event`)
+- **Data files**: 
+  - `variables.py` - Event variables (year, date, URLs, blurbs)
+  - `speakers.py` - Presenters and MCs data
+  - `schedule.py` - Schedule data (can have multiple schedules)
+  - `sponsors.py` - Sponsor data by tier (Platinum, Gold, Silver, Bronze)
+  - `exhibitors.py` - Exhibitor data
+  - `tickets.py` - Ticket information
+  - `testimonials.py` - Testimonials (optional, used for `post_event`)
+  - `photo_highlights.py` - Photo highlights list (optional, used for `post_event`)
 - **Assets**: Images organized in `site/assets/images/{year}/` with subdirectories for `speakers/`, `sponsors/`, `exhibitors/`, `highlights/`, and `venue/`
 
 Archive pages (e.g., `2025.html`) automatically load data from their year-specific directory, show `post-event` content if `event_date` has passed, and display testimonials when available. The footer includes links to past conferences.

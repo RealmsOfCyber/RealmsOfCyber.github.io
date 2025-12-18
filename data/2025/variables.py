@@ -1,3 +1,17 @@
+# Variables data format:
+# year = 2025  # Year of the event
+# date = "28 Aug"  # Display date (shown on the site)
+# event_date = "2025-08-28"  # Event date in YYYY-MM-DD format (used for date comparison)
+# # tickets_on_sale is calculated automatically based on event_date (True if today <= event_date)
+# become_a_sponsor_url = "https://forms.office.com/r/..."
+# mailing_list_url = "https://forms.office.com/Pages/..."
+# call_for_presenters_url = "https://forms.office.com/r/..."
+# contact_us_url = "https://forms.office.com/r/..."
+# humanitix_contact_url = "https://events.humanitix.com/..."
+# sponsor_blurb = "Text about sponsors"  # Can be None to hide sponsor section intro
+# exhibitor_blurb = "Text about exhibitors"  # Can be None to hide exhibitor section intro
+# # ticket_url and ticket details are in tickets.py
+
 year = 2025
 date = "28 Aug"
 # Event date in YYYY-MM-DD format for date comparison

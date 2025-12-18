@@ -1,4 +1,16 @@
-# Exhibitor logo image requirements:
+# Exhibitors data format:
+# exhibitors = [
+#     {
+#         "name": "Exhibitor Name",
+#         "url": "https://exhibitor-website.com",
+#         "logo": "exhibitor_logo.png",
+#         # Optional: custom dimensions (defaults to 110x320 if not provided)
+#         "height": 110,  # Optional
+#         "width": 320   # Optional
+#     },
+#     ...
+# ]
+# Image requirements:
 # - Recommended size: 320x110 pixels (width x height) to match Platinum sponsor dimensions
 # - Format: PNG, JPG, or JPEG
 # - Images will be scaled down if larger, maintaining aspect ratio

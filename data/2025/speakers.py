@@ -1,4 +1,31 @@
-speakers = [
+# Speakers data format:
+# speakers = {
+#     "presenters": [
+#         {
+#             "name": "Speaker Name",
+#             "jobtitle": "Job Title",
+#             "company": "Company Name",
+#             "linkedin": "https://linkedin.com/in/...",
+#             "image": "speaker_image.jpg",
+#             "description": "Speaker bio/description (can include HTML like <br> for line breaks)"
+#         },
+#         ...
+#     ],
+#     "mcs": [
+#         {
+#             "name": "MC Name",
+#             "jobtitle": "Job Title",
+#             "company": "Company Name",
+#             "linkedin": "https://linkedin.com/in/...",
+#             "image": "mc_image.jpg",
+#             "description": "MC bio/description (can include HTML like <br> for line breaks)"
+#         },
+#         ...
+#     ]
+# }
+# Images should be placed in: site/assets/images/{year}/speakers/
+speakers = {
+    "presenters": [
     {
         "name": "Kylie McDevitt",
         "jobtitle": "CEO & Founder",
@@ -159,9 +186,8 @@ speakers = [
         "image": "judd_mccann.jpg",
         "description": "Judd McCann is an accomplished strategic and operational leader with more than 20 years' experience delivering complex, high-risk programs in defence, mining, and engineering. Having served multiple tours in conflict regions, he has worked across North America, the Middle East, and Australasia, and now focuses on U.S. Federal programs in the Indo-Pacific. As Group Director at Ocebile, Judd oversees initiatives in autonomous systems, defence sustainment, and advanced technology integration—designing and building programs from the ground up. His work leverages Indigenous-led supply chains, global partnerships, and rapid deployment capabilities to strengthen sovereign capability and operational readiness."
     },
-]
-
-mc = [
+    ],
+    "mcs": [
     {
         "name": "Adam Green",
         "jobtitle": "Founder and CISO",
@@ -178,4 +204,5 @@ mc = [
         "image": "gareth_smith.jpg",
         "description": "Gareth Smith is a seasoned cybersecurity professional with over 20 years of experience, the majority of which was spent in corporate IT before shifting his focus to industrial control systems (ICS) and operational technology (OT) security in 2018.<br><br>He currently serves as Principal Advisor – Infrastructure and I&OT Security for a large multinational mining company, where he leads the protection of critical operational environments across complex, globally distributed industrial sites. His work centres on securing ICS/PCN systems in high-availability, safety-critical contexts.<br><br>Gareth is also the President of the ISA Queensland Chapter, helping drive professional development and community engagement across the industrial automation and control systems security sector.<br><br>Known for his practical mindset and depth of technical insight, Gareth brings a grounded yet forward-looking perspective to OT security. As MC for the OT stream at ROCC25, he will steer discussions on the evolving challenges and innovations at the heart of cyber-physical resilience."
     },
-]
+    ],
+}

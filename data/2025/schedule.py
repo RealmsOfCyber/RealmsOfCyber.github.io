@@ -1,4 +1,41 @@
-schedule_build = [
+# Schedule data format:
+# schedules = {
+#     "schedule_1": {
+#         "name": "schedule",  # Internal identifier (used for HTML id)
+#         "title": "Schedule",  # Display title shown in the view
+#         "items": [
+#             # For talks with speakers:
+#             {
+#                 "time": "9:00 - 9:30",
+#                 "title": "Talk Title",
+#                 "realm": "Space",  # One of: Space, Cognitive, Land, Sea, Air, Biological, Multi
+#                 "speaker": {
+#                     "name": "Speaker Name",
+#                     "image": "speaker_image.jpg"
+#                 },
+#                 "desc": "Talk description"
+#             },
+#             # For non-talk items (breaks, Q&A, etc.):
+#             {
+#                 "time": "10:00 - 10:30",
+#                 "title": "Morning Tea Break"
+#             },
+#             ...
+#         ]
+#     },
+#     "schedule_2": {
+#         "name": "ot-cybersecurity-stream",
+#         "title": "OT Cybersecurity Stream",
+#         "items": [...]
+#     }
+# }
+# Realm icons are automatically added based on realm name.
+# Speaker images should be in: site/assets/images/{year}/speakers/
+schedules = {
+    "schedule_1": {
+        "name": "schedule",
+        "title": "Schedule",
+        "items": [
     {
         "time": "8:00 - 8:45",
         "title": "Registration"
@@ -207,9 +244,12 @@ schedule_build = [
         "time": "17:00 - 18:30",
         "title": "Networking Session and Closing Reception"
     }
-]
-
-schedule2_build = [
+    ]
+    },
+    "schedule_2": {
+        "name": "ot-cybersecurity-stream",
+        "title": "OT Cybersecurity Stream",
+        "items": [
     {
         "time": "10:30 – 11:25",
         "title": "Morning Tea Break"
@@ -270,53 +310,6 @@ schedule2_build = [
         "time": "14:50 – 15:45",
         "title": "Afternoon Break"
     }
-]
-
-def add_schedule_logos(schedule_list):
-    schedule_ret = []
-    for schedule_item in schedule_list:
-        if "speaker" not in schedule_item.keys():
-            schedule_ret += [schedule_item]
-            continue
-        match schedule_item["realm"]:
-            case "Space":
-                schedule_item["logo"] = "fa-satellite"
-            case "Cognitive":
-                schedule_item["logo"] = "fa-brain"
-            case "Land":
-                schedule_item["logo"] = "fa-truck"
-            case "Land/Air":
-                schedule_item["logo"] = "fa-truck"
-            case "Sea":
-                schedule_item["logo"] = "fa-ship"
-            case "Air":
-                schedule_item["logo"] = "fa-plane-departure"
-            case "Biological":
-                schedule_item["logo"] = "fa-dna"
-            case "Multi":
-                schedule_item["logo"] = "fa-earth-americas"
-            case _:
-                schedule_item["logo"] = "NONE"
-        schedule_ret += [schedule_item]
-    return schedule_ret
-
-schedule = add_schedule_logos(schedule_build)
-schedule2 = add_schedule_logos(schedule2_build)
-
-# New unified schedules structure with metadata
-schedules = [
-    {
-        "id": "schedule",
-        "title": "Schedule",
-        "subtitle": None,
-        "date": None,
-        "items": schedule
+    ]
     },
-    {
-        "id": "ot-cybersecurity-stream",
-        "title": "OT Cybersecurity Stream",
-        "subtitle": None,
-        "date": None,
-        "items": schedule2
-    }
-]
+}

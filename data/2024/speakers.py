@@ -1,4 +1,31 @@
-speakers = [
+# Speakers data format:
+# speakers = {
+#     "presenters": [
+#         {
+#             "name": "Speaker Name",
+#             "jobtitle": "Job Title",
+#             "company": "Company Name",
+#             "linkedin": "https://linkedin.com/in/...",
+#             "image": "speaker_image.jpg",
+#             "description": "Speaker bio/description (can include HTML like <br> for line breaks)"
+#         },
+#         ...
+#     ],
+#     "mcs": [
+#         {
+#             "name": "MC Name",
+#             "jobtitle": "Job Title",
+#             "company": "Company Name",
+#             "linkedin": "https://linkedin.com/in/...",
+#             "image": "mc_image.jpg",
+#             "description": "MC bio/description (can include HTML like <br> for line breaks)"
+#         },
+#         ...
+#     ]
+# }
+# Images should be placed in: site/assets/images/{year}/speakers/
+speakers = {
+    "presenters": [
     {
         "name": 'Kylie McDevitt',
         "jobtitle": 'Chief Executive Officer',
@@ -143,9 +170,8 @@ speakers = [
         "image": 'koh_eng.jpeg',
         "description": 'Koh Eng is a Principal Advisor (Data Analysis) at the Queensland Department of Transport and Main Roads (TMR), with 18 years of IT experience in various roles. She has extensive experience in data analysis and interpretation and is passionate about data, cloud services, and analytics. Throughout her career, she has focused on data analytics, effectively supporting the management, and reporting of transport system performance.<br><br>Recently, she has broadened her expertise to include Connected Intelligent Transport Systems (C-ITS) technology, staying at the forefront of innovations that enhance transportation efficiency and safety. Koh Eng is committed to using data to inform strategic decisions and improve infrastructure performance, which is the driving force behind her professional journey.',
     },
-]
-
-mc = [
+    ],
+    "mcs": [
     {
         "name": 'Adam Green',
         "jobtitle": 'Founder and CISO',
@@ -154,4 +180,5 @@ mc = [
         "image": 'adam_green.jpg',
         "description": "With over two decades at the forefront of cybersecurity thought-leadership with some of the industry's biggest disruptors such as IBM, Palo Alto, Verizon, the Israeli Government, and NTT, Adam has been the advisor in the War Room for over 20 active cybersecurity incidents and Ransomware attacks, and hundreds of simulated scenarios.<br><br>Having worked with some of the world's best forensic investigators and ethical hackers, Adam's disruptive view of cybersecurity allows him to advise the industry's most progressive CIO's and CISO's with a unique perspective of the cyber threat landscape and adversary behaviour.<br><br>As the Founder and CISO of Cybersecurity advisory, Green Cyber Consulting, Adam uses his experience and exposure to some of the leading Higher Education, Critical Infrastructure, Airports, Airlines and Medical Service Providers across the Globe, to collaborating with our most vulnerable sectors to address complex cybersecurity challenges.<br><br>Adam is based out of Brisbane, Australia and holds a qualification in Cyber Warfare and Terrorism, Cyber/Electronic Operations and Warfare from Charles Sturt University.",
     },
-]
+    ],
+}

@@ -52,6 +52,84 @@ def import_from_year_dir(year, module_name):
     spec.loader.exec_module(module)
     return module
 
+def process_speakers_data(speakers_data):
+    """Extract presenters and mcs from speakers data structure."""
+    if isinstance(speakers_data, dict):
+        # New structure: { "presenters": [], "mcs": [] }
+        return {
+            "speakers": speakers_data.get("presenters", []),
+            "mc": speakers_data.get("mcs", [])
+        }
+    else:
+        # Legacy structure: separate speakers and mc variables
+        return {
+            "speakers": speakers_data if speakers_data else [],
+            "mc": []
+        }
+
+def add_schedule_logos(schedule_list):
+    """Add realm icons to schedule items (for 2025+ format)."""
+    schedule_ret = []
+    for schedule_item in schedule_list:
+        if "speaker" not in schedule_item.keys():
+            schedule_ret.append(schedule_item)
+            continue
+        realm = schedule_item.get("realm", "")
+        realm_icon_map = {
+            "Space": "fa-satellite",
+            "Cognitive": "fa-brain",
+            "Land": "fa-truck",
+            "Land/Air": "fa-truck",
+            "Sea": "fa-ship",
+            "Air": "fa-plane-departure",
+            "Biological": "fa-dna",
+            "Multi": "fa-earth-americas",
+        }
+        schedule_item["logo"] = realm_icon_map.get(realm, "NONE")
+        schedule_ret.append(schedule_item)
+    return schedule_ret
+
+def process_schedules_data(schedules_data, year):
+    """Process schedules data and convert to template format."""
+    if isinstance(schedules_data, dict):
+        # New structure: { "schedule_1": { "name": "...", "title": "...", "items": [] }, ... }
+        processed_schedules = []
+        
+        for schedule_key, schedule_data in schedules_data.items():
+            # Handle both new structure (dict with name/title/items) and legacy (just a list)
+            if isinstance(schedule_data, dict):
+                schedule_items = schedule_data.get("items", [])
+                schedule_name = schedule_data.get("name", schedule_key)
+                schedule_title = schedule_data.get("title", schedule_key.replace("_", " ").title())
+                schedule_subtitle = schedule_data.get("subtitle", None)
+                schedule_date = schedule_data.get("date", None)
+            else:
+                # Legacy: just a list of items
+                schedule_items = schedule_data
+                schedule_name = schedule_key
+                schedule_title = schedule_key.replace("_", " ").title()
+                schedule_subtitle = None
+                schedule_date = None
+            
+            if not schedule_items:
+                continue
+                
+            # Add realm icons to schedule items
+            converted_items = add_schedule_logos(schedule_items)
+            
+            processed_schedules.append({
+                "id": schedule_name,
+                "title": schedule_title,
+                "subtitle": schedule_subtitle,
+                "date": schedule_date,
+                "items": converted_items
+            })
+        
+        return processed_schedules
+    else:
+        # Legacy structure: already processed
+        return schedules_data if schedules_data else []
+
 def get_current_year_data(current_year):
     """Load all data for the current year from its directory."""
     try:
@@ -64,12 +142,21 @@ def get_current_year_data(current_year):
         testimonials_module = import_from_year_dir(current_year, "testimonials")
         photo_highlights_module = import_from_year_dir(current_year, "photo_highlights")
         
+        # Process speakers data
+        speakers_raw = getattr(speakers_module, 'speakers', {}) if speakers_module else {}
+        speakers_processed = process_speakers_data(speakers_raw)
+        
+        # Process schedules data
+        schedules_raw = getattr(schedule_module, 'schedules', {}) if schedule_module else {}
+        year = getattr(variables_module, 'year', current_year) if variables_module else current_year
+        schedules_processed = process_schedules_data(schedules_raw, year)
+        
         return {
-            "speakers": speakers_module.speakers if speakers_module else [],
-            "mc": getattr(speakers_module, 'mc', []) if speakers_module else [],
-            "schedule": schedule_module.schedule if schedule_module else [],
-            "schedule2": schedule_module.schedule2 if schedule_module else [],
-            "schedules": getattr(schedule_module, 'schedules', []) if schedule_module else [],
+            "speakers": speakers_processed["speakers"],
+            "mc": speakers_processed["mc"],
+            "schedule": schedules_raw.get("schedule_1", {}).get("items", []) if isinstance(schedules_raw, dict) and isinstance(schedules_raw.get("schedule_1"), dict) else (schedules_raw.get("schedule_1", []) if isinstance(schedules_raw, dict) else []),
+            "schedule2": schedules_raw.get("schedule_2", {}).get("items", []) if isinstance(schedules_raw, dict) and isinstance(schedules_raw.get("schedule_2"), dict) else (schedules_raw.get("schedule_2", []) if isinstance(schedules_raw, dict) else []),
+            "schedules": schedules_processed,
             "sponsors": sponsors_module.sponsors if sponsors_module else {},
             "exhibitors": exhibitors_module.exhibitors if exhibitors_module else [],
             "testimonials": getattr(testimonials_module, 'testimonials', []) if testimonials_module else [],

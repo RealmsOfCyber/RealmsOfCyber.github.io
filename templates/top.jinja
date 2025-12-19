@@ -39,9 +39,11 @@
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#venue-section">Venue</a>
               </li>
+              {% if has_sponsors %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#sponsors-section">Sponsors</a>
               </li>
+              {% endif %}
             </ul>
             <!--//nav-->
           </div>
@@ -80,7 +82,7 @@
             </div>
       {% elif is_year_page and is_post_event %}
             <p class="mb-2" style="font-size: 1.7em; font-weight: 600;">That's a wrap for {{ rocc_year }}!</p>
-            <p class="mb-3" style="font-size: 1.2em;">A huge thanks to our <a href="#speakers-section" style="color: white; text-decoration: underline;">speakers</a>, <a href="#sponsors-section" style="color: white; text-decoration: underline;">sponsors</a>, <a href="#exhibitors-section" style="color: white; text-decoration: underline;">exhibitors</a>, and attendees for an incredible day at Brisbane Powerhouse.</p>
+            <p class="mb-3" style="font-size: 1.2em;">A huge thanks to our <a href="#speakers-section" style="color: white; text-decoration: underline;">speakers</a>{% if has_sponsors %}, <a href="#sponsors-section" style="color: white; text-decoration: underline;">sponsors</a>{% endif %}{% if has_exhibitors %}, <a href="#exhibitors-section" style="color: white; text-decoration: underline;">exhibitors</a>{% endif %}, and attendees for an incredible day at Brisbane Powerhouse.</p>
             <h1 class="hero-heading mb-2">{{ rocc_year }} Archive</h1>
             <div class="hero-meta mb-3">
               <i class="far fa-calendar-alt me-2"></i>{{ date }}

@@ -291,6 +291,8 @@ def render_page(year_data, is_year_page=False):
         "humanitix_contact_url": year_data.get("humanitix_contact_url", ""),
         "sponsors": year_data.get("sponsors", {}),
         "exhibitors": year_data.get("exhibitors", []),
+        "has_sponsors": any(len(year_data.get("sponsors", {}).get(tier, [])) > 0 for tier in ["Platinum", "Gold", "Silver", "Bronze"]),
+        "has_exhibitors": len(year_data.get("exhibitors", [])) > 0,
         "speakers": year_data.get("speakers", []),
         "mc": year_data.get("mc", []),
         "testimonials": year_data.get("testimonials", []),

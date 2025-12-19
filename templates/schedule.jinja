@@ -6,7 +6,7 @@
 <section id="{{ schedule_data.id }}" class="schedule-section section active">
     <div class="container">
         <h3 class="section-heading text-center mb-5">
-            {% if is_year_page %}{{ schedule_data.title }} - ROCC{{ year }}{% else %}{{ schedule_data.title }}{% endif %}
+            {% if is_year_page %}{{ schedule_data.title }} - {{ rocc_year }}{% else %}{{ schedule_data.title }}{% endif %}
         </h3>
         {% if schedule_data.subtitle %}
         <p class="text-center mb-4">{{ schedule_data.subtitle }}</p>

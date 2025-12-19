@@ -33,17 +33,42 @@
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#about-section">About</a>
               </li>
+              {% if (is_post_event and testimonials and testimonials|length > 0) or (photo_highlights and photo_highlights|length > 0) %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#highlights-section">Highlights</a>
+              </li>
+              {% endif %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#speakers-section">Speakers</a>
               </li>
+              {% if has_schedules %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#{{ schedules[0].id if schedules else 'schedule' }}">Schedule</a>
+              </li>
+              {% endif %}
+              {% if tickets_on_sale and not is_post_event %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#tickets-section">Tickets</a>
+              </li>
+              {% endif %}
+              {% if not is_post_event %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#venue-section">Venue</a>
               </li>
+              {% endif %}
               {% if has_sponsors %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#sponsors-section">Sponsors</a>
               </li>
               {% endif %}
+              {% if has_exhibitors %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#exhibitors-section">Exhibitors</a>
+              </li>
+              {% endif %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#faq-section">FAQ</a>
+              </li>
             </ul>
             <!--//nav-->
           </div>

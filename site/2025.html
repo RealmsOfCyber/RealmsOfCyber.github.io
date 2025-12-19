@@ -100,17 +100,34 @@
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#about-section">About</a>
               </li>
+              
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#highlights-section">Highlights</a>
+              </li>
+              
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#speakers-section">Speakers</a>
               </li>
+              
               <li class="nav-item">
-                <a class="nav-link scrollto" href="#venue-section">Venue</a>
+                <a class="nav-link scrollto" href="#schedule">Schedule</a>
               </li>
+              
+              
+              
               
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#sponsors-section">Sponsors</a>
               </li>
               
+              
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#exhibitors-section">Exhibitors</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#faq-section">FAQ</a>
+              </li>
             </ul>
             <!--//nav-->
           </div>
@@ -223,10 +240,12 @@
 
 
 
-<section class="section theme-bg-light py-5">
+<section id="highlights-section" class="section theme-bg-light">
   <div class="container">
-    <h3 class="section-heading text-center mb-5">Experience highlights</h3>
-    <div class="row justify-content-center">
+    <h3 class="section-heading text-center mb-5">Highlights</h3>
+    
+    
+    <div class="row justify-content-center mb-5">
       <div class="col-lg-10">
         <div style="background: white; border-radius: 15px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); padding: 40px; max-width: 100%;">
           <div class="row">
@@ -255,272 +274,264 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!--//experience-highlights-->
+    
 
-
-
-
-<section id="highlights-section" class="faq section theme-bg-primary text-white">
-<div class="container">
-  <h3 class="section-heading text-center mb-5 text-white">ROCC25 Photo Highlights</h3>
+    
     <div class="row gx-5 py-lg-5 justify-content-center">
+      <style>
+          .carouselhighlight-container {
+              max-width: 800px;
+              width: 100%;
+              background: white;
+              border-radius: 15px;
+              box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+              overflow: hidden;
+          }
 
-    <style>
-        .carouselhighlight-container {
-            max-width: 800px;
-            width: 100%;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
+          .carouselhighlight {
+              position: relative;
+              width: 100%;
+              height: 500px;
+              overflow: hidden;
+              padding: 20px;
+              box-sizing: border-box;
+          }
 
-        .carouselhighlight {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+          .carouselhighlight-slide {
+              position: absolute;
+              top: 40px;
+              left: 20px;
+              width: calc(100% - 40px);
+              height: calc(100% - 40px);
+              opacity: 0;
+              transition: opacity 1s ease-in-out;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: #f0f0f0;
+              box-sizing: border-box;
+          }
 
-        .carouselhighlight-slide {
-            position: absolute;
-            top: 40px;
-            left: 20px;
-            width: calc(100% - 40px);
-            height: calc(100% - 40px);
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #f0f0f0;
-            box-sizing: border-box;
-        }
+          .carouselhighlight-slide.active {
+              opacity: 1;
+          }
 
-        .carouselhighlight-slide.active {
-            opacity: 1;
-        }
+          .carouselhighlight-slide img {
+              max-width: 100%;
+              max-height: 100%;
+              object-fit: contain;
+          }
 
-        .carouselhighlight-slide img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
+          .carouselhighlight-controls {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              padding: 20px;
+              gap: 15px;
+          }
 
-        .carouselhighlight-controls {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            gap: 15px;
-        }
+          .carouselhighlight-btn {
+              background: white;
+              color: black;
+              border: none;
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              cursor: pointer;
+              font-size: 20px;
+              transition: background 0.3s;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+          }
 
-        .carouselhighlight-btn {
-            background: white;
-            color: black;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 20px;
-            transition: background 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+          .carouselhighlight-btn:hover {
+              background: white;
+          }
 
-        .carouselhighlight-btn:hover {
-            background: white;
-        }
+          .carouselhighlight-indicators {
+              display: flex;
+              gap: 10px;
+          }
 
-        .carouselhighlight-indicators {
-            display: flex;
-            gap: 10px;
-        }
+          .indicator {
+              width: 12px;
+              height: 12px;
+              border-radius: 50%;
+              background: #ddd;
+              cursor: pointer;
+              transition: background 0.3s;
+          }
 
-        .indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #ddd;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
+          .indicator.active {
+              background: #667eea;
+          }
 
-        .indicator.active {
-            background: #667eea;
-        }
+          .placeholder-text {
+              font-size: 18px;
+              color: #666;
+              text-align: center;
+              padding: 40px;
+          }
+      </style>
 
-        .placeholder-text {
-            font-size: 18px;
-            color: #666;
-            text-align: center;
-            padding: 40px;
-        }
-    </style>
+      <div class="carouselhighlight-container mx-auto">
+          <div class="carouselhighlight" id="carouselhighlight">
+              <div class="carouselhighlight-slide active">
+                  <img src="/assets/images/2025/highlights/highlight1.jpg" alt="Photo 1">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight2.jpg" alt="Photo 2">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight3.jpg" alt="Photo 3">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight4.jpg" alt="Photo 4">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight5.jpg" alt="Photo 5">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight6.jpg" alt="Photo 6">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight7.jpg" alt="Photo 7">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight8.jpg" alt="Photo 8">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight9.jpg" alt="Photo 9">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight10.jpg" alt="Photo 10">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight11.jpg" alt="Photo 11">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight12.jpg" alt="Photo 12">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight13.jpg" alt="Photo 13">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight14.jpg" alt="Photo 14">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight15.jpg" alt="Photo 15">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight16.jpg" alt="Photo 16">
+              </div>
+              <div class="carouselhighlight-slide ">
+                  <img src="/assets/images/2025/highlights/highlight17.jpg" alt="Photo 17">
+              </div>
+              
+          </div>
+          <div class="carouselhighlight-controls">
+              <button class="carouselhighlight-btn" id="prevBtn">&#10094;</button>
+              <div class="carouselhighlight-indicators" id="indicators"></div>
+              <button class="carouselhighlight-btn" id="nextBtn">&#10095;</button>
+          </div>
+      </div>
 
+      <script>
+          const slides = document.querySelectorAll('.carouselhighlight-slide');
+          const indicatorsContainer = document.getElementById('indicators');
+          const prevBtn = document.getElementById('prevBtn');
+          const nextBtn = document.getElementById('nextBtn');
 
-    <div class="carouselhighlight-container mx-auto">
-        <div class="carouselhighlight" id="carouselhighlight">
-            
-            <div class="carouselhighlight-slide active">
-                <img src="/assets/images/2025/highlights/highlight1.jpg" alt="Photo 1">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight2.jpg" alt="Photo 2">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight3.jpg" alt="Photo 3">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight4.jpg" alt="Photo 4">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight5.jpg" alt="Photo 5">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight6.jpg" alt="Photo 6">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight7.jpg" alt="Photo 7">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight8.jpg" alt="Photo 8">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight9.jpg" alt="Photo 9">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight10.jpg" alt="Photo 10">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight11.jpg" alt="Photo 11">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight12.jpg" alt="Photo 12">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight13.jpg" alt="Photo 13">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight14.jpg" alt="Photo 14">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight15.jpg" alt="Photo 15">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight16.jpg" alt="Photo 16">
-            </div>
-            <div class="carouselhighlight-slide ">
-                <img src="/assets/images/2025/highlights/highlight17.jpg" alt="Photo 17">
-            </div>
-            
-            
-        </div>
-        <div class="carouselhighlight-controls">
-            <button class="carouselhighlight-btn" id="prevBtn">&#10094;</button>
-            <div class="carouselhighlight-indicators" id="indicators"></div>
-            <button class="carouselhighlight-btn" id="nextBtn">&#10095;</button>
-        </div>
+          let currentIndex = 0;
+          let autoPlayInterval;
+
+          // Only initialize if there are slides
+          if (slides.length > 0) {
+              // Create indicators
+              slides.forEach((_, index) => {
+                  const indicator = document.createElement('div');
+                  indicator.classList.add('indicator');
+                  if (index === 0) indicator.classList.add('active');
+                  indicator.addEventListener('click', () => goToSlide(index));
+                  indicatorsContainer.appendChild(indicator);
+              });
+
+              const indicators = document.querySelectorAll('.indicator');
+
+              function updateCarousel() {
+                  slides.forEach((slide, index) => {
+                      slide.classList.remove('active');
+                      if (indicators[index]) {
+                          indicators[index].classList.remove('active');
+                      }
+                  });
+
+                  if (slides[currentIndex]) {
+                      slides[currentIndex].classList.add('active');
+                      if (indicators[currentIndex]) {
+                          indicators[currentIndex].classList.add('active');
+                      }
+                  }
+              }
+
+              function nextSlide() {
+                  if (slides.length > 0) {
+                      currentIndex = (currentIndex + 1) % slides.length;
+                      updateCarousel();
+                  }
+              }
+
+              function prevSlide() {
+                  if (slides.length > 0) {
+                      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                      updateCarousel();
+                  }
+              }
+
+              function goToSlide(index) {
+                  if (slides.length > 0 && index >= 0 && index < slides.length) {
+                      currentIndex = index;
+                      updateCarousel();
+                      resetAutoPlay();
+                  }
+              }
+
+              function startAutoPlay() {
+                  if (slides.length > 0) {
+                      autoPlayInterval = setInterval(nextSlide, 3000);
+                  }
+              }
+
+              function resetAutoPlay() {
+                  clearInterval(autoPlayInterval);
+                  startAutoPlay();
+              }
+
+              if (prevBtn) {
+                  prevBtn.addEventListener('click', () => {
+                      prevSlide();
+                      resetAutoPlay();
+                  });
+              }
+
+              if (nextBtn) {
+                  nextBtn.addEventListener('click', () => {
+                      nextSlide();
+                      resetAutoPlay();
+                  });
+              }
+
+              // Start auto-play
+              startAutoPlay();
+          }
+      </script>
     </div>
-
-    <script>
-        const slides = document.querySelectorAll('.carouselhighlight-slide');
-        const indicatorsContainer = document.getElementById('indicators');
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-
-        let currentIndex = 0;
-        let autoPlayInterval;
-
-        // Only initialize if there are slides
-        if (slides.length > 0) {
-            // Create indicators
-            slides.forEach((_, index) => {
-                const indicator = document.createElement('div');
-                indicator.classList.add('indicator');
-                if (index === 0) indicator.classList.add('active');
-                indicator.addEventListener('click', () => goToSlide(index));
-                indicatorsContainer.appendChild(indicator);
-            });
-
-            const indicators = document.querySelectorAll('.indicator');
-
-            function updateCarousel() {
-                slides.forEach((slide, index) => {
-                    slide.classList.remove('active');
-                    if (indicators[index]) {
-                        indicators[index].classList.remove('active');
-                    }
-                });
-
-                if (slides[currentIndex]) {
-                    slides[currentIndex].classList.add('active');
-                    if (indicators[currentIndex]) {
-                        indicators[currentIndex].classList.add('active');
-                    }
-                }
-            }
-
-            function nextSlide() {
-                if (slides.length > 0) {
-                    currentIndex = (currentIndex + 1) % slides.length;
-                    updateCarousel();
-                }
-            }
-
-            function prevSlide() {
-                if (slides.length > 0) {
-                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-                    updateCarousel();
-                }
-            }
-
-            function goToSlide(index) {
-                if (slides.length > 0 && index >= 0 && index < slides.length) {
-                    currentIndex = index;
-                    updateCarousel();
-                    resetAutoPlay();
-                }
-            }
-
-            function startAutoPlay() {
-                if (slides.length > 0) {
-                    autoPlayInterval = setInterval(nextSlide, 3000);
-                }
-            }
-
-            function resetAutoPlay() {
-                clearInterval(autoPlayInterval);
-                startAutoPlay();
-            }
-
-            if (prevBtn) {
-                prevBtn.addEventListener('click', () => {
-                    prevSlide();
-                    resetAutoPlay();
-                });
-            }
-
-            if (nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                    nextSlide();
-                    resetAutoPlay();
-                });
-            }
-
-            // Start auto-play
-            startAutoPlay();
-        }
-    </script>
-    </div>
+    
   </div>
 </section>
+
+
 
 
 <section id="speakers-section" class="speakers-section section active">

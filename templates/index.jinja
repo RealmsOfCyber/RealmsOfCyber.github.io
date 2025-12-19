@@ -9,12 +9,8 @@
 
 {% include 'about.jinja' %}
 
-{% if is_post_event and testimonials and testimonials|length > 0 %}
-{% include 'testimonials.jinja' %}
-{% endif %}
-
-{% if photo_highlights and photo_highlights|length > 0 %}
-{% include 'photo-highlights.jinja' %}
+{% if (is_post_event and testimonials and testimonials|length > 0) or (photo_highlights and photo_highlights|length > 0) %}
+{% include 'highlights.jinja' %}
 {% endif %}
 
 {% include 'speakers.jinja' %}

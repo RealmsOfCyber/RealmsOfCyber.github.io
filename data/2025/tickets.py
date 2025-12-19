@@ -1,4 +1,4 @@
-# Ticket information for ROCC 2025
+# Ticket information for ROCC25
 ticket_url = "https://events.humanitix.com/realms-of-cyber-2025/tickets"
 
 # Ticket 1: Frontline Ticket

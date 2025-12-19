@@ -33,10 +33,13 @@
   <div class="archive-links mb-4">
     <p class="text-white mb-2"><b>Past Conferences:</b></p>
     <ul class="list-inline mb-0">
-      {% for past_year in past_years %}
+      {% for past_year in available_years %}
+      {% if not is_year_page or past_year != year %}
+      {% set past_rocc_year = "ROCC" + (past_year|string)[-2:] %}
       <li class="list-inline-item me-3">
-        <a href="{{ past_year }}.html" class="text-white"><b>ROCC {{ past_year }}</b></a>
+        <a href="{{ past_year }}.html" class="text-white"><b>{{ past_rocc_year }}</b></a>
       </li>
+      {% endif %}
       {% endfor %}
     </ul>
   </div>

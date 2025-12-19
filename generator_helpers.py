@@ -270,9 +270,18 @@ def render_page(year_data, is_year_page=False):
     current_page_year = year_data.get("year")
     past_years = [y for y in available_years if y != current_page_year]
     
+    # Format year as ROCC25, ROCC26, etc. (last 2 digits)
+    year_int = year_data.get("year", 0)
+    rocc_year = f"ROCC{str(year_int)[-2:]}" if year_int > 0 else "ROCC"
+    next_year_int = year_int + 1
+    rocc_next_year = f"ROCC{str(next_year_int)[-2:]}" if next_year_int > 0 else "ROCC"
+    
     context = {
         "year": year_data.get("year"),
-        "next_year": year_data.get("year", 0) + 1,
+        "rocc_year": rocc_year,
+        "next_year": next_year_int,
+        "rocc_next_year": rocc_next_year,
+        "available_years": sorted(available_years, reverse=True),  # All available years for footer
         "past_years": sorted(past_years, reverse=True),  # Most recent first
         "date": year_data.get("date", "TBD"),
         "become_a_sponsor_url": year_data.get("become_a_sponsor_url", ""),
@@ -282,6 +291,8 @@ def render_page(year_data, is_year_page=False):
         "humanitix_contact_url": year_data.get("humanitix_contact_url", ""),
         "sponsors": year_data.get("sponsors", {}),
         "exhibitors": year_data.get("exhibitors", []),
+        "has_sponsors": any(len(year_data.get("sponsors", {}).get(tier, [])) > 0 for tier in ["Platinum", "Gold", "Silver", "Bronze"]),
+        "has_exhibitors": len(year_data.get("exhibitors", [])) > 0,
         "speakers": year_data.get("speakers", []),
         "mc": year_data.get("mc", []),
         "testimonials": year_data.get("testimonials", []),

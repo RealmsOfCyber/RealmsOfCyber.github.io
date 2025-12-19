@@ -1,13 +1,13 @@
 <section id="speakers-section" class="speakers-section section active">
 <div class="container">
 {% if is_year_page %}
-  <h3 class="section-heading text-center mb-3">ROCC{{ year }} Speakers</h3>
+  <h3 class="section-heading text-center mb-3">{{ rocc_year }} Speakers</h3>
   <div class="section-intro text-center single-col-max mx-auto mb-5">
     View the speakers from Realms of Cyber Conference {{ year }}
   </div>
 {% elif is_post_event %}
   <div class="speakers-cta text-center mb-5">
-    <a class="btn-primary btn btn-lg" href="{{ call_for_presenters_url }}" target="_blank">Interested in presenting at ROCC{{ next_year }}?</a>
+    <a class="btn-primary btn btn-lg" href="{{ call_for_presenters_url }}" target="_blank">Interested in presenting at {{ rocc_next_year }}?</a>
   </div>
   <h3 class="section-heading text-center mb-3">ROCC25 Speakers</h3>
   <div class="section-intro text-center single-col-max mx-auto mb-5">
@@ -71,7 +71,7 @@
   <hr class="my-5">
 </div>
 <div class="section-intro text-center single-col-max mx-auto mb-4">
-  ROCC {{ year }} hosted by{% if mc|length > 1 %}:{% endif %}
+  {{ rocc_year }} hosted by{% if mc|length > 1 %}:{% endif %}
 </div>
 
 <div class="row justify-content-center">

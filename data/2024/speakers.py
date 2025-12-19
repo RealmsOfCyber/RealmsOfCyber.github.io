@@ -35,14 +35,6 @@ speakers = {
         "description": "Kylie McDevitt is a security researcher at her own company, InfoSect, specialising in Linux and embedded devices. Before starting at InfoSect, she was a Technical Director at the Australian Signals Directorate (ASD). Kylie graduated from ANU with a Bachelor of Engineering and worked for Australia's largest telco as a radio engineer in MobileNet before moving into computer security, where she has been for the last 15 years. She has a Masters in Computer Networking, as well as multiple industry certifications. Kylie has taught as a casual lecturer at UNSW Canberra and spends her free time organising community events such as BSides Canberra and the CSides monthly security meetup.",
     },
     {
-        "name": "Charles O'Connell",
-        "jobtitle": 'Founder, Advisor & Investor',
-        "company": 'Stealth Startup',
-        "linkedin": 'https://www.linkedin.com/in/charles-o-2bb46223/',
-        "image": 'charles_oconnell.jpg',
-        "description": "",
-    },
-    {
         "name": 'Michael Creagh, PHD',
         "jobtitle": 'CEO',
         "company": 'Skyborne Technologies',

@@ -33,14 +33,41 @@
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#about-section">About</a>
               </li>
+              {% if (is_post_event and testimonials and testimonials|length > 0) or (photo_highlights and photo_highlights|length > 0) %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#highlights-section">Highlights</a>
+              </li>
+              {% endif %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#speakers-section">Speakers</a>
               </li>
+              {% if has_schedules %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#{{ schedules[0].id if schedules else 'schedule' }}">Schedule</a>
+              </li>
+              {% endif %}
+              {% if tickets_on_sale and not is_post_event %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#tickets-section">Tickets</a>
+              </li>
+              {% endif %}
+              {% if not is_post_event %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#venue-section">Venue</a>
               </li>
+              {% endif %}
+              {% if has_sponsors %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#sponsors-section">Sponsors</a>
+              </li>
+              {% endif %}
+              {% if has_exhibitors %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#exhibitors-section">Exhibitors</a>
+              </li>
+              {% endif %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#faq-section">FAQ</a>
               </li>
             </ul>
             <!--//nav-->
@@ -79,9 +106,9 @@
               <a class="btn-primary btn btn-lg" href="index.html">Back to Current Conference</a>
             </div>
       {% elif is_year_page and is_post_event %}
-            <p class="mb-2" style="font-size: 1.7em; font-weight: 600;">That's a wrap for ROCC{{ year }}!</p>
-            <p class="mb-3" style="font-size: 1.2em;">A huge thanks to our <a href="#speakers-section" style="color: white; text-decoration: underline;">speakers</a>, <a href="#sponsors-section" style="color: white; text-decoration: underline;">sponsors</a>, <a href="#exhibitors-section" style="color: white; text-decoration: underline;">exhibitors</a>, and attendees for an incredible day at Brisbane Powerhouse.</p>
-            <h1 class="hero-heading mb-2">ROCC{{ year }} Archive</h1>
+            <p class="mb-2" style="font-size: 1.7em; font-weight: 600;">That's a wrap for {{ rocc_year }}!</p>
+            <p class="mb-3" style="font-size: 1.2em;">A huge thanks to our <a href="#speakers-section" style="color: white; text-decoration: underline;">speakers</a>{% if has_sponsors %}, <a href="#sponsors-section" style="color: white; text-decoration: underline;">sponsors</a>{% endif %}{% if has_exhibitors %}, <a href="#exhibitors-section" style="color: white; text-decoration: underline;">exhibitors</a>{% endif %}, and attendees for an incredible day at Brisbane Powerhouse.</p>
+            <h1 class="hero-heading mb-2">{{ rocc_year }} Archive</h1>
             <div class="hero-meta mb-3">
               <i class="far fa-calendar-alt me-2"></i>{{ date }}
               <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
@@ -93,16 +120,16 @@
               <a class="btn-primary btn btn-lg" href="index.html">Back to Current Conference</a>
             </div>
       {% elif is_post_event %}
-      <p class="mb-2" style="font-size: 1.7em; font-weight: 600;">That's a wrap for ROCC{{ year }}!</p>
+      <p class="mb-2" style="font-size: 1.7em; font-weight: 600;">That's a wrap for {{ rocc_year }}!</p>
       <p class="mb-3" style="font-size: 1.2em;">A huge thanks to our <a href="#speakers-section" style="color: white; text-decoration: underline;">speakers</a>, <a href="#sponsors-section" style="color: white; text-decoration: underline;">sponsors</a>, <a href="#exhibitors-section" style="color: white; text-decoration: underline;">exhibitors</a>, and attendees for an incredible day at Brisbane Powerhouse.</p>
-            <h1 class="hero-heading mb-2">Stay tuned for ROCC{{ next_year }}</h1>
+            <h1 class="hero-heading mb-2">Stay tuned for {{ rocc_next_year }}</h1>
             <div class="hero-meta mb-3">
               <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
             </div>
             <div class="mb-3">
               <a class="btn-primary btn btn-lg" href="{{ mailing_list_url }}">Join the ROCC mailing list</a>
             </div>
-            <p class="mb-4" style="font-size: 1.1em;">Be notified when registration opens for ROCC{{ next_year }}</p>
+            <p class="mb-4" style="font-size: 1.1em;">Be notified when registration opens for {{ rocc_next_year }}</p>
       {% else %}
             <h1 class="hero-heading mb-2">Realms of Cyber Conference {{ year }}</h1>
             <div class="hero-meta mb-3">

@@ -118,7 +118,7 @@ schedules = {
                 "realm": "Cognitive",
                 "speaker": {
                     "name": "James Carlopio",
-                    "image": "james_carlopio.jpg"
+                    "image": "james_carlopio.jpeg"
                 },
                 "desc": "Dr. Carlopio will discuss information warfare, from both the Nation-State sponsored and cybercrime perspectives, looking at recent examples, what we can expect in the not-too-distant future, and what we can do about it."
             },
@@ -214,7 +214,7 @@ schedules = {
                 "realm": "Land",
                 "speaker": {
                     "name": "Sam kelly",
-                    "image": "sam_kelly.jpg"
+                    "image": "sam_kelly.png"
                 },
                 "desc": "Despite the Controller Area Network (CAN) protocol being around since the 1980s, it remains a daunting challenge for backyard mechanics and cybersecurity red teamers alike. In this presentation, Sam will guide you through the process of procuring and reverse engineering unknown data on a vehicle's CAN Bus. Learn how attackers might exploit this information to bypass security controls and how entrepreneurs could develop vehicle-specific products for the market. Plus, for the sheer fun of it, discover how Sam made his car run DOOM."
             },

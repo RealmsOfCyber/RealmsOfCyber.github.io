@@ -16,7 +16,7 @@
             </a>
           </div>
 
-          {% if tickets_on_sale and not is_post_event %}
+          {% if tickets_on_sale and not is_post_event and production %}
           <div class="navbar-btn order-lg-2">
             <a class="btn btn-secondary" href="{{ ticket_url }}" target="_blank">Tickets</a>
           </div>
@@ -30,6 +30,11 @@
 
           <div id="navigation" class="navbar-collapse collapse justify-content-lg-end me-lg-3">
             <ul class="nav navbar-nav">
+              {% if is_year_page %}
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Back to Current Conference</a>
+              </li>
+              {% endif %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#about-section">About</a>
               </li>
@@ -38,15 +43,17 @@
                 <a class="nav-link scrollto" href="#highlights-section">Highlights</a>
               </li>
               {% endif %}
+              {% if not is_year_page or is_post_event %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#speakers-section">Speakers</a>
               </li>
-              {% if has_schedules %}
+              {% endif %}
+              {% if has_schedules and (not is_year_page or is_post_event) %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#{{ schedules[0].id if schedules else 'schedule' }}">Schedule</a>
               </li>
               {% endif %}
-              {% if tickets_on_sale and not is_post_event %}
+              {% if tickets_on_sale and not is_post_event and production %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#tickets-section">Tickets</a>
               </li>
@@ -56,12 +63,12 @@
                 <a class="nav-link scrollto" href="#venue-section">Venue</a>
               </li>
               {% endif %}
-              {% if has_sponsors %}
+              {% if has_sponsors and (not is_year_page or is_post_event) %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#sponsors-section">Sponsors</a>
               </li>
               {% endif %}
-              {% if has_exhibitors %}
+              {% if has_exhibitors and (not is_year_page or is_post_event) %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#exhibitors-section">Exhibitors</a>
               </li>
@@ -94,17 +101,15 @@
         <div class="col-lg-12 col-12">
           <div class="hero-text-block mx-auto text-center" style="max-width: 900px;">
       {% if is_year_page and not is_post_event %}
-            <h1 class="hero-heading mb-2">Realms of Cyber Conference {{ year }}</h1>
+            <h1 class="hero-heading mb-2">Save the Date for {{ rocc_year }}</h1>
+            <h1 class="hero-heading mb-2">{{ next_event_date }}</h1>
             <div class="hero-meta mb-3">
-              <i class="far fa-calendar-alt me-2"></i>{{ date }}
-              <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
-            </div>
-            <div class="hero-intro mb-4">
-              Inspiring and informative talks from some of the world's brightest minds in physical cybersecurity
+              <i class="fas fa-map-marker-alt mx-2"></i>Brisbane Powerhouse, Aus
             </div>
             <div class="mb-3">
-              <a class="btn-primary btn btn-lg" href="index.html">Back to Current Conference</a>
+              <a class="btn-primary btn btn-lg" href="{{ mailing_list_url }}">Join the ROCC mailing list</a>
             </div>
+            <p class="mb-4" style="font-size: 1.1em;">Be notified when registration opens for {{ rocc_year }}</p>
       {% elif is_year_page and is_post_event %}
             <p class="mb-2" style="font-size: 1.7em; font-weight: 600;">That's a wrap for {{ rocc_year }}!</p>
             <p class="mb-3" style="font-size: 1.2em;">A huge thanks to our <a href="#speakers-section" style="color: white; text-decoration: underline;">speakers</a>{% if has_sponsors %}, <a href="#sponsors-section" style="color: white; text-decoration: underline;">sponsors</a>{% endif %}{% if has_exhibitors %}, <a href="#exhibitors-section" style="color: white; text-decoration: underline;">exhibitors</a>{% endif %}, and attendees for an incredible day at Brisbane Powerhouse.</p>
@@ -115,9 +120,6 @@
             </div>
             <div class="hero-intro mb-4">
               View the speakers and schedule from Realms of Cyber Conference {{ year }}
-            </div>
-            <div class="mb-3">
-              <a class="btn-primary btn btn-lg" href="index.html">Back to Current Conference</a>
             </div>
       {% elif is_post_event %}
       <p class="mb-2" style="font-size: 1.7em; font-weight: 600;">That's a wrap for {{ rocc_year }}!</p>

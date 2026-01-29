@@ -34,7 +34,7 @@
     <p class="text-white mb-2"><b>Past Conferences:</b></p>
     <ul class="list-inline mb-0">
       {% for past_year in available_years %}
-      {% if not is_year_page or past_year != year %}
+      {% if (not is_year_page or past_year != year) and past_year != 2026 %}
       {% set past_rocc_year = "ROCC" + (past_year|string)[-2:] %}
       <li class="list-inline-item me-3">
         <a href="{{ past_year }}.html" class="text-white"><b>{{ past_rocc_year }}</b></a>

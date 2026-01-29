@@ -156,7 +156,7 @@ aria-labelledby="mc-{{ mc_person['image'] }}-ModalLabel" aria-hidden="true">
 
 </div>
 <!--//container-->
-{% if tickets_on_sale %}
+{% if tickets_on_sale and production %}
 <div class="speakers-cta text-center py-3">
   <a class="btn btn-primary btn-lg" href="{{ ticket_url }}" target="_blank">Get Tickets</a>
 </div>

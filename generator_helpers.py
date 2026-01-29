@@ -185,6 +185,8 @@ def get_current_year_data(current_year):
             "humanitix_contact_url": getattr(variables_module, 'humanitix_contact_url', "") if variables_module else "",
             "sponsor_blurb": getattr(variables_module, 'sponsor_blurb', "") if variables_module else "",
             "exhibitor_blurb": getattr(variables_module, 'exhibitor_blurb', None) if variables_module else None,
+            "next_event_date": getattr(variables_module, 'next_event_date', "") if variables_module else "",
+            "production": getattr(variables_module, 'production', True) if variables_module else True,
         }
     except Exception as e:
         print(f"Warning: Could not load current year ({current_year}) data: {e}")
@@ -212,6 +214,8 @@ def get_current_year_data(current_year):
             "humanitix_contact_url": "",
             "sponsor_blurb": "",
             "exhibitor_blurb": None,
+            "next_event_date": "",
+            "production": True,
         }
 
 def discover_available_years():
@@ -246,6 +250,7 @@ def render_page(year_data, is_year_page=False):
     """
     Render a page using the `index.jinja` template with the provided year data.
     The template automatically handles pre/post event variations based on is_post_event.
+    Pre-event year pages (e.g. 2026) show Save-the-date and hide speakers/schedule/sponsors/exhibitors.
     
     Args:
         year_data: Dictionary containing year-specific data
@@ -321,6 +326,8 @@ def render_page(year_data, is_year_page=False):
         "schedule2": year_data.get("schedule2", []),
         "is_post_event": is_post,
         "is_year_page": is_year_page,
+        "next_event_date": year_data.get("next_event_date", ""),
+        "production": year_data.get("production", True),
     }
     
     return index_template.render(**context)

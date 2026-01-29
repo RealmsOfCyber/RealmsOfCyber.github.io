@@ -13,13 +13,15 @@
 {% include 'highlights.jinja' %}
 {% endif %}
 
+{% if not is_year_page or is_post_event %}
 {% include 'speakers.jinja' %}
+{% endif %}
 
-{% if has_schedules %}
+{% if has_schedules and (not is_year_page or is_post_event) %}
 {% include 'schedule.jinja' %}
 {% endif %}
 
-{% if tickets_on_sale and not is_post_event %}
+{% if tickets_on_sale and not is_post_event and production %}
 {% include 'tickets.jinja' %}
 {% endif %}
 
@@ -27,11 +29,11 @@
 {% include 'venue.jinja' %}
 {% endif %}
 
-{% if has_sponsors %}
+{% if has_sponsors and (not is_year_page or is_post_event) %}
 {% include 'sponsors.jinja' %}
 {% endif %}
 
-{% if exhibitors and exhibitors|length > 0 %}
+{% if (exhibitors and exhibitors|length > 0) and (not is_year_page or is_post_event) %}
 {% include 'exhibitors.jinja' %}
 {% endif %}
 

@@ -267,8 +267,13 @@ def render_page(year_data, is_year_page=False):
                      len(year_data.get("schedule2", [])) > 0 or 
                      len(year_data.get("schedules", [])) > 0)
     
-    # Tickets are on sale if event hasn't passed yet
-    tickets_on_sale = not is_post
+    # Tickets are on sale if event hasn't passed yet AND we have ticket data
+    has_ticket_data = bool(year_data.get("ticket_url")) or any([
+        year_data.get("ticket_1_name"), 
+        year_data.get("ticket_2_name"), 
+        year_data.get("ticket_3_name")
+    ])
+    tickets_on_sale = not is_post and has_ticket_data
     
     # Get available years for footer - show all years except the current page's year
     available_years = discover_available_years()
@@ -298,6 +303,7 @@ def render_page(year_data, is_year_page=False):
         "exhibitors": year_data.get("exhibitors", []),
         "has_sponsors": any(len(year_data.get("sponsors", {}).get(tier, [])) > 0 for tier in ["Platinum", "Gold", "Silver", "Bronze"]),
         "has_exhibitors": len(year_data.get("exhibitors", [])) > 0,
+        "has_speakers": len(year_data.get("speakers", [])) > 0,
         "speakers": year_data.get("speakers", []),
         "mc": year_data.get("mc", []),
         "testimonials": year_data.get("testimonials", []),

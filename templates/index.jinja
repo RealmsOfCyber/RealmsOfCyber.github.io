@@ -13,7 +13,7 @@
 {% include 'highlights.jinja' %}
 {% endif %}
 
-{% if not is_year_page or is_post_event %}
+{% if has_speakers and (not is_year_page or is_post_event) %}
 {% include 'speakers.jinja' %}
 {% endif %}
 

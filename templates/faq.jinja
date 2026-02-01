@@ -1,29 +1,6 @@
 <section id="faq-section" class="faq section theme-bg-light">
 <div class="container">
-{% if is_post_event or (is_year_page and not is_post_event) %}
-  <h3 class="section-heading text-center mb-5">FAQ</h3>
-    <div class="row gx-5 py-lg-5">
-      <div class="single-col-max mx-auto">
-        <h3 class="mb-3">I'm all in for ROCC26, when is it?</h3>
-        <p class="mb-3" style="padding-left: 20px;">ROCC will be back at Brisbane Powerhouse in 2026, join our mailing list to be the first to know.</p>
-        <div class="mb-5" style="padding-left: 20px;">
-          <a class="btn-primary btn btn-lg" href="{{ mailing_list_url }}">Join the mailing list</a>
-        </div>
-        
-        <h3 class="mb-3">I'm interested in becoming a sponsor. How can I get involved?</h3>
-        <p class="mb-3" style="padding-left: 20px;">We love working with sponsors to create partnerships that boost visibility and deliver real value and return on investment through a range of tailored sponsorship options.</p>
-        <div class="mb-5" style="padding-left: 20px;">
-          <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Register your interest here</a>
-        </div>
-        
-        <h3 class="mb-3">I'm interested in presenting at {{ rocc_next_year if is_post_event else rocc_year }}. How can I connect?</h3>
-        <p class="mb-3" style="padding-left: 20px;">We'd love to hear from you! If you're interested in presenting, we welcome speakers who bring fresh perspectives, real-world experience, and a passion for advancing physical cyber security.</p>
-        <div class="mb-5" style="padding-left: 20px;">
-          <a class="btn-primary btn btn-lg" href="{{ call_for_presenters_url }}">Register your interest here</a>
-        </div>
-      </div>
-    </div>
-{% else %}
+{% if False %}
   <h3 class="section-heading text-center mb-5 text-white">Frequently Asked Questions</h3>
     <div class="row gx-5 py-lg-5">
       <h3 class="text-white mb-0">What is Frontline to ROCC?</h3>
@@ -46,43 +23,43 @@
       <h3 class="text-white mb-0">Ticketing Questions</h3><br>
 
       <details class="faq-details">
-        <summary class="faq-summary">I’m a developer working in Qld Police. What ticket do I get?</summary>
-        <p class="faq-answer">You’re in public administration and Frontline.</p>
+        <summary class="faq-summary">I'm a developer working in Qld Police. What ticket do I get?</summary>
+        <p class="faq-answer">You're in public administration and Frontline.</p>
       </details>
 
       <details class="faq-details">
-        <summary class="faq-summary">I’m a recruiter. What ticket do I get?</summary>
+        <summary class="faq-summary">I'm a recruiter. What ticket do I get?</summary>
         <p class="faq-answer">You're welcome to purchase a general admission ticket.</p>
       </details>
 
       <details class="faq-details">
-        <summary class="faq-summary">I’m a student studying business. What ticket do I get?</summary>
-        <p class="faq-answer">You’re the future — grab the student ticket.</p>
+        <summary class="faq-summary">I'm a student studying business. What ticket do I get?</summary>
+        <p class="faq-answer">You're the future — grab the student ticket.</p>
       </details>
 
       <details class="faq-details">
         <summary class="faq-summary">I work for a large supermarket chain in their logistics area. What ticket do I get?</summary>
-        <p class="faq-answer">You’re part of the national supply chain — that’s Frontline.</p>
+        <p class="faq-answer">You're part of the national supply chain — that's Frontline.</p>
       </details>
 
       <details class="faq-details">
         <summary class="faq-summary">I work for a cybersecurity consultancy. What ticket do I get?</summary>
-        <p class="faq-answer">You’re in the commercial cyber sector — choose the general admission ticket.</p>
+        <p class="faq-answer">You're in the commercial cyber sector — choose the general admission ticket.</p>
       </details>
 
       <details class="faq-details">
         <summary class="faq-summary">I work for Catholic Education. What ticket do I get?</summary>
-        <p class="faq-answer">You’re in education and public service — that’s Frontline.</p>
+        <p class="faq-answer">You're in education and public service — that's Frontline.</p>
       </details>
 
       <details class="faq-details">
         <summary class="faq-summary">I deliver cybersecurity training. What ticket do I get?</summary>
-        <p class="faq-answer">If you’re with a public education or training provider (e.g. TAFE, university), grab a critical infrastructure ticket. If you’re private sector, choose general admission.</p>
+        <p class="faq-answer">If you're with a public education or training provider (e.g. TAFE, university), grab a critical infrastructure ticket. If you're private sector, choose general admission.</p>
       </details>
 
       <details class="faq-details">
         <summary class="faq-summary">I work for a telecommunications company. What ticket do I get?</summary>
-        <p class="faq-answer">You’re part of national infrastructure — that’s firmly within critical infrastructure.</p>
+        <p class="faq-answer">You're part of national infrastructure — that's firmly within critical infrastructure.</p>
       </details>
 
       <details class="faq-details">
@@ -91,18 +68,41 @@
       </details>
 
       <details class="faq-details">
-        <summary class="faq-summary">I work in a local council’s facilities team. What ticket do I get?</summary>
-        <p class="faq-answer">Local government is public administration — you’re covered under critical infrastructure.</p>
+        <summary class="faq-summary">I work in a local council's facilities team. What ticket do I get?</summary>
+        <p class="faq-answer">Local government is public administration — you're covered under critical infrastructure.</p>
       </details>
 
       <details class="faq-details">
-        <summary class="faq-summary">I’m a lawyer. What ticket do I get?</summary>
-        <p class="faq-answer">If you’re in-house counsel at a critical infrastructure organisation, you’re eligible for a critical infrastructure ticket. If you’re in private legal practice, please select a general admission ticket.</p>
+        <summary class="faq-summary">I'm a lawyer. What ticket do I get?</summary>
+        <p class="faq-answer">If you're in-house counsel at a critical infrastructure organisation, you're eligible for a critical infrastructure ticket. If you're in private legal practice, please select a general admission ticket.</p>
       </details>
     </div>
 
     <div class="faq-contact">
       <p><strong>Still unsure which ticket to purchase?</strong> <a href="{{ contact_us_url }}" class="text-white mb-0">Contact us</a> and we will get back to you ASAP.</p>
+    </div>
+{% else %}
+  <h3 class="section-heading text-center mb-5">FAQ</h3>
+    <div class="row gx-5 py-lg-5">
+      <div class="single-col-max mx-auto">
+        <h3 class="mb-3">I'm all in for {{ rocc_next_year if is_post_event else rocc_year }}, when is it?</h3>
+        <p class="mb-3" style="padding-left: 20px;">ROCC will be back at Brisbane Powerhouse in {{ year if not is_post_event else next_year }}, join our mailing list to be the first to know.</p>
+        <div class="mb-5" style="padding-left: 20px;">
+          <a class="btn-primary btn btn-lg" href="{{ mailing_list_url }}">Join the mailing list</a>
+        </div>
+        
+        <h3 class="mb-3">I'm interested in becoming a sponsor. How can I get involved?</h3>
+        <p class="mb-3" style="padding-left: 20px;">We love working with sponsors to create partnerships that boost visibility and deliver real value and return on investment through a range of tailored sponsorship options.</p>
+        <div class="mb-5" style="padding-left: 20px;">
+          <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Register your interest here</a>
+        </div>
+        
+        <h3 class="mb-3">I'm interested in presenting at {{ rocc_next_year if is_post_event else rocc_year }}. How can I connect?</h3>
+        <p class="mb-3" style="padding-left: 20px;">We'd love to hear from you! If you're interested in presenting, we welcome speakers who bring fresh perspectives, real-world experience, and a passion for advancing physical cyber security.</p>
+        <div class="mb-5" style="padding-left: 20px;">
+          <a class="btn-primary btn btn-lg" href="{{ call_for_presenters_url }}">Register your interest here</a>
+        </div>
+      </div>
     </div>
 {% endif %}
   </div>

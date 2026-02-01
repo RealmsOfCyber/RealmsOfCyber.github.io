@@ -334,6 +334,7 @@ def render_page(year_data, is_year_page=False):
         "is_year_page": is_year_page,
         "next_event_date": year_data.get("next_event_date", ""),
         "production": year_data.get("production", True),
+        "highlights_year": year_data.get("highlights_year", year_data.get("year")),
     }
     
     return index_template.render(**context)

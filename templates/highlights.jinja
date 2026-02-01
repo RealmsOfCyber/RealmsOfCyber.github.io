@@ -3,7 +3,7 @@
   <div class="container">
     <h3 class="section-heading text-center mb-5">Highlights</h3>
     
-    {% if is_post_event and testimonials and testimonials|length > 0 %}
+    {% if testimonials and testimonials|length > 0 %}
     <div class="row justify-content-center mb-5">
       <div class="col-lg-10">
         <div style="background: white; border-radius: 15px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); padding: 40px; max-width: 100%;">
@@ -124,7 +124,7 @@
           <div class="carouselhighlight" id="carouselhighlight">
               {% for photo in photo_highlights -%}
               <div class="carouselhighlight-slide {% if loop.first %}active{% endif %}">
-                  <img src="/assets/images/{{ year }}/highlights/{{ photo }}" alt="Photo {{ loop.index }}">
+                  <img src="/assets/images/{{ highlights_year }}/highlights/{{ photo }}" alt="Photo {{ loop.index }}">
               </div>
               {% endfor %}
           </div>

@@ -11,6 +11,15 @@ current_year = 2026
 available_years = discover_available_years()
 current_data = get_current_year_data(current_year)
 
+# If current year has no highlights, load from previous year for the index
+if not current_data.get("photo_highlights") and not current_data.get("testimonials"):
+    previous_year = current_year - 1
+    if previous_year in available_years:
+        previous_data = get_current_year_data(previous_year)
+        current_data["photo_highlights"] = previous_data.get("photo_highlights", [])
+        current_data["testimonials"] = previous_data.get("testimonials", [])
+        current_data["highlights_year"] = previous_year  # Track which year the highlights are from
+
 # Generate main index page
 print(f"Generating index page for year {current_year}...")
 index_html = render_page(current_data)

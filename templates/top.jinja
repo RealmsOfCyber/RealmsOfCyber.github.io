@@ -61,7 +61,7 @@
                 <a class="nav-link scrollto" href="#highlights-section">Highlights</a>
               </li>
               {% endif %}
-              {% if not is_year_page or is_post_event %}
+              {% if has_speakers and (not is_year_page or is_post_event) %}
               <li class="nav-item">
                 <a class="nav-link scrollto" href="#speakers-section">Speakers</a>
               </li>
@@ -118,7 +118,7 @@
       <div class="row">
         <div class="col-lg-12 col-12">
           <div class="hero-text-block mx-auto text-center" style="max-width: 900px;">
-      {% if is_year_page and not is_post_event %}
+      {% if not is_post_event %}
             <h1 class="hero-heading mb-2">Save the Date for {{ rocc_year }}</h1>
             <h1 class="hero-heading mb-2">{{ next_event_date }}</h1>
             <div class="hero-meta mb-3">

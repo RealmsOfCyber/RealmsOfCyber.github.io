@@ -14565,9 +14565,9 @@ a.theme-link:hover {
 .hero-block {
   position: relative;
   background-size: cover;
-  height: 930px;
+  min-height: 580px;
   padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-bottom: 3.5rem;
 }
 
 .hero-block.container {
@@ -14576,13 +14576,13 @@ a.theme-link:hover {
 
 @media (min-width: 768px) {
     .hero-block {
-        height: 900px;
+        min-height: 720px;
     }
 }
 
 @media (min-width: 1024px) {
     .hero-block {
-        height: 620px;
+        min-height: 700px;
     }
 
     .hero-block.container {
@@ -15186,8 +15186,9 @@ a.theme-link:hover {
   }
 
   .hero-block {
+    min-height: 520px;
     height: auto;
-    padding-bottom: 5rem;
+    padding-bottom: 2.5rem;
   }
 
   .hero-text-block h1.hero-heading,

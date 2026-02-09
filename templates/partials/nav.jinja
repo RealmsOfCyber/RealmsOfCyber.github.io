@@ -1,0 +1,108 @@
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6V35BDW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header id="header" class="header fixed-top">
+    <div class="branding">
+      <div class="container-fluid">
+        <nav class="main-nav navbar navbar-expand-lg">
+          <div class="site-logo">
+            {% if is_year_page %}
+            <a href="{{ base_path|default('') }}index.html">
+            {% else %}
+            <a class="scrollto" href="#hero-block">
+            {% endif %}
+              <picture>
+                <source srcset="{{ base_path|default('') }}assets/images/roclogotxt.png" media="(min-width: 768px)" />
+                <img class="logo-icon" src="{{ base_path|default('') }}assets/images/roclogotxt2.png" alt="logo" />
+              </picture>
+            </a>
+          </div>
+          <!--//site-logo-->
+
+          {% if tickets_on_sale and not is_post_event and not is_holding_page %}
+          <div class="navbar-btn order-lg-2">
+            <a class="btn btn-secondary" href="{{ ticket_url }}" target="_blank">Tickets</a>
+          </div>
+          {% endif %}
+
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
+            aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div id="navigation" class="navbar-collapse collapse justify-content-lg-end me-lg-3">
+            <ul class="nav navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarPastConferences" role="button" data-bs-toggle="dropdown" aria-expanded="false">Past Events</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarPastConferences">
+                  {% for past_year in available_years %}
+                  {% if past_year != 2026 %}
+                  {% set past_rocc_year = "ROCC" + (past_year|string)[-2:] %}
+                  <li><a class="dropdown-item" href="{{ base_path|default('') }}{{ past_year }}.html">{{ past_rocc_year }}</a></li>
+                  {% endif %}
+                  {% endfor %}
+                </ul>
+              </li>
+              <li class="nav-item">
+                {% if is_year_page %}
+                <a class="nav-link" href="{{ base_path|default('') }}index.html">Home</a>
+                {% else %}
+                <a class="nav-link scrollto" href="#hero-block">Home</a>
+                {% endif %}
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#about-section">About</a>
+              </li>
+              {% if (is_post_event and testimonials and testimonials|length > 0) or (photo_highlights and photo_highlights|length > 0) %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#highlights-section">Highlights</a>
+              </li>
+              {% endif %}
+              {% if has_speakers and (not is_year_page or is_post_event) %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#speakers-section">Speakers</a>
+              </li>
+              {% endif %}
+              {% if has_schedules and (not is_year_page or is_post_event) %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#{{ schedules[0].id if schedules else 'schedule' }}">Schedule</a>
+              </li>
+              {% endif %}
+              {% if tickets_on_sale and not is_post_event and not is_holding_page %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#tickets-section">Tickets</a>
+              </li>
+              {% endif %}
+              {% if not is_post_event %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#venue-section">Venue</a>
+              </li>
+              {% endif %}
+              {% if has_sponsors and (not is_year_page or is_post_event) %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#sponsors-section">Sponsors</a>
+              </li>
+              {% endif %}
+              {% if has_exhibitors and (not is_year_page or is_post_event) %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#exhibitors-section">Exhibitors</a>
+              </li>
+              {% endif %}
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#faq-section">FAQ</a>
+              </li>
+            </ul>
+            <!--//nav-->
+          </div>
+          <!--//navabr-collapse-->
+        </nav>
+        <!--//main-nav-->
+      </div>
+      <!--//container-->
+    </div>
+    <!--//branding-->
+  </header>
+  <!--//header-->

@@ -37,14 +37,14 @@
       {% if past_year != 2026 %}
       {% set past_rocc_year = "ROCC" + (past_year|string)[-2:] %}
       <div>
-        <a href="{{ past_year }}.html" class="text-white"><b>{{ past_rocc_year }}</b></a>
+        <a href="{{ base_path|default('') }}{{ past_year }}.html" class="text-white"><b>{{ past_rocc_year }}</b></a>
       </div>
       {% endif %}
       {% endfor %}
     </div>
   </div>
   <picture>
-    <img class="logo-icon" style="width: 200px; align-content: center" src="assets/images/roclogotxt2.png" alt="logo">
+    <img class="logo-icon" style="width: 200px; align-content: center" src="{{ base_path|default('') }}assets/images/roclogotxt2.png" alt="logo">
   </picture>
   <!--//footer-link-->
 </div>

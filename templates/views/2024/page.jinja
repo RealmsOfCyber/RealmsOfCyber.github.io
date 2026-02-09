@@ -1,0 +1,28 @@
+{% extends "base.jinja" %}
+{% block content %}
+{% include 'views/2024/hero.jinja' %}
+{% include 'views/2024/about.jinja' %}
+{% if (is_post_event and testimonials and testimonials|length > 0) or (photo_highlights and photo_highlights|length > 0) %}
+{% include 'views/2024/highlights.jinja' %}
+{% endif %}
+{% if has_speakers and (not is_year_page or is_post_event) %}
+{% include 'views/2024/speakers.jinja' %}
+{% endif %}
+{% if has_schedules and (not is_year_page or is_post_event) %}
+{% include 'views/2024/schedule.jinja' %}
+{% endif %}
+{% if tickets_on_sale and not is_post_event and not is_holding_page %}
+{% include 'views/2024/tickets.jinja' %}
+{% endif %}
+{% if not is_post_event %}
+{% include 'views/2024/venue.jinja' %}
+{% endif %}
+{% if has_sponsors and (not is_year_page or is_post_event) %}
+{% include 'views/2024/sponsors.jinja' %}
+{% endif %}
+{% if (exhibitors and exhibitors|length > 0) and (not is_year_page or is_post_event) %}
+{% include 'views/2024/exhibitors.jinja' %}
+{% endif %}
+{% include 'views/2024/faq.jinja' %}
+{% include 'views/2024/footer.jinja' %}
+{% endblock %}

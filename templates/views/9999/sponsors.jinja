@@ -1,0 +1,46 @@
+<section id="sponsors-section" class="sponsors-section section">
+<div class="container">
+{% if is_post_event %}
+  <div class="sponsors-cta text-center mb-5">
+    <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Interested in sponsoring ROCC26?</a>
+  </div>
+  <h3 class="section-heading text-center mb-3">Thank you to our ROCC25 sponsors</h3>
+  <div class="section-intro text-center single-col-max mx-auto mb-5">
+    We're proud to partner with the organisations advancing Australia's cyber-physical resilience.
+  </div>
+{% else %}
+  <h3 class="section-heading text-center mb-3">Sponsors</h3>
+  <div class="section-intro text-center single-col-max mx-auto mb-5">{{ sponsor_blurb }}</div>
+{% endif %}
+  {% for sponsor_level in sponsors -%}
+      <h2 class="fw-bolder text-primary mb-4 text-center">{{ sponsor_level }}</h2>
+      {% for sponsor_detail in sponsors[sponsor_level] -%}
+          {% if sponsor_level == "Silver" or sponsor_level == "Bronze" %}
+            {% if loop.index0 is divisibleby 2 %}
+              <div class="row logos justify-content-center">
+            {% endif %}
+            <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+              <a href="{{ sponsor_detail['url'] }}" target="_blank"><img style="float: left; width: {{ sponsor_detail['width'] }}px; height: {{ sponsor_detail['height'] }}px; object-fit:scale-down; max-height: {{ sponsor_detail['height'] }}px"
+                  src="{{ base_path|default('') }}assets/images/{{ year }}/sponsors/{{ sponsor_detail['logo'] }}" alt="{{ sponsor_detail['name'] }}" /></a>
+            </div>
+            {% if loop.index is divisibleby 2 or loop.last %}
+              </div>
+            {% endif %}
+          {% else %}
+              <div class="row logos justify-content-center">
+                <div class="logo-item m-4 col-6 col-md-4 col-lg-4 d-flex align-items-center">
+                  <a href="{{ sponsor_detail['url'] }}" target="_blank"><img style="float: left; width: {{ sponsor_detail['width'] }}px; height: {{ sponsor_detail['height'] }}px; object-fit:scale-down; max-height: {{ sponsor_detail['height'] }}px"
+                      src="{{ base_path|default('') }}assets/images/{{ year }}/sponsors/{{ sponsor_detail['logo'] }}" alt="{{ sponsor_detail['name'] }}" /></a>
+                </div>
+              </div>
+          {% endif %}
+      {% endfor %}
+      <br>
+  {% endfor %}
+{% if not is_post_event %}
+  <div class="sponsors-cta text-center pt-5">
+    <a class="btn-primary btn btn-lg" href="{{ become_a_sponsor_url }}">Become A Sponsor</a>
+  </div>
+{% endif %}
+</div>
+</section>

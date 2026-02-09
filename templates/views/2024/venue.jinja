@@ -1,0 +1,36 @@
+<section id="venue-section" class="venue-section section theme-bg-primary text-white">
+<div class="container">
+  <h3 class="section-heading text-center mb-5 text-white">Venue</h3>
+  <div class="row gx-5 py-lg-5">
+    <div class="col-12 col-lg-7 h-100">
+      <div class="desc">
+        <h4 class="text-white mb-3">How To Get Here</h4>
+        <p>
+          {{ venue_name }} is an iconic venue only 20 minutes from the
+          Airport and 400 metres from Public Transport! It is a
+          magnificent power station of the 1920s reborn as Queensland's
+          home of contemporary art and culture located along the Brisbane
+          River (Maiwar) on Yagara Country. We think it's a perfect
+          location to be hosting Brisbane's pure cyberphysical conference.
+        </p>
+        <h4 class="text-white mb-4 mt-3 mt-lg-5">Google Maps</h4>
+        <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=Powerhouse%20Brisbane+(Realms%20of%20Cyber%20Conference%20{{ year }})&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+      </div>
+    </div>
+    <div class="col-12 col-xl-3 col-lg-4 offset-lg-1 position-relative h-100 mt-5 mt-lg-0">
+      <div class="figures-holder">
+        <div class="figure figure-1">
+          <img class="shadow" src="{{ base_path|default('') }}assets/images/{{ year }}/venue/venue-1.jpg" alt="" />
+        </div>
+        <div class="figure figure-2">
+          <img class="shadow" src="{{ base_path|default('') }}assets/images/{{ year }}/venue/venue-2.jpg" alt="" />
+        </div>
+        <div class="figure figure-3">
+          <img class="shadow" src="{{ base_path|default('') }}assets/images/{{ year }}/venue/venue-3.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>

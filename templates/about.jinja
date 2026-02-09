@@ -4,7 +4,7 @@
   <div class="section-intro text-center single-col-max mx-auto mb-4">
       ROCC is a high-impact, one-day conference bringing together cutting-edge presentations,
       live technology demonstrations, and meaningful networking opportunities
-      - all set in the inspiring surrounds of the iconic Brisbane Powerhouse.
+      - all set in the inspiring surrounds of the iconic {{ venue_name }}.
   </div>
   <div class="section-intro text-center single-col-max mx-auto mb-4">
         Focused on operational security across physical domains - Land, Sea, Air, Space, Biological,
@@ -21,7 +21,7 @@
     <div id="countdown-box" class="countdown-box"></div>
   </div> -->
   <!--//event-countdown-->
-  {% if tickets_on_sale and not is_post_event and production %}
+  {% if tickets_on_sale and not is_post_event and not is_holding_page %}
   <div class="about-cta text-center mb-5">
     <a class="btn btn-secondary btn-lg mb-5" href="{{ ticket_url }}" target="_blank">Get Your Ticket Today</a>
   </div>

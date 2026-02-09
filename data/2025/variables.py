@@ -16,8 +16,11 @@ year = 2025
 date = "28 Aug"
 # Event date in YYYY-MM-DD format for date comparison
 event_date = "2025-08-28"
+hero_image_path = "2025/hero/hero.jpg"
 # tickets_on_sale is calculated automatically based on event_date (True if today <= event_date)
 # ticket_url and ticket_price are now in tickets.py
+location = "Brisbane Powerhouse, Brisbane, Australia"
+venue_name = "Brisbane Powerhouse"
 become_a_sponsor_url = "https://forms.office.com/r/K5Tqfz2bq7"
 mailing_list_url = "https://forms.office.com/Pages/ResponsePage.aspx?id=M_lB6ZN8ZUqF9CN5eeaMlk2zVhzLeglLsBOvYaQmADVUNDVPOFdaNUlFRTBDS01WVVdVM1ZMRTlKQi4u"
 call_for_presenters_url = "https://forms.office.com/r/VkSvkBzaf3"

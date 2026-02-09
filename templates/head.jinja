@@ -12,7 +12,7 @@
   <meta name="twitter:description"
     content="Realms of Cyber {{ year }} | Brisbane's biggest cyber and information security meets physical systems conference in Brisbane. Learn more." />
   <meta name="twitter:title" content="ROCCON {{ year }} - Home" />
-  <meta name="image" property="og:image" content="assets/images/roclogotxt2.png"/>
+  <meta name="image" property="og:image" content="{{ base_path|default('') }}assets/images/roclogotxt2.png"/>
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1024">
   <meta property="og:image:height" content="1024">
@@ -21,10 +21,10 @@
 {% endif %}
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="{{ base_path|default('') }}favicon.ico" />
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:600,700,800|Roboto:300,400,700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&family=Roboto:wght@300;400;700&display=swap"
     rel="stylesheet" />
 
   <!-- FontAwesome JS-->
@@ -39,8 +39,8 @@
   </script>
   <!-- End Google Tag Manager -->
 
-  <!-- Theme CSS -->
-  <link id="theme-style" rel="stylesheet" href="assets/css/theme.css" />
+  <!-- Theme CSS (per-view: assets/css/{view_slug}/theme.css when using view-based rendering) -->
+  <link id="theme-style" rel="stylesheet" href="{{ theme_css_path|default(base_path|default('') ~ 'assets/css/theme.css') }}" />
 
   <!-- Mixpanel -->
   <!-- Mixpanel -->

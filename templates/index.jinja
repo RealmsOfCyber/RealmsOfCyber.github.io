@@ -21,7 +21,7 @@
 {% include 'schedule.jinja' %}
 {% endif %}
 
-{% if tickets_on_sale and not is_post_event and production %}
+{% if tickets_on_sale and not is_post_event and not is_holding_page %}
 {% include 'tickets.jinja' %}
 {% endif %}
 

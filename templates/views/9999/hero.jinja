@@ -1,0 +1,33 @@
+  <div id="hero-block" class="hero-block">
+    <div id="hero-carousel" class="hero-carousel carousel slide carousel-fade" data-ride="carousel"{% if hero_image_path %} style="background-image: url('{{ base_path|default('') }}assets/images/{{ hero_image_path }}'); background-size: cover; background-position: center 25%; background-repeat: no-repeat;"{% endif %}>
+      <div class="carousel-inner">
+        {% if hero_image_path %}
+        <div class="carousel-item active" style="background: transparent; height: 100%;"></div>
+        {% else %}
+        <div class="carousel-item-1 carousel-item active"></div>
+        {% endif %}
+      </div>
+    </div>
+    <div class="hero-block-mask"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-12">
+          <div class="hero-text-block mx-auto text-center hero-text-block--featured" style="max-width: 900px;">
+            <h1 class="hero-heading">{{ hero_title or rocc_year }}</h1>
+            {% if hero_subtitle %}
+            <p class="hero-theme-line">{{ hero_subtitle }}</p>
+            {% endif %}
+            <div class="hero-date-location">
+              <span class="hero-date"><i class="far fa-calendar-alt me-2" aria-hidden="true"></i>{{ next_event_date }}</span>
+              <span class="hero-location"><i class="fas fa-map-marker-alt mx-2"></i>{{ location }}</span>
+            </div>
+            <div class="mb-3">
+              <a class="btn-primary btn btn-lg hero-cta" href="{{ mailing_list_url }}">Join the ROCC mailing list</a>
+            </div>
+            <p class="mb-0" style="font-size: 1rem; opacity: 0.9;">Be notified when registration opens for {{ hero_title or rocc_year }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--//hero-block-->

@@ -16,6 +16,9 @@ year = 2024
 date = "28 Aug"
 # Event date in YYYY-MM-DD format for date comparison
 event_date = "2024-08-20"
+hero_image_path = "2024/hero/hero.jpg"
+location = "Brisbane Powerhouse, Brisbane, Australia"
+venue_name = "Brisbane Powerhouse"
 sponsor_blurb = "We extend our deepest gratitude to the sponsors and partners who made ROCCON 2024 possible. Your generous support ensured the success of this year's event and helped us bring together a community dedicated to advancing cybersecurity. Thank you to our Platinum sponsor, Queensland Government, as well as our Gold, Silver, and Bronze sponsors."
 exhibitor_blurb = None
 # (Realms of Cyber conference) is an expansion on our previous, wildly successful, Autohackers conference. We are a think-tank, conference, and hacker meet with a focus on the physical domains.

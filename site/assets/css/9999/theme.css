@@ -14800,6 +14800,108 @@ a.theme-link:hover {
   padding-bottom: 0;
 }
 
+/* Audience full-width background (about.jpg) with dark overlay and centred content */
+.audience-bg-section {
+  position: relative;
+  min-height: 42vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.audience-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  pointer-events: none;
+}
+.audience-bg-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42vh;
+  padding: 4rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.audience-bg-content .container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.audience-bg-inner {
+  max-width: 640px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.audience-bg-heading {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.audience-bg-subtext {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.audience-bg-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.audience-bg-cta {
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.audience-bg-cta-primary {
+  background: #098dcf;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.audience-bg-cta-primary:hover {
+  background: #076c9e;
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.audience-bg-cta-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+.audience-bg-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: #fff;
+}
+.audience-bg-cta-mailing {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+.audience-bg-cta-mailing:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  border-color: #fff;
+}
+
 .benefits-list li {
   margin-bottom: 0.5rem;
   font-size: 1.125rem;
@@ -15240,6 +15342,35 @@ a.theme-link:hover {
   }
   .hero-text-block .hero-date-location .hero-location {
     font-size: 1.05rem !important;
+  }
+
+  .audience-bg-section {
+    min-height: 36vh;
+  }
+  .audience-bg-content {
+    min-height: 36vh;
+    padding: 3rem 1rem;
+  }
+  .audience-bg-heading {
+    font-size: 1.5rem;
+  }
+  .audience-bg-subtext {
+    font-size: 1.05rem;
+  }
+  .audience-bg-cta-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .audience-bg-cta-row .audience-bg-cta {
+    width: 100%;
+    max-width: 280px;
+  }
+  .audience-bg-cta-mailing {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .stats-block .number {

@@ -217,6 +217,8 @@ def get_data_for_slug(slug):
             "hero_theme_line_1": (getattr(variables_module, 'hero_theme_line_1', None) or "") if variables_module else "",
             "hero_theme_line_2": (getattr(variables_module, 'hero_theme_line_2', None) or "") if variables_module else "",
             "hero_image_path": (getattr(variables_module, 'hero_image_path', None) or "") if variables_module else "",
+            "about_audience_heading": (getattr(variables_module, 'about_audience_heading', None) or "") if variables_module else "",
+            "about_audience_subtext": (getattr(variables_module, 'about_audience_subtext', None) or "") if variables_module else "",
             "location": getattr(variables_module, 'location', "Brisbane Powerhouse, Brisbane, Australia") if variables_module else "Brisbane Powerhouse, Brisbane, Australia",
             "venue_name": getattr(variables_module, 'venue_name', "Brisbane Powerhouse") if variables_module else "Brisbane Powerhouse",
         }
@@ -260,6 +262,8 @@ def get_data_for_slug(slug):
             "hero_theme_line_1": "",
             "hero_theme_line_2": "",
             "hero_image_path": "",
+            "about_audience_heading": "",
+            "about_audience_subtext": "",
             "location": "Brisbane Powerhouse, Brisbane, Australia",
             "venue_name": "Brisbane Powerhouse",
         }
@@ -406,6 +410,8 @@ def _build_page_context(year_data, is_year_page=False, base_path_override=None, 
         "hero_theme_line_1": year_data.get("hero_theme_line_1", ""),
         "hero_theme_line_2": year_data.get("hero_theme_line_2", ""),
         "hero_image_path": year_data.get("hero_image_path", ""),
+        "about_audience_heading": year_data.get("about_audience_heading", ""),
+        "about_audience_subtext": year_data.get("about_audience_subtext", ""),
         "location": year_data.get("location", "Brisbane Powerhouse, Brisbane, Australia"),
         "venue_name": year_data.get("venue_name", "Brisbane Powerhouse"),
     }

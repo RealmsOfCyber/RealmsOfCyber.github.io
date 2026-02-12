@@ -9,6 +9,8 @@ next_event_date = "27 August 2026"
 # Hero
 hero_title = "ROCC26"
 hero_subtitle = "Sovereignty in a Connected World: Where Reality Meets Resilience"
+hero_theme_line_1 = "Sovereignty in a Connected World"
+hero_theme_line_2 = "Where Reality Meets Resilience"
 hero_image_path = "9999/hero/hero.jpg"
 
 # Location / venue

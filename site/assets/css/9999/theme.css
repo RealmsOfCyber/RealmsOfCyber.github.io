@@ -14640,6 +14640,7 @@ a.theme-link:hover {
   color: #fff;
   font-size: 4rem;
   font-weight: 800;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .hero-text-block .hero-intro {
@@ -14660,6 +14661,7 @@ a.theme-link:hover {
   font-size: 5.25rem !important;
   font-weight: 800;
   margin-bottom: 1.25rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 .hero-text-block .hero-theme-line {
   font-family: "Montserrat", sans-serif;
@@ -14670,6 +14672,17 @@ a.theme-link:hover {
   text-transform: uppercase;
   margin-bottom: 2rem;
   line-height: 1.35;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.hero-text-block .hero-theme-line.hero-theme-line-1 {
+  font-size: 2.9rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.35rem !important;
+}
+.hero-text-block .hero-theme-line.hero-theme-line-2 {
+  font-size: 2.2rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.75rem !important;
 }
 .hero-text-block .hero-date-location {
   font-size: 1.35rem !important;
@@ -14680,6 +14693,7 @@ a.theme-link:hover {
 .hero-text-block .hero-date-location .hero-date {
   display: block;
   margin-bottom: 0.5rem;
+  font-size: 1.7rem !important;
 }
 .hero-text-block .hero-date-location .hero-location {
   font-size: 1.2rem !important;
@@ -15208,9 +15222,19 @@ a.theme-link:hover {
     font-size: 2rem !important;
     margin-bottom: 1.5rem;
   }
+  .hero-text-block .hero-theme-line.hero-theme-line-1 {
+    font-size: 2.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .hero-text-block .hero-theme-line.hero-theme-line-2 {
+    font-size: 1.85rem !important;
+  }
   .hero-text-block .hero-date-location {
     font-size: 1.15rem !important;
     margin-bottom: 1.5rem;
+  }
+  .hero-text-block .hero-date-location .hero-date {
+    font-size: 1.4rem !important;
   }
   .hero-text-block .hero-date-location .hero-location {
     font-size: 1.05rem !important;

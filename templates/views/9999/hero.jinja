@@ -14,7 +14,10 @@
         <div class="col-lg-12 col-12">
           <div class="hero-text-block mx-auto text-center hero-text-block--featured" style="max-width: 900px;">
             <h1 class="hero-heading">{{ hero_title or rocc_year }}</h1>
-            {% if hero_subtitle %}
+            {% if hero_theme_line_1 and hero_theme_line_2 %}
+            <p class="hero-theme-line hero-theme-line-1">{{ hero_theme_line_1 }}</p>
+            <p class="hero-theme-line hero-theme-line-2">{{ hero_theme_line_2 }}</p>
+            {% elif hero_subtitle %}
             <p class="hero-theme-line">{{ hero_subtitle }}</p>
             {% endif %}
             <div class="hero-date-location">

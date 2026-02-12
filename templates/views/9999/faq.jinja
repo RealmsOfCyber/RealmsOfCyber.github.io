@@ -5,7 +5,7 @@
     <div class="row gx-5 py-lg-5">
       <div class="single-col-max mx-auto">
         <h3 class="mb-3">I'm all in for {{ rocc_next_year if is_post_event else rocc_year }}, when is it?</h3>
-        <p class="mb-3" style="padding-left: 20px;">ROCC will be back at {{ venue_name }} in {{ year if not is_post_event else next_year }}, join our mailing list to be the first to know.</p>
+        <p class="mb-3" style="padding-left: 20px;">{% if next_event_date %}{{ rocc_next_year if is_post_event else rocc_year }} is on {{ next_event_date }} at {{ venue_name }}. Join our mailing list to be the first to know when registration opens.{% else %}ROCC will be back at {{ venue_name }} in {{ year if not is_post_event else next_year }}, join our mailing list to be the first to know.{% endif %}</p>
         <div class="mb-5" style="padding-left: 20px;">
           <a class="btn-primary btn btn-lg" href="{{ mailing_list_url }}">Join the mailing list</a>
         </div>

@@ -2,6 +2,13 @@
   <div class="container">
     <div class="content">
   <h3 class="section-heading text-center mb-5 text-white">Venue</h3>
+  {% if venue_name or location %}
+  <div class="venue-name-location text-center mb-5">
+    {% if location %}
+    <span class="venue-location text-white"><i class="fas fa-map-marker-alt me-2" aria-hidden="true"></i>{{ location }}</span>
+    {% endif %}
+  </div>
+  {% endif %}
   <div class="row gx-5 py-lg-5">
     <div class="col-12 col-lg-7 h-100">
       <div class="desc">

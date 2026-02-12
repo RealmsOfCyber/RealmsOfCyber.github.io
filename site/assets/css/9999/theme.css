@@ -14551,13 +14551,14 @@ a.theme-link:hover {
 }
 
 .navbar-toggler {
-  border: 1px solid #fff;
+  border: none;
   padding: 0.4rem 0.5rem;
   outline: none !important;
 }
 
 .navbar-toggler .navbar-toggler-icon {
-  background: url("../images/bars.svg") no-repeat left top;
+  background: url("../../images/bars.svg") no-repeat center;
+  background-size: 27px 20px;
   height: 20px;
   width: 27px;
 }
@@ -14701,6 +14702,13 @@ a.theme-link:hover {
   font-size: 1.2rem !important;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.78);
+}
+.hero-text-block .hero-location-link {
+  text-decoration: none;
+  color: inherit;
+}
+.hero-text-block .hero-location-link:hover .hero-location {
+  color: rgba(255, 255, 255, 0.95);
 }
 .hero-text-block .hero-date-location + .mb-3 {
   margin-top: 1rem;
@@ -15181,6 +15189,38 @@ a.theme-link:hover {
   overflow-x: hidden;
 }
 
+.venue-section .venue-name-location {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+}
+.venue-section .venue-name-location .venue-name {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.venue-section .venue-name-location .venue-location {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.78);
+}
+@media (min-width: 768px) {
+  .venue-section .venue-name-location .venue-name {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .venue-section .venue-name-location {
+    font-size: 1.15rem;
+  }
+  .venue-section .venue-name-location .venue-name {
+    font-size: 1.4rem;
+  }
+  .venue-section .venue-name-location .venue-location {
+    font-size: 1.05rem;
+  }
+}
+
 .venue-section .figure {
   position: relative;
 }
@@ -15296,7 +15336,7 @@ a.theme-link:hover {
 
 @media (max-width: 767.98px) {
   .header {
-    background: rgba(20, 28, 37, 0.95);
+    background: #00002b;
   }
 
   .section {

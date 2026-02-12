@@ -14454,7 +14454,7 @@ a.theme-link:hover {
 }
 
 .theme-bg-primary {
-  background: #098dcf;
+  background: #00002b;
 }
 
 #topcontrol {
@@ -14520,7 +14520,7 @@ a.theme-link:hover {
 
 .header-shrink {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  background: #141c25;
+  background: #00002b;
 }
 
 .navbar-nav .nav-item {
@@ -15257,6 +15257,11 @@ a.theme-link:hover {
 
 .footer .social-list {
   font-size: 1.5rem;
+}
+
+.footer .footer-logo {
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
 }
 
 @media (min-width: 576px) {

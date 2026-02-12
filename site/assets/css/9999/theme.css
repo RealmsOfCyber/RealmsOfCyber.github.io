@@ -14454,7 +14454,7 @@ a.theme-link:hover {
 }
 
 .theme-bg-primary {
-  background: #098dcf;
+  background: #00002b;
 }
 
 #topcontrol {
@@ -14520,7 +14520,7 @@ a.theme-link:hover {
 
 .header-shrink {
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
-  background: #141c25;
+  background: #00002b;
 }
 
 .navbar-nav .nav-item {
@@ -14551,13 +14551,14 @@ a.theme-link:hover {
 }
 
 .navbar-toggler {
-  border: 1px solid #fff;
+  border: none;
   padding: 0.4rem 0.5rem;
   outline: none !important;
 }
 
 .navbar-toggler .navbar-toggler-icon {
-  background: url("../images/bars.svg") no-repeat left top;
+  background: url("../../images/bars.svg") no-repeat center;
+  background-size: 27px 20px;
   height: 20px;
   width: 27px;
 }
@@ -14638,8 +14639,10 @@ a.theme-link:hover {
 .hero-text-block h1.hero-heading,
 .hero-text-block .hero-heading.h1 {
   color: #fff;
+  font-family: "Pulse Rifle", sans-serif;
   font-size: 4rem;
   font-weight: 800;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .hero-text-block .hero-intro {
@@ -14657,9 +14660,11 @@ a.theme-link:hover {
   max-width: 1150px !important;
 }
 .hero-text-block--featured .hero-heading {
-  font-size: 5.25rem !important;
+  font-family: "Pulse Rifle", sans-serif;
+  font-size: 5.75rem !important;
   font-weight: 800;
   margin-bottom: 1.25rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 .hero-text-block .hero-theme-line {
   font-family: "Montserrat", sans-serif;
@@ -14670,24 +14675,43 @@ a.theme-link:hover {
   text-transform: uppercase;
   margin-bottom: 2rem;
   line-height: 1.35;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.hero-text-block .hero-theme-line.hero-theme-line-1 {
+  font-size: 2.9rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.35rem !important;
+}
+.hero-text-block .hero-theme-line.hero-theme-line-2 {
+  font-size: 2.2rem !important;
+  font-weight: 500 !important;
+  margin-bottom: 1.75rem !important;
 }
 .hero-text-block .hero-date-location {
   font-size: 1.35rem !important;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.88);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .hero-text-block .hero-date-location .hero-date {
   display: block;
   margin-bottom: 0.5rem;
+  font-size: 1.7rem !important;
 }
 .hero-text-block .hero-date-location .hero-location {
   font-size: 1.2rem !important;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.78);
 }
+.hero-text-block .hero-location-link {
+  text-decoration: none;
+  color: inherit;
+}
+.hero-text-block .hero-location-link:hover .hero-location {
+  color: rgba(255, 255, 255, 0.95);
+}
 .hero-text-block .hero-date-location + .mb-3 {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 .hero-text-block .hero-cta {
   background: #098dcf;
@@ -14771,6 +14795,7 @@ a.theme-link:hover {
   padding-bottom: 4rem;
 }
 
+/* Shared section block: background + content centered vertically and horizontally */
 .section-heading {
   font-size: 2rem;
   font-weight: 800;
@@ -14781,7 +14806,104 @@ a.theme-link:hover {
 }
 
 .about-section {
-  padding-bottom: 0;
+  padding: 4rem 0;
+}
+.about-section .content > .section-intro:nth-child(4) {
+  margin-bottom: 0;
+}
+
+/* Audience full-width background (about.jpg) with dark overlay and centred content */
+.audience-bg-section {
+  position: relative;
+  min-height: 42vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+.audience-bg-section .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.audience-bg-section .content {
+  text-align: center;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.audience-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  pointer-events: none;
+}
+.audience-bg-heading {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.audience-bg-subtext {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.audience-bg-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.audience-bg-cta {
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+.audience-bg-cta:hover {
+  text-decoration: none;
+}
+.audience-bg-cta-primary {
+  background: #098dcf;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.audience-bg-cta-primary:hover {
+  background: #076c9e;
+  color: #fff;
+  border-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.audience-bg-cta-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+.audience-bg-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: #fff;
+}
+.audience-bg-cta-mailing {
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+}
+.audience-bg-cta-mailing:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: #fff;
 }
 
 .benefits-list li {
@@ -15067,6 +15189,38 @@ a.theme-link:hover {
   overflow-x: hidden;
 }
 
+.venue-section .venue-name-location {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+}
+.venue-section .venue-name-location .venue-name {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.venue-section .venue-name-location .venue-location {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.78);
+}
+@media (min-width: 768px) {
+  .venue-section .venue-name-location .venue-name {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .venue-section .venue-name-location {
+    font-size: 1.15rem;
+  }
+  .venue-section .venue-name-location .venue-name {
+    font-size: 1.4rem;
+  }
+  .venue-section .venue-name-location .venue-location {
+    font-size: 1.05rem;
+  }
+}
+
 .venue-section .figure {
   position: relative;
 }
@@ -15141,6 +15295,11 @@ a.theme-link:hover {
   font-size: 1.5rem;
 }
 
+.footer .footer-logo {
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
@@ -15177,12 +15336,15 @@ a.theme-link:hover {
 
 @media (max-width: 767.98px) {
   .header {
-    background: rgba(20, 28, 37, 0.95);
+    background: #00002b;
   }
 
   .section {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+  .about-section {
+    padding: 3rem 0;
   }
 
   .hero-block {
@@ -15201,19 +15363,62 @@ a.theme-link:hover {
   }
 
   .hero-text-block--featured .hero-heading {
-    font-size: 3.25rem !important;
+    font-size: 3.6rem !important;
     margin-bottom: 1rem;
   }
   .hero-text-block .hero-theme-line {
     font-size: 2rem !important;
     margin-bottom: 1.5rem;
   }
+  .hero-text-block .hero-theme-line.hero-theme-line-1 {
+    font-size: 2.25rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .hero-text-block .hero-theme-line.hero-theme-line-2 {
+    font-size: 1.85rem !important;
+    margin-bottom: 1.5rem !important;
+  }
   .hero-text-block .hero-date-location {
     font-size: 1.15rem !important;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.25rem;
+  }
+  .hero-text-block .hero-date-location + .mb-3 {
+    margin-top: 0.75rem;
+  }
+  .hero-text-block .hero-date-location .hero-date {
+    font-size: 1.4rem !important;
   }
   .hero-text-block .hero-date-location .hero-location {
     font-size: 1.05rem !important;
+  }
+
+  .audience-bg-section {
+    min-height: 36vh;
+  }
+  .audience-bg-section {
+    min-height: 36vh;
+    padding: 3rem 1rem;
+  }
+  .audience-bg-heading {
+    font-size: 1.5rem;
+  }
+  .audience-bg-subtext {
+    font-size: 1.05rem;
+  }
+  .audience-bg-cta-row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .audience-bg-cta-row .audience-bg-cta {
+    width: 100%;
+    max-width: 280px;
+  }
+  .audience-bg-cta-mailing {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .stats-block .number {

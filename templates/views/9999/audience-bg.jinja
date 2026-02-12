@@ -1,23 +1,21 @@
 <section id="audience-bg-section" class="audience-bg-section" style="background-image: url('{{ base_path|default('') }}assets/images/9999/hero/about.jpg');">
   <div class="audience-bg-overlay" aria-hidden="true"></div>
-  <div class="audience-bg-content">
-    <div class="container">
-      <div class="audience-bg-inner text-center">
-        {% if about_audience_heading %}
-        <h3 class="audience-bg-heading">{{ about_audience_heading }}</h3>
+  <div class="container">
+    <div class="content">
+      {% if about_audience_heading %}
+      <h3 class="audience-bg-heading">{{ about_audience_heading }}</h3>
+      {% endif %}
+      <div class="audience-bg-cta-row">
+        {% if become_a_sponsor_url %}
+        <a class="btn btn-primary btn-lg audience-bg-cta audience-bg-cta-primary" href="{{ become_a_sponsor_url }}" target="_blank" rel="noopener">Become a Sponsor</a>
         {% endif %}
-        <div class="audience-bg-cta-row">
-          {% if become_a_sponsor_url %}
-          <a class="btn btn-primary btn-lg audience-bg-cta audience-bg-cta-primary" href="{{ become_a_sponsor_url }}" target="_blank" rel="noopener">Become a Sponsor</a>
-          {% endif %}
-          {% if call_for_presenters_url %}
-          <a class="btn btn-lg audience-bg-cta audience-bg-cta-secondary" href="{{ call_for_presenters_url }}" target="_blank" rel="noopener">Apply to Present</a>
-          {% endif %}
-        </div>
-        {% if mailing_list_url %}
-        <a class="btn btn-lg audience-bg-cta audience-bg-cta-mailing" href="{{ mailing_list_url }}">Join the ROCC mailing list</a>
+        {% if call_for_presenters_url %}
+        <a class="btn btn-lg audience-bg-cta audience-bg-cta-secondary" href="{{ call_for_presenters_url }}" target="_blank" rel="noopener">Apply to Present</a>
         {% endif %}
       </div>
+      {% if mailing_list_url %}
+      <a class="btn btn-lg audience-bg-cta audience-bg-cta-mailing" href="{{ mailing_list_url }}">Join the mailing list</a>
+      {% endif %}
     </div>
   </div>
 </section>

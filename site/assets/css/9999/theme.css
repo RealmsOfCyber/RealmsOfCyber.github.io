@@ -14638,6 +14638,7 @@ a.theme-link:hover {
 .hero-text-block h1.hero-heading,
 .hero-text-block .hero-heading.h1 {
   color: #fff;
+  font-family: "Pulse Rifle", sans-serif;
   font-size: 4rem;
   font-weight: 800;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -14658,7 +14659,8 @@ a.theme-link:hover {
   max-width: 1150px !important;
 }
 .hero-text-block--featured .hero-heading {
-  font-size: 5.25rem !important;
+  font-family: "Pulse Rifle", sans-serif;
+  font-size: 5.75rem !important;
   font-weight: 800;
   margin-bottom: 1.25rem;
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.4);
@@ -15215,7 +15217,7 @@ a.theme-link:hover {
   }
 
   .hero-text-block--featured .hero-heading {
-    font-size: 3.25rem !important;
+    font-size: 3.6rem !important;
     margin-bottom: 1rem;
   }
   .hero-text-block .hero-theme-line {

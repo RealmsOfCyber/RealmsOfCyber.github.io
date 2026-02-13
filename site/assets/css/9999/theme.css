@@ -14817,7 +14817,7 @@ a.theme-link:hover {
   position: relative;
   min-height: 42vh;
   background-size: cover;
-  background-position: center;
+  background-position: center 55%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -14885,25 +14885,29 @@ a.theme-link:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 .audience-bg-cta-secondary {
-  background: transparent;
+  background: #098dcf;
   color: #fff;
   border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 .audience-bg-cta-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: #076c9e;
   color: #fff;
   border-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 .audience-bg-cta-mailing {
   display: inline-block;
-  background: transparent;
+  background: #098dcf;
   color: #fff;
   border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 .audience-bg-cta-mailing:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: #076c9e;
   color: #fff;
   border-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .benefits-list li {
@@ -15407,11 +15411,14 @@ a.theme-link:hover {
   }
   .audience-bg-cta-row {
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
   }
   .audience-bg-cta-row .audience-bg-cta {
     width: 100%;
     max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .audience-bg-cta-mailing {
     display: block;
@@ -15419,6 +15426,23 @@ a.theme-link:hover {
     max-width: 280px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0;
+  }
+
+  .realms-section .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem 0.5rem;
+    justify-items: center;
+  }
+  .realms-section .row .col {
+    max-width: 100%;
+    min-width: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .realms-section .realm {
+    font-size: 0.9rem;
   }
 
   .stats-block .number {

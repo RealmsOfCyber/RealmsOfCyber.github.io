@@ -1,27 +1,32 @@
 <section id="about-section" class="about-section section theme-bg-light">
-<div class="container">
-  <h3 class="section-heading text-center mb-3">About Realms of Cyber Conference</h3>
-  <div class="section-intro text-center single-col-max mx-auto mb-4">
-      ROCC is a high-impact, one-day conference bringing together cutting-edge presentations,
-      live technology demonstrations, and meaningful networking opportunities
-      - all set in the inspiring surrounds of the iconic {{ venue_name }}.
-  </div>
-  <div class="section-intro text-center single-col-max mx-auto mb-4">
-        Focused on operational security across physical domains - Land, Sea, Air, Space, Biological,
-        and Cognitive - ROCC is dedicated to advancing Australia's OT and cyber-physical resilience.
-  </div>
-  <div class="section-intro text-center single-col-max mx-auto mb-4">
-        Attendees can explore multiple streams of expert talks, get hands-on with interactive tech
-        displays, and connect in curated social spaces designed to spark real conversations and collaboration.
-  </div>
-  {% if tickets_on_sale and not is_post_event and not is_holding_page %}
-  <div class="about-cta text-center mb-5">
-    <a class="btn btn-secondary btn-lg mb-5" href="{{ ticket_url }}" target="_blank">Get Your Ticket Today</a>
-  </div>
-  {% endif %}
-</div>
-<div class="media-block theme-bg-primary py-5">
   <div class="container">
+    <div class="content">
+      <h3 class="section-heading text-center mb-3">About Realms of Cyber Conference</h3>
+      <div class="section-intro text-center single-col-max mx-auto mb-4">
+          ROCC is a high-impact, one-day conference bringing together cutting-edge presentations,
+          live technology demonstrations, and meaningful networking opportunities
+          - all set in the inspiring surrounds of the iconic {{ venue_name }}.
+      </div>
+      <div class="section-intro text-center single-col-max mx-auto mb-4">
+            Focused on operational security across physical domains - Land, Sea, Air, Space, Biological,
+            and Cognitive - ROCC is dedicated to advancing Australia's OT and cyber-physical resilience.
+      </div>
+      <div class="section-intro text-center single-col-max mx-auto mb-4">
+            Attendees can explore multiple streams of expert talks, get hands-on with interactive tech
+            displays, and connect in curated social spaces designed to spark real conversations and collaboration.
+      </div>
+      {% if tickets_on_sale and not is_post_event and not is_holding_page %}
+      <div class="about-cta text-center mb-5">
+        <a class="btn btn-secondary btn-lg mb-5" href="{{ ticket_url }}" target="_blank">Get Your Ticket Today</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% include 'views/2026/audience-bg.jinja' %}
+<section id="realms-section" class="realms-section section theme-bg-primary">
+  <div class="container">
+    <div class="content">
     <h4 class="text-white text-center pb-3">The Realms</h4>
     <div class="row text-white text-center">
       <div class="col mb-4 mx-3">
@@ -49,6 +54,6 @@
         <i style="color: #fff" class="fa-solid fa-brain fa-4x"></i>
       </div>
     </div>
+    </div>
   </div>
-</div>
 </section>

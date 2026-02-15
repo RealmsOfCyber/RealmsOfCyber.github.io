@@ -12,63 +12,22 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-12">
-          <div class="hero-text-block mx-auto text-center {% if hero_title or hero_subtitle %}hero-text-block--featured{% endif %}" style="max-width: 900px;">
-      {% if hero_title or hero_subtitle %}
+          <div class="hero-text-block mx-auto text-center hero-text-block--featured" style="max-width: 900px;">
             <h1 class="hero-heading">{{ hero_title or rocc_year }}</h1>
-            {% if hero_subtitle %}
+            {% if hero_theme_line_1 and hero_theme_line_2 %}
+            <p class="hero-theme-line hero-theme-line-1">{{ hero_theme_line_1 }}</p>
+            <p class="hero-theme-line hero-theme-line-2">{{ hero_theme_line_2 }}</p>
+            {% elif hero_subtitle %}
             <p class="hero-theme-line">{{ hero_subtitle }}</p>
             {% endif %}
             <div class="hero-date-location">
               <span class="hero-date"><i class="far fa-calendar-alt me-2" aria-hidden="true"></i>{{ next_event_date }}</span>
-              <span class="hero-location"><i class="fas fa-map-marker-alt mx-2"></i>{{ location }}</span>
+              <a class="scrollto hero-location-link" href="#venue-section"><span class="hero-location"><i class="fas fa-map-marker-alt mx-2"></i>{{ location }}</span></a>
             </div>
             <div class="mb-3">
               <a class="btn-primary btn btn-lg hero-cta" href="{{ mailing_list_url }}">Join the ROCC mailing list</a>
             </div>
             <p class="mb-0" style="font-size: 1rem; opacity: 0.9;">Be notified when registration opens for {{ hero_title or rocc_year }}</p>
-      {% elif not is_post_event %}
-            <h1 class="hero-heading mb-2">Save the Date for {{ rocc_year }}</h1>
-            <h1 class="hero-heading mb-2">{{ next_event_date }}</h1>
-            <div class="hero-meta mb-3">
-              <i class="fas fa-map-marker-alt mx-2"></i>{{ location }}
-            </div>
-            <div class="mb-3">
-              <a class="btn-primary btn btn-lg" href="{{ mailing_list_url }}">Join the ROCC mailing list</a>
-            </div>
-            <p class="mb-4" style="font-size: 1.1em;">Be notified when registration opens for {{ rocc_year }}</p>
-      {% elif is_year_page and is_post_event %}
-            <p class="mb-2" style="font-size: 1.7em; font-weight: 600;">That's a wrap for {{ rocc_year }}!</p>
-            <p class="mb-3" style="font-size: 1.2em;">A huge thanks to our <a href="#speakers-section" style="color: white; text-decoration: underline;">speakers</a>{% if has_sponsors %}, <a href="#sponsors-section" style="color: white; text-decoration: underline;">sponsors</a>{% endif %}{% if has_exhibitors %}, <a href="#exhibitors-section" style="color: white; text-decoration: underline;">exhibitors</a>{% endif %}, and attendees for an incredible day at {{ venue_name }}.</p>
-            <h1 class="hero-heading mb-2">{{ rocc_year }} Archive</h1>
-            <div class="hero-meta mb-3">
-              <i class="far fa-calendar-alt me-2"></i>{{ date }}
-              <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
-            </div>
-            <div class="hero-intro mb-4">
-              View the speakers and schedule from Realms of Cyber Conference {{ year }}
-            </div>
-      {% elif is_post_event %}
-      <p class="mb-2" style="font-size: 1.7em; font-weight: 600;">That's a wrap for {{ rocc_year }}!</p>
-      <p class="mb-3" style="font-size: 1.2em;">A huge thanks to our <a href="#speakers-section" style="color: white; text-decoration: underline;">speakers</a>, <a href="#sponsors-section" style="color: white; text-decoration: underline;">sponsors</a>, <a href="#exhibitors-section" style="color: white; text-decoration: underline;">exhibitors</a>, and attendees for an incredible day at {{ venue_name }}.</p>
-            <h1 class="hero-heading mb-2">Stay tuned for {{ rocc_next_year }}</h1>
-            <div class="hero-meta mb-3">
-              <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
-            </div>
-            <div class="mb-3">
-              <a class="btn-primary btn btn-lg" href="{{ mailing_list_url }}">Join the ROCC mailing list</a>
-            </div>
-            <p class="mb-4" style="font-size: 1.1em;">Be notified when registration opens for {{ rocc_next_year }}</p>
-      {% else %}
-            <h1 class="hero-heading mb-2">Realms of Cyber Conference {{ year }}</h1>
-            <div class="hero-meta mb-3">
-              <i class="far fa-calendar-alt me-2"></i>{{ date }}
-              <i class="fas fa-map-marker-alt mx-2"></i>Brisbane, AUS
-            </div>
-            <div class="hero-intro mb-4">
-              Inspiring and informative talks from some of the world's
-              brightest minds in physical cybersecurity
-            </div>
-            {% endif %}
           </div>
         </div>
       </div>

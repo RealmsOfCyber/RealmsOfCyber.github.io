@@ -1,2 +1,2 @@
-# ROCC26 schedule (empty for pre-event; add when ready)
+# Holding page: no schedule
 schedules = {}

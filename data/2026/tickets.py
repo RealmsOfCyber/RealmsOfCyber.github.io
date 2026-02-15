@@ -1,4 +1,4 @@
-# ROCC26 tickets (no tickets on sale yet for pre-event)
+# Holding page: no tickets
 ticket_url = ""
 ticket_1_name = ""
 ticket_1_price = 0

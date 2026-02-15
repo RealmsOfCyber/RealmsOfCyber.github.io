@@ -1,4 +1,4 @@
-# ROCC26 speakers (empty for pre-event save-the-date view; add when ready)
+# Holding page: no speakers
 speakers = {
     "presenters": [],
     "mcs": [],
